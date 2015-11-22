@@ -1,0 +1,26 @@
+Behaviors:
+	Test
+	
+Variables:
+	x
+
+Constants: 
+	REF = 5;
+	
+Stops when: x > 10
+
+Implementation for Test:
+	Takes control when: True
+	Does:
+	Forward;
+
+Routine test:
+	Set Acceleration 50;
+	Set Speed RightMotor 200;
+	
+Routine bar:
+	Rotate RightMotor neg 200 wait;
+	Forward;
+	Stop RightMotor;
+	Do test;
+	Do test;

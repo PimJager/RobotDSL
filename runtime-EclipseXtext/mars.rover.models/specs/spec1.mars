@@ -1,0 +1,75 @@
+Behaviors: 
+	DetectLine
+	DetectObject
+	DetectColor
+	DriveForward
+	
+Variables:
+	yellowFound
+	redFound
+	blueFound
+	
+Constants:
+	ROTATE_SPEED = 100;
+	ROTATE_ACC = 6000;
+	DEFAULT_SPEED = 300;
+	DEFAULT_ACC = 800;
+	LINE_TRESHOLD = 3 / 10;
+	US_TRESHOLD = 1 / 10;
+	YELLOW = 1;
+	RED = 0;
+	BLUE = 2; 
+	
+Stops when: yellowFound && redFound && blueFound
+	
+Implementation for DetectLine:
+	Takes control when: 4 < TouchSensorL 
+	Does: 
+		Do beforeRotate;
+		Stop;
+		Rotate LeftMotor neg 130;
+		Rotate RightMotor neg 20 wait;
+		
+Implementation for DetectObject:
+	Takes control when: 
+			UltraSonicSensor < US_TRESHOLD 
+		|| 	TouchSensorL || TouchSensorR 
+	Does:
+		Do beforeRotate;
+		Stop; 
+		Rotate LeftMotor neg 80;
+		Rotate RightMotor neg 80 wait;
+		IF NOT TouchSensorL {
+			Rotate LeftMotor neg 130;
+			Rotate RightMotor neg 20 wait;
+		} ELSE {
+			Rotate LeftMotor neg 20;
+			Rotate RightMotor neg 130 wait;
+		}
+		
+Implementation for DriveForward:
+	Takes control when: True
+	Does:
+		Do setDefaults;
+		Forward;
+		
+Implementation for DetectColor:
+	Takes control when: ColorIDSensor==RED || ColorIDSensor==YELLOW || ColorIDSensor==BLUE
+	Does:
+		IF ColorIDSensor==RED {
+			redFound = True;
+		} 
+		IF ColorIDSensor==BLUE {
+			blueFound = True;
+		}
+		IF ColorIDSensor==YELLOW{
+			yellowFound = True;
+		}
+
+Routine beforeRotate:
+	Set Speed ROTATE_SPEED;
+	Set Acceleration ROTATE_ACC;
+	 
+Routine setDefaults:
+	Set Speed DEFAULT_SPEED;
+	Set Acceleration DEFAULT_ACC;
