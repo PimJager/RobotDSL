@@ -1,0 +1,186 @@
+grammar mars.rover.RoverDSL with org.eclipse.xtext.common.Terminals
+
+generate roverDSL "http://www.rover.mars/RoverDSL"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Robot:
+    'Behaviors:' behaviorOrder += BehaviorName+
+    ('Variables:' globals += Global*)?
+    ('Constants:' statics += Static*)?
+    ('Stops when:') stopBehaviour = ValueExpression
+    behaviors += Implementation+
+    subRoutines += SubRoutine*
+;
+
+BehaviorName : name = ID;
+
+enum Sensor :
+      COLORIDSENSOR = 'ColorIDSensor'
+    | LIGHTSENSOR = 'LightSensor'
+    | ULTRASONICSENSOR = 'UltraSonicSensor'
+	| TOUCHSENSORL = 'TouchSensorL'
+    | TOUCHSENSORR = 'TouchSensorR'	
+;
+
+Motor : m = EMotor;
+
+enum EMotor :
+	  LEFTMOTOR = 'LeftMotor'
+	| RIGHTMOTOR = 'RightMotor'
+;
+
+Global : name = ID;
+
+Static : name = ID ' = ' value = ValueExpression ';';
+
+Implementation :
+	'Implementation for' for = [BehaviorName] ':'
+	'Takes control when:'
+		controlCheck = ValueExpression
+	'Does:'
+		expressions += Expression+
+;
+
+SubRoutine :
+	'Routine ' name = ID ':'
+	expressions += Expression+
+;
+
+Expression : 
+	((
+	  ValExpr
+	| Action
+	| AssignExpression
+	) ';')
+	| IFExpression
+	| WHILEExpression
+	//| Var
+;
+
+ValExpr : vExpr = ValueExpression;
+IFExpression :
+	'IF' c=ValueExpression '{' t+=Expression+ '}' ('ELSE' '{' e+=Expression+ '}')?
+;
+WHILEExpression: 'WHILE' c=ValueExpression '{' b+=Expression+ '}' ;
+AssignExpression: global = [Global] ' = ' v = ValueExpression ;
+
+/*Var :
+	'VAR' name = ID ' = ' v = Expression
+;*/
+
+Action : 
+	  ForwardAction
+	| RotateAction
+	| StopAction
+	| SAccelerationAction
+	| SSpeedAction
+	| SubRoutineAction
+;
+ForwardAction : {ForwardAction} 
+	'Forward' (motor = Motor)? 
+;
+RotateAction :  'Rotate' motor = Motor degrees = ValueExpression (blocking ?= 'wait')? ; 
+StopAction : {StopAction} 'Stop' (motor = Motor)? ;
+SAccelerationAction : 'Set Acceleration' (motor = Motor)? v = ValueExpression ;
+SSpeedAction : 'Set Speed' (motor = Motor)? v = ValueExpression ;
+SubRoutineAction : 'Do' routine = [SubRoutine] ;
+
+ValueExpression :	Blevel1;
+
+Blevel1 returns ValueExpression:
+	Blevel2 
+	( {ExpressionBinOp.left = current} bop = BBinaryOp right=Blevel2)*
+;
+
+Blevel2 returns ValueExpression :
+	BNotExpr | Blevel3
+;
+
+BNotExpr : "NOT" sub = Blevel3;
+
+Blevel3 returns ValueExpression :
+	Blevel4
+	( {ExpressionBinComp.left = current} bcomp = CompareOp right=Blevel4)*
+;
+
+Blevel4 returns ValueExpression :
+	  BVLiteral
+	| BBLiteral
+	| BVarLiteral
+	| BSensorLiteral
+	| BVBracket
+;
+
+BVLiteral : neg ?= ('neg')? aValue = INT ('/' fraction = INT)?;
+BBLiteral : bValue = BOOL_LITERAL;
+BVarLiteral : var = ID ;
+BSensorLiteral : sensor = Sensor;
+BVBracket : '(' bsub = ValueExpression ')' ;
+
+
+enum BBinaryOp :
+	AND = '&&' | OR = '||'
+;
+enum CompareOp :
+	EQ = "==" | NEQ = "!=" | GEQ = ">=" | GT = ">" | LEQ = "<=" | LT = "<"
+;
+
+//terminals
+terminal ALPHA : ('A'..'Z');
+terminal BOOL_LITERAL returns ecore::EBoolean: 'True' | 'False' | 'TRUE' | 'FALSE' ;
+
+
+/* Arithmetic expressions are not necessary for now
+ValueExpression : Alevel1;
+
+Alevel1 returns ValueExpression :
+	Alevel2
+	(( {ExpressionAdd.left = current} '+' right=Alevel2)
+	 ( {ExpressionMinus.left = current} '-' right=Alevel2))*
+;
+
+Alevel2 returns ValueExpression :
+	Alevel3
+	( ({ExpressionMultiply.left=current} "*" right=Alevel3)
+	| ({ExpressionDivision.left=current} "/" right=Alevel3)
+	)*
+;
+
+Alevel3 returns ValueExpression :
+	Alevel4
+	( {ExpressionPow.left = current} '^' right=Alevel4)*
+;
+
+Alevel4 returns ValueExpression :
+	ANegate | Alevel5
+;
+
+ANegate : 'neg' sub = Alevel5;
+
+Alevel5 returns ValueExpression :
+	  value = INT
+	| 'G' global = [Global]
+	| 'L' var = [Var]
+	| 'S' stat = [Static]
+	| sensor = Sensor
+	| '(' sub = ValueExpression ')'
+;
+* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

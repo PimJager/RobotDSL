@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="mars.rover.sdk"
+	label="RoverDSL SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="mars.rover"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="mars.rover.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
