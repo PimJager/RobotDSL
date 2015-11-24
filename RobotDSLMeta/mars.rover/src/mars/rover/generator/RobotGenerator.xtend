@@ -64,7 +64,7 @@ class RobotGenerator {
 			Behavior[] bList = {
 									«FOR bName : root.behaviorOrder SEPARATOR ","»
 										new «bName.name»()
-									«ENDFOR»,new DefaultQuitBehaviour_() 
+									«ENDFOR»,new DefaultQuitBehaviour() 
 								};
 			Arbitrator ar = new Arbitrator(bList);
 			ar.start();
@@ -99,7 +99,7 @@ class RobotGenerator {
 		«ENDFOR»	
 	}
 		
-	public class QDefaultQuitBehaviour_ extends Behavior {
+	public class DefaultQuitBehaviour extends Behavior {
 		@Override
 		public boolean takeControl() {
 			return Robot.iToB(«ValueExpressionPrinter.print(root.stopBehaviour)»);
@@ -126,7 +126,6 @@ class RobotGenerator {
 		public void action() {
 			_supressed = false;
 			Robot.updateSensor();
-			//TODO: update sensors more often?
 			// supressioncontext = «suppressContext = true»
 			«ExpressionPrinter.printExprList(impl.expressions)»
 			// supressioncontext = «suppressContext = false»

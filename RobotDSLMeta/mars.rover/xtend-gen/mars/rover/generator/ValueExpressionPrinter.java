@@ -137,7 +137,7 @@ public class ValueExpressionPrinter {
           return _builder.toString();
         case OR:
           StringConcatenation _builder_1 = new StringConcatenation();
-          _builder_1.append("OR");
+          _builder_1.append("||");
           return _builder_1.toString();
         default:
           break;

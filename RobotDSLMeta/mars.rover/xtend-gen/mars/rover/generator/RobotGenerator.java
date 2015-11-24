@@ -181,7 +181,7 @@ public class RobotGenerator {
         _builder.append("\t\t\t\t\t\t\t\t\t");
       }
     }
-    _builder.append(",new DefaultQuitBehaviour_() ");
+    _builder.append(",new DefaultQuitBehaviour() ");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t\t\t\t\t");
     _builder.append("};");
@@ -285,7 +285,7 @@ public class RobotGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
-    _builder.append("public class QDefaultQuitBehaviour_ extends Behavior {");
+    _builder.append("public class DefaultQuitBehaviour extends Behavior {");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("@Override");
@@ -371,9 +371,6 @@ public class RobotGenerator {
         _builder.newLine();
         _builder.append("\t\t");
         _builder.append("Robot.updateSensor();");
-        _builder.newLine();
-        _builder.append("\t\t");
-        _builder.append("//TODO: update sensors more often?");
         _builder.newLine();
         _builder.append("\t\t");
         _builder.append("// supressioncontext = ");

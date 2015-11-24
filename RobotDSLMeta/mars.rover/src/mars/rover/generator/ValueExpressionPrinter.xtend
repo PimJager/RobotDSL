@@ -46,7 +46,7 @@ class ValueExpressionPrinter {
 	def static printBOp(BBinaryOp op){
 		switch(op){
 			case BBinaryOp::AND: 	return '''&&'''
-			case BBinaryOp::OR: 	return '''OR'''
+			case BBinaryOp::OR: 	return '''||'''
 		}
 	}
 	
