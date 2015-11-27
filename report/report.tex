@@ -1,0 +1,44 @@
+\documentclass[titlepage]{article}
+
+\usepackage{a4wide}
+\usepackage[dvipdfm]{hyperref}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{amsfonts}
+
+\lstset{%
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  frame=single,	                   % adds a frame around the code
+  tabsize=4
+}
+
+\author{%
+	Sudhakar Gottam\and
+	Pim Jager
+}
+\title{Mars Robot DSL} 
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Requirements of Mars Robot}
+\input{requirements.tex}
+
+\section{Proposed layout of Mars Robot}
+\input{layout.tex}
+
+\section{Development process of Mars Robot DSL and corresponding Missions}
+\input{devprocess.tex}
+
+
+\end{document}
