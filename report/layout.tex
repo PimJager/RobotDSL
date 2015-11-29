@@ -1,0 +1,38 @@
+The Mars rover uses two separate bricks to connect all peripherals. Because of
+this the two bricks need to communicate about the status of the different
+actuators and sensors. 
+
+This communication could introduce small delays, and as stated in
+Section~\ref{sec:requirements} the most imported requirement for the rover is
+that is always keeps itself safe. Therefore we propose a layout where the most
+important sensors related to safety are connected to the same block as the
+two main motors. This ensures that the robot can always keep itself safe,
+even when the communication between the two bricks fails.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+					& \textbf{Brick 1} & \textbf{Brick 2} \\  \hline
+		\hline
+		Actuators 	& Left Motor & \\  
+					& Right motor & \\  
+					& Measurement Motor & \\  
+		\hline
+		Sensors 	& Light left & Color Sensor \\  
+					& Light Right & Gyro Sensor \\  
+					& Ultrasonic Front & Touch Sensor Left \\  
+					& Ultrasonic Rear & Touch Sensor Right \\  
+		\hline
+	\end{tabular}
+\caption{Connection of the sensors and actuators to the Mars Rover}
+\label{tbl:layout}
+\end{table}
+
+The touch sensor are not considered essential safety sensors as the mars rover
+is very sturdy and contact with blocks can already be mostly avoided by the
+ultrasonic sensor on the front. 
+
+If it turns out that two ultrasonic sensors on the same brick are problematic
+then the front ultrasonic sensor of brick 1 will be interchanged with the
+gyro sensor on brick 2. 
