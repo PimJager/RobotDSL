@@ -11,6 +11,9 @@
 \usepackage{longtable}
 \usepackage{amsfonts}
 
+\newcounter{TCC}
+\newcommand{\doTCC}{\theTCC \stepcounter{TCC}}
+
 \lstset{%
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking

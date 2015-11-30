@@ -1,6 +1,7 @@
 The Mars Robot shall adhere to the following requirements, which are set up
 using the FURPS model, and are prioritized using the MOSCOW method.
 
+\setcounter{TCC}{1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
@@ -10,13 +11,41 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		F1 & M & Sample description \\  
+		F\doTCC  & Must & The robot must not fall of the table \\  \hline
+		F\doTCC  & Must & The robot must be able to detect colors \\  \hline
+		F\doTCC  & Must & The robot must be able to detect rocks \\  \hline
+		F\doTCC  & Must & The robot must be able to ``measure'' rocks \\  \hline
+		F\doTCC  & Must & The robot must be able to push light-weight rocks 
+			\\  \hline
+		F\doTCC  & Should & The robot should be able to avoid lakes \\  \hline
+		F\doTCC  & Could & The robot could be able to park in a corner 
+			\\  \hline
+		F\doTCC  & Must & The robot must be able to ``measure'' lakes exactly 
+			once \\  \hline
+		F\doTCC & Must & The robot must be able to avoid rocks \\  \hline
+		F\doTCC & Could & The generated programs could work on both robots
+			\\  \hline
+		F\doTCC & Must & The DSL must allow control of the three actuators 
+			\\  \hline
+		F\doTCC & Must & The DSL must provide readouts of the three sensors
+			\\  \hline
+		F\doTCC & Must & The DSL must provide a method of controlling actuators
+			based on the values of sensors \\  \hline
+		F\doTCC & Must & The DSL must provide a method of prioritizing different
+			actions \\  \hline
+		F\doTCC & Should & The DSL should abstract over commonly used 
+			functionality \\  \hline
+		F\doTCC & Could & The DSL could provide a method to specify and execute
+			user specified subroutines \\  \hline
+		F\doTCC & Must & The DSL must generate a valid Java program which can be
+			run on the mars rover. \\  
 		\hline
 	\end{tabular}
 \caption{Functional requirements of Mars Rover}
 \label{tbl:functionalReq}
 \end{table}
 
+\setcounter{TCC}{1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
@@ -26,13 +55,18 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		U1 & M & Sample description \\  
+		U\doTCC & Should & The mapping between a generated Java program and a
+			specification in the DSL should be easy to understand \\  \hline
+		U\doTCC & Must & The DSL must be easy to read and understand \\  \hline
+		U\doTCC & Would & The robot prints a trace of behaviors and values on
+			the LCD for easy debugging \\  
 		\hline
 	\end{tabular}
 \caption{Usability requirements of Mars Rover}
 \label{tbl:usabilityReq}
 \end{table}
 
+\setcounter{TCC}{1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
