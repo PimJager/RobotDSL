@@ -29,6 +29,10 @@ even when the communication between the two bricks fails.
 \label{tbl:layout}
 \end{table}
 
+In this layout Brick 1 is the main control brick, it handles the most important
+safety related sensors and all actuators. Brick 2 connects the other sensors and
+can then communicate their readings to Brick 1. 
+
 The touch sensor are not considered essential safety sensors as the mars rover
 is very sturdy and contact with blocks can already be mostly avoided by the
 ultrasonic sensor on the front. 
