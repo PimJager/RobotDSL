@@ -20,14 +20,13 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		F\doTCC  & Should & The robot should be able to avoid lakes \\  \hline
 		F\doTCC  & Could & The robot could be able to park in a corner 
 			\\  \hline
-		F\doTCC  & Must & The robot must be able to ``measure'' lakes exactly 
-			once \\  \hline
+		F\doTCC  & Must & The robot must be able to ``measure'' lakes \\  \hline
 		F\doTCC & Must & The robot must be able to avoid rocks \\  \hline
 		F\doTCC & Could & The generated programs could work on both robots
 			\\  \hline
 		F\doTCC & Must & The DSL must allow control of the three actuators 
 			\\  \hline
-		F\doTCC & Must & The DSL must provide readouts of the three sensors
+		F\doTCC & Must & The DSL must provide readouts of the the sensors
 			\\  \hline
 		F\doTCC & Must & The DSL must provide a method of controlling actuators
 			based on the values of sensors \\  \hline
@@ -38,7 +37,19 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		F\doTCC & Could & The DSL could provide a method to specify and execute
 			user specified subroutines \\  \hline
 		F\doTCC & Must & The DSL must generate a valid Java program which can be
-			run on the mars rover. \\  
+			run on the mars rover. \\  \hline
+		F\doTCC & Must & The DSL must provide readable and writable global
+			variables \\  \hline
+		F\doTCC & Must & The DSL must provide a method to write global variables
+			based on sensor values \\  \hline
+		F\doTCC & Would & The robot can communicate with an external entity
+			through Bluetooth or WiFi. \\  \hline
+		F\doTCC & Should & The DSL should provide a method to sound beeps and
+			buzzes \\  \hline
+		F\doTCC & Should & The DSL should provide a method to write string to
+			the LCD \\  \hline
+		F\doTCC & Could & The DSL could provide a way to write strings with
+			values of sensor readings to the LCD \\  
 		\hline
 	\end{tabular}
 \caption{Functional requirements of Mars Rover}
@@ -55,8 +66,9 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		U\doTCC & Should & The mapping between a generated Java program and a
-			specification in the DSL should be easy to understand \\  \hline
+		U\doTCC & Should & The mapping between a generated Java program \\  
+				&		& and a specification in the DSL should \\  
+				& 		& be easy to understand \\  \hline
 		U\doTCC & Must & The DSL must be easy to read and understand \\  \hline
 		U\doTCC & Would & The robot prints a trace of behaviors and values on
 			the LCD for easy debugging \\  
@@ -76,13 +88,21 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		R1 & M & Sample description \\  
+		R\doTCC & Must & The robot must not be able to enter a deadlock state,
+			\\  
+				& 		& unless one is specified in the DSL specification 
+			\\  \hline
+		R\doTCC & Should & The robot should have reliable and consistent 
+			sensor readings \\  \hline
+		R\doTCC & Could & The robot could be able to recover from driving into
+			a lake \\  
 		\hline
 	\end{tabular}
 \caption{Reliability requirements of Mars Rover}
 \label{tbl:reliabilityReq}
 \end{table}
 
+\setcounter{TCC}{1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
@@ -92,13 +112,19 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		P1 & M & Sample description \\  
+		P\doTCC & Must & The robot must be able to complete mission in finite 
+			time \\  \hline
+		P\doTCC & Must & The robot must complete missions as fast as safely 
+			possible \\   \hline
+		P\doTCC & Should & The robot should reach its targets with as little 
+			movement as possible \\  
 		\hline
 	\end{tabular}
 \caption{Performance requirements of Mars Rover}
 \label{tbl:performanceReq}
 \end{table}
 
+\setcounter{TCC}{1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
@@ -108,7 +134,10 @@ using the FURPS model, and are prioritized using the MOSCOW method.
 		Identifier & Priority & Description \\  
 		\hline
 		\hline
-		S1 & M & Sample description \\  
+		S\doTCC & Would & The robot can be reprogrammed and debugged without
+			a physical connection to it \\  \hline
+		S\doTCC & Could & The robot could be expanded with additional sensors
+			or actuators \\  
 		\hline
 	\end{tabular}
 \caption{Supportability requirements of Mars Rover}
