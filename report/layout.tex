@@ -40,3 +40,30 @@ ultrasonic sensor on the front.
 If it turns out that two ultrasonic sensors on the same brick are problematic
 then the front ultrasonic sensor of brick 1 will be interchanged with the
 gyro sensor on brick 2. 
+
+\subsection{Final Layout}
+After discussion with the other groups the final layout for the Mars Rover has 
+been decided as shown in Table~\ref{tbl:finallayout}. 
+
+This layout has the benefit over our proposed layout that it does not have two 
+Ultrasonic sensors attached to the same brick.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		port	& Brick 1 & Brick 2\\  \hline
+		\hline
+		A 		& Left Motor & \\  
+		B		& Right motor & \\  
+		C		& Measurement Motor & \\  
+		\hline
+		S1	 	& Light left & Left touch \\  
+		S2		& Light Right & Right touch \\  
+		S3		& Ultrasonic Rear & Ultrasonic Front\\  
+		S4		& Gyro & Color Sensor \\  
+		\hline
+	\end{tabular}
+\caption{Connection of the sensors and actuators to the Mars Rover}
+\label{tbl:finallayout}
+\end{table}
