@@ -10,6 +10,7 @@ import mars.rover.roverDSL.Expression;
 import mars.rover.roverDSL.ForwardAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
+import mars.rover.roverDSL.MeasureAction;
 import mars.rover.roverDSL.Motor;
 import mars.rover.roverDSL.RotateAction;
 import mars.rover.roverDSL.SAccelerationAction;
@@ -353,6 +354,13 @@ public class ExpressionPrinter {
     return _builder;
   }
   
+  protected static CharSequence _print(final MeasureAction a) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("//INSERT MEASURE ACTION CODE HERE!");
+    _builder.newLine();
+    return _builder;
+  }
+  
   public static CharSequence printExprList(final EList<Expression> es) {
     StringConcatenation _builder = new StringConcatenation();
     {
@@ -374,6 +382,8 @@ public class ExpressionPrinter {
   public static CharSequence print(final Expression a) {
     if (a instanceof ForwardAction) {
       return _print((ForwardAction)a);
+    } else if (a instanceof MeasureAction) {
+      return _print((MeasureAction)a);
     } else if (a instanceof RotateAction) {
       return _print((RotateAction)a);
     } else if (a instanceof SAccelerationAction) {

@@ -83,7 +83,8 @@ ruleAction :
 	ruleStopAction |
 	ruleSAccelerationAction |
 	ruleSSpeedAction |
-	ruleSubRoutineAction
+	ruleSubRoutineAction |
+	ruleMeasureAction
 ;
 
 // Rule ForwardAction
@@ -114,6 +115,11 @@ ruleSSpeedAction :
 // Rule SubRoutineAction
 ruleSubRoutineAction :
 	'Do' RULE_ID
+;
+
+// Rule MeasureAction
+ruleMeasureAction :
+	'Measure'
 ;
 
 // Rule ValueExpression
@@ -184,11 +190,14 @@ ruleBVBracket :
 
 // Rule Sensor
 ruleSensor :
-	'ColorIDSensor' |
-	'LightSensor' |
-	'UltraSonicSensor' |
-	'TouchSensorL' |
-	'TouchSensorR'
+	'ColorID' |
+	'LeftLight' |
+	'RightLight' |
+	'FrontUS' |
+	'RearUS' |
+	'LeftTouch' |
+	'RightTouch' |
+	'Angle'
 ;
 
 // Rule EMotor

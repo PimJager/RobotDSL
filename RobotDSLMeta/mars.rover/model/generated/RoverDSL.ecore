@@ -19,11 +19,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Sensor">
-    <eLiterals name="COLORIDSENSOR" literal="ColorIDSensor"/>
-    <eLiterals name="LIGHTSENSOR" value="1" literal="LightSensor"/>
-    <eLiterals name="ULTRASONICSENSOR" value="2" literal="UltraSonicSensor"/>
-    <eLiterals name="TOUCHSENSORL" value="3" literal="TouchSensorL"/>
-    <eLiterals name="TOUCHSENSORR" value="4" literal="TouchSensorR"/>
+    <eLiterals name="COLORIDSENSOR" literal="ColorID"/>
+    <eLiterals name="LEFTLIGHTSENSOR" value="1" literal="LeftLight"/>
+    <eLiterals name="RIGHTLIGHTSENSOR" value="2" literal="RightLight"/>
+    <eLiterals name="FRONTULTRASONICSENSOR" value="3" literal="FrontUS"/>
+    <eLiterals name="REARULTRASONICSENSOR" value="4" literal="RearUS"/>
+    <eLiterals name="TOUCHSENSORL" value="5" literal="LeftTouch"/>
+    <eLiterals name="TOUCHSENSORR" value="6" literal="RightTouch"/>
+    <eLiterals name="ANGLESENSOR" value="7" literal="Angle"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Motor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="m" eType="#//EMotor"/>
@@ -107,6 +110,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SubRoutineAction" eSuperTypes="#//Action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="routine" eType="#//SubRoutine"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeasureAction" eSuperTypes="#//Action"/>
   <eClassifiers xsi:type="ecore:EClass" name="ValueExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="BNotExpr" eSuperTypes="#//ValueExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sub" eType="#//ValueExpression"

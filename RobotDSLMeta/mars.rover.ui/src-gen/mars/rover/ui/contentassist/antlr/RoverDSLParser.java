@@ -63,6 +63,7 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSAccelerationActionAccess().getGroup(), "rule__SAccelerationAction__Group__0");
 					put(grammarAccess.getSSpeedActionAccess().getGroup(), "rule__SSpeedAction__Group__0");
 					put(grammarAccess.getSubRoutineActionAccess().getGroup(), "rule__SubRoutineAction__Group__0");
+					put(grammarAccess.getMeasureActionAccess().getGroup(), "rule__MeasureAction__Group__0");
 					put(grammarAccess.getBlevel1Access().getGroup(), "rule__Blevel1__Group__0");
 					put(grammarAccess.getBlevel1Access().getGroup_1(), "rule__Blevel1__Group_1__0");
 					put(grammarAccess.getBNotExprAccess().getGroup(), "rule__BNotExpr__Group__0");

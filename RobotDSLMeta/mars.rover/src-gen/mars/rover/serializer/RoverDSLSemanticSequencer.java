@@ -19,6 +19,7 @@ import mars.rover.roverDSL.ForwardAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
 import mars.rover.roverDSL.Implementation;
+import mars.rover.roverDSL.MeasureAction;
 import mars.rover.roverDSL.Motor;
 import mars.rover.roverDSL.Robot;
 import mars.rover.roverDSL.RotateAction;
@@ -94,6 +95,9 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case RoverDSLPackage.IMPLEMENTATION:
 				sequence_Implementation(context, (Implementation) semanticObject); 
+				return; 
+			case RoverDSLPackage.MEASURE_ACTION:
+				sequence_MeasureAction(context, (MeasureAction) semanticObject); 
 				return; 
 			case RoverDSLPackage.MOTOR:
 				sequence_Motor(context, (Motor) semanticObject); 
@@ -339,6 +343,15 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     (for=[BehaviorName|ID] controlCheck=ValueExpression expressions+=Expression+)
 	 */
 	protected void sequence_Implementation(EObject context, Implementation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {MeasureAction}
+	 */
+	protected void sequence_MeasureAction(EObject context, MeasureAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

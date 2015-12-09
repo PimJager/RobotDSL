@@ -84,6 +84,7 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
       case RoverDSLPackage.SACCELERATION_ACTION: return createSAccelerationAction();
       case RoverDSLPackage.SSPEED_ACTION: return createSSpeedAction();
       case RoverDSLPackage.SUB_ROUTINE_ACTION: return createSubRoutineAction();
+      case RoverDSLPackage.MEASURE_ACTION: return createMeasureAction();
       case RoverDSLPackage.VALUE_EXPRESSION: return createValueExpression();
       case RoverDSLPackage.BNOT_EXPR: return createBNotExpr();
       case RoverDSLPackage.BV_LITERAL: return createBVLiteral();
@@ -351,6 +352,17 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
   {
     SubRoutineActionImpl subRoutineAction = new SubRoutineActionImpl();
     return subRoutineAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MeasureAction createMeasureAction()
+  {
+    MeasureActionImpl measureAction = new MeasureActionImpl();
+    return measureAction;
   }
 
   /**

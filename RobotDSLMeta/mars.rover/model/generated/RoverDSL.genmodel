@@ -9,10 +9,13 @@
       fileExtensions="mars" ecorePackage="RoverDSL.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="RoverDSL.ecore#//Sensor">
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/COLORIDSENSOR"/>
-      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/LIGHTSENSOR"/>
-      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/ULTRASONICSENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/LEFTLIGHTSENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/RIGHTLIGHTSENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/FRONTULTRASONICSENSOR"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/REARULTRASONICSENSOR"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/TOUCHSENSORL"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/TOUCHSENSORR"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sensor/ANGLESENSOR"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="RoverDSL.ecore#//EMotor">
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//EMotor/LEFTMOTOR"/>
@@ -100,6 +103,7 @@
     <genClasses ecoreClass="RoverDSL.ecore#//SubRoutineAction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//SubRoutineAction/routine"/>
     </genClasses>
+    <genClasses ecoreClass="RoverDSL.ecore#//MeasureAction"/>
     <genClasses ecoreClass="RoverDSL.ecore#//ValueExpression"/>
     <genClasses ecoreClass="RoverDSL.ecore#//BNotExpr">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//BNotExpr/sub"/>

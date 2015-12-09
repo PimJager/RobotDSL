@@ -10,24 +10,36 @@ public class SensorAux {
       switch (s) {
         case COLORIDSENSOR:
           StringConcatenation _builder = new StringConcatenation();
-          _builder.append("Robot.colorSensorSample[0]");
+          _builder.append("Robot.colorSample");
           return _builder;
-        case LIGHTSENSOR:
+        case LEFTLIGHTSENSOR:
           StringConcatenation _builder_1 = new StringConcatenation();
-          _builder_1.append("Robot.lightSensorSample[0]");
+          _builder_1.append("Robot.leftLightSamples[0]");
           return _builder_1;
-        case ULTRASONICSENSOR:
+        case RIGHTLIGHTSENSOR:
           StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("Robot.ultraSonicSensorSample[0]");
+          _builder_2.append("Robot.rightLightSamples[0]");
           return _builder_2;
-        case TOUCHSENSORL:
+        case FRONTULTRASONICSENSOR:
           StringConcatenation _builder_3 = new StringConcatenation();
-          _builder_3.append("Robot.touchSensorLSample[0]");
+          _builder_3.append("Robot.frontUSSample");
           return _builder_3;
-        case TOUCHSENSORR:
+        case REARULTRASONICSENSOR:
           StringConcatenation _builder_4 = new StringConcatenation();
-          _builder_4.append("Robot.touchSensorRSample[0]");
+          _builder_4.append("Robot.rearUSSamples[0]");
           return _builder_4;
+        case TOUCHSENSORL:
+          StringConcatenation _builder_5 = new StringConcatenation();
+          _builder_5.append("Robot.touchLeftSample");
+          return _builder_5;
+        case TOUCHSENSORR:
+          StringConcatenation _builder_6 = new StringConcatenation();
+          _builder_6.append("Robot.touchRightSample");
+          return _builder_6;
+        case ANGLESENSOR:
+          StringConcatenation _builder_7 = new StringConcatenation();
+          _builder_7.append("Robot.gyroSamples[0]");
+          return _builder_7;
         default:
           break;
       }

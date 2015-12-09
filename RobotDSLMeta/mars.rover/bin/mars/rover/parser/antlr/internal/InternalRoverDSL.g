@@ -952,6 +952,16 @@ ruleAction returns [EObject current=null]
         $current = $this_SubRoutineAction_5.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getMeasureActionParserRuleCall_6()); 
+    }
+    this_MeasureAction_6=ruleMeasureAction
+    { 
+        $current = $this_MeasureAction_6.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -1287,6 +1297,37 @@ ruleSubRoutineAction returns [EObject current=null]
 
 )
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleMeasureAction
+entryRuleMeasureAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMeasureActionRule()); }
+	 iv_ruleMeasureAction=ruleMeasureAction 
+	 { $current=$iv_ruleMeasureAction.current; } 
+	 EOF 
+;
+
+// Rule MeasureAction
+ruleMeasureAction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getMeasureActionAccess().getMeasureActionAction_0(),
+            $current);
+    }
+)	otherlv_1='Measure' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getMeasureActionAccess().getMeasureKeyword_1());
+    }
+)
 ;
 
 
@@ -1864,34 +1905,52 @@ ruleBVBracket returns [EObject current=null]
 ruleSensor returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='ColorIDSensor' 
+((	enumLiteral_0='ColorID' 
 	{
         $current = grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='LightSensor' 
+    |(	enumLiteral_1='LeftLight' 
 	{
-        $current = grammarAccess.getSensorAccess().getLIGHTSENSOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getSensorAccess().getLIGHTSENSOREnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='UltraSonicSensor' 
+    |(	enumLiteral_2='RightLight' 
 	{
-        $current = grammarAccess.getSensorAccess().getULTRASONICSENSOREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getSensorAccess().getULTRASONICSENSOREnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2()); 
     }
 )
-    |(	enumLiteral_3='TouchSensorL' 
+    |(	enumLiteral_3='FrontUS' 
 	{
-        $current = grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_3()); 
+        $current = grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3()); 
     }
 )
-    |(	enumLiteral_4='TouchSensorR' 
+    |(	enumLiteral_4='RearUS' 
 	{
-        $current = grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_4, grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_4()); 
+        $current = grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='LeftTouch' 
+	{
+        $current = grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='RightTouch' 
+	{
+        $current = grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='Angle' 
+	{
+        $current = grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7()); 
     }
 ));
 

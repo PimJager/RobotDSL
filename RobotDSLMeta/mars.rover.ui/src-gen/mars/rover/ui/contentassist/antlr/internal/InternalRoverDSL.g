@@ -588,6 +588,34 @@ finally {
 
 
 
+// Entry rule entryRuleMeasureAction
+entryRuleMeasureAction 
+:
+{ before(grammarAccess.getMeasureActionRule()); }
+	 ruleMeasureAction
+{ after(grammarAccess.getMeasureActionRule()); } 
+	 EOF 
+;
+
+// Rule MeasureAction
+ruleMeasureAction
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getMeasureActionAccess().getGroup()); }
+(rule__MeasureAction__Group__0)
+{ after(grammarAccess.getMeasureActionAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleValueExpression
 entryRuleValueExpression 
 :
@@ -1070,6 +1098,12 @@ rule__Action__Alternatives
 { after(grammarAccess.getActionAccess().getSubRoutineActionParserRuleCall_5()); }
 )
 
+    |(
+{ before(grammarAccess.getActionAccess().getMeasureActionParserRuleCall_6()); }
+	ruleMeasureAction
+{ after(grammarAccess.getActionAccess().getMeasureActionParserRuleCall_6()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1144,37 +1178,58 @@ rule__Sensor__Alternatives
 :
 (
 { before(grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0()); }
-(	'ColorIDSensor' 
+(	'ColorID' 
 )
 { after(grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0()); }
 )
 
     |(
-{ before(grammarAccess.getSensorAccess().getLIGHTSENSOREnumLiteralDeclaration_1()); }
-(	'LightSensor' 
+{ before(grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1()); }
+(	'LeftLight' 
 )
-{ after(grammarAccess.getSensorAccess().getLIGHTSENSOREnumLiteralDeclaration_1()); }
-)
-
-    |(
-{ before(grammarAccess.getSensorAccess().getULTRASONICSENSOREnumLiteralDeclaration_2()); }
-(	'UltraSonicSensor' 
-)
-{ after(grammarAccess.getSensorAccess().getULTRASONICSENSOREnumLiteralDeclaration_2()); }
+{ after(grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1()); }
 )
 
     |(
-{ before(grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_3()); }
-(	'TouchSensorL' 
+{ before(grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2()); }
+(	'RightLight' 
 )
-{ after(grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_3()); }
+{ after(grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2()); }
 )
 
     |(
-{ before(grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_4()); }
-(	'TouchSensorR' 
+{ before(grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3()); }
+(	'FrontUS' 
 )
-{ after(grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_4()); }
+{ after(grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3()); }
+)
+
+    |(
+{ before(grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4()); }
+(	'RearUS' 
+)
+{ after(grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4()); }
+)
+
+    |(
+{ before(grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5()); }
+(	'LeftTouch' 
+)
+{ after(grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5()); }
+)
+
+    |(
+{ before(grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6()); }
+(	'RightTouch' 
+)
+{ after(grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6()); }
+)
+
+    |(
+{ before(grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7()); }
+(	'Angle' 
+)
+{ after(grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7()); }
 )
 
 ;
@@ -3381,6 +3436,71 @@ rule__SubRoutineAction__Group__1__Impl
 { before(grammarAccess.getSubRoutineActionAccess().getRoutineAssignment_1()); }
 (rule__SubRoutineAction__RoutineAssignment_1)
 { after(grammarAccess.getSubRoutineActionAccess().getRoutineAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+rule__MeasureAction__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MeasureAction__Group__0__Impl
+	rule__MeasureAction__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MeasureAction__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMeasureActionAccess().getMeasureActionAction_0()); }
+(
+
+)
+{ after(grammarAccess.getMeasureActionAccess().getMeasureActionAction_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__MeasureAction__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__MeasureAction__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__MeasureAction__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMeasureActionAccess().getMeasureKeyword_1()); }
+
+	'Measure' 
+
+{ after(grammarAccess.getMeasureActionAccess().getMeasureKeyword_1()); }
 )
 
 ;

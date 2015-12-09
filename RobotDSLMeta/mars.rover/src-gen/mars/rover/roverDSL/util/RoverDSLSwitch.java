@@ -222,6 +222,15 @@ public class RoverDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RoverDSLPackage.MEASURE_ACTION:
+      {
+        MeasureAction measureAction = (MeasureAction)theEObject;
+        T result = caseMeasureAction(measureAction);
+        if (result == null) result = caseAction(measureAction);
+        if (result == null) result = caseExpression(measureAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case RoverDSLPackage.VALUE_EXPRESSION:
       {
         ValueExpression valueExpression = (ValueExpression)theEObject;
@@ -597,6 +606,22 @@ public class RoverDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSubRoutineAction(SubRoutineAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Measure Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Measure Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMeasureAction(MeasureAction object)
   {
     return null;
   }

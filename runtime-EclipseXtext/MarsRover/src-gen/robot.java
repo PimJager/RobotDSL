@@ -44,7 +44,8 @@ public class Robot {
 		init();
 		
 		Behavior[] bList = {
-								new DriveForward()
+								new DriveForward(),
+																	new DetectLine()
 									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
@@ -105,6 +106,27 @@ public class DriveForward extends Behavior {
 		if(_supressed) return; 
 		Robot.leftMotor.forward();
 		Robot.rightMotor.forward();
+		// supressioncontext = false
+	}
+	@Override
+	public void suppress() {_supressed = true;}
+}
+public class DetectLine extends Behavior {
+	private boolean _supressed = true;
+	@Override
+	public boolean takeControl() {
+		Robot.updateSensor();
+		return 	Robot.iToB(Robot._running) &&
+				Robot.iToB(Robot.bToI(Robot.iToB((Robot.leftLightSamples[0] < (3/10))) || Robot.iToB((Robot.rightLightSamples[0] < (3/10))));
+	}
+	@Override
+	public void action() {
+		_supressed = false;
+		Robot.updateSensor();
+		// supressioncontext = true
+		if(_supressed) return; 
+		Robot.leftMotor.stop();
+		Robot.rightMotor.sop();
 		// supressioncontext = false
 	}
 	@Override

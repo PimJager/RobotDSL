@@ -15,11 +15,14 @@ Robot:
 BehaviorName : name = ID;
 
 enum Sensor :
-      COLORIDSENSOR = 'ColorIDSensor'
-    | LIGHTSENSOR = 'LightSensor'
-    | ULTRASONICSENSOR = 'UltraSonicSensor'
-	| TOUCHSENSORL = 'TouchSensorL'
-    | TOUCHSENSORR = 'TouchSensorR'	
+      COLORIDSENSOR = 'ColorID'
+    | LEFTLIGHTSENSOR = 'LeftLight'
+    | RIGHTLIGHTSENSOR = 'RightLight'
+    | FRONTULTRASONICSENSOR = 'FrontUS'
+    | REARULTRASONICSENSOR = 'RearUS'
+	| TOUCHSENSORL = 'LeftTouch'
+    | TOUCHSENSORR = 'RightTouch'
+    | ANGLESENSOR = 'Angle'    	
 ;
 
 Motor : m = EMotor;
@@ -75,6 +78,7 @@ Action :
 	| SAccelerationAction
 	| SSpeedAction
 	| SubRoutineAction
+	| MeasureAction
 ;
 ForwardAction : {ForwardAction} 
 	'Forward' (motor = Motor)? 
@@ -84,6 +88,7 @@ StopAction : {StopAction} 'Stop' (motor = Motor)? ;
 SAccelerationAction : 'Set Acceleration' (motor = Motor)? v = ValueExpression ;
 SSpeedAction : 'Set Speed' (motor = Motor)? v = ValueExpression ;
 SubRoutineAction : 'Do' routine = [SubRoutine] ;
+MeasureAction : {MeasureAction} 'Measure';
 
 ValueExpression :	Blevel1;
 

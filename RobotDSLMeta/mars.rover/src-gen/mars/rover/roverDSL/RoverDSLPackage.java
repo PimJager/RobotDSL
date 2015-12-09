@@ -725,6 +725,25 @@ public interface RoverDSLPackage extends EPackage
   int SUB_ROUTINE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link mars.rover.roverDSL.impl.MeasureActionImpl <em>Measure Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.impl.MeasureActionImpl
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getMeasureAction()
+   * @generated
+   */
+  int MEASURE_ACTION = 19;
+
+  /**
+   * The number of structural features of the '<em>Measure Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEASURE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link mars.rover.roverDSL.impl.ValueExpressionImpl <em>Value Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -732,7 +751,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getValueExpression()
    * @generated
    */
-  int VALUE_EXPRESSION = 19;
+  int VALUE_EXPRESSION = 20;
 
   /**
    * The number of structural features of the '<em>Value Expression</em>' class.
@@ -751,7 +770,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBNotExpr()
    * @generated
    */
-  int BNOT_EXPR = 20;
+  int BNOT_EXPR = 21;
 
   /**
    * The feature id for the '<em><b>Sub</b></em>' containment reference.
@@ -779,7 +798,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVLiteral()
    * @generated
    */
-  int BV_LITERAL = 21;
+  int BV_LITERAL = 22;
 
   /**
    * The feature id for the '<em><b>Neg</b></em>' attribute.
@@ -825,7 +844,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBBLiteral()
    * @generated
    */
-  int BB_LITERAL = 22;
+  int BB_LITERAL = 23;
 
   /**
    * The feature id for the '<em><b>BValue</b></em>' attribute.
@@ -853,7 +872,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVarLiteral()
    * @generated
    */
-  int BVAR_LITERAL = 23;
+  int BVAR_LITERAL = 24;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -881,7 +900,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBSensorLiteral()
    * @generated
    */
-  int BSENSOR_LITERAL = 24;
+  int BSENSOR_LITERAL = 25;
 
   /**
    * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -909,7 +928,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVBracket()
    * @generated
    */
-  int BV_BRACKET = 25;
+  int BV_BRACKET = 26;
 
   /**
    * The feature id for the '<em><b>Bsub</b></em>' containment reference.
@@ -937,7 +956,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getExpressionBinOp()
    * @generated
    */
-  int EXPRESSION_BIN_OP = 26;
+  int EXPRESSION_BIN_OP = 27;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -983,7 +1002,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getExpressionBinComp()
    * @generated
    */
-  int EXPRESSION_BIN_COMP = 27;
+  int EXPRESSION_BIN_COMP = 28;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1029,7 +1048,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSensor()
    * @generated
    */
-  int SENSOR = 28;
+  int SENSOR = 29;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.EMotor <em>EMotor</em>}' enum.
@@ -1039,7 +1058,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getEMotor()
    * @generated
    */
-  int EMOTOR = 29;
+  int EMOTOR = 30;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.BBinaryOp <em>BBinary Op</em>}' enum.
@@ -1049,7 +1068,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBBinaryOp()
    * @generated
    */
-  int BBINARY_OP = 30;
+  int BBINARY_OP = 31;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.CompareOp <em>Compare Op</em>}' enum.
@@ -1059,7 +1078,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getCompareOp()
    * @generated
    */
-  int COMPARE_OP = 31;
+  int COMPARE_OP = 32;
 
 
   /**
@@ -1625,6 +1644,16 @@ public interface RoverDSLPackage extends EPackage
    * @generated
    */
   EReference getSubRoutineAction_Routine();
+
+  /**
+   * Returns the meta object for class '{@link mars.rover.roverDSL.MeasureAction <em>Measure Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Measure Action</em>'.
+   * @see mars.rover.roverDSL.MeasureAction
+   * @generated
+   */
+  EClass getMeasureAction();
 
   /**
    * Returns the meta object for class '{@link mars.rover.roverDSL.ValueExpression <em>Value Expression</em>}'.
@@ -2394,6 +2423,16 @@ public interface RoverDSLPackage extends EPackage
      * @generated
      */
     EReference SUB_ROUTINE_ACTION__ROUTINE = eINSTANCE.getSubRoutineAction_Routine();
+
+    /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.impl.MeasureActionImpl <em>Measure Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.impl.MeasureActionImpl
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getMeasureAction()
+     * @generated
+     */
+    EClass MEASURE_ACTION = eINSTANCE.getMeasureAction();
 
     /**
      * The meta object literal for the '{@link mars.rover.roverDSL.impl.ValueExpressionImpl <em>Value Expression</em>}' class.

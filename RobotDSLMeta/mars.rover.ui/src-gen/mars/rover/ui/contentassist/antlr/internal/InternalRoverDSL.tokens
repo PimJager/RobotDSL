@@ -1,46 +1,50 @@
-' = '=32
-'!='=23
-'&&'=20
-'('=52
-')'=53
-'/'=51
-':'=35
-';'=33
-'<'=27
-'<='=26
-'=='=22
-'>'=25
-'>='=24
-'Behaviors:'=28
-'ColorIDSensor'=13
-'Constants:'=31
-'Do'=49
-'Does:'=37
-'ELSE'=42
-'Forward'=44
-'IF'=39
-'Implementation for'=34
-'LeftMotor'=18
-'LightSensor'=14
-'NOT'=50
-'RightMotor'=19
-'Rotate'=45
-'Routine '=38
-'Set Acceleration'=47
-'Set Speed'=48
-'Stop'=46
-'Stops when:'=29
-'Takes control when:'=36
-'TouchSensorL'=16
-'TouchSensorR'=17
-'UltraSonicSensor'=15
-'Variables:'=30
-'WHILE'=43
-'neg'=55
-'wait'=54
-'{'=40
-'||'=21
-'}'=41
+' = '=35
+'!='=26
+'&&'=23
+'('=56
+')'=57
+'/'=55
+':'=38
+';'=36
+'<'=30
+'<='=29
+'=='=25
+'>'=28
+'>='=27
+'Angle'=20
+'Behaviors:'=31
+'ColorID'=13
+'Constants:'=34
+'Do'=52
+'Does:'=40
+'ELSE'=45
+'Forward'=47
+'FrontUS'=16
+'IF'=42
+'Implementation for'=37
+'LeftLight'=14
+'LeftMotor'=21
+'LeftTouch'=18
+'Measure'=53
+'NOT'=54
+'RearUS'=17
+'RightLight'=15
+'RightMotor'=22
+'RightTouch'=19
+'Rotate'=48
+'Routine '=41
+'Set Acceleration'=50
+'Set Speed'=51
+'Stop'=49
+'Stops when:'=32
+'Takes control when:'=39
+'Variables:'=33
+'WHILE'=46
+'neg'=59
+'wait'=58
+'{'=43
+'||'=24
+'}'=44
 RULE_ALPHA=7
 RULE_ANY_OTHER=12
 RULE_BOOL_LITERAL=6
@@ -93,3 +97,7 @@ T__52=52
 T__53=53
 T__54=54
 T__55=55
+T__56=56
+T__57=57
+T__58=58
+T__59=59

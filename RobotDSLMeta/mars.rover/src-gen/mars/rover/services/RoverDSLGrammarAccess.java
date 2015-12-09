@@ -492,14 +492,15 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSAccelerationActionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cSSpeedActionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cSubRoutineActionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cMeasureActionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
 		/// *Var :
 		//	'VAR' name = ID ' = ' v = Expression
 		//;* / Action:
-		//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction;
+		//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction
+		//ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ForwardAction
@@ -519,6 +520,9 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//SubRoutineAction
 		public RuleCall getSubRoutineActionParserRuleCall_5() { return cSubRoutineActionParserRuleCall_5; }
+
+		//MeasureAction
+		public RuleCall getMeasureActionParserRuleCall_6() { return cMeasureActionParserRuleCall_6; }
 	}
 
 	public class ForwardActionElements extends AbstractParserRuleElementFinder {
@@ -707,6 +711,26 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getRoutineSubRoutineIDTerminalRuleCall_1_0_1() { return cRoutineSubRoutineIDTerminalRuleCall_1_0_1; }
+	}
+
+	public class MeasureActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MeasureAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cMeasureActionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cMeasureKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//MeasureAction:
+		//	{MeasureAction} "Measure";
+		@Override public ParserRule getRule() { return rule; }
+
+		//{MeasureAction} "Measure"
+		public Group getGroup() { return cGroup; }
+
+		//{MeasureAction}
+		public Action getMeasureActionAction_0() { return cMeasureActionAction_0; }
+
+		//"Measure"
+		public Keyword getMeasureKeyword_1() { return cMeasureKeyword_1; }
 	}
 
 	public class ValueExpressionElements extends AbstractParserRuleElementFinder {
@@ -1002,54 +1026,79 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Sensor");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cCOLORIDSENSOREnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cCOLORIDSENSORColorIDSensorKeyword_0_0 = (Keyword)cCOLORIDSENSOREnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cLIGHTSENSOREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cLIGHTSENSORLightSensorKeyword_1_0 = (Keyword)cLIGHTSENSOREnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cULTRASONICSENSOREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cULTRASONICSENSORUltraSonicSensorKeyword_2_0 = (Keyword)cULTRASONICSENSOREnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cTOUCHSENSORLEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cTOUCHSENSORLTouchSensorLKeyword_3_0 = (Keyword)cTOUCHSENSORLEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cTOUCHSENSORREnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cTOUCHSENSORRTouchSensorRKeyword_4_0 = (Keyword)cTOUCHSENSORREnumLiteralDeclaration_4.eContents().get(0);
+		private final Keyword cCOLORIDSENSORColorIDKeyword_0_0 = (Keyword)cCOLORIDSENSOREnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cLEFTLIGHTSENSOREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cLEFTLIGHTSENSORLeftLightKeyword_1_0 = (Keyword)cLEFTLIGHTSENSOREnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cRIGHTLIGHTSENSOREnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cRIGHTLIGHTSENSORRightLightKeyword_2_0 = (Keyword)cRIGHTLIGHTSENSOREnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cFRONTULTRASONICSENSOREnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cFRONTULTRASONICSENSORFrontUSKeyword_3_0 = (Keyword)cFRONTULTRASONICSENSOREnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cREARULTRASONICSENSOREnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cREARULTRASONICSENSORRearUSKeyword_4_0 = (Keyword)cREARULTRASONICSENSOREnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cTOUCHSENSORLEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cTOUCHSENSORLLeftTouchKeyword_5_0 = (Keyword)cTOUCHSENSORLEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cTOUCHSENSORREnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cTOUCHSENSORRRightTouchKeyword_6_0 = (Keyword)cTOUCHSENSORREnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cANGLESENSOREnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cANGLESENSORAngleKeyword_7_0 = (Keyword)cANGLESENSOREnumLiteralDeclaration_7.eContents().get(0);
 		
 		//enum Sensor:
-		//	COLORIDSENSOR="ColorIDSensor" | LIGHTSENSOR="LightSensor" | ULTRASONICSENSOR="UltraSonicSensor" |
-		//	TOUCHSENSORL="TouchSensorL" | TOUCHSENSORR="TouchSensorR";
+		//	COLORIDSENSOR="ColorID" | LEFTLIGHTSENSOR="LeftLight" | RIGHTLIGHTSENSOR="RightLight" |
+		//	FRONTULTRASONICSENSOR="FrontUS" | REARULTRASONICSENSOR="RearUS" | TOUCHSENSORL="LeftTouch" | TOUCHSENSORR="RightTouch"
+		//	| ANGLESENSOR="Angle";
 		public EnumRule getRule() { return rule; }
 
-		//COLORIDSENSOR="ColorIDSensor" | LIGHTSENSOR="LightSensor" | ULTRASONICSENSOR="UltraSonicSensor" |
-		//TOUCHSENSORL="TouchSensorL" | TOUCHSENSORR="TouchSensorR"
+		//COLORIDSENSOR="ColorID" | LEFTLIGHTSENSOR="LeftLight" | RIGHTLIGHTSENSOR="RightLight" | FRONTULTRASONICSENSOR="FrontUS"
+		//| REARULTRASONICSENSOR="RearUS" | TOUCHSENSORL="LeftTouch" | TOUCHSENSORR="RightTouch" | ANGLESENSOR="Angle"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//COLORIDSENSOR="ColorIDSensor"
+		//COLORIDSENSOR="ColorID"
 		public EnumLiteralDeclaration getCOLORIDSENSOREnumLiteralDeclaration_0() { return cCOLORIDSENSOREnumLiteralDeclaration_0; }
 
-		//"ColorIDSensor"
-		public Keyword getCOLORIDSENSORColorIDSensorKeyword_0_0() { return cCOLORIDSENSORColorIDSensorKeyword_0_0; }
+		//"ColorID"
+		public Keyword getCOLORIDSENSORColorIDKeyword_0_0() { return cCOLORIDSENSORColorIDKeyword_0_0; }
 
-		//LIGHTSENSOR="LightSensor"
-		public EnumLiteralDeclaration getLIGHTSENSOREnumLiteralDeclaration_1() { return cLIGHTSENSOREnumLiteralDeclaration_1; }
+		//LEFTLIGHTSENSOR="LeftLight"
+		public EnumLiteralDeclaration getLEFTLIGHTSENSOREnumLiteralDeclaration_1() { return cLEFTLIGHTSENSOREnumLiteralDeclaration_1; }
 
-		//"LightSensor"
-		public Keyword getLIGHTSENSORLightSensorKeyword_1_0() { return cLIGHTSENSORLightSensorKeyword_1_0; }
+		//"LeftLight"
+		public Keyword getLEFTLIGHTSENSORLeftLightKeyword_1_0() { return cLEFTLIGHTSENSORLeftLightKeyword_1_0; }
 
-		//ULTRASONICSENSOR="UltraSonicSensor"
-		public EnumLiteralDeclaration getULTRASONICSENSOREnumLiteralDeclaration_2() { return cULTRASONICSENSOREnumLiteralDeclaration_2; }
+		//RIGHTLIGHTSENSOR="RightLight"
+		public EnumLiteralDeclaration getRIGHTLIGHTSENSOREnumLiteralDeclaration_2() { return cRIGHTLIGHTSENSOREnumLiteralDeclaration_2; }
 
-		//"UltraSonicSensor"
-		public Keyword getULTRASONICSENSORUltraSonicSensorKeyword_2_0() { return cULTRASONICSENSORUltraSonicSensorKeyword_2_0; }
+		//"RightLight"
+		public Keyword getRIGHTLIGHTSENSORRightLightKeyword_2_0() { return cRIGHTLIGHTSENSORRightLightKeyword_2_0; }
 
-		//TOUCHSENSORL="TouchSensorL"
-		public EnumLiteralDeclaration getTOUCHSENSORLEnumLiteralDeclaration_3() { return cTOUCHSENSORLEnumLiteralDeclaration_3; }
+		//FRONTULTRASONICSENSOR="FrontUS"
+		public EnumLiteralDeclaration getFRONTULTRASONICSENSOREnumLiteralDeclaration_3() { return cFRONTULTRASONICSENSOREnumLiteralDeclaration_3; }
 
-		//"TouchSensorL"
-		public Keyword getTOUCHSENSORLTouchSensorLKeyword_3_0() { return cTOUCHSENSORLTouchSensorLKeyword_3_0; }
+		//"FrontUS"
+		public Keyword getFRONTULTRASONICSENSORFrontUSKeyword_3_0() { return cFRONTULTRASONICSENSORFrontUSKeyword_3_0; }
 
-		//TOUCHSENSORR="TouchSensorR"
-		public EnumLiteralDeclaration getTOUCHSENSORREnumLiteralDeclaration_4() { return cTOUCHSENSORREnumLiteralDeclaration_4; }
+		//REARULTRASONICSENSOR="RearUS"
+		public EnumLiteralDeclaration getREARULTRASONICSENSOREnumLiteralDeclaration_4() { return cREARULTRASONICSENSOREnumLiteralDeclaration_4; }
 
-		//"TouchSensorR"
-		public Keyword getTOUCHSENSORRTouchSensorRKeyword_4_0() { return cTOUCHSENSORRTouchSensorRKeyword_4_0; }
+		//"RearUS"
+		public Keyword getREARULTRASONICSENSORRearUSKeyword_4_0() { return cREARULTRASONICSENSORRearUSKeyword_4_0; }
+
+		//TOUCHSENSORL="LeftTouch"
+		public EnumLiteralDeclaration getTOUCHSENSORLEnumLiteralDeclaration_5() { return cTOUCHSENSORLEnumLiteralDeclaration_5; }
+
+		//"LeftTouch"
+		public Keyword getTOUCHSENSORLLeftTouchKeyword_5_0() { return cTOUCHSENSORLLeftTouchKeyword_5_0; }
+
+		//TOUCHSENSORR="RightTouch"
+		public EnumLiteralDeclaration getTOUCHSENSORREnumLiteralDeclaration_6() { return cTOUCHSENSORREnumLiteralDeclaration_6; }
+
+		//"RightTouch"
+		public Keyword getTOUCHSENSORRRightTouchKeyword_6_0() { return cTOUCHSENSORRRightTouchKeyword_6_0; }
+
+		//ANGLESENSOR="Angle"
+		public EnumLiteralDeclaration getANGLESENSOREnumLiteralDeclaration_7() { return cANGLESENSOREnumLiteralDeclaration_7; }
+
+		//"Angle"
+		public Keyword getANGLESENSORAngleKeyword_7_0() { return cANGLESENSORAngleKeyword_7_0; }
 	}
 
 	public class EMotorElements extends AbstractEnumRuleElementFinder {
@@ -1189,6 +1238,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final SAccelerationActionElements pSAccelerationAction;
 	private final SSpeedActionElements pSSpeedAction;
 	private final SubRoutineActionElements pSubRoutineAction;
+	private final MeasureActionElements pMeasureAction;
 	private final ValueExpressionElements pValueExpression;
 	private final Blevel1Elements pBlevel1;
 	private final Blevel2Elements pBlevel2;
@@ -1235,6 +1285,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSAccelerationAction = new SAccelerationActionElements();
 		this.pSSpeedAction = new SSpeedActionElements();
 		this.pSubRoutineAction = new SubRoutineActionElements();
+		this.pMeasureAction = new MeasureActionElements();
 		this.pValueExpression = new ValueExpressionElements();
 		this.pBlevel1 = new Blevel1Elements();
 		this.pBlevel2 = new Blevel2Elements();
@@ -1301,8 +1352,9 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum Sensor:
-	//	COLORIDSENSOR="ColorIDSensor" | LIGHTSENSOR="LightSensor" | ULTRASONICSENSOR="UltraSonicSensor" |
-	//	TOUCHSENSORL="TouchSensorL" | TOUCHSENSORR="TouchSensorR";
+	//	COLORIDSENSOR="ColorID" | LEFTLIGHTSENSOR="LeftLight" | RIGHTLIGHTSENSOR="RightLight" |
+	//	FRONTULTRASONICSENSOR="FrontUS" | REARULTRASONICSENSOR="RearUS" | TOUCHSENSORL="LeftTouch" | TOUCHSENSORR="RightTouch"
+	//	| ANGLESENSOR="Angle";
 	public SensorElements getSensorAccess() {
 		return unknownRuleSensor;
 	}
@@ -1426,7 +1478,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	/// *Var :
 	//	'VAR' name = ID ' = ' v = Expression
 	//;* / Action:
-	//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction;
+	//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -1493,6 +1545,16 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getSubRoutineActionRule() {
 		return getSubRoutineActionAccess().getRule();
+	}
+
+	//MeasureAction:
+	//	{MeasureAction} "Measure";
+	public MeasureActionElements getMeasureActionAccess() {
+		return pMeasureAction;
+	}
+	
+	public ParserRule getMeasureActionRule() {
+		return getMeasureActionAccess().getRule();
 	}
 
 	//ValueExpression:

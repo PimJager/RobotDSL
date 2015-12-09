@@ -194,6 +194,15 @@ public interface RoverDSLFactory extends EFactory
   SubRoutineAction createSubRoutineAction();
 
   /**
+   * Returns a new object of class '<em>Measure Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Measure Action</em>'.
+   * @generated
+   */
+  MeasureAction createMeasureAction();
+
+  /**
    * Returns a new object of class '<em>Value Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

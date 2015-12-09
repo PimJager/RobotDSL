@@ -21,6 +21,7 @@ import mars.rover.roverDSL.ForwardAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
 import mars.rover.roverDSL.Implementation;
+import mars.rover.roverDSL.MeasureAction;
 import mars.rover.roverDSL.Motor;
 import mars.rover.roverDSL.Robot;
 import mars.rover.roverDSL.RotateAction;
@@ -185,6 +186,13 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * @generated
    */
   private EClass subRoutineActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass measureActionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -875,6 +883,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getMeasureAction()
+  {
+    return measureActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getValueExpression()
   {
     return valueExpressionEClass;
@@ -1242,6 +1260,8 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     subRoutineActionEClass = createEClass(SUB_ROUTINE_ACTION);
     createEReference(subRoutineActionEClass, SUB_ROUTINE_ACTION__ROUTINE);
 
+    measureActionEClass = createEClass(MEASURE_ACTION);
+
     valueExpressionEClass = createEClass(VALUE_EXPRESSION);
 
     bNotExprEClass = createEClass(BNOT_EXPR);
@@ -1321,6 +1341,7 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     sAccelerationActionEClass.getESuperTypes().add(this.getAction());
     sSpeedActionEClass.getESuperTypes().add(this.getAction());
     subRoutineActionEClass.getESuperTypes().add(this.getAction());
+    measureActionEClass.getESuperTypes().add(this.getAction());
     bNotExprEClass.getESuperTypes().add(this.getValueExpression());
     bvLiteralEClass.getESuperTypes().add(this.getValueExpression());
     bbLiteralEClass.getESuperTypes().add(this.getValueExpression());
@@ -1403,6 +1424,8 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     initEClass(subRoutineActionEClass, SubRoutineAction.class, "SubRoutineAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSubRoutineAction_Routine(), this.getSubRoutine(), null, "routine", null, 0, 1, SubRoutineAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(measureActionEClass, MeasureAction.class, "MeasureAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(valueExpressionEClass, ValueExpression.class, "ValueExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(bNotExprEClass, BNotExpr.class, "BNotExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1438,10 +1461,13 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     // Initialize enums and add enum literals
     initEEnum(sensorEEnum, Sensor.class, "Sensor");
     addEEnumLiteral(sensorEEnum, Sensor.COLORIDSENSOR);
-    addEEnumLiteral(sensorEEnum, Sensor.LIGHTSENSOR);
-    addEEnumLiteral(sensorEEnum, Sensor.ULTRASONICSENSOR);
+    addEEnumLiteral(sensorEEnum, Sensor.LEFTLIGHTSENSOR);
+    addEEnumLiteral(sensorEEnum, Sensor.RIGHTLIGHTSENSOR);
+    addEEnumLiteral(sensorEEnum, Sensor.FRONTULTRASONICSENSOR);
+    addEEnumLiteral(sensorEEnum, Sensor.REARULTRASONICSENSOR);
     addEEnumLiteral(sensorEEnum, Sensor.TOUCHSENSORL);
     addEEnumLiteral(sensorEEnum, Sensor.TOUCHSENSORR);
+    addEEnumLiteral(sensorEEnum, Sensor.ANGLESENSOR);
 
     initEEnum(eMotorEEnum, EMotor.class, "EMotor");
     addEEnumLiteral(eMotorEEnum, EMotor.LEFTMOTOR);

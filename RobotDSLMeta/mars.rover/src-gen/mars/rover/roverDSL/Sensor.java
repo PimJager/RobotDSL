@@ -27,27 +27,47 @@ public enum Sensor implements Enumerator
    * @generated
    * @ordered
    */
-  COLORIDSENSOR(0, "COLORIDSENSOR", "ColorIDSensor"),
+  COLORIDSENSOR(0, "COLORIDSENSOR", "ColorID"),
 
   /**
-   * The '<em><b>LIGHTSENSOR</b></em>' literal object.
+   * The '<em><b>LEFTLIGHTSENSOR</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #LIGHTSENSOR_VALUE
+   * @see #LEFTLIGHTSENSOR_VALUE
    * @generated
    * @ordered
    */
-  LIGHTSENSOR(1, "LIGHTSENSOR", "LightSensor"),
+  LEFTLIGHTSENSOR(1, "LEFTLIGHTSENSOR", "LeftLight"),
 
   /**
-   * The '<em><b>ULTRASONICSENSOR</b></em>' literal object.
+   * The '<em><b>RIGHTLIGHTSENSOR</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ULTRASONICSENSOR_VALUE
+   * @see #RIGHTLIGHTSENSOR_VALUE
    * @generated
    * @ordered
    */
-  ULTRASONICSENSOR(2, "ULTRASONICSENSOR", "UltraSonicSensor"),
+  RIGHTLIGHTSENSOR(2, "RIGHTLIGHTSENSOR", "RightLight"),
+
+  /**
+   * The '<em><b>FRONTULTRASONICSENSOR</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FRONTULTRASONICSENSOR_VALUE
+   * @generated
+   * @ordered
+   */
+  FRONTULTRASONICSENSOR(3, "FRONTULTRASONICSENSOR", "FrontUS"),
+
+  /**
+   * The '<em><b>REARULTRASONICSENSOR</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #REARULTRASONICSENSOR_VALUE
+   * @generated
+   * @ordered
+   */
+  REARULTRASONICSENSOR(4, "REARULTRASONICSENSOR", "RearUS"),
 
   /**
    * The '<em><b>TOUCHSENSORL</b></em>' literal object.
@@ -57,7 +77,7 @@ public enum Sensor implements Enumerator
    * @generated
    * @ordered
    */
-  TOUCHSENSORL(3, "TOUCHSENSORL", "TouchSensorL"),
+  TOUCHSENSORL(5, "TOUCHSENSORL", "LeftTouch"),
 
   /**
    * The '<em><b>TOUCHSENSORR</b></em>' literal object.
@@ -67,7 +87,17 @@ public enum Sensor implements Enumerator
    * @generated
    * @ordered
    */
-  TOUCHSENSORR(4, "TOUCHSENSORR", "TouchSensorR");
+  TOUCHSENSORR(6, "TOUCHSENSORR", "RightTouch"),
+
+  /**
+   * The '<em><b>ANGLESENSOR</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ANGLESENSOR_VALUE
+   * @generated
+   * @ordered
+   */
+  ANGLESENSOR(7, "ANGLESENSOR", "Angle");
 
   /**
    * The '<em><b>COLORIDSENSOR</b></em>' literal value.
@@ -78,41 +108,71 @@ public enum Sensor implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #COLORIDSENSOR
-   * @model literal="ColorIDSensor"
+   * @model literal="ColorID"
    * @generated
    * @ordered
    */
   public static final int COLORIDSENSOR_VALUE = 0;
 
   /**
-   * The '<em><b>LIGHTSENSOR</b></em>' literal value.
+   * The '<em><b>LEFTLIGHTSENSOR</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>LIGHTSENSOR</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>LEFTLIGHTSENSOR</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #LIGHTSENSOR
-   * @model literal="LightSensor"
+   * @see #LEFTLIGHTSENSOR
+   * @model literal="LeftLight"
    * @generated
    * @ordered
    */
-  public static final int LIGHTSENSOR_VALUE = 1;
+  public static final int LEFTLIGHTSENSOR_VALUE = 1;
 
   /**
-   * The '<em><b>ULTRASONICSENSOR</b></em>' literal value.
+   * The '<em><b>RIGHTLIGHTSENSOR</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>ULTRASONICSENSOR</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>RIGHTLIGHTSENSOR</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #ULTRASONICSENSOR
-   * @model literal="UltraSonicSensor"
+   * @see #RIGHTLIGHTSENSOR
+   * @model literal="RightLight"
    * @generated
    * @ordered
    */
-  public static final int ULTRASONICSENSOR_VALUE = 2;
+  public static final int RIGHTLIGHTSENSOR_VALUE = 2;
+
+  /**
+   * The '<em><b>FRONTULTRASONICSENSOR</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>FRONTULTRASONICSENSOR</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FRONTULTRASONICSENSOR
+   * @model literal="FrontUS"
+   * @generated
+   * @ordered
+   */
+  public static final int FRONTULTRASONICSENSOR_VALUE = 3;
+
+  /**
+   * The '<em><b>REARULTRASONICSENSOR</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>REARULTRASONICSENSOR</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #REARULTRASONICSENSOR
+   * @model literal="RearUS"
+   * @generated
+   * @ordered
+   */
+  public static final int REARULTRASONICSENSOR_VALUE = 4;
 
   /**
    * The '<em><b>TOUCHSENSORL</b></em>' literal value.
@@ -123,11 +183,11 @@ public enum Sensor implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #TOUCHSENSORL
-   * @model literal="TouchSensorL"
+   * @model literal="LeftTouch"
    * @generated
    * @ordered
    */
-  public static final int TOUCHSENSORL_VALUE = 3;
+  public static final int TOUCHSENSORL_VALUE = 5;
 
   /**
    * The '<em><b>TOUCHSENSORR</b></em>' literal value.
@@ -138,11 +198,26 @@ public enum Sensor implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #TOUCHSENSORR
-   * @model literal="TouchSensorR"
+   * @model literal="RightTouch"
    * @generated
    * @ordered
    */
-  public static final int TOUCHSENSORR_VALUE = 4;
+  public static final int TOUCHSENSORR_VALUE = 6;
+
+  /**
+   * The '<em><b>ANGLESENSOR</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>ANGLESENSOR</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ANGLESENSOR
+   * @model literal="Angle"
+   * @generated
+   * @ordered
+   */
+  public static final int ANGLESENSOR_VALUE = 7;
 
   /**
    * An array of all the '<em><b>Sensor</b></em>' enumerators.
@@ -154,10 +229,13 @@ public enum Sensor implements Enumerator
     new Sensor[]
     {
       COLORIDSENSOR,
-      LIGHTSENSOR,
-      ULTRASONICSENSOR,
+      LEFTLIGHTSENSOR,
+      RIGHTLIGHTSENSOR,
+      FRONTULTRASONICSENSOR,
+      REARULTRASONICSENSOR,
       TOUCHSENSORL,
       TOUCHSENSORR,
+      ANGLESENSOR,
     };
 
   /**
@@ -223,10 +301,13 @@ public enum Sensor implements Enumerator
     switch (value)
     {
       case COLORIDSENSOR_VALUE: return COLORIDSENSOR;
-      case LIGHTSENSOR_VALUE: return LIGHTSENSOR;
-      case ULTRASONICSENSOR_VALUE: return ULTRASONICSENSOR;
+      case LEFTLIGHTSENSOR_VALUE: return LEFTLIGHTSENSOR;
+      case RIGHTLIGHTSENSOR_VALUE: return RIGHTLIGHTSENSOR;
+      case FRONTULTRASONICSENSOR_VALUE: return FRONTULTRASONICSENSOR;
+      case REARULTRASONICSENSOR_VALUE: return REARULTRASONICSENSOR;
       case TOUCHSENSORL_VALUE: return TOUCHSENSORL;
       case TOUCHSENSORR_VALUE: return TOUCHSENSORR;
+      case ANGLESENSOR_VALUE: return ANGLESENSOR;
     }
     return null;
   }

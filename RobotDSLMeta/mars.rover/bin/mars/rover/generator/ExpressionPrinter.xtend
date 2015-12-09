@@ -13,6 +13,7 @@ import mars.rover.roverDSL.SubRoutineAction
 import mars.rover.roverDSL.ValExpr
 import mars.rover.roverDSL.WHILEExpression
 import org.eclipse.emf.common.util.EList
+import mars.rover.roverDSL.MeasureAction
 
 class ExpressionPrinter  {
 	
@@ -103,6 +104,10 @@ class ExpressionPrinter  {
 		
 	def static dispatch CharSequence print(SubRoutineAction a)'''
 		Robot.«a.routine.name»();
+	'''
+	
+	def static dispatch CharSequence print(MeasureAction a)'''
+		//INSERT MEASURE ACTION CODE HERE!
 	'''
 	
 	def static CharSequence printExprList(EList<Expression> es)'''

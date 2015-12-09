@@ -170,6 +170,11 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
         return createSubRoutineActionAdapter();
       }
       @Override
+      public Adapter caseMeasureAction(MeasureAction object)
+      {
+        return createMeasureActionAdapter();
+      }
+      @Override
       public Adapter caseValueExpression(ValueExpression object)
       {
         return createValueExpressionAdapter();
@@ -517,6 +522,21 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSubRoutineActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.MeasureAction <em>Measure Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.rover.roverDSL.MeasureAction
+   * @generated
+   */
+  public Adapter createMeasureActionAdapter()
   {
     return null;
   }
