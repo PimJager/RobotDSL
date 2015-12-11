@@ -37,7 +37,7 @@ class RobotGenerator {
 	    public static EV3UltrasonicSensor rearUSSensor 	= new EV3UltrasonicSensor(LocalEV3.get().getPort("S3"));
 	    public static EV3GyroSensor gyroSensor			= new EV3GyroSensor(LocalEV3.get().getPort("S4"));
 	    
-	    //local sensor values
+	    //local sensor providers and samples
 	    static SampleProvider llsProvider  				= Robot.leftLightSensor.getRedMode();
 		static float[] leftLightSamples 				= new float[llsProvider.sampleSize()];
 		static SampleProvider rlsProvider  				= Robot.rightLightSensor.getRedMode();
@@ -47,10 +47,14 @@ class RobotGenerator {
 		static SampleProvider gyroProvider 				= Robot.gyroSensor.getAngleAndRateMode();
 		static float[] gyroSamples 						= new float[gyroProvider.sampleSize()];
 		//remote sensor values
-	    static float frontUSSample;
-	    static float touchLeftSample;
-	    static float touchRightSample;
-	    static float colorSample;
+	    static int frontUSSample;
+	    static int touchLeftSample;
+	    static int touchRightSample;
+	    static int colorSample;
+	    static int leftLightSample;
+	    static int rightLightSample;
+	    static int rearUSSample;
+	    static int gyroSample;
 	
 		//bluetooth
 		public static NXTConnection connection;
@@ -92,6 +96,16 @@ class RobotGenerator {
 	    	rlsProvider.fetchSample(rightLightSamples, 0);
 	    	rearUSProvider.fetchSample(rearUSSamples, 0);
 	    	gyroProvider.fetchSample(gyroSamples, 0);
+	    	leftLightSample = (int) (leftLightSamples[0] * 100);
+	    	rightLightSample = (int) (leftLightSamples[0] * 100);
+	    	rearUSSample = (int) (rearUSSamples[0] * 100);
+	    	gyroSample = (int) gyroSamples[0];
+	    	synchronized (valsLock) {
+				frontUSSample = (int) (vals.frontUS * 100);
+				touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
+				touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
+				colorSample = (int) vals.color;
+			}
 		}
 		
 		public static void init(){
@@ -137,19 +151,15 @@ class RobotGenerator {
 			public void run() {
 				while(true) {
 					updateSensors();
-					synchronized (valsLock) {
-						LCD.drawString("LeftL: " + leftLightSamples[0], 0, 0);
-						LCD.drawString("RightL: " + rightLightSamples[0], 0, 1);
-						LCD.drawString("RearUs: " + rearUSSamples[0], 0, 2);
-						LCD.drawString("Gyro: " + gyroSamples[0], 0, 3);
-						int tl = vals.touchLeft > 0.9 ? 1 : 0;
-						int tr = vals.touchRight > 0.9 ? 1 : 0;
-						LCD.drawString("Touch L:"+tl+" R:"+tr, 0, 4);
-						LCD.drawString("FrontUS: " + vals.frontUS, 0, 5);
-						LCD.drawString("color:" + vals.color, 0, 6);
-						LCD.drawString("" + Robot.normalise(_running), 0, 7);	
-						LCD.drawString(currentBehaviour, 1, 7);
-					}
+					LCD.drawString("LeftL: " + leftLightSample, 0, 0);
+					LCD.drawString("RightL: " + rightLightSample, 0, 1);
+					LCD.drawString("RearUs: " + rearUSSample, 0, 2);
+					LCD.drawString("Gyro: " + gyroSample, 0, 3);
+					LCD.drawString("Touch L:"+touchLeftSample+" R:"+touchRightSample, 0, 4);
+					LCD.drawString("FrontUS: " + frontUSSample, 0, 5);
+					LCD.drawString("color:" + colorSample, 0, 6);
+					LCD.drawString("" + Robot.normalise(_running), 0, 7);	
+					LCD.drawString(currentBehaviour, 1, 7);
 				}
 			}	
 		});

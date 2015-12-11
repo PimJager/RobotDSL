@@ -1,24 +1,56 @@
+import java.io.DataInputStream;
+
+import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
-import lejos.utility.Delay;
+import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.MotorPort;
-import lejos.hardware.sensor.EV3ColorSensor;
-import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3GyroSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.hardware.sensor.NXTLightSensor;
+import lejos.remote.nxt.BTConnector;
+import lejos.remote.nxt.NXTConnection;
 import lejos.robotics.SampleProvider;
 import lejos.robotics.subsumption.Arbitrator;
 import lejos.robotics.subsumption.Behavior;
 
 public class Robot {
 
-	public static EV3LargeRegulatedMotor leftMotor = new EV3LargeRegulatedMotor(MotorPort.A);
-    public static EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.D);
+	public static EV3LargeRegulatedMotor leftMotor 	= new EV3LargeRegulatedMotor(MotorPort.A);
+    public static EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.B);
+    public static EV3LargeRegulatedMotor mesMotor 	= new EV3LargeRegulatedMotor(MotorPort.C);
     
-    public static EV3TouchSensor touchLeftSensor = new EV3TouchSensor(LocalEV3.get().getPort("S1"));
-    public static EV3TouchSensor touchRightSensor = new EV3TouchSensor(LocalEV3.get().getPort("S4"));
-    public static EV3ColorSensor colorSensor = new EV3ColorSensor(LocalEV3.get().getPort("S2"));
-    public static EV3UltrasonicSensor distanceSensor = new EV3UltrasonicSensor(LocalEV3.get().getPort("S3"));
+    public static NXTLightSensor leftLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S1"));
+    public static NXTLightSensor rightLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S2"));
+    public static EV3UltrasonicSensor rearUSSensor 	= new EV3UltrasonicSensor(LocalEV3.get().getPort("S3"));
+    public static EV3GyroSensor gyroSensor			= new EV3GyroSensor(LocalEV3.get().getPort("S4"));
+    
+    //local sensor providers and samples
+    static SampleProvider llsProvider  				= Robot.leftLightSensor.getRedMode();
+	static float[] leftLightSamples 				= new float[llsProvider.sampleSize()];
+	static SampleProvider rlsProvider  				= Robot.rightLightSensor.getRedMode();
+	static float[] rightLightSamples 				= new float[rlsProvider.sampleSize()];
+	static SampleProvider rearUSProvider 		 	= Robot.rearUSSensor.getDistanceMode();
+	static float[] rearUSSamples 					= new float[rearUSProvider.sampleSize()];
+	static SampleProvider gyroProvider 				= Robot.gyroSensor.getAngleAndRateMode();
+	static float[] gyroSamples 						= new float[gyroProvider.sampleSize()];
+	//remote sensor values
+    static int frontUSSample;
+    static int touchLeftSample;
+    static int touchRightSample;
+    static int colorSample;
+    static int leftLightSample;
+    static int rightLightSample;
+    static int rearUSSample;
+    static int gyroSample;
+
+	//bluetooth
+	public static NXTConnection connection;
+	private static DataInputStream btIn;
+	private static SensorValues vals = new SensorValues();
+	private static Object valsLock = new Object();
+	
+	public static String currentBehaviour = "Setup";
 
 	//CONSTANTS
     //generated from constant list
@@ -26,8 +58,8 @@ public class Robot {
     public static int ROTATE_ACC = (6000);
     public static int DEFAULT_SPEED = (300);
     public static int DEFAULT_ACC = (800);
-    public static int LINE_TRESHOLD = (3/10);
-    public static int US_TRESHOLD = (1/10);
+    public static int LINE_TRESHOLD = (30);
+    public static int US_TRESHOLD = (10);
     public static int YELLOW = (1);
     public static int RED = (0);
     public static int BLUE = (2);
@@ -40,17 +72,6 @@ public class Robot {
     public static int redFound;
     public static int blueFound;
     
-    private static SampleProvider color  		= colorSensor.getColorIDMode();
-    private static SampleProvider light  		= colorSensor.getColorIDMode(); //TODO: change to light mode
-    private static SampleProvider touchL 		= touchLeftSensor.getTouchMode();
-	private static SampleProvider touchR 		= touchRightSensor.getTouchMode();
-	private static SampleProvider distance  	= distanceSensor.getDistanceMode();
-	public static float[] colorSensorSample 	= new float[color.sampleSize()];
-	public static float[] lightSensorSample 	= new float[light.sampleSize()];
-	public static float[] touchSensorLSample 	= new float[touchL.sampleSize()];
-	public static float[] touchSensorRSample	= new float[touchR.sampleSize()];
-	public static float[] ultraSonicSensorSample = new float[distance.sampleSize()];
-    
     	    
     public static void main(String[] args) {
 		init();
@@ -60,32 +81,109 @@ public class Robot {
 																	new DetectObject(),
 																	new DetectColor(),
 																	new DriveForward()
-									,new DefaultQuitBehaviour_() 
+									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
 		ar.start();
 	}
 	
-	public static void updateSensor(){
-		touchL.fetchSample(touchSensorLSample, 0);
-		touchR.fetchSample(touchSensorRSample, 0);
-		distance.fetchSample(ultraSonicSensorSample, 0);
-		color.fetchSample(colorSensorSample, 0);
-		//TODO: Update light sensor
+	public static void updateSensors(){
+		llsProvider.fetchSample(leftLightSamples, 0);
+    	rlsProvider.fetchSample(rightLightSamples, 0);
+    	rearUSProvider.fetchSample(rearUSSamples, 0);
+    	gyroProvider.fetchSample(gyroSamples, 0);
+    	leftLightSample = (int) (leftLightSamples[0] * 100);
+    	rightLightSample = (int) (leftLightSamples[0] * 100);
+    	rearUSSample = (int) (rearUSSamples[0] * 100);
+    	gyroSample = (int) gyroSamples[0];
+    	synchronized (valsLock) {
+			frontUSSample = (int) (vals.frontUS * 100);
+			touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
+			touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
+			colorSample = (int) vals.color;
+		}
 	}
 	
 	public static void init(){
-		leftMotor.rotateTo(0);
-		rightMotor.rotateTo(0);
+    	btSetup();
+    	gyroSensor.reset();
+    	listener.start();
+    	updateLCD.start();
 	}
 	
-	public static int bToI(boolean b){
+    public static void btSetup(){
+    	LCD.drawString("Connecting to brick2", 0, 8);
+    	
+    	BTConnector connector = new BTConnector();
+    	connection = connector.waitForConnection(10000, NXTConnection.RAW);
+    	
+    	LCD.clear();
+    	if(connection == null) {
+    		LCD.drawString("CONNECTION CANCELLED!!!", 0, 8);
+    		Sound.buzz();
+    		while(true) {}
+    	} else {
+    		btIn = connection.openDataInputStream();
+    		Sound.beep();
+    	}
+    }
+	
+	public static int normalise(int i){
+		return i;
+	}
+	public static int normalise(boolean b){
 		if(b) return 1;
-		elese return 0;
+		else return 0;
 	}
-	public static boolean iToB(boolean i){
-		return i > 0;	
+	public static boolean makeBool(int i){
+		return i > 0;
 	}
+	public static boolean makeBool(boolean b){
+		return b;
+	}
+	
+    static Thread updateLCD = new Thread(new Runnable() {
+		@Override
+		public void run() {
+			while(true) {
+				updateSensors();
+				LCD.drawString("LeftL: " + leftLightSample, 0, 0);
+				LCD.drawString("RightL: " + rightLightSample, 0, 1);
+				LCD.drawString("RearUs: " + rearUSSample, 0, 2);
+				LCD.drawString("Gyro: " + gyroSample, 0, 3);
+				LCD.drawString("Touch L:"+touchLeftSample+" R:"+touchRightSample, 0, 4);
+				LCD.drawString("FrontUS: " + frontUSSample, 0, 5);
+				LCD.drawString("color:" + colorSample, 0, 6);
+				LCD.drawString("" + Robot.normalise(_running), 0, 7);	
+				LCD.drawString(currentBehaviour, 1, 7);
+			}
+		}	
+	});
+	
+	static Thread listener = new Thread(new Runnable() {
+		@Override
+		public void run() {
+			while(true) {
+				byte[] buffer = new byte[256]; //allows for 128char strings
+				int i = 0;
+				byte b;
+				try{
+					while ((b = btIn.readByte()) != '\n') {
+						buffer[i] = b;
+						i++;
+					}
+					String rec = new String(buffer);
+					synchronized (valsLock) {
+						vals = SensorValues.fromString(rec);
+						if(vals == null) Sound.buzz();
+					}
+				} catch(Exception e) {
+					e.printStackTrace();
+					while(true) {}
+				}
+			}
+		}	
+	});
 	
 	//Generated list of subroutines
 	public static void beforeRotate(){
@@ -104,10 +202,10 @@ public class Robot {
 	}
 }
 	
-public class QDefaultQuitBehaviour_ extends Behavior {
+class DefaultQuitBehaviour implements Behavior {
 	@Override
 	public boolean takeControl() {
-		return Robot.iToB(Robot.bToI(Robot.iToB(Robot.bToI(Robot.iToB((Robot.yellowFound)) && Robot.iToB((Robot.redFound))) && Robot.iToB((Robot.blueFound)));
+		return Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool((Robot.yellowFound)) && Robot.makeBool((Robot.redFound)))) && Robot.makeBool((Robot.blueFound))));
 	}
 	@Override
 	public void action() {
@@ -118,28 +216,28 @@ public class QDefaultQuitBehaviour_ extends Behavior {
 }
 
 //Generated behaviours
-public class DetectLine extends Behavior {
+class DetectLine implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(((4) < Robot.touchSensorLSample[0]));
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.normalise((4) < (Robot.TouchSensorL)));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
-		//TODO: update sensors more often?
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DetectLine";
 		// supressioncontext = true
 		Robot.beforeRotate();
 		
 		if(_supressed) return; 
 		Robot.leftMotor.stop();
-		Robot.rightMotor.sop();
+		Robot.rightMotor.stop();
 		
 		if(_supressed) return; 
-		Robot.leftMotor.rotate((-130),true););
+		Robot.leftMotor.rotate((-130),true);
 		
 		if(_supressed) return; 
 		Robot.rightMotor.rotate((-20),false);
@@ -148,41 +246,41 @@ public class DetectLine extends Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-public class DetectObject extends Behavior {
+class DetectObject implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(Robot.bToI(Robot.iToB(Robot.bToI(Robot.iToB((Robot.ultraSonicSensorSample[0] < (Robot.US_TRESHOLD))) OR Robot.iToB(Robot.touchSensorLSample[0])) OR Robot.iToB(Robot.touchSensorRSample[0]));
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise((Robot.UltraSonicSensor) < (Robot.US_TRESHOLD))) || Robot.makeBool((Robot.TouchSensorL)))) || Robot.makeBool((Robot.TouchSensorR))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
-		//TODO: update sensors more often?
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DetectObject";
 		// supressioncontext = true
 		Robot.beforeRotate();
 		
 		if(_supressed) return; 
 		Robot.leftMotor.stop();
-		Robot.rightMotor.sop();
+		Robot.rightMotor.stop();
 		
 		if(_supressed) return; 
-		Robot.leftMotor.rotate((-80),true););
+		Robot.leftMotor.rotate((-80),true);
 		
 		if(_supressed) return; 
 		Robot.rightMotor.rotate((-80),false);
 		
-		if(Robot.iToB(Robot.bToI(!Robot.iToB(Robot.touchSensorLSample[0])))){
+		if(Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.TouchSensorL))))){
 			if(_supressed) return; 
-			Robot.leftMotor.rotate((-130),true););
+			Robot.leftMotor.rotate((-130),true);
 			
 			if(_supressed) return; 
 			Robot.rightMotor.rotate((-20),false);
 		} else {
 			if(_supressed) return; 
-			Robot.leftMotor.rotate((-20),true););
+			Robot.leftMotor.rotate((-20),true);
 			
 			if(_supressed) return; 
 			Robot.rightMotor.rotate((-130),false);
@@ -192,19 +290,19 @@ public class DetectObject extends Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-public class DriveForward extends Behavior {
+class DriveForward implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(1);
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(1);
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
-		//TODO: update sensors more often?
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DriveForward";
 		// supressioncontext = true
 		Robot.setDefaults();
 		
@@ -216,29 +314,29 @@ public class DriveForward extends Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-public class DetectColor extends Behavior {
+class DetectColor implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(Robot.bToI(Robot.iToB(Robot.bToI(Robot.iToB((Robot.colorSensorSample[0] == (Robot.RED))) OR Robot.iToB((Robot.colorSensorSample[0] == (Robot.YELLOW)))) OR Robot.iToB((Robot.colorSensorSample[0] == (Robot.BLUE))));
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.RED))) || Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.YELLOW))))) || Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.BLUE)))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
-		//TODO: update sensors more often?
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DetectColor";
 		// supressioncontext = true
-		if(Robot.iToB((Robot.colorSensorSample[0] == (Robot.RED)))){
+		if(Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.RED)))){
 			Robot.redFound = 1;
 		} else {
 		}
-		if(Robot.iToB((Robot.colorSensorSample[0] == (Robot.BLUE)))){
+		if(Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.BLUE)))){
 			Robot.blueFound = 1;
 		} else {
 		}
-		if(Robot.iToB((Robot.colorSensorSample[0] == (Robot.YELLOW)))){
+		if(Robot.makeBool(Robot.normalise((Robot.ColorIDSensor) == (Robot.YELLOW)))){
 			Robot.yellowFound = 1;
 		} else {
 		}
@@ -247,3 +345,30 @@ public class DetectColor extends Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
+
+class SensorValues {
+
+	float touchLeft;
+	float touchRight;
+	float frontUS;
+	float color;
+	
+	static SensorValues fromString(String s){
+		String[] parts = s.split(";");
+		if(parts.length < 4) return null;
+		SensorValues ret = new SensorValues();
+		ret.touchLeft = Float.parseFloat(parts[0]);
+		ret.touchRight = Float.parseFloat(parts[1]);
+		ret.frontUS = Float.parseFloat(parts[2]);
+		ret.color = Float.parseFloat(parts[3]);
+		return ret;
+	}
+	
+	static String toString(SensorValues s){
+		int touchL = s.touchLeft > 0.9 ? 1 : 0;
+		int touchR = s.touchRight > 0.9 ? 1 : 0;
+		return ""+touchL+";"+touchR+";"+Float.toString(s.frontUS)+";"+Float.toString(s.color);
+	}
+	
+}
+

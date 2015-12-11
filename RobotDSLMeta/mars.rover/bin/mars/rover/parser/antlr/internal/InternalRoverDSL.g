@@ -1708,29 +1708,7 @@ ruleBVLiteral returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_2='/' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0());
-    }
-(
-(
-		lv_fraction_3_0=RULE_INT
-		{
-			newLeafNode(lv_fraction_3_0, grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getBVLiteralRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"fraction",
-        		lv_fraction_3_0, 
-        		"INT");
-	    }
-
-)
-))?)
+))
 ;
 
 

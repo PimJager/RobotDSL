@@ -115,8 +115,8 @@ Blevel4 returns ValueExpression :
 	| BSensorLiteral
 	| BVBracket
 ;
-
-BVLiteral : neg ?= ('neg')? aValue = INT ('/' fraction = INT)?;
+										//remove comment for fractional values
+BVLiteral : neg ?= ('neg')? aValue = INT; //('/' fraction = INT)?;
 BBLiteral : bValue = BOOL_LITERAL;
 BVarLiteral : var = ID ;
 BSensorLiteral : sensor = Sensor;

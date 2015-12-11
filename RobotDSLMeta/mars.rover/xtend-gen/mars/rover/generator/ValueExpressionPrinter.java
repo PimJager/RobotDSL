@@ -73,21 +73,8 @@ public class ValueExpressionPrinter {
         _builder.append("-");
       }
     }
-    {
-      int _fraction = e.getFraction();
-      boolean _notEquals = (_fraction != 0);
-      if (_notEquals) {
-        _builder.append("(float)");
-        int _aValue = e.getAValue();
-        _builder.append(_aValue, "");
-        _builder.append("/(float)");
-        int _fraction_1 = e.getFraction();
-        _builder.append(_fraction_1, "");
-      } else {
-        int _aValue_1 = e.getAValue();
-        _builder.append(_aValue_1, "");
-      }
-    }
+    int _aValue = e.getAValue();
+    _builder.append(_aValue, "");
     _builder.append(")");
     return _builder;
   }

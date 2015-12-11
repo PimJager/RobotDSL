@@ -3921,7 +3921,6 @@ rule__BVLiteral__Group__1
     }
 :
 	rule__BVLiteral__Group__1__Impl
-	rule__BVLiteral__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -3936,99 +3935,6 @@ rule__BVLiteral__Group__1__Impl
 { before(grammarAccess.getBVLiteralAccess().getAValueAssignment_1()); }
 (rule__BVLiteral__AValueAssignment_1)
 { after(grammarAccess.getBVLiteralAccess().getAValueAssignment_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__BVLiteral__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BVLiteral__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BVLiteral__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBVLiteralAccess().getGroup_2()); }
-(rule__BVLiteral__Group_2__0)?
-{ after(grammarAccess.getBVLiteralAccess().getGroup_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-
-
-rule__BVLiteral__Group_2__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BVLiteral__Group_2__0__Impl
-	rule__BVLiteral__Group_2__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BVLiteral__Group_2__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0()); }
-
-	'/' 
-
-{ after(grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__BVLiteral__Group_2__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BVLiteral__Group_2__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BVLiteral__Group_2__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBVLiteralAccess().getFractionAssignment_2_1()); }
-(rule__BVLiteral__FractionAssignment_2_1)
-{ after(grammarAccess.getBVLiteralAccess().getFractionAssignment_2_1()); }
 )
 
 ;
@@ -4774,21 +4680,6 @@ rule__BVLiteral__AValueAssignment_1
 (
 { before(grammarAccess.getBVLiteralAccess().getAValueINTTerminalRuleCall_1_0()); }
 	RULE_INT{ after(grammarAccess.getBVLiteralAccess().getAValueINTTerminalRuleCall_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BVLiteral__FractionAssignment_2_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); }
-	RULE_INT{ after(grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); }
 )
 
 ;

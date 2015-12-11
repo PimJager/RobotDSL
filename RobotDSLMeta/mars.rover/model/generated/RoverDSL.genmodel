@@ -111,7 +111,6 @@
     <genClasses ecoreClass="RoverDSL.ecore#//BVLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//BVLiteral/neg"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//BVLiteral/aValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//BVLiteral/fraction"/>
     </genClasses>
     <genClasses ecoreClass="RoverDSL.ecore#//BBLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//BBLiteral/bValue"/>

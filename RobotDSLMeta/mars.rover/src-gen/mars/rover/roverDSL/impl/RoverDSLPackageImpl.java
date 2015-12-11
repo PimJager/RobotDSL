@@ -953,16 +953,6 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBVLiteral_Fraction()
-  {
-    return (EAttribute)bvLiteralEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getBBLiteral()
   {
     return bbLiteralEClass;
@@ -1270,7 +1260,6 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     bvLiteralEClass = createEClass(BV_LITERAL);
     createEAttribute(bvLiteralEClass, BV_LITERAL__NEG);
     createEAttribute(bvLiteralEClass, BV_LITERAL__AVALUE);
-    createEAttribute(bvLiteralEClass, BV_LITERAL__FRACTION);
 
     bbLiteralEClass = createEClass(BB_LITERAL);
     createEAttribute(bbLiteralEClass, BB_LITERAL__BVALUE);
@@ -1434,7 +1423,6 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     initEClass(bvLiteralEClass, BVLiteral.class, "BVLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBVLiteral_Neg(), ecorePackage.getEBoolean(), "neg", null, 0, 1, BVLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBVLiteral_AValue(), ecorePackage.getEInt(), "aValue", null, 0, 1, BVLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBVLiteral_Fraction(), ecorePackage.getEInt(), "fraction", null, 0, 1, BVLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bbLiteralEClass, BBLiteral.class, "BBLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBBLiteral_BValue(), ecorePackage.getEBoolean(), "bValue", null, 0, 1, BBLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

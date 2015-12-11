@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link mars.rover.roverDSL.impl.BVLiteralImpl#isNeg <em>Neg</em>}</li>
  *   <li>{@link mars.rover.roverDSL.impl.BVLiteralImpl#getAValue <em>AValue</em>}</li>
- *   <li>{@link mars.rover.roverDSL.impl.BVLiteralImpl#getFraction <em>Fraction</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,26 +66,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
    * @ordered
    */
   protected int aValue = AVALUE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getFraction() <em>Fraction</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFraction()
-   * @generated
-   * @ordered
-   */
-  protected static final int FRACTION_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getFraction() <em>Fraction</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFraction()
-   * @generated
-   * @ordered
-   */
-  protected int fraction = FRACTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,29 +139,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getFraction()
-  {
-    return fraction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFraction(int newFraction)
-  {
-    int oldFraction = fraction;
-    fraction = newFraction;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RoverDSLPackage.BV_LITERAL__FRACTION, oldFraction, fraction));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -192,8 +148,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
         return isNeg();
       case RoverDSLPackage.BV_LITERAL__AVALUE:
         return getAValue();
-      case RoverDSLPackage.BV_LITERAL__FRACTION:
-        return getFraction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -213,9 +167,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
         return;
       case RoverDSLPackage.BV_LITERAL__AVALUE:
         setAValue((Integer)newValue);
-        return;
-      case RoverDSLPackage.BV_LITERAL__FRACTION:
-        setFraction((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,9 +188,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
       case RoverDSLPackage.BV_LITERAL__AVALUE:
         setAValue(AVALUE_EDEFAULT);
         return;
-      case RoverDSLPackage.BV_LITERAL__FRACTION:
-        setFraction(FRACTION_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -258,8 +206,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
         return neg != NEG_EDEFAULT;
       case RoverDSLPackage.BV_LITERAL__AVALUE:
         return aValue != AVALUE_EDEFAULT;
-      case RoverDSLPackage.BV_LITERAL__FRACTION:
-        return fraction != FRACTION_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -279,8 +225,6 @@ public class BVLiteralImpl extends ValueExpressionImpl implements BVLiteral
     result.append(neg);
     result.append(", aValue: ");
     result.append(aValue);
-    result.append(", fraction: ");
-    result.append(fraction);
     result.append(')');
     return result.toString();
   }

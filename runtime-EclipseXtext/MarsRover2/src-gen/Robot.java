@@ -178,14 +178,14 @@ public class Robot {
 	
 	//Generated list of subroutines
 	public static void beforeRatate(){
-		Robot.leftMotor.setSpeed((Robot.ROTATE_SPEED));
-		Robot.rightMotor.setSpeed((Robot.ROTATE_SPEED));
-		
 		Robot.leftMotor.setAcceleration((Robot.ROTATE_ACC));
 		Robot.rightMotor.setAcceleration((Robot.ROTATE_ACC));
 		
 		Robot.leftMotor.stop();
 		Robot.rightMotor.stop();
+		
+		Robot.leftMotor.setSpeed((Robot.ROTATE_SPEED));
+		Robot.rightMotor.setSpeed((Robot.ROTATE_SPEED));
 	}
 	public static void setDefaults(){
 		Robot.leftMotor.setSpeed((Robot.DEFAULT_SPEED));
@@ -252,15 +252,15 @@ class DetectOutsideLine implements Behavior {
 		
 		if(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD)))){
 			if(_supressed) return; 
-			Robot.leftMotor.rotate((-130),true);
+			Robot.leftMotor.rotate((-300),true);
 			
 			if(_supressed) return; 
-			Robot.rightMotor.rotate((-20),false);
+			Robot.rightMotor.rotate((-130),false);
 		} else {
 		}
 		if(Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))){
 			if(_supressed) return; 
-			Robot.leftMotor.rotate((-20),true);
+			Robot.leftMotor.rotate((-300),true);
 			
 			if(_supressed) return; 
 			Robot.rightMotor.rotate((-130),false);

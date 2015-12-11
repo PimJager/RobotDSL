@@ -1,36 +1,35 @@
 ' = '=17
-'!='=55
-'&&'=52
-'('=40
-')'=41
-'/'=39
+'!='=54
+'&&'=51
+'('=39
+')'=40
 ':'=20
 ';'=18
-'<'=59
-'<='=58
-'=='=54
-'>'=57
-'>='=56
-'Angle'=49
+'<'=58
+'<='=57
+'=='=53
+'>'=56
+'>='=55
+'Angle'=48
 'Behaviors:'=13
-'ColorID'=42
+'ColorID'=41
 'Constants:'=15
 'Do'=35
 'Does:'=22
 'ELSE'=27
 'Forward'=29
-'FrontUS'=45
+'FrontUS'=44
 'IF'=24
 'Implementation for'=19
-'LeftLight'=43
-'LeftMotor'=50
-'LeftTouch'=47
+'LeftLight'=42
+'LeftMotor'=49
+'LeftTouch'=46
 'Measure'=36
 'NOT'=37
-'RearUS'=46
-'RightLight'=44
-'RightMotor'=51
-'RightTouch'=48
+'RearUS'=45
+'RightLight'=43
+'RightMotor'=50
+'RightTouch'=47
 'Rotate'=30
 'Routine '=23
 'Set Acceleration'=33
@@ -43,7 +42,7 @@
 'neg'=38
 'wait'=31
 '{'=25
-'||'=53
+'||'=52
 '}'=26
 RULE_ALPHA=7
 RULE_ANY_OTHER=12
@@ -100,4 +99,3 @@ T__55=55
 T__56=56
 T__57=57
 T__58=58
-T__59=59

@@ -70,7 +70,6 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBlevel3Access().getGroup(), "rule__Blevel3__Group__0");
 					put(grammarAccess.getBlevel3Access().getGroup_1(), "rule__Blevel3__Group_1__0");
 					put(grammarAccess.getBVLiteralAccess().getGroup(), "rule__BVLiteral__Group__0");
-					put(grammarAccess.getBVLiteralAccess().getGroup_2(), "rule__BVLiteral__Group_2__0");
 					put(grammarAccess.getBVBracketAccess().getGroup(), "rule__BVBracket__Group__0");
 					put(grammarAccess.getRobotAccess().getBehaviorOrderAssignment_1(), "rule__Robot__BehaviorOrderAssignment_1");
 					put(grammarAccess.getRobotAccess().getGlobalsAssignment_2_1(), "rule__Robot__GlobalsAssignment_2_1");
@@ -113,7 +112,6 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBlevel3Access().getRightAssignment_1_2(), "rule__Blevel3__RightAssignment_1_2");
 					put(grammarAccess.getBVLiteralAccess().getNegAssignment_0(), "rule__BVLiteral__NegAssignment_0");
 					put(grammarAccess.getBVLiteralAccess().getAValueAssignment_1(), "rule__BVLiteral__AValueAssignment_1");
-					put(grammarAccess.getBVLiteralAccess().getFractionAssignment_2_1(), "rule__BVLiteral__FractionAssignment_2_1");
 					put(grammarAccess.getBBLiteralAccess().getBValueAssignment(), "rule__BBLiteral__BValueAssignment");
 					put(grammarAccess.getBVarLiteralAccess().getVarAssignment(), "rule__BVarLiteral__VarAssignment");
 					put(grammarAccess.getBSensorLiteralAccess().getSensorAssignment(), "rule__BSensorLiteral__SensorAssignment");

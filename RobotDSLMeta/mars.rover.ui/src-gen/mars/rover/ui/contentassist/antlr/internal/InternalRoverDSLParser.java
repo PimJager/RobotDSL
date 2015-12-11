@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRoverDSLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_BOOL_LITERAL", "RULE_ALPHA", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ColorID'", "'LeftLight'", "'RightLight'", "'FrontUS'", "'RearUS'", "'LeftTouch'", "'RightTouch'", "'Angle'", "'LeftMotor'", "'RightMotor'", "'&&'", "'||'", "'=='", "'!='", "'>='", "'>'", "'<='", "'<'", "'Behaviors:'", "'Stops when:'", "'Variables:'", "'Constants:'", "' = '", "';'", "'Implementation for'", "':'", "'Takes control when:'", "'Does:'", "'Routine '", "'IF'", "'{'", "'}'", "'ELSE'", "'WHILE'", "'Forward'", "'Rotate'", "'Stop'", "'Set Acceleration'", "'Set Speed'", "'Do'", "'Measure'", "'NOT'", "'/'", "'('", "')'", "'wait'", "'neg'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_BOOL_LITERAL", "RULE_ALPHA", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ColorID'", "'LeftLight'", "'RightLight'", "'FrontUS'", "'RearUS'", "'LeftTouch'", "'RightTouch'", "'Angle'", "'LeftMotor'", "'RightMotor'", "'&&'", "'||'", "'=='", "'!='", "'>='", "'>'", "'<='", "'<'", "'Behaviors:'", "'Stops when:'", "'Variables:'", "'Constants:'", "' = '", "';'", "'Implementation for'", "':'", "'Takes control when:'", "'Does:'", "'Routine '", "'IF'", "'{'", "'}'", "'ELSE'", "'WHILE'", "'Forward'", "'Rotate'", "'Stop'", "'Set Acceleration'", "'Set Speed'", "'Do'", "'Measure'", "'NOT'", "'('", "')'", "'wait'", "'neg'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -52,7 +52,6 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final int T__17=17;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int T__59=59;
     public static final int RULE_INT=5;
     public static final int T__50=50;
     public static final int T__42=42;
@@ -2717,8 +2716,8 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             case 52:
             case 53:
             case 54:
-            case 56:
-            case 59:
+            case 55:
+            case 58:
                 {
                 alt1=1;
                 }
@@ -2842,8 +2841,8 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             case 19:
             case 20:
             case 54:
-            case 56:
-            case 59:
+            case 55:
+            case 58:
                 {
                 alt2=1;
                 }
@@ -3176,7 +3175,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             if ( (LA4_0==54) ) {
                 alt4=1;
             }
-            else if ( ((LA4_0>=RULE_ID && LA4_0<=RULE_BOOL_LITERAL)||(LA4_0>=13 && LA4_0<=20)||LA4_0==56||LA4_0==59) ) {
+            else if ( ((LA4_0>=RULE_ID && LA4_0<=RULE_BOOL_LITERAL)||(LA4_0>=13 && LA4_0<=20)||LA4_0==55||LA4_0==58) ) {
                 alt4=2;
             }
             else {
@@ -3252,7 +3251,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             int alt5=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
-            case 59:
+            case 58:
                 {
                 alt5=1;
                 }
@@ -3279,7 +3278,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 alt5=4;
                 }
                 break;
-            case 56:
+            case 55:
                 {
                 alt5=5;
                 }
@@ -5991,7 +5990,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( ((LA17_0>=RULE_ID && LA17_0<=RULE_BOOL_LITERAL)||(LA17_0>=13 && LA17_0<=20)||LA17_0==42||(LA17_0>=46 && LA17_0<=54)||LA17_0==56||LA17_0==59) ) {
+                if ( ((LA17_0>=RULE_ID && LA17_0<=RULE_BOOL_LITERAL)||(LA17_0>=13 && LA17_0<=20)||LA17_0==42||(LA17_0>=46 && LA17_0<=55)||LA17_0==58) ) {
                     alt17=1;
                 }
 
@@ -6349,7 +6348,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( ((LA18_0>=RULE_ID && LA18_0<=RULE_BOOL_LITERAL)||(LA18_0>=13 && LA18_0<=20)||LA18_0==42||(LA18_0>=46 && LA18_0<=54)||LA18_0==56||LA18_0==59) ) {
+                if ( ((LA18_0>=RULE_ID && LA18_0<=RULE_BOOL_LITERAL)||(LA18_0>=13 && LA18_0<=20)||LA18_0==42||(LA18_0>=46 && LA18_0<=55)||LA18_0==58) ) {
                     alt18=1;
                 }
 
@@ -6867,7 +6866,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 int alt19=2;
                 int LA19_0 = input.LA(1);
 
-                if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_BOOL_LITERAL)||(LA19_0>=13 && LA19_0<=20)||LA19_0==42||(LA19_0>=46 && LA19_0<=54)||LA19_0==56||LA19_0==59) ) {
+                if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_BOOL_LITERAL)||(LA19_0>=13 && LA19_0<=20)||LA19_0==42||(LA19_0>=46 && LA19_0<=55)||LA19_0==58) ) {
                     alt19=1;
                 }
 
@@ -7311,7 +7310,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 int alt21=2;
                 int LA21_0 = input.LA(1);
 
-                if ( ((LA21_0>=RULE_ID && LA21_0<=RULE_BOOL_LITERAL)||(LA21_0>=13 && LA21_0<=20)||LA21_0==42||(LA21_0>=46 && LA21_0<=54)||LA21_0==56||LA21_0==59) ) {
+                if ( ((LA21_0>=RULE_ID && LA21_0<=RULE_BOOL_LITERAL)||(LA21_0>=13 && LA21_0<=20)||LA21_0==42||(LA21_0>=46 && LA21_0<=55)||LA21_0==58) ) {
                     alt21=1;
                 }
 
@@ -7744,7 +7743,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( ((LA22_0>=RULE_ID && LA22_0<=RULE_BOOL_LITERAL)||(LA22_0>=13 && LA22_0<=20)||LA22_0==42||(LA22_0>=46 && LA22_0<=54)||LA22_0==56||LA22_0==59) ) {
+                if ( ((LA22_0>=RULE_ID && LA22_0<=RULE_BOOL_LITERAL)||(LA22_0>=13 && LA22_0<=20)||LA22_0==42||(LA22_0>=46 && LA22_0<=55)||LA22_0==58) ) {
                     alt22=1;
                 }
 
@@ -8639,7 +8638,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             int alt24=2;
             int LA24_0 = input.LA(1);
 
-            if ( (LA24_0==58) ) {
+            if ( (LA24_0==57) ) {
                 alt24=1;
             }
             switch (alt24) {
@@ -10767,7 +10766,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
             int alt30=2;
             int LA30_0 = input.LA(1);
 
-            if ( (LA30_0==59) ) {
+            if ( (LA30_0==58) ) {
                 alt30=1;
             }
             switch (alt30) {
@@ -10808,22 +10807,17 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVLiteral__Group__1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3918:1: rule__BVLiteral__Group__1 : rule__BVLiteral__Group__1__Impl rule__BVLiteral__Group__2 ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3918:1: rule__BVLiteral__Group__1 : rule__BVLiteral__Group__1__Impl ;
     public final void rule__BVLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3922:1: ( rule__BVLiteral__Group__1__Impl rule__BVLiteral__Group__2 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3923:2: rule__BVLiteral__Group__1__Impl rule__BVLiteral__Group__2
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3922:1: ( rule__BVLiteral__Group__1__Impl )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3923:2: rule__BVLiteral__Group__1__Impl
             {
             pushFollow(FOLLOW_rule__BVLiteral__Group__1__Impl_in_rule__BVLiteral__Group__18012);
             rule__BVLiteral__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__BVLiteral__Group__2_in_rule__BVLiteral__Group__18015);
-            rule__BVLiteral__Group__2();
 
             state._fsp--;
 
@@ -10846,23 +10840,23 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVLiteral__Group__1__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3930:1: rule__BVLiteral__Group__1__Impl : ( ( rule__BVLiteral__AValueAssignment_1 ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3929:1: rule__BVLiteral__Group__1__Impl : ( ( rule__BVLiteral__AValueAssignment_1 ) ) ;
     public final void rule__BVLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3934:1: ( ( ( rule__BVLiteral__AValueAssignment_1 ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3935:1: ( ( rule__BVLiteral__AValueAssignment_1 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3933:1: ( ( ( rule__BVLiteral__AValueAssignment_1 ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3934:1: ( ( rule__BVLiteral__AValueAssignment_1 ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3935:1: ( ( rule__BVLiteral__AValueAssignment_1 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3936:1: ( rule__BVLiteral__AValueAssignment_1 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3934:1: ( ( rule__BVLiteral__AValueAssignment_1 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3935:1: ( rule__BVLiteral__AValueAssignment_1 )
             {
              before(grammarAccess.getBVLiteralAccess().getAValueAssignment_1()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3937:1: ( rule__BVLiteral__AValueAssignment_1 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3937:2: rule__BVLiteral__AValueAssignment_1
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3936:1: ( rule__BVLiteral__AValueAssignment_1 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3936:2: rule__BVLiteral__AValueAssignment_1
             {
-            pushFollow(FOLLOW_rule__BVLiteral__AValueAssignment_1_in_rule__BVLiteral__Group__1__Impl8042);
+            pushFollow(FOLLOW_rule__BVLiteral__AValueAssignment_1_in_rule__BVLiteral__Group__1__Impl8039);
             rule__BVLiteral__AValueAssignment_1();
 
             state._fsp--;
@@ -10892,268 +10886,22 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__BVLiteral__Group__1__Impl"
 
 
-    // $ANTLR start "rule__BVLiteral__Group__2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3947:1: rule__BVLiteral__Group__2 : rule__BVLiteral__Group__2__Impl ;
-    public final void rule__BVLiteral__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3951:1: ( rule__BVLiteral__Group__2__Impl )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3952:2: rule__BVLiteral__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__BVLiteral__Group__2__Impl_in_rule__BVLiteral__Group__28072);
-            rule__BVLiteral__Group__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group__2"
-
-
-    // $ANTLR start "rule__BVLiteral__Group__2__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3958:1: rule__BVLiteral__Group__2__Impl : ( ( rule__BVLiteral__Group_2__0 )? ) ;
-    public final void rule__BVLiteral__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3962:1: ( ( ( rule__BVLiteral__Group_2__0 )? ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3963:1: ( ( rule__BVLiteral__Group_2__0 )? )
-            {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3963:1: ( ( rule__BVLiteral__Group_2__0 )? )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3964:1: ( rule__BVLiteral__Group_2__0 )?
-            {
-             before(grammarAccess.getBVLiteralAccess().getGroup_2()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3965:1: ( rule__BVLiteral__Group_2__0 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
-
-            if ( (LA31_0==55) ) {
-                alt31=1;
-            }
-            switch (alt31) {
-                case 1 :
-                    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3965:2: rule__BVLiteral__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__BVLiteral__Group_2__0_in_rule__BVLiteral__Group__2__Impl8099);
-                    rule__BVLiteral__Group_2__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getBVLiteralAccess().getGroup_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group__2__Impl"
-
-
-    // $ANTLR start "rule__BVLiteral__Group_2__0"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3981:1: rule__BVLiteral__Group_2__0 : rule__BVLiteral__Group_2__0__Impl rule__BVLiteral__Group_2__1 ;
-    public final void rule__BVLiteral__Group_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3985:1: ( rule__BVLiteral__Group_2__0__Impl rule__BVLiteral__Group_2__1 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3986:2: rule__BVLiteral__Group_2__0__Impl rule__BVLiteral__Group_2__1
-            {
-            pushFollow(FOLLOW_rule__BVLiteral__Group_2__0__Impl_in_rule__BVLiteral__Group_2__08136);
-            rule__BVLiteral__Group_2__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__BVLiteral__Group_2__1_in_rule__BVLiteral__Group_2__08139);
-            rule__BVLiteral__Group_2__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group_2__0"
-
-
-    // $ANTLR start "rule__BVLiteral__Group_2__0__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3993:1: rule__BVLiteral__Group_2__0__Impl : ( '/' ) ;
-    public final void rule__BVLiteral__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3997:1: ( ( '/' ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3998:1: ( '/' )
-            {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3998:1: ( '/' )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3999:1: '/'
-            {
-             before(grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0()); 
-            match(input,55,FOLLOW_55_in_rule__BVLiteral__Group_2__0__Impl8167); 
-             after(grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__BVLiteral__Group_2__1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4012:1: rule__BVLiteral__Group_2__1 : rule__BVLiteral__Group_2__1__Impl ;
-    public final void rule__BVLiteral__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4016:1: ( rule__BVLiteral__Group_2__1__Impl )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4017:2: rule__BVLiteral__Group_2__1__Impl
-            {
-            pushFollow(FOLLOW_rule__BVLiteral__Group_2__1__Impl_in_rule__BVLiteral__Group_2__18198);
-            rule__BVLiteral__Group_2__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group_2__1"
-
-
-    // $ANTLR start "rule__BVLiteral__Group_2__1__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4023:1: rule__BVLiteral__Group_2__1__Impl : ( ( rule__BVLiteral__FractionAssignment_2_1 ) ) ;
-    public final void rule__BVLiteral__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4027:1: ( ( ( rule__BVLiteral__FractionAssignment_2_1 ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4028:1: ( ( rule__BVLiteral__FractionAssignment_2_1 ) )
-            {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4028:1: ( ( rule__BVLiteral__FractionAssignment_2_1 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4029:1: ( rule__BVLiteral__FractionAssignment_2_1 )
-            {
-             before(grammarAccess.getBVLiteralAccess().getFractionAssignment_2_1()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4030:1: ( rule__BVLiteral__FractionAssignment_2_1 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4030:2: rule__BVLiteral__FractionAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__BVLiteral__FractionAssignment_2_1_in_rule__BVLiteral__Group_2__1__Impl8225);
-            rule__BVLiteral__FractionAssignment_2_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBVLiteralAccess().getFractionAssignment_2_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__Group_2__1__Impl"
-
-
     // $ANTLR start "rule__BVBracket__Group__0"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4044:1: rule__BVBracket__Group__0 : rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1 ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3950:1: rule__BVBracket__Group__0 : rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1 ;
     public final void rule__BVBracket__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4048:1: ( rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4049:2: rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3954:1: ( rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3955:2: rule__BVBracket__Group__0__Impl rule__BVBracket__Group__1
             {
-            pushFollow(FOLLOW_rule__BVBracket__Group__0__Impl_in_rule__BVBracket__Group__08259);
+            pushFollow(FOLLOW_rule__BVBracket__Group__0__Impl_in_rule__BVBracket__Group__08073);
             rule__BVBracket__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BVBracket__Group__1_in_rule__BVBracket__Group__08262);
+            pushFollow(FOLLOW_rule__BVBracket__Group__1_in_rule__BVBracket__Group__08076);
             rule__BVBracket__Group__1();
 
             state._fsp--;
@@ -11177,20 +10925,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__Group__0__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4056:1: rule__BVBracket__Group__0__Impl : ( '(' ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3962:1: rule__BVBracket__Group__0__Impl : ( '(' ) ;
     public final void rule__BVBracket__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4060:1: ( ( '(' ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4061:1: ( '(' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3966:1: ( ( '(' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3967:1: ( '(' )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4061:1: ( '(' )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4062:1: '('
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3967:1: ( '(' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3968:1: '('
             {
              before(grammarAccess.getBVBracketAccess().getLeftParenthesisKeyword_0()); 
-            match(input,56,FOLLOW_56_in_rule__BVBracket__Group__0__Impl8290); 
+            match(input,55,FOLLOW_55_in_rule__BVBracket__Group__0__Impl8104); 
              after(grammarAccess.getBVBracketAccess().getLeftParenthesisKeyword_0()); 
 
             }
@@ -11214,21 +10962,21 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__Group__1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4075:1: rule__BVBracket__Group__1 : rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2 ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3981:1: rule__BVBracket__Group__1 : rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2 ;
     public final void rule__BVBracket__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4079:1: ( rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4080:2: rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3985:1: ( rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3986:2: rule__BVBracket__Group__1__Impl rule__BVBracket__Group__2
             {
-            pushFollow(FOLLOW_rule__BVBracket__Group__1__Impl_in_rule__BVBracket__Group__18321);
+            pushFollow(FOLLOW_rule__BVBracket__Group__1__Impl_in_rule__BVBracket__Group__18135);
             rule__BVBracket__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BVBracket__Group__2_in_rule__BVBracket__Group__18324);
+            pushFollow(FOLLOW_rule__BVBracket__Group__2_in_rule__BVBracket__Group__18138);
             rule__BVBracket__Group__2();
 
             state._fsp--;
@@ -11252,23 +11000,23 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__Group__1__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4087:1: rule__BVBracket__Group__1__Impl : ( ( rule__BVBracket__BsubAssignment_1 ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3993:1: rule__BVBracket__Group__1__Impl : ( ( rule__BVBracket__BsubAssignment_1 ) ) ;
     public final void rule__BVBracket__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4091:1: ( ( ( rule__BVBracket__BsubAssignment_1 ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4092:1: ( ( rule__BVBracket__BsubAssignment_1 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3997:1: ( ( ( rule__BVBracket__BsubAssignment_1 ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3998:1: ( ( rule__BVBracket__BsubAssignment_1 ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4092:1: ( ( rule__BVBracket__BsubAssignment_1 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4093:1: ( rule__BVBracket__BsubAssignment_1 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3998:1: ( ( rule__BVBracket__BsubAssignment_1 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:3999:1: ( rule__BVBracket__BsubAssignment_1 )
             {
              before(grammarAccess.getBVBracketAccess().getBsubAssignment_1()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4094:1: ( rule__BVBracket__BsubAssignment_1 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4094:2: rule__BVBracket__BsubAssignment_1
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4000:1: ( rule__BVBracket__BsubAssignment_1 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4000:2: rule__BVBracket__BsubAssignment_1
             {
-            pushFollow(FOLLOW_rule__BVBracket__BsubAssignment_1_in_rule__BVBracket__Group__1__Impl8351);
+            pushFollow(FOLLOW_rule__BVBracket__BsubAssignment_1_in_rule__BVBracket__Group__1__Impl8165);
             rule__BVBracket__BsubAssignment_1();
 
             state._fsp--;
@@ -11299,16 +11047,16 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__Group__2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4104:1: rule__BVBracket__Group__2 : rule__BVBracket__Group__2__Impl ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4010:1: rule__BVBracket__Group__2 : rule__BVBracket__Group__2__Impl ;
     public final void rule__BVBracket__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4108:1: ( rule__BVBracket__Group__2__Impl )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4109:2: rule__BVBracket__Group__2__Impl
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4014:1: ( rule__BVBracket__Group__2__Impl )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4015:2: rule__BVBracket__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BVBracket__Group__2__Impl_in_rule__BVBracket__Group__28381);
+            pushFollow(FOLLOW_rule__BVBracket__Group__2__Impl_in_rule__BVBracket__Group__28195);
             rule__BVBracket__Group__2__Impl();
 
             state._fsp--;
@@ -11332,20 +11080,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__Group__2__Impl"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4115:1: rule__BVBracket__Group__2__Impl : ( ')' ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4021:1: rule__BVBracket__Group__2__Impl : ( ')' ) ;
     public final void rule__BVBracket__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4119:1: ( ( ')' ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4120:1: ( ')' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4025:1: ( ( ')' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4026:1: ( ')' )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4120:1: ( ')' )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4121:1: ')'
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4026:1: ( ')' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4027:1: ')'
             {
              before(grammarAccess.getBVBracketAccess().getRightParenthesisKeyword_2()); 
-            match(input,57,FOLLOW_57_in_rule__BVBracket__Group__2__Impl8409); 
+            match(input,56,FOLLOW_56_in_rule__BVBracket__Group__2__Impl8223); 
              after(grammarAccess.getBVBracketAccess().getRightParenthesisKeyword_2()); 
 
             }
@@ -11369,20 +11117,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__BehaviorOrderAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4141:1: rule__Robot__BehaviorOrderAssignment_1 : ( ruleBehaviorName ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4047:1: rule__Robot__BehaviorOrderAssignment_1 : ( ruleBehaviorName ) ;
     public final void rule__Robot__BehaviorOrderAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4145:1: ( ( ruleBehaviorName ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4146:1: ( ruleBehaviorName )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4051:1: ( ( ruleBehaviorName ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4052:1: ( ruleBehaviorName )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4146:1: ( ruleBehaviorName )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4147:1: ruleBehaviorName
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4052:1: ( ruleBehaviorName )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4053:1: ruleBehaviorName
             {
              before(grammarAccess.getRobotAccess().getBehaviorOrderBehaviorNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBehaviorName_in_rule__Robot__BehaviorOrderAssignment_18451);
+            pushFollow(FOLLOW_ruleBehaviorName_in_rule__Robot__BehaviorOrderAssignment_18265);
             ruleBehaviorName();
 
             state._fsp--;
@@ -11410,20 +11158,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__GlobalsAssignment_2_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4156:1: rule__Robot__GlobalsAssignment_2_1 : ( ruleGlobal ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4062:1: rule__Robot__GlobalsAssignment_2_1 : ( ruleGlobal ) ;
     public final void rule__Robot__GlobalsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4160:1: ( ( ruleGlobal ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4161:1: ( ruleGlobal )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4066:1: ( ( ruleGlobal ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4067:1: ( ruleGlobal )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4161:1: ( ruleGlobal )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4162:1: ruleGlobal
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4067:1: ( ruleGlobal )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4068:1: ruleGlobal
             {
              before(grammarAccess.getRobotAccess().getGlobalsGlobalParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleGlobal_in_rule__Robot__GlobalsAssignment_2_18482);
+            pushFollow(FOLLOW_ruleGlobal_in_rule__Robot__GlobalsAssignment_2_18296);
             ruleGlobal();
 
             state._fsp--;
@@ -11451,20 +11199,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__StaticsAssignment_3_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4171:1: rule__Robot__StaticsAssignment_3_1 : ( ruleStatic ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4077:1: rule__Robot__StaticsAssignment_3_1 : ( ruleStatic ) ;
     public final void rule__Robot__StaticsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4175:1: ( ( ruleStatic ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4176:1: ( ruleStatic )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4081:1: ( ( ruleStatic ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4082:1: ( ruleStatic )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4176:1: ( ruleStatic )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4177:1: ruleStatic
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4082:1: ( ruleStatic )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4083:1: ruleStatic
             {
              before(grammarAccess.getRobotAccess().getStaticsStaticParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleStatic_in_rule__Robot__StaticsAssignment_3_18513);
+            pushFollow(FOLLOW_ruleStatic_in_rule__Robot__StaticsAssignment_3_18327);
             ruleStatic();
 
             state._fsp--;
@@ -11492,20 +11240,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__StopBehaviourAssignment_5"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4186:1: rule__Robot__StopBehaviourAssignment_5 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4092:1: rule__Robot__StopBehaviourAssignment_5 : ( ruleValueExpression ) ;
     public final void rule__Robot__StopBehaviourAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4190:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4191:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4096:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4097:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4191:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4192:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4097:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4098:1: ruleValueExpression
             {
              before(grammarAccess.getRobotAccess().getStopBehaviourValueExpressionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__Robot__StopBehaviourAssignment_58544);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__Robot__StopBehaviourAssignment_58358);
             ruleValueExpression();
 
             state._fsp--;
@@ -11533,20 +11281,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__BehaviorsAssignment_6"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4201:1: rule__Robot__BehaviorsAssignment_6 : ( ruleImplementation ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4107:1: rule__Robot__BehaviorsAssignment_6 : ( ruleImplementation ) ;
     public final void rule__Robot__BehaviorsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4205:1: ( ( ruleImplementation ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4206:1: ( ruleImplementation )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4111:1: ( ( ruleImplementation ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4112:1: ( ruleImplementation )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4206:1: ( ruleImplementation )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4207:1: ruleImplementation
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4112:1: ( ruleImplementation )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4113:1: ruleImplementation
             {
              before(grammarAccess.getRobotAccess().getBehaviorsImplementationParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleImplementation_in_rule__Robot__BehaviorsAssignment_68575);
+            pushFollow(FOLLOW_ruleImplementation_in_rule__Robot__BehaviorsAssignment_68389);
             ruleImplementation();
 
             state._fsp--;
@@ -11574,20 +11322,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Robot__SubRoutinesAssignment_7"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4216:1: rule__Robot__SubRoutinesAssignment_7 : ( ruleSubRoutine ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4122:1: rule__Robot__SubRoutinesAssignment_7 : ( ruleSubRoutine ) ;
     public final void rule__Robot__SubRoutinesAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4220:1: ( ( ruleSubRoutine ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4221:1: ( ruleSubRoutine )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4126:1: ( ( ruleSubRoutine ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4127:1: ( ruleSubRoutine )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4221:1: ( ruleSubRoutine )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4222:1: ruleSubRoutine
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4127:1: ( ruleSubRoutine )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4128:1: ruleSubRoutine
             {
              before(grammarAccess.getRobotAccess().getSubRoutinesSubRoutineParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_ruleSubRoutine_in_rule__Robot__SubRoutinesAssignment_78606);
+            pushFollow(FOLLOW_ruleSubRoutine_in_rule__Robot__SubRoutinesAssignment_78420);
             ruleSubRoutine();
 
             state._fsp--;
@@ -11615,20 +11363,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BehaviorName__NameAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4231:1: rule__BehaviorName__NameAssignment : ( RULE_ID ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4137:1: rule__BehaviorName__NameAssignment : ( RULE_ID ) ;
     public final void rule__BehaviorName__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4235:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4236:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4141:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4142:1: ( RULE_ID )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4236:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4237:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4142:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4143:1: RULE_ID
             {
              before(grammarAccess.getBehaviorNameAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BehaviorName__NameAssignment8637); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BehaviorName__NameAssignment8451); 
              after(grammarAccess.getBehaviorNameAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -11652,20 +11400,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Motor__MAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4246:1: rule__Motor__MAssignment : ( ruleEMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4152:1: rule__Motor__MAssignment : ( ruleEMotor ) ;
     public final void rule__Motor__MAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4250:1: ( ( ruleEMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4251:1: ( ruleEMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4156:1: ( ( ruleEMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4157:1: ( ruleEMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4251:1: ( ruleEMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4252:1: ruleEMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4157:1: ( ruleEMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4158:1: ruleEMotor
             {
              before(grammarAccess.getMotorAccess().getMEMotorEnumRuleCall_0()); 
-            pushFollow(FOLLOW_ruleEMotor_in_rule__Motor__MAssignment8668);
+            pushFollow(FOLLOW_ruleEMotor_in_rule__Motor__MAssignment8482);
             ruleEMotor();
 
             state._fsp--;
@@ -11693,20 +11441,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Global__NameAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4261:1: rule__Global__NameAssignment : ( RULE_ID ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4167:1: rule__Global__NameAssignment : ( RULE_ID ) ;
     public final void rule__Global__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4265:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4266:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4171:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4172:1: ( RULE_ID )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4266:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4267:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4172:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4173:1: RULE_ID
             {
              before(grammarAccess.getGlobalAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Global__NameAssignment8699); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Global__NameAssignment8513); 
              after(grammarAccess.getGlobalAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -11730,20 +11478,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Static__NameAssignment_0"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4276:1: rule__Static__NameAssignment_0 : ( RULE_ID ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4182:1: rule__Static__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Static__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4280:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4281:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4186:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4187:1: ( RULE_ID )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4281:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4282:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4187:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4188:1: RULE_ID
             {
              before(grammarAccess.getStaticAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Static__NameAssignment_08730); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Static__NameAssignment_08544); 
              after(grammarAccess.getStaticAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -11767,20 +11515,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Static__ValueAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4291:1: rule__Static__ValueAssignment_2 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4197:1: rule__Static__ValueAssignment_2 : ( ruleValueExpression ) ;
     public final void rule__Static__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4295:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4296:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4201:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4202:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4296:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4297:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4202:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4203:1: ruleValueExpression
             {
              before(grammarAccess.getStaticAccess().getValueValueExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__Static__ValueAssignment_28761);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__Static__ValueAssignment_28575);
             ruleValueExpression();
 
             state._fsp--;
@@ -11808,24 +11556,24 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Implementation__ForAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4306:1: rule__Implementation__ForAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4212:1: rule__Implementation__ForAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__Implementation__ForAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4310:1: ( ( ( RULE_ID ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4311:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4216:1: ( ( ( RULE_ID ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4217:1: ( ( RULE_ID ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4311:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4312:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4217:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4218:1: ( RULE_ID )
             {
              before(grammarAccess.getImplementationAccess().getForBehaviorNameCrossReference_1_0()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4313:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4314:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4219:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4220:1: RULE_ID
             {
              before(grammarAccess.getImplementationAccess().getForBehaviorNameIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Implementation__ForAssignment_18796); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Implementation__ForAssignment_18610); 
              after(grammarAccess.getImplementationAccess().getForBehaviorNameIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -11853,20 +11601,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Implementation__ControlCheckAssignment_4"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4325:1: rule__Implementation__ControlCheckAssignment_4 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4231:1: rule__Implementation__ControlCheckAssignment_4 : ( ruleValueExpression ) ;
     public final void rule__Implementation__ControlCheckAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4329:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4330:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4235:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4236:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4330:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4331:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4236:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4237:1: ruleValueExpression
             {
              before(grammarAccess.getImplementationAccess().getControlCheckValueExpressionParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__Implementation__ControlCheckAssignment_48831);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__Implementation__ControlCheckAssignment_48645);
             ruleValueExpression();
 
             state._fsp--;
@@ -11894,20 +11642,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Implementation__ExpressionsAssignment_6"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4340:1: rule__Implementation__ExpressionsAssignment_6 : ( ruleExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4246:1: rule__Implementation__ExpressionsAssignment_6 : ( ruleExpression ) ;
     public final void rule__Implementation__ExpressionsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4344:1: ( ( ruleExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4345:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4250:1: ( ( ruleExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4251:1: ( ruleExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4345:1: ( ruleExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4346:1: ruleExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4251:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4252:1: ruleExpression
             {
              before(grammarAccess.getImplementationAccess().getExpressionsExpressionParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Implementation__ExpressionsAssignment_68862);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Implementation__ExpressionsAssignment_68676);
             ruleExpression();
 
             state._fsp--;
@@ -11935,20 +11683,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SubRoutine__NameAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4355:1: rule__SubRoutine__NameAssignment_1 : ( RULE_ID ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4261:1: rule__SubRoutine__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SubRoutine__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4359:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4360:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4265:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4266:1: ( RULE_ID )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4360:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4361:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4266:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4267:1: RULE_ID
             {
              before(grammarAccess.getSubRoutineAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubRoutine__NameAssignment_18893); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubRoutine__NameAssignment_18707); 
              after(grammarAccess.getSubRoutineAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -11972,20 +11720,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SubRoutine__ExpressionsAssignment_3"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4370:1: rule__SubRoutine__ExpressionsAssignment_3 : ( ruleExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4276:1: rule__SubRoutine__ExpressionsAssignment_3 : ( ruleExpression ) ;
     public final void rule__SubRoutine__ExpressionsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4374:1: ( ( ruleExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4375:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4280:1: ( ( ruleExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4281:1: ( ruleExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4375:1: ( ruleExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4376:1: ruleExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4281:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4282:1: ruleExpression
             {
              before(grammarAccess.getSubRoutineAccess().getExpressionsExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__SubRoutine__ExpressionsAssignment_38924);
+            pushFollow(FOLLOW_ruleExpression_in_rule__SubRoutine__ExpressionsAssignment_38738);
             ruleExpression();
 
             state._fsp--;
@@ -12013,20 +11761,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ValExpr__VExprAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4385:1: rule__ValExpr__VExprAssignment : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4291:1: rule__ValExpr__VExprAssignment : ( ruleValueExpression ) ;
     public final void rule__ValExpr__VExprAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4389:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4390:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4295:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4296:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4390:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4391:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4296:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4297:1: ruleValueExpression
             {
              before(grammarAccess.getValExprAccess().getVExprValueExpressionParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__ValExpr__VExprAssignment8955);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__ValExpr__VExprAssignment8769);
             ruleValueExpression();
 
             state._fsp--;
@@ -12054,20 +11802,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IFExpression__CAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4400:1: rule__IFExpression__CAssignment_1 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4306:1: rule__IFExpression__CAssignment_1 : ( ruleValueExpression ) ;
     public final void rule__IFExpression__CAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4404:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4405:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4310:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4311:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4405:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4406:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4311:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4312:1: ruleValueExpression
             {
              before(grammarAccess.getIFExpressionAccess().getCValueExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__IFExpression__CAssignment_18986);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__IFExpression__CAssignment_18800);
             ruleValueExpression();
 
             state._fsp--;
@@ -12095,20 +11843,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IFExpression__TAssignment_3"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4415:1: rule__IFExpression__TAssignment_3 : ( ruleExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4321:1: rule__IFExpression__TAssignment_3 : ( ruleExpression ) ;
     public final void rule__IFExpression__TAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4419:1: ( ( ruleExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4420:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4325:1: ( ( ruleExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4326:1: ( ruleExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4420:1: ( ruleExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4421:1: ruleExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4326:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4327:1: ruleExpression
             {
              before(grammarAccess.getIFExpressionAccess().getTExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__IFExpression__TAssignment_39017);
+            pushFollow(FOLLOW_ruleExpression_in_rule__IFExpression__TAssignment_38831);
             ruleExpression();
 
             state._fsp--;
@@ -12136,20 +11884,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IFExpression__EAssignment_5_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4430:1: rule__IFExpression__EAssignment_5_2 : ( ruleExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4336:1: rule__IFExpression__EAssignment_5_2 : ( ruleExpression ) ;
     public final void rule__IFExpression__EAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4434:1: ( ( ruleExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4435:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4340:1: ( ( ruleExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4341:1: ( ruleExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4435:1: ( ruleExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4436:1: ruleExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4341:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4342:1: ruleExpression
             {
              before(grammarAccess.getIFExpressionAccess().getEExpressionParserRuleCall_5_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__IFExpression__EAssignment_5_29048);
+            pushFollow(FOLLOW_ruleExpression_in_rule__IFExpression__EAssignment_5_28862);
             ruleExpression();
 
             state._fsp--;
@@ -12177,20 +11925,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__WHILEExpression__CAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4445:1: rule__WHILEExpression__CAssignment_1 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4351:1: rule__WHILEExpression__CAssignment_1 : ( ruleValueExpression ) ;
     public final void rule__WHILEExpression__CAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4449:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4450:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4355:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4356:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4450:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4451:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4356:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4357:1: ruleValueExpression
             {
              before(grammarAccess.getWHILEExpressionAccess().getCValueExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__WHILEExpression__CAssignment_19079);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__WHILEExpression__CAssignment_18893);
             ruleValueExpression();
 
             state._fsp--;
@@ -12218,20 +11966,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__WHILEExpression__BAssignment_3"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4460:1: rule__WHILEExpression__BAssignment_3 : ( ruleExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4366:1: rule__WHILEExpression__BAssignment_3 : ( ruleExpression ) ;
     public final void rule__WHILEExpression__BAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4464:1: ( ( ruleExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4465:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4370:1: ( ( ruleExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4371:1: ( ruleExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4465:1: ( ruleExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4466:1: ruleExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4371:1: ( ruleExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4372:1: ruleExpression
             {
              before(grammarAccess.getWHILEExpressionAccess().getBExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__WHILEExpression__BAssignment_39110);
+            pushFollow(FOLLOW_ruleExpression_in_rule__WHILEExpression__BAssignment_38924);
             ruleExpression();
 
             state._fsp--;
@@ -12259,24 +12007,24 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AssignExpression__GlobalAssignment_0"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4475:1: rule__AssignExpression__GlobalAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4381:1: rule__AssignExpression__GlobalAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__AssignExpression__GlobalAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4479:1: ( ( ( RULE_ID ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4480:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4385:1: ( ( ( RULE_ID ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4386:1: ( ( RULE_ID ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4480:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4481:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4386:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4387:1: ( RULE_ID )
             {
              before(grammarAccess.getAssignExpressionAccess().getGlobalGlobalCrossReference_0_0()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4482:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4483:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4388:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4389:1: RULE_ID
             {
              before(grammarAccess.getAssignExpressionAccess().getGlobalGlobalIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AssignExpression__GlobalAssignment_09145); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AssignExpression__GlobalAssignment_08959); 
              after(grammarAccess.getAssignExpressionAccess().getGlobalGlobalIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -12304,20 +12052,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AssignExpression__VAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4494:1: rule__AssignExpression__VAssignment_2 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4400:1: rule__AssignExpression__VAssignment_2 : ( ruleValueExpression ) ;
     public final void rule__AssignExpression__VAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4498:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4499:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4404:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4405:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4499:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4500:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4405:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4406:1: ruleValueExpression
             {
              before(grammarAccess.getAssignExpressionAccess().getVValueExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__AssignExpression__VAssignment_29180);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__AssignExpression__VAssignment_28994);
             ruleValueExpression();
 
             state._fsp--;
@@ -12345,20 +12093,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ForwardAction__MotorAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4509:1: rule__ForwardAction__MotorAssignment_2 : ( ruleMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4415:1: rule__ForwardAction__MotorAssignment_2 : ( ruleMotor ) ;
     public final void rule__ForwardAction__MotorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4513:1: ( ( ruleMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4514:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4419:1: ( ( ruleMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4420:1: ( ruleMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4514:1: ( ruleMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4515:1: ruleMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4420:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4421:1: ruleMotor
             {
              before(grammarAccess.getForwardActionAccess().getMotorMotorParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleMotor_in_rule__ForwardAction__MotorAssignment_29211);
+            pushFollow(FOLLOW_ruleMotor_in_rule__ForwardAction__MotorAssignment_29025);
             ruleMotor();
 
             state._fsp--;
@@ -12386,20 +12134,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RotateAction__MotorAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4524:1: rule__RotateAction__MotorAssignment_1 : ( ruleMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4430:1: rule__RotateAction__MotorAssignment_1 : ( ruleMotor ) ;
     public final void rule__RotateAction__MotorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4528:1: ( ( ruleMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4529:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4434:1: ( ( ruleMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4435:1: ( ruleMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4529:1: ( ruleMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4530:1: ruleMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4435:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4436:1: ruleMotor
             {
              before(grammarAccess.getRotateActionAccess().getMotorMotorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMotor_in_rule__RotateAction__MotorAssignment_19242);
+            pushFollow(FOLLOW_ruleMotor_in_rule__RotateAction__MotorAssignment_19056);
             ruleMotor();
 
             state._fsp--;
@@ -12427,20 +12175,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RotateAction__DegreesAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4539:1: rule__RotateAction__DegreesAssignment_2 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4445:1: rule__RotateAction__DegreesAssignment_2 : ( ruleValueExpression ) ;
     public final void rule__RotateAction__DegreesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4543:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4544:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4449:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4450:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4544:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4545:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4450:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4451:1: ruleValueExpression
             {
              before(grammarAccess.getRotateActionAccess().getDegreesValueExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__RotateAction__DegreesAssignment_29273);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__RotateAction__DegreesAssignment_29087);
             ruleValueExpression();
 
             state._fsp--;
@@ -12468,24 +12216,24 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RotateAction__BlockingAssignment_3"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4554:1: rule__RotateAction__BlockingAssignment_3 : ( ( 'wait' ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4460:1: rule__RotateAction__BlockingAssignment_3 : ( ( 'wait' ) ) ;
     public final void rule__RotateAction__BlockingAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4558:1: ( ( ( 'wait' ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4559:1: ( ( 'wait' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4464:1: ( ( ( 'wait' ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4465:1: ( ( 'wait' ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4559:1: ( ( 'wait' ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4560:1: ( 'wait' )
-            {
-             before(grammarAccess.getRotateActionAccess().getBlockingWaitKeyword_3_0()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4561:1: ( 'wait' )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4562:1: 'wait'
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4465:1: ( ( 'wait' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4466:1: ( 'wait' )
             {
              before(grammarAccess.getRotateActionAccess().getBlockingWaitKeyword_3_0()); 
-            match(input,58,FOLLOW_58_in_rule__RotateAction__BlockingAssignment_39309); 
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4467:1: ( 'wait' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4468:1: 'wait'
+            {
+             before(grammarAccess.getRotateActionAccess().getBlockingWaitKeyword_3_0()); 
+            match(input,57,FOLLOW_57_in_rule__RotateAction__BlockingAssignment_39123); 
              after(grammarAccess.getRotateActionAccess().getBlockingWaitKeyword_3_0()); 
 
             }
@@ -12513,20 +12261,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__StopAction__MotorAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4577:1: rule__StopAction__MotorAssignment_2 : ( ruleMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4483:1: rule__StopAction__MotorAssignment_2 : ( ruleMotor ) ;
     public final void rule__StopAction__MotorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4581:1: ( ( ruleMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4582:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4487:1: ( ( ruleMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4488:1: ( ruleMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4582:1: ( ruleMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4583:1: ruleMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4488:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4489:1: ruleMotor
             {
              before(grammarAccess.getStopActionAccess().getMotorMotorParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleMotor_in_rule__StopAction__MotorAssignment_29348);
+            pushFollow(FOLLOW_ruleMotor_in_rule__StopAction__MotorAssignment_29162);
             ruleMotor();
 
             state._fsp--;
@@ -12554,20 +12302,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SAccelerationAction__MotorAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4592:1: rule__SAccelerationAction__MotorAssignment_1 : ( ruleMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4498:1: rule__SAccelerationAction__MotorAssignment_1 : ( ruleMotor ) ;
     public final void rule__SAccelerationAction__MotorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4596:1: ( ( ruleMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4597:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4502:1: ( ( ruleMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4503:1: ( ruleMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4597:1: ( ruleMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4598:1: ruleMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4503:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4504:1: ruleMotor
             {
              before(grammarAccess.getSAccelerationActionAccess().getMotorMotorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMotor_in_rule__SAccelerationAction__MotorAssignment_19379);
+            pushFollow(FOLLOW_ruleMotor_in_rule__SAccelerationAction__MotorAssignment_19193);
             ruleMotor();
 
             state._fsp--;
@@ -12595,20 +12343,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SAccelerationAction__VAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4607:1: rule__SAccelerationAction__VAssignment_2 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4513:1: rule__SAccelerationAction__VAssignment_2 : ( ruleValueExpression ) ;
     public final void rule__SAccelerationAction__VAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4611:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4612:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4517:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4518:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4612:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4613:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4518:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4519:1: ruleValueExpression
             {
              before(grammarAccess.getSAccelerationActionAccess().getVValueExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__SAccelerationAction__VAssignment_29410);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__SAccelerationAction__VAssignment_29224);
             ruleValueExpression();
 
             state._fsp--;
@@ -12636,20 +12384,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SSpeedAction__MotorAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4622:1: rule__SSpeedAction__MotorAssignment_1 : ( ruleMotor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4528:1: rule__SSpeedAction__MotorAssignment_1 : ( ruleMotor ) ;
     public final void rule__SSpeedAction__MotorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4626:1: ( ( ruleMotor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4627:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4532:1: ( ( ruleMotor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4533:1: ( ruleMotor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4627:1: ( ruleMotor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4628:1: ruleMotor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4533:1: ( ruleMotor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4534:1: ruleMotor
             {
              before(grammarAccess.getSSpeedActionAccess().getMotorMotorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMotor_in_rule__SSpeedAction__MotorAssignment_19441);
+            pushFollow(FOLLOW_ruleMotor_in_rule__SSpeedAction__MotorAssignment_19255);
             ruleMotor();
 
             state._fsp--;
@@ -12677,20 +12425,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SSpeedAction__VAssignment_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4637:1: rule__SSpeedAction__VAssignment_2 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4543:1: rule__SSpeedAction__VAssignment_2 : ( ruleValueExpression ) ;
     public final void rule__SSpeedAction__VAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4641:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4642:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4547:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4548:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4642:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4643:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4548:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4549:1: ruleValueExpression
             {
              before(grammarAccess.getSSpeedActionAccess().getVValueExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__SSpeedAction__VAssignment_29472);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__SSpeedAction__VAssignment_29286);
             ruleValueExpression();
 
             state._fsp--;
@@ -12718,24 +12466,24 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SubRoutineAction__RoutineAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4652:1: rule__SubRoutineAction__RoutineAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4558:1: rule__SubRoutineAction__RoutineAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__SubRoutineAction__RoutineAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4656:1: ( ( ( RULE_ID ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4657:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4562:1: ( ( ( RULE_ID ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4563:1: ( ( RULE_ID ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4657:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4658:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4563:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4564:1: ( RULE_ID )
             {
              before(grammarAccess.getSubRoutineActionAccess().getRoutineSubRoutineCrossReference_1_0()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4659:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4660:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4565:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4566:1: RULE_ID
             {
              before(grammarAccess.getSubRoutineActionAccess().getRoutineSubRoutineIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubRoutineAction__RoutineAssignment_19507); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SubRoutineAction__RoutineAssignment_19321); 
              after(grammarAccess.getSubRoutineActionAccess().getRoutineSubRoutineIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -12763,20 +12511,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Blevel1__BopAssignment_1_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4671:1: rule__Blevel1__BopAssignment_1_1 : ( ruleBBinaryOp ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4577:1: rule__Blevel1__BopAssignment_1_1 : ( ruleBBinaryOp ) ;
     public final void rule__Blevel1__BopAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4675:1: ( ( ruleBBinaryOp ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4676:1: ( ruleBBinaryOp )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4581:1: ( ( ruleBBinaryOp ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4582:1: ( ruleBBinaryOp )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4676:1: ( ruleBBinaryOp )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4677:1: ruleBBinaryOp
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4582:1: ( ruleBBinaryOp )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4583:1: ruleBBinaryOp
             {
              before(grammarAccess.getBlevel1Access().getBopBBinaryOpEnumRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleBBinaryOp_in_rule__Blevel1__BopAssignment_1_19542);
+            pushFollow(FOLLOW_ruleBBinaryOp_in_rule__Blevel1__BopAssignment_1_19356);
             ruleBBinaryOp();
 
             state._fsp--;
@@ -12804,20 +12552,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Blevel1__RightAssignment_1_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4686:1: rule__Blevel1__RightAssignment_1_2 : ( ruleBlevel2 ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4592:1: rule__Blevel1__RightAssignment_1_2 : ( ruleBlevel2 ) ;
     public final void rule__Blevel1__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4690:1: ( ( ruleBlevel2 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4691:1: ( ruleBlevel2 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4596:1: ( ( ruleBlevel2 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4597:1: ( ruleBlevel2 )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4691:1: ( ruleBlevel2 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4692:1: ruleBlevel2
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4597:1: ( ruleBlevel2 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4598:1: ruleBlevel2
             {
              before(grammarAccess.getBlevel1Access().getRightBlevel2ParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleBlevel2_in_rule__Blevel1__RightAssignment_1_29573);
+            pushFollow(FOLLOW_ruleBlevel2_in_rule__Blevel1__RightAssignment_1_29387);
             ruleBlevel2();
 
             state._fsp--;
@@ -12845,20 +12593,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BNotExpr__SubAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4701:1: rule__BNotExpr__SubAssignment_1 : ( ruleBlevel3 ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4607:1: rule__BNotExpr__SubAssignment_1 : ( ruleBlevel3 ) ;
     public final void rule__BNotExpr__SubAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4705:1: ( ( ruleBlevel3 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4706:1: ( ruleBlevel3 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4611:1: ( ( ruleBlevel3 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4612:1: ( ruleBlevel3 )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4706:1: ( ruleBlevel3 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4707:1: ruleBlevel3
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4612:1: ( ruleBlevel3 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4613:1: ruleBlevel3
             {
              before(grammarAccess.getBNotExprAccess().getSubBlevel3ParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBlevel3_in_rule__BNotExpr__SubAssignment_19604);
+            pushFollow(FOLLOW_ruleBlevel3_in_rule__BNotExpr__SubAssignment_19418);
             ruleBlevel3();
 
             state._fsp--;
@@ -12886,20 +12634,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Blevel3__BcompAssignment_1_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4716:1: rule__Blevel3__BcompAssignment_1_1 : ( ruleCompareOp ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4622:1: rule__Blevel3__BcompAssignment_1_1 : ( ruleCompareOp ) ;
     public final void rule__Blevel3__BcompAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4720:1: ( ( ruleCompareOp ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4721:1: ( ruleCompareOp )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4626:1: ( ( ruleCompareOp ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4627:1: ( ruleCompareOp )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4721:1: ( ruleCompareOp )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4722:1: ruleCompareOp
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4627:1: ( ruleCompareOp )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4628:1: ruleCompareOp
             {
              before(grammarAccess.getBlevel3Access().getBcompCompareOpEnumRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleCompareOp_in_rule__Blevel3__BcompAssignment_1_19635);
+            pushFollow(FOLLOW_ruleCompareOp_in_rule__Blevel3__BcompAssignment_1_19449);
             ruleCompareOp();
 
             state._fsp--;
@@ -12927,20 +12675,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Blevel3__RightAssignment_1_2"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4731:1: rule__Blevel3__RightAssignment_1_2 : ( ruleBlevel4 ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4637:1: rule__Blevel3__RightAssignment_1_2 : ( ruleBlevel4 ) ;
     public final void rule__Blevel3__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4735:1: ( ( ruleBlevel4 ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4736:1: ( ruleBlevel4 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4641:1: ( ( ruleBlevel4 ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4642:1: ( ruleBlevel4 )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4736:1: ( ruleBlevel4 )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4737:1: ruleBlevel4
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4642:1: ( ruleBlevel4 )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4643:1: ruleBlevel4
             {
              before(grammarAccess.getBlevel3Access().getRightBlevel4ParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleBlevel4_in_rule__Blevel3__RightAssignment_1_29666);
+            pushFollow(FOLLOW_ruleBlevel4_in_rule__Blevel3__RightAssignment_1_29480);
             ruleBlevel4();
 
             state._fsp--;
@@ -12968,24 +12716,24 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVLiteral__NegAssignment_0"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4746:1: rule__BVLiteral__NegAssignment_0 : ( ( 'neg' ) ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4652:1: rule__BVLiteral__NegAssignment_0 : ( ( 'neg' ) ) ;
     public final void rule__BVLiteral__NegAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4750:1: ( ( ( 'neg' ) ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4751:1: ( ( 'neg' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4656:1: ( ( ( 'neg' ) ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4657:1: ( ( 'neg' ) )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4751:1: ( ( 'neg' ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4752:1: ( 'neg' )
-            {
-             before(grammarAccess.getBVLiteralAccess().getNegNegKeyword_0_0()); 
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4753:1: ( 'neg' )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4754:1: 'neg'
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4657:1: ( ( 'neg' ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4658:1: ( 'neg' )
             {
              before(grammarAccess.getBVLiteralAccess().getNegNegKeyword_0_0()); 
-            match(input,59,FOLLOW_59_in_rule__BVLiteral__NegAssignment_09702); 
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4659:1: ( 'neg' )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4660:1: 'neg'
+            {
+             before(grammarAccess.getBVLiteralAccess().getNegNegKeyword_0_0()); 
+            match(input,58,FOLLOW_58_in_rule__BVLiteral__NegAssignment_09516); 
              after(grammarAccess.getBVLiteralAccess().getNegNegKeyword_0_0()); 
 
             }
@@ -13013,20 +12761,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVLiteral__AValueAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4769:1: rule__BVLiteral__AValueAssignment_1 : ( RULE_INT ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4675:1: rule__BVLiteral__AValueAssignment_1 : ( RULE_INT ) ;
     public final void rule__BVLiteral__AValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4773:1: ( ( RULE_INT ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4774:1: ( RULE_INT )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4679:1: ( ( RULE_INT ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4680:1: ( RULE_INT )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4774:1: ( RULE_INT )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4775:1: RULE_INT
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4680:1: ( RULE_INT )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4681:1: RULE_INT
             {
              before(grammarAccess.getBVLiteralAccess().getAValueINTTerminalRuleCall_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__BVLiteral__AValueAssignment_19741); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__BVLiteral__AValueAssignment_19555); 
              after(grammarAccess.getBVLiteralAccess().getAValueINTTerminalRuleCall_1_0()); 
 
             }
@@ -13049,58 +12797,21 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__BVLiteral__AValueAssignment_1"
 
 
-    // $ANTLR start "rule__BVLiteral__FractionAssignment_2_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4784:1: rule__BVLiteral__FractionAssignment_2_1 : ( RULE_INT ) ;
-    public final void rule__BVLiteral__FractionAssignment_2_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4788:1: ( ( RULE_INT ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4789:1: ( RULE_INT )
-            {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4789:1: ( RULE_INT )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4790:1: RULE_INT
-            {
-             before(grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__BVLiteral__FractionAssignment_2_19772); 
-             after(grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BVLiteral__FractionAssignment_2_1"
-
-
     // $ANTLR start "rule__BBLiteral__BValueAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4799:1: rule__BBLiteral__BValueAssignment : ( RULE_BOOL_LITERAL ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4690:1: rule__BBLiteral__BValueAssignment : ( RULE_BOOL_LITERAL ) ;
     public final void rule__BBLiteral__BValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4803:1: ( ( RULE_BOOL_LITERAL ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4804:1: ( RULE_BOOL_LITERAL )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4694:1: ( ( RULE_BOOL_LITERAL ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4695:1: ( RULE_BOOL_LITERAL )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4804:1: ( RULE_BOOL_LITERAL )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4805:1: RULE_BOOL_LITERAL
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4695:1: ( RULE_BOOL_LITERAL )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4696:1: RULE_BOOL_LITERAL
             {
              before(grammarAccess.getBBLiteralAccess().getBValueBOOL_LITERALTerminalRuleCall_0()); 
-            match(input,RULE_BOOL_LITERAL,FOLLOW_RULE_BOOL_LITERAL_in_rule__BBLiteral__BValueAssignment9803); 
+            match(input,RULE_BOOL_LITERAL,FOLLOW_RULE_BOOL_LITERAL_in_rule__BBLiteral__BValueAssignment9586); 
              after(grammarAccess.getBBLiteralAccess().getBValueBOOL_LITERALTerminalRuleCall_0()); 
 
             }
@@ -13124,20 +12835,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVarLiteral__VarAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4814:1: rule__BVarLiteral__VarAssignment : ( RULE_ID ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4705:1: rule__BVarLiteral__VarAssignment : ( RULE_ID ) ;
     public final void rule__BVarLiteral__VarAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4818:1: ( ( RULE_ID ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4819:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4709:1: ( ( RULE_ID ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4710:1: ( RULE_ID )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4819:1: ( RULE_ID )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4820:1: RULE_ID
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4710:1: ( RULE_ID )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4711:1: RULE_ID
             {
              before(grammarAccess.getBVarLiteralAccess().getVarIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BVarLiteral__VarAssignment9834); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BVarLiteral__VarAssignment9617); 
              after(grammarAccess.getBVarLiteralAccess().getVarIDTerminalRuleCall_0()); 
 
             }
@@ -13161,20 +12872,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BSensorLiteral__SensorAssignment"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4829:1: rule__BSensorLiteral__SensorAssignment : ( ruleSensor ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4720:1: rule__BSensorLiteral__SensorAssignment : ( ruleSensor ) ;
     public final void rule__BSensorLiteral__SensorAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4833:1: ( ( ruleSensor ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4834:1: ( ruleSensor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4724:1: ( ( ruleSensor ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4725:1: ( ruleSensor )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4834:1: ( ruleSensor )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4835:1: ruleSensor
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4725:1: ( ruleSensor )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4726:1: ruleSensor
             {
              before(grammarAccess.getBSensorLiteralAccess().getSensorSensorEnumRuleCall_0()); 
-            pushFollow(FOLLOW_ruleSensor_in_rule__BSensorLiteral__SensorAssignment9865);
+            pushFollow(FOLLOW_ruleSensor_in_rule__BSensorLiteral__SensorAssignment9648);
             ruleSensor();
 
             state._fsp--;
@@ -13202,20 +12913,20 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BVBracket__BsubAssignment_1"
-    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4844:1: rule__BVBracket__BsubAssignment_1 : ( ruleValueExpression ) ;
+    // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4735:1: rule__BVBracket__BsubAssignment_1 : ( ruleValueExpression ) ;
     public final void rule__BVBracket__BsubAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4848:1: ( ( ruleValueExpression ) )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4849:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4739:1: ( ( ruleValueExpression ) )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4740:1: ( ruleValueExpression )
             {
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4849:1: ( ruleValueExpression )
-            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4850:1: ruleValueExpression
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4740:1: ( ruleValueExpression )
+            // ../mars.rover.ui/src-gen/mars/rover/ui/contentassist/antlr/internal/InternalRoverDSL.g:4741:1: ruleValueExpression
             {
              before(grammarAccess.getBVBracketAccess().getBsubValueExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValueExpression_in_rule__BVBracket__BsubAssignment_19896);
+            pushFollow(FOLLOW_ruleValueExpression_in_rule__BVBracket__BsubAssignment_19679);
             ruleValueExpression();
 
             state._fsp--;
@@ -13394,7 +13105,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Robot__Group__3__Impl_in_rule__Robot__Group__33125 = new BitSet(new long[]{0x0000000700000000L});
     public static final BitSet FOLLOW_rule__Robot__Group__4_in_rule__Robot__Group__33128 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Robot__Group_3__0_in_rule__Robot__Group__3__Impl3155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Robot__Group__4__Impl_in_rule__Robot__Group__43186 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__Robot__Group__4__Impl_in_rule__Robot__Group__43186 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__Robot__Group__5_in_rule__Robot__Group__43189 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_32_in_rule__Robot__Group__4__Impl3217 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Robot__Group__5__Impl_in_rule__Robot__Group__53248 = new BitSet(new long[]{0x0000002000000000L});
@@ -13419,7 +13130,7 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Static__Group__0__Impl_in_rule__Static__Group__03707 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_rule__Static__Group__1_in_rule__Static__Group__03710 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Static__NameAssignment_0_in_rule__Static__Group__0__Impl3737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Static__Group__1__Impl_in_rule__Static__Group__13767 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__Static__Group__1__Impl_in_rule__Static__Group__13767 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__Static__Group__2_in_rule__Static__Group__13770 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_rule__Static__Group__1__Impl3798 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Static__Group__2__Impl_in_rule__Static__Group__23829 = new BitSet(new long[]{0x0000001000000000L});
@@ -13436,48 +13147,48 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Implementation__Group__2__Impl_in_rule__Implementation__Group__24078 = new BitSet(new long[]{0x0000008000000000L});
     public static final BitSet FOLLOW_rule__Implementation__Group__3_in_rule__Implementation__Group__24081 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_rule__Implementation__Group__2__Impl4109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Implementation__Group__3__Impl_in_rule__Implementation__Group__34140 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__Implementation__Group__3__Impl_in_rule__Implementation__Group__34140 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__Implementation__Group__4_in_rule__Implementation__Group__34143 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_39_in_rule__Implementation__Group__3__Impl4171 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Implementation__Group__4__Impl_in_rule__Implementation__Group__44202 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_rule__Implementation__Group__5_in_rule__Implementation__Group__44205 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Implementation__ControlCheckAssignment_4_in_rule__Implementation__Group__4__Impl4232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Implementation__Group__5__Impl_in_rule__Implementation__Group__54262 = new BitSet(new long[]{0x097FC400001FE070L});
+    public static final BitSet FOLLOW_rule__Implementation__Group__5__Impl_in_rule__Implementation__Group__54262 = new BitSet(new long[]{0x04FFC400001FE070L});
     public static final BitSet FOLLOW_rule__Implementation__Group__6_in_rule__Implementation__Group__54265 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_40_in_rule__Implementation__Group__5__Impl4293 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Implementation__Group__6__Impl_in_rule__Implementation__Group__64324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Implementation__ExpressionsAssignment_6_in_rule__Implementation__Group__6__Impl4353 = new BitSet(new long[]{0x097FC400001FE072L});
-    public static final BitSet FOLLOW_rule__Implementation__ExpressionsAssignment_6_in_rule__Implementation__Group__6__Impl4365 = new BitSet(new long[]{0x097FC400001FE072L});
+    public static final BitSet FOLLOW_rule__Implementation__ExpressionsAssignment_6_in_rule__Implementation__Group__6__Impl4353 = new BitSet(new long[]{0x04FFC400001FE072L});
+    public static final BitSet FOLLOW_rule__Implementation__ExpressionsAssignment_6_in_rule__Implementation__Group__6__Impl4365 = new BitSet(new long[]{0x04FFC400001FE072L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__0__Impl_in_rule__SubRoutine__Group__04412 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__1_in_rule__SubRoutine__Group__04415 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_41_in_rule__SubRoutine__Group__0__Impl4443 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__1__Impl_in_rule__SubRoutine__Group__14474 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__2_in_rule__SubRoutine__Group__14477 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SubRoutine__NameAssignment_1_in_rule__SubRoutine__Group__1__Impl4504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubRoutine__Group__2__Impl_in_rule__SubRoutine__Group__24534 = new BitSet(new long[]{0x097FC400001FE070L});
+    public static final BitSet FOLLOW_rule__SubRoutine__Group__2__Impl_in_rule__SubRoutine__Group__24534 = new BitSet(new long[]{0x04FFC400001FE070L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__3_in_rule__SubRoutine__Group__24537 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_rule__SubRoutine__Group__2__Impl4565 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SubRoutine__Group__3__Impl_in_rule__SubRoutine__Group__34596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SubRoutine__ExpressionsAssignment_3_in_rule__SubRoutine__Group__3__Impl4625 = new BitSet(new long[]{0x097FC400001FE072L});
-    public static final BitSet FOLLOW_rule__SubRoutine__ExpressionsAssignment_3_in_rule__SubRoutine__Group__3__Impl4637 = new BitSet(new long[]{0x097FC400001FE072L});
+    public static final BitSet FOLLOW_rule__SubRoutine__ExpressionsAssignment_3_in_rule__SubRoutine__Group__3__Impl4625 = new BitSet(new long[]{0x04FFC400001FE072L});
+    public static final BitSet FOLLOW_rule__SubRoutine__ExpressionsAssignment_3_in_rule__SubRoutine__Group__3__Impl4637 = new BitSet(new long[]{0x04FFC400001FE072L});
     public static final BitSet FOLLOW_rule__Expression__Group_0__0__Impl_in_rule__Expression__Group_0__04678 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_rule__Expression__Group_0__1_in_rule__Expression__Group_0__04681 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Alternatives_0_0_in_rule__Expression__Group_0__0__Impl4708 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_0__1__Impl_in_rule__Expression__Group_0__14738 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_36_in_rule__Expression__Group_0__1__Impl4766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IFExpression__Group__0__Impl_in_rule__IFExpression__Group__04801 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__IFExpression__Group__0__Impl_in_rule__IFExpression__Group__04801 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__1_in_rule__IFExpression__Group__04804 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_42_in_rule__IFExpression__Group__0__Impl4832 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__1__Impl_in_rule__IFExpression__Group__14863 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__2_in_rule__IFExpression__Group__14866 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__IFExpression__CAssignment_1_in_rule__IFExpression__Group__1__Impl4893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IFExpression__Group__2__Impl_in_rule__IFExpression__Group__24923 = new BitSet(new long[]{0x097FC400001FE070L});
+    public static final BitSet FOLLOW_rule__IFExpression__Group__2__Impl_in_rule__IFExpression__Group__24923 = new BitSet(new long[]{0x04FFC400001FE070L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__3_in_rule__IFExpression__Group__24926 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_43_in_rule__IFExpression__Group__2__Impl4954 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__3__Impl_in_rule__IFExpression__Group__34985 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__4_in_rule__IFExpression__Group__34988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IFExpression__TAssignment_3_in_rule__IFExpression__Group__3__Impl5017 = new BitSet(new long[]{0x097FC400001FE072L});
-    public static final BitSet FOLLOW_rule__IFExpression__TAssignment_3_in_rule__IFExpression__Group__3__Impl5029 = new BitSet(new long[]{0x097FC400001FE072L});
+    public static final BitSet FOLLOW_rule__IFExpression__TAssignment_3_in_rule__IFExpression__Group__3__Impl5017 = new BitSet(new long[]{0x04FFC400001FE072L});
+    public static final BitSet FOLLOW_rule__IFExpression__TAssignment_3_in_rule__IFExpression__Group__3__Impl5029 = new BitSet(new long[]{0x04FFC400001FE072L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__4__Impl_in_rule__IFExpression__Group__45062 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_rule__IFExpression__Group__5_in_rule__IFExpression__Group__45065 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_44_in_rule__IFExpression__Group__4__Impl5093 = new BitSet(new long[]{0x0000000000000002L});
@@ -13486,34 +13197,34 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__0__Impl_in_rule__IFExpression__Group_5__05194 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__1_in_rule__IFExpression__Group_5__05197 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_45_in_rule__IFExpression__Group_5__0__Impl5225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IFExpression__Group_5__1__Impl_in_rule__IFExpression__Group_5__15256 = new BitSet(new long[]{0x097FC400001FE070L});
+    public static final BitSet FOLLOW_rule__IFExpression__Group_5__1__Impl_in_rule__IFExpression__Group_5__15256 = new BitSet(new long[]{0x04FFC400001FE070L});
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__2_in_rule__IFExpression__Group_5__15259 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_43_in_rule__IFExpression__Group_5__1__Impl5287 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__2__Impl_in_rule__IFExpression__Group_5__25318 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__3_in_rule__IFExpression__Group_5__25321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IFExpression__EAssignment_5_2_in_rule__IFExpression__Group_5__2__Impl5350 = new BitSet(new long[]{0x097FC400001FE072L});
-    public static final BitSet FOLLOW_rule__IFExpression__EAssignment_5_2_in_rule__IFExpression__Group_5__2__Impl5362 = new BitSet(new long[]{0x097FC400001FE072L});
+    public static final BitSet FOLLOW_rule__IFExpression__EAssignment_5_2_in_rule__IFExpression__Group_5__2__Impl5350 = new BitSet(new long[]{0x04FFC400001FE072L});
+    public static final BitSet FOLLOW_rule__IFExpression__EAssignment_5_2_in_rule__IFExpression__Group_5__2__Impl5362 = new BitSet(new long[]{0x04FFC400001FE072L});
     public static final BitSet FOLLOW_rule__IFExpression__Group_5__3__Impl_in_rule__IFExpression__Group_5__35395 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_44_in_rule__IFExpression__Group_5__3__Impl5423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WHILEExpression__Group__0__Impl_in_rule__WHILEExpression__Group__05462 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__WHILEExpression__Group__0__Impl_in_rule__WHILEExpression__Group__05462 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__1_in_rule__WHILEExpression__Group__05465 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_46_in_rule__WHILEExpression__Group__0__Impl5493 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__1__Impl_in_rule__WHILEExpression__Group__15524 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__2_in_rule__WHILEExpression__Group__15527 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__WHILEExpression__CAssignment_1_in_rule__WHILEExpression__Group__1__Impl5554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WHILEExpression__Group__2__Impl_in_rule__WHILEExpression__Group__25584 = new BitSet(new long[]{0x097FC400001FE070L});
+    public static final BitSet FOLLOW_rule__WHILEExpression__Group__2__Impl_in_rule__WHILEExpression__Group__25584 = new BitSet(new long[]{0x04FFC400001FE070L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__3_in_rule__WHILEExpression__Group__25587 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_43_in_rule__WHILEExpression__Group__2__Impl5615 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__3__Impl_in_rule__WHILEExpression__Group__35646 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__4_in_rule__WHILEExpression__Group__35649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WHILEExpression__BAssignment_3_in_rule__WHILEExpression__Group__3__Impl5678 = new BitSet(new long[]{0x097FC400001FE072L});
-    public static final BitSet FOLLOW_rule__WHILEExpression__BAssignment_3_in_rule__WHILEExpression__Group__3__Impl5690 = new BitSet(new long[]{0x097FC400001FE072L});
+    public static final BitSet FOLLOW_rule__WHILEExpression__BAssignment_3_in_rule__WHILEExpression__Group__3__Impl5678 = new BitSet(new long[]{0x04FFC400001FE072L});
+    public static final BitSet FOLLOW_rule__WHILEExpression__BAssignment_3_in_rule__WHILEExpression__Group__3__Impl5690 = new BitSet(new long[]{0x04FFC400001FE072L});
     public static final BitSet FOLLOW_rule__WHILEExpression__Group__4__Impl_in_rule__WHILEExpression__Group__45723 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_44_in_rule__WHILEExpression__Group__4__Impl5751 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignExpression__Group__0__Impl_in_rule__AssignExpression__Group__05792 = new BitSet(new long[]{0x0000000800000000L});
     public static final BitSet FOLLOW_rule__AssignExpression__Group__1_in_rule__AssignExpression__Group__05795 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignExpression__GlobalAssignment_0_in_rule__AssignExpression__Group__0__Impl5822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignExpression__Group__1__Impl_in_rule__AssignExpression__Group__15852 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__AssignExpression__Group__1__Impl_in_rule__AssignExpression__Group__15852 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__AssignExpression__Group__2_in_rule__AssignExpression__Group__15855 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_rule__AssignExpression__Group__1__Impl5883 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignExpression__Group__2__Impl_in_rule__AssignExpression__Group__25914 = new BitSet(new long[]{0x0000000000000002L});
@@ -13528,10 +13239,10 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__RotateAction__Group__0__Impl_in_rule__RotateAction__Group__06164 = new BitSet(new long[]{0x0000000000600000L});
     public static final BitSet FOLLOW_rule__RotateAction__Group__1_in_rule__RotateAction__Group__06167 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_48_in_rule__RotateAction__Group__0__Impl6195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RotateAction__Group__1__Impl_in_rule__RotateAction__Group__16226 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__RotateAction__Group__1__Impl_in_rule__RotateAction__Group__16226 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__RotateAction__Group__2_in_rule__RotateAction__Group__16229 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RotateAction__MotorAssignment_1_in_rule__RotateAction__Group__1__Impl6256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RotateAction__Group__2__Impl_in_rule__RotateAction__Group__26286 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__RotateAction__Group__2__Impl_in_rule__RotateAction__Group__26286 = new BitSet(new long[]{0x0200000000000000L});
     public static final BitSet FOLLOW_rule__RotateAction__Group__3_in_rule__RotateAction__Group__26289 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RotateAction__DegreesAssignment_2_in_rule__RotateAction__Group__2__Impl6316 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RotateAction__Group__3__Impl_in_rule__RotateAction__Group__36346 = new BitSet(new long[]{0x0000000000000002L});
@@ -13543,18 +13254,18 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_49_in_rule__StopAction__Group__1__Impl6504 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__StopAction__Group__2__Impl_in_rule__StopAction__Group__26535 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__StopAction__MotorAssignment_2_in_rule__StopAction__Group__2__Impl6562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SAccelerationAction__Group__0__Impl_in_rule__SAccelerationAction__Group__06599 = new BitSet(new long[]{0x09400000007FE070L});
+    public static final BitSet FOLLOW_rule__SAccelerationAction__Group__0__Impl_in_rule__SAccelerationAction__Group__06599 = new BitSet(new long[]{0x04C00000007FE070L});
     public static final BitSet FOLLOW_rule__SAccelerationAction__Group__1_in_rule__SAccelerationAction__Group__06602 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_50_in_rule__SAccelerationAction__Group__0__Impl6630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SAccelerationAction__Group__1__Impl_in_rule__SAccelerationAction__Group__16661 = new BitSet(new long[]{0x09400000007FE070L});
+    public static final BitSet FOLLOW_rule__SAccelerationAction__Group__1__Impl_in_rule__SAccelerationAction__Group__16661 = new BitSet(new long[]{0x04C00000007FE070L});
     public static final BitSet FOLLOW_rule__SAccelerationAction__Group__2_in_rule__SAccelerationAction__Group__16664 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SAccelerationAction__MotorAssignment_1_in_rule__SAccelerationAction__Group__1__Impl6691 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SAccelerationAction__Group__2__Impl_in_rule__SAccelerationAction__Group__26722 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SAccelerationAction__VAssignment_2_in_rule__SAccelerationAction__Group__2__Impl6749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SSpeedAction__Group__0__Impl_in_rule__SSpeedAction__Group__06785 = new BitSet(new long[]{0x09400000007FE070L});
+    public static final BitSet FOLLOW_rule__SSpeedAction__Group__0__Impl_in_rule__SSpeedAction__Group__06785 = new BitSet(new long[]{0x04C00000007FE070L});
     public static final BitSet FOLLOW_rule__SSpeedAction__Group__1_in_rule__SSpeedAction__Group__06788 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_51_in_rule__SSpeedAction__Group__0__Impl6816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SSpeedAction__Group__1__Impl_in_rule__SSpeedAction__Group__16847 = new BitSet(new long[]{0x09400000007FE070L});
+    public static final BitSet FOLLOW_rule__SSpeedAction__Group__1__Impl_in_rule__SSpeedAction__Group__16847 = new BitSet(new long[]{0x04C00000007FE070L});
     public static final BitSet FOLLOW_rule__SSpeedAction__Group__2_in_rule__SSpeedAction__Group__16850 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SSpeedAction__MotorAssignment_1_in_rule__SSpeedAction__Group__1__Impl6877 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SSpeedAction__Group__2__Impl_in_rule__SSpeedAction__Group__26908 = new BitSet(new long[]{0x0000000000000002L});
@@ -13575,12 +13286,12 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Blevel1__Group_1__0_in_rule__Blevel1__Group__1__Impl7304 = new BitSet(new long[]{0x0000000001800002L});
     public static final BitSet FOLLOW_rule__Blevel1__Group_1__0__Impl_in_rule__Blevel1__Group_1__07339 = new BitSet(new long[]{0x0000000001800000L});
     public static final BitSet FOLLOW_rule__Blevel1__Group_1__1_in_rule__Blevel1__Group_1__07342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Blevel1__Group_1__1__Impl_in_rule__Blevel1__Group_1__17400 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__Blevel1__Group_1__1__Impl_in_rule__Blevel1__Group_1__17400 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__Blevel1__Group_1__2_in_rule__Blevel1__Group_1__17403 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel1__BopAssignment_1_1_in_rule__Blevel1__Group_1__1__Impl7430 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel1__Group_1__2__Impl_in_rule__Blevel1__Group_1__27460 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel1__RightAssignment_1_2_in_rule__Blevel1__Group_1__2__Impl7487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BNotExpr__Group__0__Impl_in_rule__BNotExpr__Group__07523 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__BNotExpr__Group__0__Impl_in_rule__BNotExpr__Group__07523 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__BNotExpr__Group__1_in_rule__BNotExpr__Group__07526 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_54_in_rule__BNotExpr__Group__0__Impl7554 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BNotExpr__Group__1__Impl_in_rule__BNotExpr__Group__17585 = new BitSet(new long[]{0x0000000000000002L});
@@ -13592,77 +13303,68 @@ public class InternalRoverDSLParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Blevel3__Group_1__0_in_rule__Blevel3__Group__1__Impl7732 = new BitSet(new long[]{0x000000007E000002L});
     public static final BitSet FOLLOW_rule__Blevel3__Group_1__0__Impl_in_rule__Blevel3__Group_1__07767 = new BitSet(new long[]{0x000000007E000000L});
     public static final BitSet FOLLOW_rule__Blevel3__Group_1__1_in_rule__Blevel3__Group_1__07770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Blevel3__Group_1__1__Impl_in_rule__Blevel3__Group_1__17828 = new BitSet(new long[]{0x09400000001FE070L});
+    public static final BitSet FOLLOW_rule__Blevel3__Group_1__1__Impl_in_rule__Blevel3__Group_1__17828 = new BitSet(new long[]{0x04C00000001FE070L});
     public static final BitSet FOLLOW_rule__Blevel3__Group_1__2_in_rule__Blevel3__Group_1__17831 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel3__BcompAssignment_1_1_in_rule__Blevel3__Group_1__1__Impl7858 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel3__Group_1__2__Impl_in_rule__Blevel3__Group_1__27888 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Blevel3__RightAssignment_1_2_in_rule__Blevel3__Group_1__2__Impl7915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group__0__Impl_in_rule__BVLiteral__Group__07951 = new BitSet(new long[]{0x0800000000000020L});
+    public static final BitSet FOLLOW_rule__BVLiteral__Group__0__Impl_in_rule__BVLiteral__Group__07951 = new BitSet(new long[]{0x0400000000000020L});
     public static final BitSet FOLLOW_rule__BVLiteral__Group__1_in_rule__BVLiteral__Group__07954 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BVLiteral__NegAssignment_0_in_rule__BVLiteral__Group__0__Impl7981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group__1__Impl_in_rule__BVLiteral__Group__18012 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group__2_in_rule__BVLiteral__Group__18015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__AValueAssignment_1_in_rule__BVLiteral__Group__1__Impl8042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group__2__Impl_in_rule__BVLiteral__Group__28072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group_2__0_in_rule__BVLiteral__Group__2__Impl8099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group_2__0__Impl_in_rule__BVLiteral__Group_2__08136 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group_2__1_in_rule__BVLiteral__Group_2__08139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__BVLiteral__Group_2__0__Impl8167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__Group_2__1__Impl_in_rule__BVLiteral__Group_2__18198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVLiteral__FractionAssignment_2_1_in_rule__BVLiteral__Group_2__1__Impl8225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVBracket__Group__0__Impl_in_rule__BVBracket__Group__08259 = new BitSet(new long[]{0x09400000001FE070L});
-    public static final BitSet FOLLOW_rule__BVBracket__Group__1_in_rule__BVBracket__Group__08262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__BVBracket__Group__0__Impl8290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVBracket__Group__1__Impl_in_rule__BVBracket__Group__18321 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_rule__BVBracket__Group__2_in_rule__BVBracket__Group__18324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVBracket__BsubAssignment_1_in_rule__BVBracket__Group__1__Impl8351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BVBracket__Group__2__Impl_in_rule__BVBracket__Group__28381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__BVBracket__Group__2__Impl8409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBehaviorName_in_rule__Robot__BehaviorOrderAssignment_18451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGlobal_in_rule__Robot__GlobalsAssignment_2_18482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatic_in_rule__Robot__StaticsAssignment_3_18513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Robot__StopBehaviourAssignment_58544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImplementation_in_rule__Robot__BehaviorsAssignment_68575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubRoutine_in_rule__Robot__SubRoutinesAssignment_78606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BehaviorName__NameAssignment8637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEMotor_in_rule__Motor__MAssignment8668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Global__NameAssignment8699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Static__NameAssignment_08730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Static__ValueAssignment_28761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Implementation__ForAssignment_18796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Implementation__ControlCheckAssignment_48831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Implementation__ExpressionsAssignment_68862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SubRoutine__NameAssignment_18893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__SubRoutine__ExpressionsAssignment_38924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__ValExpr__VExprAssignment8955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__IFExpression__CAssignment_18986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__IFExpression__TAssignment_39017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__IFExpression__EAssignment_5_29048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__WHILEExpression__CAssignment_19079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__WHILEExpression__BAssignment_39110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AssignExpression__GlobalAssignment_09145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__AssignExpression__VAssignment_29180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMotor_in_rule__ForwardAction__MotorAssignment_29211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMotor_in_rule__RotateAction__MotorAssignment_19242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__RotateAction__DegreesAssignment_29273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__RotateAction__BlockingAssignment_39309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMotor_in_rule__StopAction__MotorAssignment_29348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMotor_in_rule__SAccelerationAction__MotorAssignment_19379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__SAccelerationAction__VAssignment_29410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMotor_in_rule__SSpeedAction__MotorAssignment_19441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__SSpeedAction__VAssignment_29472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SubRoutineAction__RoutineAssignment_19507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBBinaryOp_in_rule__Blevel1__BopAssignment_1_19542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlevel2_in_rule__Blevel1__RightAssignment_1_29573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlevel3_in_rule__BNotExpr__SubAssignment_19604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOp_in_rule__Blevel3__BcompAssignment_1_19635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlevel4_in_rule__Blevel3__RightAssignment_1_29666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__BVLiteral__NegAssignment_09702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__BVLiteral__AValueAssignment_19741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__BVLiteral__FractionAssignment_2_19772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOL_LITERAL_in_rule__BBLiteral__BValueAssignment9803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BVarLiteral__VarAssignment9834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSensor_in_rule__BSensorLiteral__SensorAssignment9865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_rule__BVBracket__BsubAssignment_19896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVLiteral__Group__1__Impl_in_rule__BVLiteral__Group__18012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVLiteral__AValueAssignment_1_in_rule__BVLiteral__Group__1__Impl8039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVBracket__Group__0__Impl_in_rule__BVBracket__Group__08073 = new BitSet(new long[]{0x04C00000001FE070L});
+    public static final BitSet FOLLOW_rule__BVBracket__Group__1_in_rule__BVBracket__Group__08076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__BVBracket__Group__0__Impl8104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVBracket__Group__1__Impl_in_rule__BVBracket__Group__18135 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_rule__BVBracket__Group__2_in_rule__BVBracket__Group__18138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVBracket__BsubAssignment_1_in_rule__BVBracket__Group__1__Impl8165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BVBracket__Group__2__Impl_in_rule__BVBracket__Group__28195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rule__BVBracket__Group__2__Impl8223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBehaviorName_in_rule__Robot__BehaviorOrderAssignment_18265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGlobal_in_rule__Robot__GlobalsAssignment_2_18296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatic_in_rule__Robot__StaticsAssignment_3_18327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Robot__StopBehaviourAssignment_58358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImplementation_in_rule__Robot__BehaviorsAssignment_68389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubRoutine_in_rule__Robot__SubRoutinesAssignment_78420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BehaviorName__NameAssignment8451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEMotor_in_rule__Motor__MAssignment8482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Global__NameAssignment8513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Static__NameAssignment_08544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Static__ValueAssignment_28575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Implementation__ForAssignment_18610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__Implementation__ControlCheckAssignment_48645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Implementation__ExpressionsAssignment_68676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SubRoutine__NameAssignment_18707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__SubRoutine__ExpressionsAssignment_38738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__ValExpr__VExprAssignment8769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__IFExpression__CAssignment_18800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__IFExpression__TAssignment_38831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__IFExpression__EAssignment_5_28862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__WHILEExpression__CAssignment_18893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__WHILEExpression__BAssignment_38924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AssignExpression__GlobalAssignment_08959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__AssignExpression__VAssignment_28994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMotor_in_rule__ForwardAction__MotorAssignment_29025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMotor_in_rule__RotateAction__MotorAssignment_19056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__RotateAction__DegreesAssignment_29087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__RotateAction__BlockingAssignment_39123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMotor_in_rule__StopAction__MotorAssignment_29162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMotor_in_rule__SAccelerationAction__MotorAssignment_19193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__SAccelerationAction__VAssignment_29224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMotor_in_rule__SSpeedAction__MotorAssignment_19255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__SSpeedAction__VAssignment_29286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SubRoutineAction__RoutineAssignment_19321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBBinaryOp_in_rule__Blevel1__BopAssignment_1_19356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlevel2_in_rule__Blevel1__RightAssignment_1_29387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlevel3_in_rule__BNotExpr__SubAssignment_19418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOp_in_rule__Blevel3__BcompAssignment_1_19449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlevel4_in_rule__Blevel3__RightAssignment_1_29480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__BVLiteral__NegAssignment_09516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__BVLiteral__AValueAssignment_19555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOL_LITERAL_in_rule__BBLiteral__BValueAssignment9586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BVarLiteral__VarAssignment9617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSensor_in_rule__BSensorLiteral__SensorAssignment9648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_rule__BVBracket__BsubAssignment_19679 = new BitSet(new long[]{0x0000000000000002L});
 
 }

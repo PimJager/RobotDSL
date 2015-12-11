@@ -10,7 +10,7 @@ Implementation for DriveForward:
 		Forward;
 		
 Implementation for DetectLine:
-	Takes control when: LeftLight < 3/10 || RightLight < 3/10
+	Takes control when: LeftLight < 30 || RightLight < 30
 	Does:
 		Stop; 
 

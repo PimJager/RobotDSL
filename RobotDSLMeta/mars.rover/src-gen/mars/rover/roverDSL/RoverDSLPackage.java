@@ -819,22 +819,13 @@ public interface RoverDSLPackage extends EPackage
   int BV_LITERAL__AVALUE = VALUE_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Fraction</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BV_LITERAL__FRACTION = VALUE_EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>BV Literal</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BV_LITERAL_FEATURE_COUNT = VALUE_EXPRESSION_FEATURE_COUNT + 3;
+  int BV_LITERAL_FEATURE_COUNT = VALUE_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.impl.BBLiteralImpl <em>BB Literal</em>}' class.
@@ -1719,17 +1710,6 @@ public interface RoverDSLPackage extends EPackage
   EAttribute getBVLiteral_AValue();
 
   /**
-   * Returns the meta object for the attribute '{@link mars.rover.roverDSL.BVLiteral#getFraction <em>Fraction</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fraction</em>'.
-   * @see mars.rover.roverDSL.BVLiteral#getFraction()
-   * @see #getBVLiteral()
-   * @generated
-   */
-  EAttribute getBVLiteral_Fraction();
-
-  /**
    * Returns the meta object for class '{@link mars.rover.roverDSL.BBLiteral <em>BB Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2487,14 +2467,6 @@ public interface RoverDSLPackage extends EPackage
      * @generated
      */
     EAttribute BV_LITERAL__AVALUE = eINSTANCE.getBVLiteral_AValue();
-
-    /**
-     * The meta object literal for the '<em><b>Fraction</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BV_LITERAL__FRACTION = eINSTANCE.getBVLiteral_Fraction();
 
     /**
      * The meta object literal for the '{@link mars.rover.roverDSL.impl.BBLiteralImpl <em>BB Literal</em>}' class.

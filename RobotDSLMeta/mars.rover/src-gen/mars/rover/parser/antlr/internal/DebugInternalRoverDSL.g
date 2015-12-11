@@ -163,9 +163,7 @@ ruleBlevel4 :
 
 // Rule BVLiteral
 ruleBVLiteral :
-	'neg'? RULE_INT (
-		'/' RULE_INT
-	)?
+	'neg'? RULE_INT
 ;
 
 // Rule BBLiteral

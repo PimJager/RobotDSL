@@ -908,16 +908,14 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNegNegKeyword_0_0 = (Keyword)cNegAssignment_0.eContents().get(0);
 		private final Assignment cAValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cAValueINTTerminalRuleCall_1_0 = (RuleCall)cAValueAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cSolidusKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cFractionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cFractionINTTerminalRuleCall_2_1_0 = (RuleCall)cFractionAssignment_2_1.eContents().get(0);
 		
+		////remove comment for fractional values
+		////('/' fraction = INT)?;
 		//BVLiteral:
-		//	neg?="neg"? aValue=INT ("/" fraction=INT)?;
+		//	neg?="neg"? aValue=INT;
 		@Override public ParserRule getRule() { return rule; }
 
-		//neg?="neg"? aValue=INT ("/" fraction=INT)?
+		//neg?="neg"? aValue=INT
 		public Group getGroup() { return cGroup; }
 
 		//neg?="neg"?
@@ -931,18 +929,6 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//INT
 		public RuleCall getAValueINTTerminalRuleCall_1_0() { return cAValueINTTerminalRuleCall_1_0; }
-
-		//("/" fraction=INT)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"/"
-		public Keyword getSolidusKeyword_2_0() { return cSolidusKeyword_2_0; }
-
-		//fraction=INT
-		public Assignment getFractionAssignment_2_1() { return cFractionAssignment_2_1; }
-
-		//INT
-		public RuleCall getFractionINTTerminalRuleCall_2_1_0() { return cFractionINTTerminalRuleCall_2_1_0; }
 	}
 
 	public class BBLiteralElements extends AbstractParserRuleElementFinder {
@@ -1617,8 +1603,10 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getBlevel4Access().getRule();
 	}
 
+	////remove comment for fractional values
+	////('/' fraction = INT)?;
 	//BVLiteral:
-	//	neg?="neg"? aValue=INT ("/" fraction=INT)?;
+	//	neg?="neg"? aValue=INT;
 	public BVLiteralElements getBVLiteralAccess() {
 		return pBVLiteral;
 	}

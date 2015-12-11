@@ -221,7 +221,7 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (neg?='neg'? aValue=INT fraction=INT?)
+	 *     (neg?='neg'? aValue=INT)
 	 */
 	protected void sequence_BVLiteral(EObject context, BVLiteral semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

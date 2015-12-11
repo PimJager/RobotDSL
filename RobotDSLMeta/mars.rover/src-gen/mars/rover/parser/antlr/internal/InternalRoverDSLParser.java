@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_BOOL_LITERAL", "RULE_ALPHA", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Behaviors:'", "'Variables:'", "'Constants:'", "'Stops when:'", "' = '", "';'", "'Implementation for'", "':'", "'Takes control when:'", "'Does:'", "'Routine '", "'IF'", "'{'", "'}'", "'ELSE'", "'WHILE'", "'Forward'", "'Rotate'", "'wait'", "'Stop'", "'Set Acceleration'", "'Set Speed'", "'Do'", "'Measure'", "'NOT'", "'neg'", "'/'", "'('", "')'", "'ColorID'", "'LeftLight'", "'RightLight'", "'FrontUS'", "'RearUS'", "'LeftTouch'", "'RightTouch'", "'Angle'", "'LeftMotor'", "'RightMotor'", "'&&'", "'||'", "'=='", "'!='", "'>='", "'>'", "'<='", "'<'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_BOOL_LITERAL", "RULE_ALPHA", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Behaviors:'", "'Variables:'", "'Constants:'", "'Stops when:'", "' = '", "';'", "'Implementation for'", "':'", "'Takes control when:'", "'Does:'", "'Routine '", "'IF'", "'{'", "'}'", "'ELSE'", "'WHILE'", "'Forward'", "'Rotate'", "'wait'", "'Stop'", "'Set Acceleration'", "'Set Speed'", "'Do'", "'Measure'", "'NOT'", "'neg'", "'('", "')'", "'ColorID'", "'LeftLight'", "'RightLight'", "'FrontUS'", "'RearUS'", "'LeftTouch'", "'RightTouch'", "'Angle'", "'LeftMotor'", "'RightMotor'", "'&&'", "'||'", "'=='", "'!='", "'>='", "'>'", "'<='", "'<'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -52,7 +52,6 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final int T__17=17;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int T__59=59;
     public static final int RULE_INT=5;
     public static final int T__50=50;
     public static final int T__42=42;
@@ -1101,7 +1100,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( ((LA8_0>=RULE_ID && LA8_0<=RULE_BOOL_LITERAL)||LA8_0==24||(LA8_0>=28 && LA8_0<=30)||(LA8_0>=32 && LA8_0<=38)||LA8_0==40||(LA8_0>=42 && LA8_0<=49)) ) {
+                if ( ((LA8_0>=RULE_ID && LA8_0<=RULE_BOOL_LITERAL)||LA8_0==24||(LA8_0>=28 && LA8_0<=30)||(LA8_0>=32 && LA8_0<=39)||(LA8_0>=41 && LA8_0<=48)) ) {
                     alt8=1;
                 }
 
@@ -1265,7 +1264,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( ((LA9_0>=RULE_ID && LA9_0<=RULE_BOOL_LITERAL)||LA9_0==24||(LA9_0>=28 && LA9_0<=30)||(LA9_0>=32 && LA9_0<=38)||LA9_0==40||(LA9_0>=42 && LA9_0<=49)) ) {
+                if ( ((LA9_0>=RULE_ID && LA9_0<=RULE_BOOL_LITERAL)||LA9_0==24||(LA9_0>=28 && LA9_0<=30)||(LA9_0>=32 && LA9_0<=39)||(LA9_0>=41 && LA9_0<=48)) ) {
                     alt9=1;
                 }
 
@@ -1406,7 +1405,8 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             case 36:
             case 37:
             case 38:
-            case 40:
+            case 39:
+            case 41:
             case 42:
             case 43:
             case 44:
@@ -1414,7 +1414,6 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             case 46:
             case 47:
             case 48:
-            case 49:
                 {
                 alt11=1;
                 }
@@ -1450,7 +1449,8 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     case RULE_BOOL_LITERAL:
                     case 37:
                     case 38:
-                    case 40:
+                    case 39:
+                    case 41:
                     case 42:
                     case 43:
                     case 44:
@@ -1458,7 +1458,6 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     case 46:
                     case 47:
                     case 48:
-                    case 49:
                         {
                         alt10=1;
                         }
@@ -1470,7 +1469,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                         if ( (LA10_2==17) ) {
                             alt10=3;
                         }
-                        else if ( (LA10_2==18||(LA10_2>=52 && LA10_2<=59)) ) {
+                        else if ( (LA10_2==18||(LA10_2>=51 && LA10_2<=58)) ) {
                             alt10=1;
                         }
                         else {
@@ -1830,7 +1829,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( ((LA12_0>=RULE_ID && LA12_0<=RULE_BOOL_LITERAL)||LA12_0==24||(LA12_0>=28 && LA12_0<=30)||(LA12_0>=32 && LA12_0<=38)||LA12_0==40||(LA12_0>=42 && LA12_0<=49)) ) {
+                if ( ((LA12_0>=RULE_ID && LA12_0<=RULE_BOOL_LITERAL)||LA12_0==24||(LA12_0>=28 && LA12_0<=30)||(LA12_0>=32 && LA12_0<=39)||(LA12_0>=41 && LA12_0<=48)) ) {
                     alt12=1;
                 }
 
@@ -1907,7 +1906,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                         int alt13=2;
                         int LA13_0 = input.LA(1);
 
-                        if ( ((LA13_0>=RULE_ID && LA13_0<=RULE_BOOL_LITERAL)||LA13_0==24||(LA13_0>=28 && LA13_0<=30)||(LA13_0>=32 && LA13_0<=38)||LA13_0==40||(LA13_0>=42 && LA13_0<=49)) ) {
+                        if ( ((LA13_0>=RULE_ID && LA13_0<=RULE_BOOL_LITERAL)||LA13_0==24||(LA13_0>=28 && LA13_0<=30)||(LA13_0>=32 && LA13_0<=39)||(LA13_0>=41 && LA13_0<=48)) ) {
                             alt13=1;
                         }
 
@@ -2088,7 +2087,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( ((LA15_0>=RULE_ID && LA15_0<=RULE_BOOL_LITERAL)||LA15_0==24||(LA15_0>=28 && LA15_0<=30)||(LA15_0>=32 && LA15_0<=38)||LA15_0==40||(LA15_0>=42 && LA15_0<=49)) ) {
+                if ( ((LA15_0>=RULE_ID && LA15_0<=RULE_BOOL_LITERAL)||LA15_0==24||(LA15_0>=28 && LA15_0<=30)||(LA15_0>=32 && LA15_0<=39)||(LA15_0>=41 && LA15_0<=48)) ) {
                     alt15=1;
                 }
 
@@ -2617,7 +2616,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( ((LA17_0>=50 && LA17_0<=51)) ) {
+            if ( ((LA17_0>=49 && LA17_0<=50)) ) {
                 alt17=1;
             }
             switch (alt17) {
@@ -2924,7 +2923,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( ((LA19_0>=50 && LA19_0<=51)) ) {
+            if ( ((LA19_0>=49 && LA19_0<=50)) ) {
                 alt19=1;
             }
             switch (alt19) {
@@ -3046,7 +3045,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( ((LA20_0>=50 && LA20_0<=51)) ) {
+            if ( ((LA20_0>=49 && LA20_0<=50)) ) {
                 alt20=1;
             }
             switch (alt20) {
@@ -3199,7 +3198,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( ((LA21_0>=50 && LA21_0<=51)) ) {
+            if ( ((LA21_0>=49 && LA21_0<=50)) ) {
                 alt21=1;
             }
             switch (alt21) {
@@ -3627,7 +3626,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( ((LA22_0>=52 && LA22_0<=53)) ) {
+                if ( ((LA22_0>=51 && LA22_0<=52)) ) {
                     alt22=1;
                 }
 
@@ -3797,7 +3796,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             if ( (LA23_0==37) ) {
                 alt23=1;
             }
-            else if ( ((LA23_0>=RULE_ID && LA23_0<=RULE_BOOL_LITERAL)||LA23_0==38||LA23_0==40||(LA23_0>=42 && LA23_0<=49)) ) {
+            else if ( ((LA23_0>=RULE_ID && LA23_0<=RULE_BOOL_LITERAL)||(LA23_0>=38 && LA23_0<=39)||(LA23_0>=41 && LA23_0<=48)) ) {
                 alt23=2;
             }
             else {
@@ -4047,7 +4046,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( ((LA24_0>=54 && LA24_0<=59)) ) {
+                if ( ((LA24_0>=53 && LA24_0<=58)) ) {
                     alt24=1;
                 }
 
@@ -4235,6 +4234,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                 alt25=3;
                 }
                 break;
+            case 41:
             case 42:
             case 43:
             case 44:
@@ -4242,12 +4242,11 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
             case 46:
             case 47:
             case 48:
-            case 49:
                 {
                 alt25=4;
                 }
                 break;
-            case 40:
+            case 39:
                 {
                 alt25=5;
                 }
@@ -4407,23 +4406,21 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBVLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1674:1: ruleBVLiteral returns [EObject current=null] : ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )? ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1674:1: ruleBVLiteral returns [EObject current=null] : ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) ) ;
     public final EObject ruleBVLiteral() throws RecognitionException {
         EObject current = null;
 
         Token lv_neg_0_0=null;
         Token lv_aValue_1_0=null;
-        Token otherlv_2=null;
-        Token lv_fraction_3_0=null;
 
          enterRule(); 
             
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1677:28: ( ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )? ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:1: ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )? )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1677:28: ( ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:1: ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:1: ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )? )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:2: ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )?
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:1: ( ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:2: ( (lv_neg_0_0= 'neg' ) )? ( (lv_aValue_1_0= RULE_INT ) )
             {
             // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1678:2: ( (lv_neg_0_0= 'neg' ) )?
             int alt26=2;
@@ -4484,53 +4481,6 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1711:2: (otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
-
-            if ( (LA27_0==39) ) {
-                alt27=1;
-            }
-            switch (alt27) {
-                case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1711:4: otherlv_2= '/' ( (lv_fraction_3_0= RULE_INT ) )
-                    {
-                    otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleBVLiteral3846); 
-
-                        	newLeafNode(otherlv_2, grammarAccess.getBVLiteralAccess().getSolidusKeyword_2_0());
-                        
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1715:1: ( (lv_fraction_3_0= RULE_INT ) )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1716:1: (lv_fraction_3_0= RULE_INT )
-                    {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1716:1: (lv_fraction_3_0= RULE_INT )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1717:3: lv_fraction_3_0= RULE_INT
-                    {
-                    lv_fraction_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleBVLiteral3863); 
-
-                    			newLeafNode(lv_fraction_3_0, grammarAccess.getBVLiteralAccess().getFractionINTTerminalRuleCall_2_1_0()); 
-                    		
-
-                    	        if (current==null) {
-                    	            current = createModelElement(grammarAccess.getBVLiteralRule());
-                    	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"fraction",
-                            		lv_fraction_3_0, 
-                            		"INT");
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
 
             }
 
@@ -4552,7 +4502,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBBLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1741:1: entryRuleBBLiteral returns [EObject current=null] : iv_ruleBBLiteral= ruleBBLiteral EOF ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1719:1: entryRuleBBLiteral returns [EObject current=null] : iv_ruleBBLiteral= ruleBBLiteral EOF ;
     public final EObject entryRuleBBLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4560,17 +4510,17 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1742:2: (iv_ruleBBLiteral= ruleBBLiteral EOF )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1743:2: iv_ruleBBLiteral= ruleBBLiteral EOF
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1720:2: (iv_ruleBBLiteral= ruleBBLiteral EOF )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1721:2: iv_ruleBBLiteral= ruleBBLiteral EOF
             {
              newCompositeNode(grammarAccess.getBBLiteralRule()); 
-            pushFollow(FOLLOW_ruleBBLiteral_in_entryRuleBBLiteral3906);
+            pushFollow(FOLLOW_ruleBBLiteral_in_entryRuleBBLiteral3869);
             iv_ruleBBLiteral=ruleBBLiteral();
 
             state._fsp--;
 
              current =iv_ruleBBLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBBLiteral3916); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBBLiteral3879); 
 
             }
 
@@ -4588,7 +4538,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBBLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1750:1: ruleBBLiteral returns [EObject current=null] : ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1728:1: ruleBBLiteral returns [EObject current=null] : ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) ) ;
     public final EObject ruleBBLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4597,16 +4547,16 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1753:28: ( ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1754:1: ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1731:28: ( ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1732:1: ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1754:1: ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1755:1: (lv_bValue_0_0= RULE_BOOL_LITERAL )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1732:1: ( (lv_bValue_0_0= RULE_BOOL_LITERAL ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1733:1: (lv_bValue_0_0= RULE_BOOL_LITERAL )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1755:1: (lv_bValue_0_0= RULE_BOOL_LITERAL )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1756:3: lv_bValue_0_0= RULE_BOOL_LITERAL
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1733:1: (lv_bValue_0_0= RULE_BOOL_LITERAL )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1734:3: lv_bValue_0_0= RULE_BOOL_LITERAL
             {
-            lv_bValue_0_0=(Token)match(input,RULE_BOOL_LITERAL,FOLLOW_RULE_BOOL_LITERAL_in_ruleBBLiteral3957); 
+            lv_bValue_0_0=(Token)match(input,RULE_BOOL_LITERAL,FOLLOW_RULE_BOOL_LITERAL_in_ruleBBLiteral3920); 
 
             			newLeafNode(lv_bValue_0_0, grammarAccess.getBBLiteralAccess().getBValueBOOL_LITERALTerminalRuleCall_0()); 
             		
@@ -4644,7 +4594,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBVarLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1780:1: entryRuleBVarLiteral returns [EObject current=null] : iv_ruleBVarLiteral= ruleBVarLiteral EOF ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1758:1: entryRuleBVarLiteral returns [EObject current=null] : iv_ruleBVarLiteral= ruleBVarLiteral EOF ;
     public final EObject entryRuleBVarLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4652,17 +4602,17 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1781:2: (iv_ruleBVarLiteral= ruleBVarLiteral EOF )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1782:2: iv_ruleBVarLiteral= ruleBVarLiteral EOF
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1759:2: (iv_ruleBVarLiteral= ruleBVarLiteral EOF )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1760:2: iv_ruleBVarLiteral= ruleBVarLiteral EOF
             {
              newCompositeNode(grammarAccess.getBVarLiteralRule()); 
-            pushFollow(FOLLOW_ruleBVarLiteral_in_entryRuleBVarLiteral3997);
+            pushFollow(FOLLOW_ruleBVarLiteral_in_entryRuleBVarLiteral3960);
             iv_ruleBVarLiteral=ruleBVarLiteral();
 
             state._fsp--;
 
              current =iv_ruleBVarLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBVarLiteral4007); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBVarLiteral3970); 
 
             }
 
@@ -4680,7 +4630,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBVarLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1789:1: ruleBVarLiteral returns [EObject current=null] : ( (lv_var_0_0= RULE_ID ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1767:1: ruleBVarLiteral returns [EObject current=null] : ( (lv_var_0_0= RULE_ID ) ) ;
     public final EObject ruleBVarLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4689,16 +4639,16 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1792:28: ( ( (lv_var_0_0= RULE_ID ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1793:1: ( (lv_var_0_0= RULE_ID ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1770:28: ( ( (lv_var_0_0= RULE_ID ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1771:1: ( (lv_var_0_0= RULE_ID ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1793:1: ( (lv_var_0_0= RULE_ID ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1794:1: (lv_var_0_0= RULE_ID )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1771:1: ( (lv_var_0_0= RULE_ID ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1772:1: (lv_var_0_0= RULE_ID )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1794:1: (lv_var_0_0= RULE_ID )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1795:3: lv_var_0_0= RULE_ID
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1772:1: (lv_var_0_0= RULE_ID )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1773:3: lv_var_0_0= RULE_ID
             {
-            lv_var_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBVarLiteral4048); 
+            lv_var_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBVarLiteral4011); 
 
             			newLeafNode(lv_var_0_0, grammarAccess.getBVarLiteralAccess().getVarIDTerminalRuleCall_0()); 
             		
@@ -4736,7 +4686,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBSensorLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1819:1: entryRuleBSensorLiteral returns [EObject current=null] : iv_ruleBSensorLiteral= ruleBSensorLiteral EOF ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1797:1: entryRuleBSensorLiteral returns [EObject current=null] : iv_ruleBSensorLiteral= ruleBSensorLiteral EOF ;
     public final EObject entryRuleBSensorLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4744,17 +4694,17 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1820:2: (iv_ruleBSensorLiteral= ruleBSensorLiteral EOF )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1821:2: iv_ruleBSensorLiteral= ruleBSensorLiteral EOF
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1798:2: (iv_ruleBSensorLiteral= ruleBSensorLiteral EOF )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1799:2: iv_ruleBSensorLiteral= ruleBSensorLiteral EOF
             {
              newCompositeNode(grammarAccess.getBSensorLiteralRule()); 
-            pushFollow(FOLLOW_ruleBSensorLiteral_in_entryRuleBSensorLiteral4088);
+            pushFollow(FOLLOW_ruleBSensorLiteral_in_entryRuleBSensorLiteral4051);
             iv_ruleBSensorLiteral=ruleBSensorLiteral();
 
             state._fsp--;
 
              current =iv_ruleBSensorLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBSensorLiteral4098); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBSensorLiteral4061); 
 
             }
 
@@ -4772,7 +4722,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBSensorLiteral"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1828:1: ruleBSensorLiteral returns [EObject current=null] : ( (lv_sensor_0_0= ruleSensor ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1806:1: ruleBSensorLiteral returns [EObject current=null] : ( (lv_sensor_0_0= ruleSensor ) ) ;
     public final EObject ruleBSensorLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4782,19 +4732,19 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1831:28: ( ( (lv_sensor_0_0= ruleSensor ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1832:1: ( (lv_sensor_0_0= ruleSensor ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1809:28: ( ( (lv_sensor_0_0= ruleSensor ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1810:1: ( (lv_sensor_0_0= ruleSensor ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1832:1: ( (lv_sensor_0_0= ruleSensor ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1833:1: (lv_sensor_0_0= ruleSensor )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1810:1: ( (lv_sensor_0_0= ruleSensor ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1811:1: (lv_sensor_0_0= ruleSensor )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1833:1: (lv_sensor_0_0= ruleSensor )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1834:3: lv_sensor_0_0= ruleSensor
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1811:1: (lv_sensor_0_0= ruleSensor )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1812:3: lv_sensor_0_0= ruleSensor
             {
              
             	        newCompositeNode(grammarAccess.getBSensorLiteralAccess().getSensorSensorEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleSensor_in_ruleBSensorLiteral4143);
+            pushFollow(FOLLOW_ruleSensor_in_ruleBSensorLiteral4106);
             lv_sensor_0_0=ruleSensor();
 
             state._fsp--;
@@ -4834,7 +4784,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBVBracket"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1858:1: entryRuleBVBracket returns [EObject current=null] : iv_ruleBVBracket= ruleBVBracket EOF ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1836:1: entryRuleBVBracket returns [EObject current=null] : iv_ruleBVBracket= ruleBVBracket EOF ;
     public final EObject entryRuleBVBracket() throws RecognitionException {
         EObject current = null;
 
@@ -4842,17 +4792,17 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1859:2: (iv_ruleBVBracket= ruleBVBracket EOF )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1860:2: iv_ruleBVBracket= ruleBVBracket EOF
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1837:2: (iv_ruleBVBracket= ruleBVBracket EOF )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1838:2: iv_ruleBVBracket= ruleBVBracket EOF
             {
              newCompositeNode(grammarAccess.getBVBracketRule()); 
-            pushFollow(FOLLOW_ruleBVBracket_in_entryRuleBVBracket4178);
+            pushFollow(FOLLOW_ruleBVBracket_in_entryRuleBVBracket4141);
             iv_ruleBVBracket=ruleBVBracket();
 
             state._fsp--;
 
              current =iv_ruleBVBracket; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBVBracket4188); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBVBracket4151); 
 
             }
 
@@ -4870,7 +4820,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBVBracket"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1867:1: ruleBVBracket returns [EObject current=null] : (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1845:1: ruleBVBracket returns [EObject current=null] : (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' ) ;
     public final EObject ruleBVBracket() throws RecognitionException {
         EObject current = null;
 
@@ -4882,26 +4832,26 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1870:28: ( (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1871:1: (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1848:28: ( (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1849:1: (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1871:1: (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1871:3: otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1849:1: (otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1849:3: otherlv_0= '(' ( (lv_bsub_1_0= ruleValueExpression ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleBVBracket4225); 
+            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleBVBracket4188); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBVBracketAccess().getLeftParenthesisKeyword_0());
                 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1875:1: ( (lv_bsub_1_0= ruleValueExpression ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1876:1: (lv_bsub_1_0= ruleValueExpression )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1853:1: ( (lv_bsub_1_0= ruleValueExpression ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1854:1: (lv_bsub_1_0= ruleValueExpression )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1876:1: (lv_bsub_1_0= ruleValueExpression )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1877:3: lv_bsub_1_0= ruleValueExpression
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1854:1: (lv_bsub_1_0= ruleValueExpression )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1855:3: lv_bsub_1_0= ruleValueExpression
             {
              
             	        newCompositeNode(grammarAccess.getBVBracketAccess().getBsubValueExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleValueExpression_in_ruleBVBracket4246);
+            pushFollow(FOLLOW_ruleValueExpression_in_ruleBVBracket4209);
             lv_bsub_1_0=ruleValueExpression();
 
             state._fsp--;
@@ -4923,7 +4873,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleBVBracket4258); 
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleBVBracket4221); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getBVBracketAccess().getRightParenthesisKeyword_2());
                 
@@ -4948,7 +4898,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSensor"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1905:1: ruleSensor returns [Enumerator current=null] : ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1883:1: ruleSensor returns [Enumerator current=null] : ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) ) ;
     public final Enumerator ruleSensor() throws RecognitionException {
         Enumerator current = null;
 
@@ -4963,67 +4913,67 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1907:28: ( ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1908:1: ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1885:28: ( ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1886:1: ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1908:1: ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) )
-            int alt28=8;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1886:1: ( (enumLiteral_0= 'ColorID' ) | (enumLiteral_1= 'LeftLight' ) | (enumLiteral_2= 'RightLight' ) | (enumLiteral_3= 'FrontUS' ) | (enumLiteral_4= 'RearUS' ) | (enumLiteral_5= 'LeftTouch' ) | (enumLiteral_6= 'RightTouch' ) | (enumLiteral_7= 'Angle' ) )
+            int alt27=8;
             switch ( input.LA(1) ) {
+            case 41:
+                {
+                alt27=1;
+                }
+                break;
             case 42:
                 {
-                alt28=1;
+                alt27=2;
                 }
                 break;
             case 43:
                 {
-                alt28=2;
+                alt27=3;
                 }
                 break;
             case 44:
                 {
-                alt28=3;
+                alt27=4;
                 }
                 break;
             case 45:
                 {
-                alt28=4;
+                alt27=5;
                 }
                 break;
             case 46:
                 {
-                alt28=5;
+                alt27=6;
                 }
                 break;
             case 47:
                 {
-                alt28=6;
+                alt27=7;
                 }
                 break;
             case 48:
                 {
-                alt28=7;
-                }
-                break;
-            case 49:
-                {
-                alt28=8;
+                alt27=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt28) {
+            switch (alt27) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1908:2: (enumLiteral_0= 'ColorID' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1886:2: (enumLiteral_0= 'ColorID' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1908:2: (enumLiteral_0= 'ColorID' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1908:4: enumLiteral_0= 'ColorID'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1886:2: (enumLiteral_0= 'ColorID' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1886:4: enumLiteral_0= 'ColorID'
                     {
-                    enumLiteral_0=(Token)match(input,42,FOLLOW_42_in_ruleSensor4308); 
+                    enumLiteral_0=(Token)match(input,41,FOLLOW_41_in_ruleSensor4271); 
 
                             current = grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getSensorAccess().getCOLORIDSENSOREnumLiteralDeclaration_0()); 
@@ -5035,12 +4985,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1914:6: (enumLiteral_1= 'LeftLight' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1892:6: (enumLiteral_1= 'LeftLight' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1914:6: (enumLiteral_1= 'LeftLight' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1914:8: enumLiteral_1= 'LeftLight'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1892:6: (enumLiteral_1= 'LeftLight' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1892:8: enumLiteral_1= 'LeftLight'
                     {
-                    enumLiteral_1=(Token)match(input,43,FOLLOW_43_in_ruleSensor4325); 
+                    enumLiteral_1=(Token)match(input,42,FOLLOW_42_in_ruleSensor4288); 
 
                             current = grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getSensorAccess().getLEFTLIGHTSENSOREnumLiteralDeclaration_1()); 
@@ -5052,12 +5002,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1920:6: (enumLiteral_2= 'RightLight' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1898:6: (enumLiteral_2= 'RightLight' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1920:6: (enumLiteral_2= 'RightLight' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1920:8: enumLiteral_2= 'RightLight'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1898:6: (enumLiteral_2= 'RightLight' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1898:8: enumLiteral_2= 'RightLight'
                     {
-                    enumLiteral_2=(Token)match(input,44,FOLLOW_44_in_ruleSensor4342); 
+                    enumLiteral_2=(Token)match(input,43,FOLLOW_43_in_ruleSensor4305); 
 
                             current = grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getSensorAccess().getRIGHTLIGHTSENSOREnumLiteralDeclaration_2()); 
@@ -5069,12 +5019,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1926:6: (enumLiteral_3= 'FrontUS' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1904:6: (enumLiteral_3= 'FrontUS' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1926:6: (enumLiteral_3= 'FrontUS' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1926:8: enumLiteral_3= 'FrontUS'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1904:6: (enumLiteral_3= 'FrontUS' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1904:8: enumLiteral_3= 'FrontUS'
                     {
-                    enumLiteral_3=(Token)match(input,45,FOLLOW_45_in_ruleSensor4359); 
+                    enumLiteral_3=(Token)match(input,44,FOLLOW_44_in_ruleSensor4322); 
 
                             current = grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getSensorAccess().getFRONTULTRASONICSENSOREnumLiteralDeclaration_3()); 
@@ -5086,12 +5036,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1932:6: (enumLiteral_4= 'RearUS' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1910:6: (enumLiteral_4= 'RearUS' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1932:6: (enumLiteral_4= 'RearUS' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1932:8: enumLiteral_4= 'RearUS'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1910:6: (enumLiteral_4= 'RearUS' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1910:8: enumLiteral_4= 'RearUS'
                     {
-                    enumLiteral_4=(Token)match(input,46,FOLLOW_46_in_ruleSensor4376); 
+                    enumLiteral_4=(Token)match(input,45,FOLLOW_45_in_ruleSensor4339); 
 
                             current = grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getSensorAccess().getREARULTRASONICSENSOREnumLiteralDeclaration_4()); 
@@ -5103,12 +5053,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1938:6: (enumLiteral_5= 'LeftTouch' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1916:6: (enumLiteral_5= 'LeftTouch' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1938:6: (enumLiteral_5= 'LeftTouch' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1938:8: enumLiteral_5= 'LeftTouch'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1916:6: (enumLiteral_5= 'LeftTouch' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1916:8: enumLiteral_5= 'LeftTouch'
                     {
-                    enumLiteral_5=(Token)match(input,47,FOLLOW_47_in_ruleSensor4393); 
+                    enumLiteral_5=(Token)match(input,46,FOLLOW_46_in_ruleSensor4356); 
 
                             current = grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getSensorAccess().getTOUCHSENSORLEnumLiteralDeclaration_5()); 
@@ -5120,12 +5070,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1944:6: (enumLiteral_6= 'RightTouch' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1922:6: (enumLiteral_6= 'RightTouch' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1944:6: (enumLiteral_6= 'RightTouch' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1944:8: enumLiteral_6= 'RightTouch'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1922:6: (enumLiteral_6= 'RightTouch' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1922:8: enumLiteral_6= 'RightTouch'
                     {
-                    enumLiteral_6=(Token)match(input,48,FOLLOW_48_in_ruleSensor4410); 
+                    enumLiteral_6=(Token)match(input,47,FOLLOW_47_in_ruleSensor4373); 
 
                             current = grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getSensorAccess().getTOUCHSENSORREnumLiteralDeclaration_6()); 
@@ -5137,12 +5087,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1950:6: (enumLiteral_7= 'Angle' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1928:6: (enumLiteral_7= 'Angle' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1950:6: (enumLiteral_7= 'Angle' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1950:8: enumLiteral_7= 'Angle'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1928:6: (enumLiteral_7= 'Angle' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1928:8: enumLiteral_7= 'Angle'
                     {
-                    enumLiteral_7=(Token)match(input,49,FOLLOW_49_in_ruleSensor4427); 
+                    enumLiteral_7=(Token)match(input,48,FOLLOW_48_in_ruleSensor4390); 
 
                             current = grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getSensorAccess().getANGLESENSOREnumLiteralDeclaration_7()); 
@@ -5174,7 +5124,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEMotor"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:1: ruleEMotor returns [Enumerator current=null] : ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1938:1: ruleEMotor returns [Enumerator current=null] : ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) ) ;
     public final Enumerator ruleEMotor() throws RecognitionException {
         Enumerator current = null;
 
@@ -5183,33 +5133,33 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1962:28: ( ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1963:1: ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1940:28: ( ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1941:1: ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1963:1: ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1941:1: ( (enumLiteral_0= 'LeftMotor' ) | (enumLiteral_1= 'RightMotor' ) )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0==50) ) {
-                alt29=1;
+            if ( (LA28_0==49) ) {
+                alt28=1;
             }
-            else if ( (LA29_0==51) ) {
-                alt29=2;
+            else if ( (LA28_0==50) ) {
+                alt28=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1963:2: (enumLiteral_0= 'LeftMotor' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1941:2: (enumLiteral_0= 'LeftMotor' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1963:2: (enumLiteral_0= 'LeftMotor' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1963:4: enumLiteral_0= 'LeftMotor'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1941:2: (enumLiteral_0= 'LeftMotor' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1941:4: enumLiteral_0= 'LeftMotor'
                     {
-                    enumLiteral_0=(Token)match(input,50,FOLLOW_50_in_ruleEMotor4472); 
+                    enumLiteral_0=(Token)match(input,49,FOLLOW_49_in_ruleEMotor4435); 
 
                             current = grammarAccess.getEMotorAccess().getLEFTMOTOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getEMotorAccess().getLEFTMOTOREnumLiteralDeclaration_0()); 
@@ -5221,12 +5171,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1969:6: (enumLiteral_1= 'RightMotor' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1947:6: (enumLiteral_1= 'RightMotor' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1969:6: (enumLiteral_1= 'RightMotor' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1969:8: enumLiteral_1= 'RightMotor'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1947:6: (enumLiteral_1= 'RightMotor' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1947:8: enumLiteral_1= 'RightMotor'
                     {
-                    enumLiteral_1=(Token)match(input,51,FOLLOW_51_in_ruleEMotor4489); 
+                    enumLiteral_1=(Token)match(input,50,FOLLOW_50_in_ruleEMotor4452); 
 
                             current = grammarAccess.getEMotorAccess().getRIGHTMOTOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getEMotorAccess().getRIGHTMOTOREnumLiteralDeclaration_1()); 
@@ -5258,7 +5208,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBBinaryOp"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:1: ruleBBinaryOp returns [Enumerator current=null] : ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1957:1: ruleBBinaryOp returns [Enumerator current=null] : ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) ;
     public final Enumerator ruleBBinaryOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -5267,33 +5217,33 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1981:28: ( ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1982:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1959:28: ( ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1982:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA30_0==52) ) {
-                alt30=1;
+            if ( (LA29_0==51) ) {
+                alt29=1;
             }
-            else if ( (LA30_0==53) ) {
-                alt30=2;
+            else if ( (LA29_0==52) ) {
+                alt29=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1982:2: (enumLiteral_0= '&&' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:2: (enumLiteral_0= '&&' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1982:2: (enumLiteral_0= '&&' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1982:4: enumLiteral_0= '&&'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:2: (enumLiteral_0= '&&' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1960:4: enumLiteral_0= '&&'
                     {
-                    enumLiteral_0=(Token)match(input,52,FOLLOW_52_in_ruleBBinaryOp4534); 
+                    enumLiteral_0=(Token)match(input,51,FOLLOW_51_in_ruleBBinaryOp4497); 
 
                             current = grammarAccess.getBBinaryOpAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBBinaryOpAccess().getANDEnumLiteralDeclaration_0()); 
@@ -5305,12 +5255,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1988:6: (enumLiteral_1= '||' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1966:6: (enumLiteral_1= '||' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1988:6: (enumLiteral_1= '||' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1988:8: enumLiteral_1= '||'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1966:6: (enumLiteral_1= '||' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1966:8: enumLiteral_1= '||'
                     {
-                    enumLiteral_1=(Token)match(input,53,FOLLOW_53_in_ruleBBinaryOp4551); 
+                    enumLiteral_1=(Token)match(input,52,FOLLOW_52_in_ruleBBinaryOp4514); 
 
                             current = grammarAccess.getBBinaryOpAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBBinaryOpAccess().getOREnumLiteralDeclaration_1()); 
@@ -5342,7 +5292,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompareOp"
-    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1998:1: ruleCompareOp returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) ) ;
+    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1976:1: ruleCompareOp returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) ) ;
     public final Enumerator ruleCompareOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -5355,57 +5305,57 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2000:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2001:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1978:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2001:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) )
-            int alt31=6;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '>=' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '<' ) )
+            int alt30=6;
             switch ( input.LA(1) ) {
+            case 53:
+                {
+                alt30=1;
+                }
+                break;
             case 54:
                 {
-                alt31=1;
+                alt30=2;
                 }
                 break;
             case 55:
                 {
-                alt31=2;
+                alt30=3;
                 }
                 break;
             case 56:
                 {
-                alt31=3;
+                alt30=4;
                 }
                 break;
             case 57:
                 {
-                alt31=4;
+                alt30=5;
                 }
                 break;
             case 58:
                 {
-                alt31=5;
-                }
-                break;
-            case 59:
-                {
-                alt31=6;
+                alt30=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt31) {
+            switch (alt30) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2001:2: (enumLiteral_0= '==' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:2: (enumLiteral_0= '==' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2001:2: (enumLiteral_0= '==' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2001:4: enumLiteral_0= '=='
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:2: (enumLiteral_0= '==' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1979:4: enumLiteral_0= '=='
                     {
-                    enumLiteral_0=(Token)match(input,54,FOLLOW_54_in_ruleCompareOp4596); 
+                    enumLiteral_0=(Token)match(input,53,FOLLOW_53_in_ruleCompareOp4559); 
 
                             current = grammarAccess.getCompareOpAccess().getEQEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getCompareOpAccess().getEQEnumLiteralDeclaration_0()); 
@@ -5417,12 +5367,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2007:6: (enumLiteral_1= '!=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1985:6: (enumLiteral_1= '!=' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2007:6: (enumLiteral_1= '!=' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2007:8: enumLiteral_1= '!='
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1985:6: (enumLiteral_1= '!=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1985:8: enumLiteral_1= '!='
                     {
-                    enumLiteral_1=(Token)match(input,55,FOLLOW_55_in_ruleCompareOp4613); 
+                    enumLiteral_1=(Token)match(input,54,FOLLOW_54_in_ruleCompareOp4576); 
 
                             current = grammarAccess.getCompareOpAccess().getNEQEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getCompareOpAccess().getNEQEnumLiteralDeclaration_1()); 
@@ -5434,12 +5384,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2013:6: (enumLiteral_2= '>=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1991:6: (enumLiteral_2= '>=' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2013:6: (enumLiteral_2= '>=' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2013:8: enumLiteral_2= '>='
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1991:6: (enumLiteral_2= '>=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1991:8: enumLiteral_2= '>='
                     {
-                    enumLiteral_2=(Token)match(input,56,FOLLOW_56_in_ruleCompareOp4630); 
+                    enumLiteral_2=(Token)match(input,55,FOLLOW_55_in_ruleCompareOp4593); 
 
                             current = grammarAccess.getCompareOpAccess().getGEQEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getCompareOpAccess().getGEQEnumLiteralDeclaration_2()); 
@@ -5451,12 +5401,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2019:6: (enumLiteral_3= '>' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1997:6: (enumLiteral_3= '>' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2019:6: (enumLiteral_3= '>' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2019:8: enumLiteral_3= '>'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1997:6: (enumLiteral_3= '>' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1997:8: enumLiteral_3= '>'
                     {
-                    enumLiteral_3=(Token)match(input,57,FOLLOW_57_in_ruleCompareOp4647); 
+                    enumLiteral_3=(Token)match(input,56,FOLLOW_56_in_ruleCompareOp4610); 
 
                             current = grammarAccess.getCompareOpAccess().getGTEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getCompareOpAccess().getGTEnumLiteralDeclaration_3()); 
@@ -5468,12 +5418,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2025:6: (enumLiteral_4= '<=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2003:6: (enumLiteral_4= '<=' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2025:6: (enumLiteral_4= '<=' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2025:8: enumLiteral_4= '<='
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2003:6: (enumLiteral_4= '<=' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2003:8: enumLiteral_4= '<='
                     {
-                    enumLiteral_4=(Token)match(input,58,FOLLOW_58_in_ruleCompareOp4664); 
+                    enumLiteral_4=(Token)match(input,57,FOLLOW_57_in_ruleCompareOp4627); 
 
                             current = grammarAccess.getCompareOpAccess().getLEQEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getCompareOpAccess().getLEQEnumLiteralDeclaration_4()); 
@@ -5485,12 +5435,12 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2031:6: (enumLiteral_5= '<' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2009:6: (enumLiteral_5= '<' )
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2031:6: (enumLiteral_5= '<' )
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2031:8: enumLiteral_5= '<'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2009:6: (enumLiteral_5= '<' )
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2009:8: enumLiteral_5= '<'
                     {
-                    enumLiteral_5=(Token)match(input,59,FOLLOW_59_in_ruleCompareOp4681); 
+                    enumLiteral_5=(Token)match(input,58,FOLLOW_58_in_ruleCompareOp4644); 
 
                             current = grammarAccess.getCompareOpAccess().getLTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getCompareOpAccess().getLTEnumLiteralDeclaration_5()); 
@@ -5533,7 +5483,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleGlobal_in_ruleRobot178 = new BitSet(new long[]{0x0000000000018010L});
     public static final BitSet FOLLOW_15_in_ruleRobot194 = new BitSet(new long[]{0x0000000000010010L});
     public static final BitSet FOLLOW_ruleStatic_in_ruleRobot215 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_16_in_ruleRobot230 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_16_in_ruleRobot230 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleRobot251 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_ruleImplementation_in_ruleRobot272 = new BitSet(new long[]{0x0000000000880002L});
     public static final BitSet FOLLOW_ruleSubRoutine_in_ruleRobot294 = new BitSet(new long[]{0x0000000000800002L});
@@ -5549,7 +5499,7 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleStatic_in_entryRuleStatic603 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStatic613 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleStatic655 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleStatic672 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_17_in_ruleStatic672 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleStatic693 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_18_in_ruleStatic705 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleImplementation_in_entryRuleImplementation741 = new BitSet(new long[]{0x0000000000000000L});
@@ -5557,16 +5507,16 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_19_in_ruleImplementation788 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleImplementation808 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_20_in_ruleImplementation820 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleImplementation832 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_21_in_ruleImplementation832 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleImplementation853 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleImplementation865 = new BitSet(new long[]{0x0003FD7F71000070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleImplementation886 = new BitSet(new long[]{0x0003FD7F71000072L});
+    public static final BitSet FOLLOW_22_in_ruleImplementation865 = new BitSet(new long[]{0x0001FEFF71000070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleImplementation886 = new BitSet(new long[]{0x0001FEFF71000072L});
     public static final BitSet FOLLOW_ruleSubRoutine_in_entryRuleSubRoutine923 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSubRoutine933 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_ruleSubRoutine970 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSubRoutine987 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleSubRoutine1004 = new BitSet(new long[]{0x0003FD7F71000070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleSubRoutine1025 = new BitSet(new long[]{0x0003FD7F71000072L});
+    public static final BitSet FOLLOW_20_in_ruleSubRoutine1004 = new BitSet(new long[]{0x0001FEFF71000070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleSubRoutine1025 = new BitSet(new long[]{0x0001FEFF71000072L});
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression1062 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression1072 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValExpr_in_ruleExpression1121 = new BitSet(new long[]{0x0000000000040000L});
@@ -5580,26 +5530,26 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleValExpr1333 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIFExpression_in_entryRuleIFExpression1368 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleIFExpression1378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleIFExpression1415 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_24_in_ruleIFExpression1415 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleIFExpression1436 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleIFExpression1448 = new BitSet(new long[]{0x0003FD7F71000070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleIFExpression1469 = new BitSet(new long[]{0x0003FD7F75000070L});
+    public static final BitSet FOLLOW_25_in_ruleIFExpression1448 = new BitSet(new long[]{0x0001FEFF71000070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleIFExpression1469 = new BitSet(new long[]{0x0001FEFF75000070L});
     public static final BitSet FOLLOW_26_in_ruleIFExpression1482 = new BitSet(new long[]{0x0000000008000002L});
     public static final BitSet FOLLOW_27_in_ruleIFExpression1495 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleIFExpression1507 = new BitSet(new long[]{0x0003FD7F71000070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleIFExpression1528 = new BitSet(new long[]{0x0003FD7F75000070L});
+    public static final BitSet FOLLOW_25_in_ruleIFExpression1507 = new BitSet(new long[]{0x0001FEFF71000070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleIFExpression1528 = new BitSet(new long[]{0x0001FEFF75000070L});
     public static final BitSet FOLLOW_26_in_ruleIFExpression1541 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWHILEExpression_in_entryRuleWHILEExpression1579 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWHILEExpression1589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleWHILEExpression1626 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_28_in_ruleWHILEExpression1626 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleWHILEExpression1647 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleWHILEExpression1659 = new BitSet(new long[]{0x0003FD7F71000070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleWHILEExpression1680 = new BitSet(new long[]{0x0003FD7F75000070L});
+    public static final BitSet FOLLOW_25_in_ruleWHILEExpression1659 = new BitSet(new long[]{0x0001FEFF71000070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleWHILEExpression1680 = new BitSet(new long[]{0x0001FEFF75000070L});
     public static final BitSet FOLLOW_26_in_ruleWHILEExpression1693 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAssignExpression_in_entryRuleAssignExpression1729 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAssignExpression1739 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleAssignExpression1784 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleAssignExpression1796 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_17_in_ruleAssignExpression1796 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleAssignExpression1817 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAction_in_entryRuleAction1853 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAction1863 = new BitSet(new long[]{0x0000000000000002L});
@@ -5612,27 +5562,27 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleMeasureAction_in_ruleAction2072 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleForwardAction_in_entryRuleForwardAction2107 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleForwardAction2117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleForwardAction2163 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleForwardAction2163 = new BitSet(new long[]{0x0006000000000002L});
     public static final BitSet FOLLOW_ruleMotor_in_ruleForwardAction2184 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRotateAction_in_entryRuleRotateAction2221 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRotateAction2231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleRotateAction2268 = new BitSet(new long[]{0x000C000000000000L});
-    public static final BitSet FOLLOW_ruleMotor_in_ruleRotateAction2289 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_30_in_ruleRotateAction2268 = new BitSet(new long[]{0x0006000000000000L});
+    public static final BitSet FOLLOW_ruleMotor_in_ruleRotateAction2289 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleRotateAction2310 = new BitSet(new long[]{0x0000000080000002L});
     public static final BitSet FOLLOW_31_in_ruleRotateAction2328 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStopAction_in_entryRuleStopAction2378 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStopAction2388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleStopAction2434 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleStopAction2434 = new BitSet(new long[]{0x0006000000000002L});
     public static final BitSet FOLLOW_ruleMotor_in_ruleStopAction2455 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSAccelerationAction_in_entryRuleSAccelerationAction2492 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSAccelerationAction2502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleSAccelerationAction2539 = new BitSet(new long[]{0x000FFD6000000070L});
-    public static final BitSet FOLLOW_ruleMotor_in_ruleSAccelerationAction2560 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_33_in_ruleSAccelerationAction2539 = new BitSet(new long[]{0x0007FEE000000070L});
+    public static final BitSet FOLLOW_ruleMotor_in_ruleSAccelerationAction2560 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleSAccelerationAction2582 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSSpeedAction_in_entryRuleSSpeedAction2618 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSSpeedAction2628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleSSpeedAction2665 = new BitSet(new long[]{0x000FFD6000000070L});
-    public static final BitSet FOLLOW_ruleMotor_in_ruleSSpeedAction2686 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_34_in_ruleSSpeedAction2665 = new BitSet(new long[]{0x0007FEE000000070L});
+    public static final BitSet FOLLOW_ruleMotor_in_ruleSSpeedAction2686 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleValueExpression_in_ruleSSpeedAction2708 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSubRoutineAction_in_entryRuleSubRoutineAction2744 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSubRoutineAction2754 = new BitSet(new long[]{0x0000000000000002L});
@@ -5646,22 +5596,22 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBlevel1_in_ruleValueExpression2995 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBlevel1_in_entryRuleBlevel13029 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBlevel13039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlevel2_in_ruleBlevel13086 = new BitSet(new long[]{0x0030000000000002L});
-    public static final BitSet FOLLOW_ruleBBinaryOp_in_ruleBlevel13116 = new BitSet(new long[]{0x0003FD6000000070L});
-    public static final BitSet FOLLOW_ruleBlevel2_in_ruleBlevel13137 = new BitSet(new long[]{0x0030000000000002L});
+    public static final BitSet FOLLOW_ruleBlevel2_in_ruleBlevel13086 = new BitSet(new long[]{0x0018000000000002L});
+    public static final BitSet FOLLOW_ruleBBinaryOp_in_ruleBlevel13116 = new BitSet(new long[]{0x0001FEE000000070L});
+    public static final BitSet FOLLOW_ruleBlevel2_in_ruleBlevel13137 = new BitSet(new long[]{0x0018000000000002L});
     public static final BitSet FOLLOW_ruleBlevel2_in_entryRuleBlevel23175 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBlevel23185 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBNotExpr_in_ruleBlevel23232 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBlevel3_in_ruleBlevel23259 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBNotExpr_in_entryRuleBNotExpr3294 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBNotExpr3304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleBNotExpr3341 = new BitSet(new long[]{0x0003FD6000000070L});
+    public static final BitSet FOLLOW_37_in_ruleBNotExpr3341 = new BitSet(new long[]{0x0001FEE000000070L});
     public static final BitSet FOLLOW_ruleBlevel3_in_ruleBNotExpr3362 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBlevel3_in_entryRuleBlevel33398 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBlevel33408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlevel4_in_ruleBlevel33455 = new BitSet(new long[]{0x0FC0000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOp_in_ruleBlevel33485 = new BitSet(new long[]{0x0003FD6000000070L});
-    public static final BitSet FOLLOW_ruleBlevel4_in_ruleBlevel33506 = new BitSet(new long[]{0x0FC0000000000002L});
+    public static final BitSet FOLLOW_ruleBlevel4_in_ruleBlevel33455 = new BitSet(new long[]{0x07E0000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOp_in_ruleBlevel33485 = new BitSet(new long[]{0x0001FEE000000070L});
+    public static final BitSet FOLLOW_ruleBlevel4_in_ruleBlevel33506 = new BitSet(new long[]{0x07E0000000000002L});
     public static final BitSet FOLLOW_ruleBlevel4_in_entryRuleBlevel43544 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBlevel43554 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBVLiteral_in_ruleBlevel43601 = new BitSet(new long[]{0x0000000000000002L});
@@ -5672,40 +5622,38 @@ public class InternalRoverDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBVLiteral_in_entryRuleBVLiteral3744 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBVLiteral3754 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_ruleBVLiteral3797 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleBVLiteral3828 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_ruleBVLiteral3846 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleBVLiteral3863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBBLiteral_in_entryRuleBBLiteral3906 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBBLiteral3916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOL_LITERAL_in_ruleBBLiteral3957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBVarLiteral_in_entryRuleBVarLiteral3997 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBVarLiteral4007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBVarLiteral4048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBSensorLiteral_in_entryRuleBSensorLiteral4088 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBSensorLiteral4098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSensor_in_ruleBSensorLiteral4143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBVBracket_in_entryRuleBVBracket4178 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBVBracket4188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleBVBracket4225 = new BitSet(new long[]{0x0003FD6000000070L});
-    public static final BitSet FOLLOW_ruleValueExpression_in_ruleBVBracket4246 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleBVBracket4258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleSensor4308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleSensor4325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleSensor4342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleSensor4359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleSensor4376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleSensor4393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleSensor4410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleSensor4427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleEMotor4472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleEMotor4489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleBBinaryOp4534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleBBinaryOp4551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleCompareOp4596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleCompareOp4613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleCompareOp4630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleCompareOp4647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleCompareOp4664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleCompareOp4681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleBVLiteral3828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBBLiteral_in_entryRuleBBLiteral3869 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBBLiteral3879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOL_LITERAL_in_ruleBBLiteral3920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBVarLiteral_in_entryRuleBVarLiteral3960 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBVarLiteral3970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBVarLiteral4011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBSensorLiteral_in_entryRuleBSensorLiteral4051 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBSensorLiteral4061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSensor_in_ruleBSensorLiteral4106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBVBracket_in_entryRuleBVBracket4141 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBVBracket4151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleBVBracket4188 = new BitSet(new long[]{0x0001FEE000000070L});
+    public static final BitSet FOLLOW_ruleValueExpression_in_ruleBVBracket4209 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleBVBracket4221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleSensor4271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleSensor4288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleSensor4305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleSensor4322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleSensor4339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleSensor4356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleSensor4373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleSensor4390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleEMotor4435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleEMotor4452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleBBinaryOp4497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleBBinaryOp4514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleCompareOp4559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleCompareOp4576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleCompareOp4593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleCompareOp4610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleCompareOp4627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleCompareOp4644 = new BitSet(new long[]{0x0000000000000002L});
 
 }

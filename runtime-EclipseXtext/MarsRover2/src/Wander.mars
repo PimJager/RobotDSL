@@ -22,18 +22,18 @@ Implementation for DetectOutsideLine:
 	Does:
 		Do beforeRatate;
 		IF LeftLight > LINE_TRESHOLD {
-			Rotate LeftMotor neg 130;
-			Rotate RightMotor neg 20 wait;
+			Rotate LeftMotor neg 300;
+			Rotate RightMotor neg 130 wait;
 		} 
 		IF RightLight > LINE_TRESHOLD {
-			Rotate LeftMotor neg 20;
+			Rotate LeftMotor neg 300;
 			Rotate RightMotor neg 130 wait;
 		}
 				
 Routine beforeRatate:
-	Set Speed ROTATE_SPEED;
 	Set Acceleration ROTATE_ACC;
 	Stop;
+	Set Speed ROTATE_SPEED;
 	
 Routine setDefaults:
 	Set Speed DEFAULT_SPEED;

@@ -23,7 +23,8 @@ class ValueExpressionPrinter {
 		Robot.normalise(«print(e.left)» «printCOP(e.bcomp)» «print(e.right)»)'''
 	
 	def static dispatch CharSequence print(BVLiteral e)'''
-		(«IF e.neg »-«ENDIF»«IF e.fraction != 0»(float)«e.AValue»/(float)«e.fraction»«ELSE»«e.AValue»«ENDIF»)'''
+		(«IF e.neg »-«ENDIF»«/*IF e.fraction != 0»(float)«e.AValue»/(float)«e.fraction»«ELSE*/»«e.AValue»«/*ENDIF*/»)'''
+		// remove comments to reenable fractions (also remove them in RoverDSL.xtext)
 	
 	def static dispatch CharSequence print(BBLiteral e){
 		if(e.BValue){
