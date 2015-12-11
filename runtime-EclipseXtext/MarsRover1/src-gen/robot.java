@@ -11,6 +11,8 @@ import lejos.hardware.sensor.NXTLightSensor;
 import lejos.remote.nxt.BTConnector;
 import lejos.remote.nxt.NXTConnection;
 import lejos.robotics.SampleProvider;
+import lejos.robotics.subsumption.Arbitrator;
+import lejos.robotics.subsumption.Behavior;
 
 public class Robot {
 
@@ -24,13 +26,13 @@ public class Robot {
     public static EV3GyroSensor gyroSensor			= new EV3GyroSensor(LocalEV3.get().getPort("S4"));
     
     //local sensor values
-    static SampleProvider llsProvider  				= MarsRoverBrick1.leftLightSensor.getRedMode();
+    static SampleProvider llsProvider  				= Robot.leftLightSensor.getRedMode();
 	static float[] leftLightSamples 				= new float[llsProvider.sampleSize()];
-	static SampleProvider rlsProvider  				= MarsRoverBrick1.leftLightSensor.getRedMode();
+	static SampleProvider rlsProvider  				= Robot.rightLightSensor.getRedMode();
 	static float[] rightLightSamples 				= new float[rlsProvider.sampleSize()];
-	static SampleProvider rearUSProvider 		 	= MarsRoverBrick1.rearUSSensor.getDistanceMode();
+	static SampleProvider rearUSProvider 		 	= Robot.rearUSSensor.getDistanceMode();
 	static float[] rearUSSamples 					= new float[rearUSProvider.sampleSize()];
-	static SampleProvider gyroProvider 				= MarsRoverBrick1.gyroSensor.getAngleAndRateMode();
+	static SampleProvider gyroProvider 				= Robot.gyroSensor.getAngleAndRateMode();
 	static float[] gyroSamples 						= new float[gyroProvider.sampleSize()];
 	//remote sensor values
     static float frontUSSample;
@@ -43,9 +45,16 @@ public class Robot {
 	private static DataInputStream btIn;
 	private static SensorValues vals = new SensorValues();
 	private static Object valsLock = new Object();
+	
+	public static String currentBehaviour = "Setup";
 
 	//CONSTANTS
     //generated from constant list
+    public static float LINE_TRESHOLD = ((float)5/(float)10);
+    public static float ROTATE_SPEED = (100);
+    public static float ROTATE_ACC = (6000);
+    public static float DEFAULT_SPEED = (300);
+    public static float DEFAULT_ACC = (800);
     
     //GLOBALS
     //To implement quit
@@ -58,7 +67,7 @@ public class Robot {
 		
 		Behavior[] bList = {
 								new DriveForward(),
-																	new DetectLine()
+																	new DetectOutsideLine()
 									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
@@ -96,12 +105,18 @@ public class Robot {
     	}
     }
 	
-	public static int bToI(boolean b){
-		if(b) return 1;
-		elese return 0;
+	public static int normalise(int i){
+		return i;
 	}
-	public static boolean iToB(boolean i){
-		return i > 0;	
+	public static int normalise(boolean b){
+		if(b) return 1;
+		else return 0;
+	}
+	public static boolean makeBool(int i){
+		return i > 0;
+	}
+	public static boolean makeBool(boolean b){
+		return b;
 	}
 	
     static Thread updateLCD = new Thread(new Runnable() {
@@ -110,14 +125,17 @@ public class Robot {
 			while(true) {
 				updateSensors();
 				synchronized (valsLock) {
-					LCD.drawString("LeftL: " + MarsRoverBrick1.leftLightSamples[0], 0, 0);
-					LCD.drawString("RightL: " + MarsRoverBrick1.rightLightSamples[0], 0, 1);
-					LCD.drawString("RearUs: " + MarsRoverBrick1.rearUSSamples[0], 0, 2);
-					LCD.drawString("Gyro: " + MarsRoverBrick1.gyroSamples[0], 0, 3);
-					LCD.drawString("TouchL:" + vals.touchLeft, 0, 4);
-					LCD.drawString("TouchR: " + vals.touchRight, 0, 5);
-					LCD.drawString("FrontUS: " + vals.frontUS, 0, 6);
-					LCD.drawString("color:" + vals.color, 0, 7);	
+					LCD.drawString("LeftL: " + leftLightSamples[0], 0, 0);
+					LCD.drawString("RightL: " + rightLightSamples[0], 0, 1);
+					LCD.drawString("RearUs: " + rearUSSamples[0], 0, 2);
+					LCD.drawString("Gyro: " + gyroSamples[0], 0, 3);
+					int tl = vals.touchLeft > 0.9 ? 1 : 0;
+					int tr = vals.touchRight > 0.9 ? 1 : 0;
+					LCD.drawString("Touch L:"+tl+" R:"+tr, 0, 4);
+					LCD.drawString("FrontUS: " + vals.frontUS, 0, 5);
+					LCD.drawString("color:" + vals.color, 0, 6);
+					LCD.drawString("" + Robot.normalise(_running), 0, 7);	
+					LCD.drawString(currentBehaviour, 1, 7);
 				}
 			}
 		}	
@@ -149,12 +167,29 @@ public class Robot {
 	});
 	
 	//Generated list of subroutines
+	public static void beforeRatate(){
+		Robot.leftMotor.setSpeed((Robot.ROTATE_SPEED));
+		Robot.rightMotor.setSpeed((Robot.ROTATE_SPEED));
+		
+		Robot.leftMotor.setAcceleration((Robot.ROTATE_ACC));
+		Robot.rightMotor.setAcceleration((Robot.ROTATE_ACC));
+		
+		Robot.leftMotor.stop();
+		Robot.rightMotor.stop();
+	}
+	public static void setDefaults(){
+		Robot.leftMotor.setSpeed((Robot.DEFAULT_SPEED));
+		Robot.rightMotor.setSpeed((Robot.DEFAULT_SPEED));
+		
+		Robot.leftMotor.setAcceleration((Robot.DEFAULT_ACC));
+		Robot.rightMotor.setAcceleration((Robot.DEFAULT_ACC));
+	}
 }
 	
-public class DefaultQuitBehaviour extends Behavior {
+class DefaultQuitBehaviour implements Behavior {
 	@Override
 	public boolean takeControl() {
-		return Robot.iToB(0);
+		return Robot.makeBool(0);
 	}
 	@Override
 	public void action() {
@@ -165,19 +200,22 @@ public class DefaultQuitBehaviour extends Behavior {
 }
 
 //Generated behaviours
-public class DriveForward extends Behavior {
+class DriveForward implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(1);
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(1);
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DriveForward";
 		// supressioncontext = true
+		Robot.setDefaults();
+		
 		if(_supressed) return; 
 		Robot.leftMotor.forward();
 		Robot.rightMotor.forward();
@@ -186,24 +224,67 @@ public class DriveForward extends Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-public class DetectLine extends Behavior {
+class DetectOutsideLine implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
-		Robot.updateSensor();
-		return 	Robot.iToB(Robot._running) &&
-				Robot.iToB(Robot.bToI(Robot.iToB((Robot.leftLightSamples[0] < (3/10))) || Robot.iToB((Robot.rightLightSamples[0] < (3/10))));
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSamples[0] > (Robot.LINE_TRESHOLD))) || Robot.makeBool(Robot.normalise(Robot.rightLightSamples[0] > (Robot.LINE_TRESHOLD)))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
-		Robot.updateSensor();
+		Robot.updateSensors();
+		Robot.currentBehaviour = "DetectOutsideLine";
 		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.leftMotor.stop();
-		Robot.rightMotor.sop();
+		Robot.beforeRatate();
+		
+		if(Robot.makeBool(Robot.normalise(Robot.leftLightSamples[0] > (Robot.LINE_TRESHOLD)))){
+			if(_supressed) return; 
+			Robot.leftMotor.rotate((-130),true);
+			
+			if(_supressed) return; 
+			Robot.rightMotor.rotate((-20),false);
+		} else {
+		}
+		if(Robot.makeBool(Robot.normalise(Robot.rightLightSamples[0] > (Robot.LINE_TRESHOLD)))){
+			if(_supressed) return; 
+			Robot.leftMotor.rotate((-20),true);
+			
+			if(_supressed) return; 
+			Robot.rightMotor.rotate((-130),false);
+		} else {
+		}
 		// supressioncontext = false
 	}
 	@Override
 	public void suppress() {_supressed = true;}
 }
+
+class SensorValues {
+
+	float touchLeft;
+	float touchRight;
+	float frontUS;
+	float color;
+	
+	static SensorValues fromString(String s){
+		String[] parts = s.split(";");
+		if(parts.length < 4) return null;
+		SensorValues ret = new SensorValues();
+		ret.touchLeft = Float.parseFloat(parts[0]);
+		ret.touchRight = Float.parseFloat(parts[1]);
+		ret.frontUS = Float.parseFloat(parts[2]);
+		ret.color = Float.parseFloat(parts[3]);
+		return ret;
+	}
+	
+	static String toString(SensorValues s){
+		int touchL = s.touchLeft > 0.9 ? 1 : 0;
+		int touchR = s.touchRight > 0.9 ? 1 : 0;
+		return ""+touchL+";"+touchR+";"+Float.toString(s.frontUS)+";"+Float.toString(s.color);
+	}
+	
+}
+

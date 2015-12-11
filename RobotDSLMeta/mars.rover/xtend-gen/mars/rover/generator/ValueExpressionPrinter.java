@@ -20,7 +20,7 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 public class ValueExpressionPrinter {
   protected static CharSequence _print(final ExpressionBinOp e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Robot.bToI(Robot.iToB(");
+    _builder.append("Robot.normalise(Robot.makeBool(");
     ValueExpression _left = e.getLeft();
     CharSequence _print = ValueExpressionPrinter.print(_left);
     _builder.append(_print, "");
@@ -28,17 +28,17 @@ public class ValueExpressionPrinter {
     BBinaryOp _bop = e.getBop();
     String _printBOp = ValueExpressionPrinter.printBOp(_bop);
     _builder.append(_printBOp, "");
-    _builder.append(" Robot.iToB(");
+    _builder.append(" Robot.makeBool(");
     ValueExpression _right = e.getRight();
     CharSequence _print_1 = ValueExpressionPrinter.print(_right);
     _builder.append(_print_1, "");
-    _builder.append(")");
+    _builder.append("))");
     return _builder;
   }
   
   protected static CharSequence _print(final BNotExpr e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Robot.bToI(!Robot.iToB(");
+    _builder.append("Robot.normalise(!Robot.makeBool(");
     ValueExpression _sub = e.getSub();
     CharSequence _print = ValueExpressionPrinter.print(_sub);
     _builder.append(_print, "");
@@ -48,7 +48,7 @@ public class ValueExpressionPrinter {
   
   protected static CharSequence _print(final ExpressionBinComp e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("(");
+    _builder.append("Robot.normalise(");
     ValueExpression _left = e.getLeft();
     CharSequence _print = ValueExpressionPrinter.print(_left);
     _builder.append(_print, "");
@@ -73,15 +73,19 @@ public class ValueExpressionPrinter {
         _builder.append("-");
       }
     }
-    int _aValue = e.getAValue();
-    _builder.append(_aValue, "");
     {
       int _fraction = e.getFraction();
       boolean _notEquals = (_fraction != 0);
       if (_notEquals) {
-        _builder.append("/");
+        _builder.append("(float)");
+        int _aValue = e.getAValue();
+        _builder.append(_aValue, "");
+        _builder.append("/(float)");
         int _fraction_1 = e.getFraction();
         _builder.append(_fraction_1, "");
+      } else {
+        int _aValue_1 = e.getAValue();
+        _builder.append(_aValue_1, "");
       }
     }
     _builder.append(")");

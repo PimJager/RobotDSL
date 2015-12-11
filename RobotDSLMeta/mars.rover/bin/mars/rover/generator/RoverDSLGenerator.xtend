@@ -18,6 +18,6 @@ class RoverDSLGenerator implements IGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		val root = resource.allContents.head as Robot;
 		if(root != null)
-			fsa.generateFile("robot.java", RobotGenerator.toJava(root));
+			fsa.generateFile("Robot.java", RobotGenerator.toJava(root));
 	}
 }

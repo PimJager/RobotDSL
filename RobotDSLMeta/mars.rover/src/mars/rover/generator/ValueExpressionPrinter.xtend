@@ -14,16 +14,16 @@ import mars.rover.roverDSL.ExpressionBinOp
 class ValueExpressionPrinter {
 	
 	def static dispatch CharSequence print(ExpressionBinOp e)'''
-		Robot.bToI(Robot.iToB(«print(e.left)») «printBOp(e.bop)» Robot.iToB(«print(e.right)»)'''
+		Robot.normalise(Robot.makeBool(«print(e.left)») «printBOp(e.bop)» Robot.makeBool(«print(e.right)»))'''
 	
 	def static dispatch CharSequence print(BNotExpr e)'''
-		Robot.bToI(!Robot.iToB(«print(e.sub)»))'''
+		Robot.normalise(!Robot.makeBool(«print(e.sub)»))'''
 	
 	def static dispatch CharSequence print(ExpressionBinComp e)'''
-		(«print(e.left)» «printCOP(e.bcomp)» «print(e.right)»)'''
+		Robot.normalise(«print(e.left)» «printCOP(e.bcomp)» «print(e.right)»)'''
 	
 	def static dispatch CharSequence print(BVLiteral e)'''
-		(«IF e.neg »-«ENDIF»«e.AValue»«IF e.fraction != 0»/«e.fraction»«ENDIF»)'''
+		(«IF e.neg »-«ENDIF»«IF e.fraction != 0»(float)«e.AValue»/(float)«e.fraction»«ELSE»«e.AValue»«ENDIF»)'''
 	
 	def static dispatch CharSequence print(BBLiteral e){
 		if(e.BValue){

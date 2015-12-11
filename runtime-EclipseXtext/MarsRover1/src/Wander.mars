@@ -1,0 +1,40 @@
+Behaviors:
+	DriveForward
+	DetectOutsideLine
+	
+Constants:
+	LINE_TRESHOLD = 5/10;
+	ROTATE_SPEED = 100;
+	ROTATE_ACC = 6000;
+	DEFAULT_SPEED = 300;
+	DEFAULT_ACC = 800;
+
+Stops when: False
+
+Implementation for DriveForward:
+	Takes control when: True
+	Does:
+		Do setDefaults;
+		Forward; 
+		
+Implementation for DetectOutsideLine:
+	Takes control when: LeftLight > LINE_TRESHOLD || RightLight > LINE_TRESHOLD
+	Does:
+		Do beforeRatate;
+		IF LeftLight > LINE_TRESHOLD {
+			Rotate LeftMotor neg 130;
+			Rotate RightMotor neg 20 wait;
+		} 
+		IF RightLight > LINE_TRESHOLD {
+			Rotate LeftMotor neg 20;
+			Rotate RightMotor neg 130 wait;
+		}
+				
+Routine beforeRatate:
+	Set Speed ROTATE_SPEED;
+	Set Acceleration ROTATE_ACC;
+	Stop;
+	
+Routine setDefaults:
+	Set Speed DEFAULT_SPEED;
+	Set Acceleration DEFAULT_ACC;

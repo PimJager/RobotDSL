@@ -1,0 +1,16 @@
+Behaviors: 
+	DriveForward
+	DetectLine
+
+Stops when: False
+
+Implementation for DriveForward:
+	Takes control when: True
+	Does: 
+		Forward;
+		
+Implementation for DetectLine:
+	Takes control when: LeftLight > 5/10 || RightLight > 5/10
+	Does:
+		Stop;
+

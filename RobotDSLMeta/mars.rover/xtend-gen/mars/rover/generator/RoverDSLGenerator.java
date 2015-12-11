@@ -28,7 +28,7 @@ public class RoverDSLGenerator implements IGenerator {
     boolean _notEquals = (!Objects.equal(root, null));
     if (_notEquals) {
       CharSequence _java = RobotGenerator.toJava(root);
-      fsa.generateFile("robot.java", _java);
+      fsa.generateFile("Robot.java", _java);
     }
   }
 }

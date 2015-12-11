@@ -25,7 +25,7 @@ class ExpressionPrinter  {
 		Robot.«e.global.name» = «ValueExpressionPrinter.print(e.v)»;'''
 	
 	def static dispatch CharSequence print(IFExpression e)'''
-	if(Robot.iToB(«ValueExpressionPrinter.print(e.c)»)){
+	if(Robot.makeBool(«ValueExpressionPrinter.print(e.c)»)){
 		«ExpressionPrinter.printExprList(e.t)»
 	} else {
 		«ExpressionPrinter.printExprList(e.e)»
@@ -53,10 +53,10 @@ class ExpressionPrinter  {
 	def static dispatch CharSequence print(RotateAction a)'''
 		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
 		«IF a.motor.m == EMotor::LEFTMOTOR»
-		Robot.leftMotor.rotate(«ValueExpressionPrinter.print(a.degrees)»,«IF a.blocking»false«ELSE»true);«ENDIF»);
+		Robot.leftMotor.rotate(«ValueExpressionPrinter.print(a.degrees)»,«IF a.blocking»false«ELSE»true«ENDIF»);
 		«ENDIF»
 		«IF a.motor.m == EMotor::RIGHTMOTOR»
-		Robot.rightMotor.rotate(«ValueExpressionPrinter.print(a.degrees)»,«IF a.blocking»false«ELSE»true);«ENDIF»);
+		Robot.rightMotor.rotate(«ValueExpressionPrinter.print(a.degrees)»,«IF a.blocking»false«ELSE»true«ENDIF»);
 		«ENDIF»
 	'''
 	
@@ -64,7 +64,7 @@ class ExpressionPrinter  {
 		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
 		«IF a.motor == null»
 		Robot.leftMotor.stop();
-		Robot.rightMotor.sop();
+		Robot.rightMotor.stop();
 		«ELSE»
 			«IF a.motor.m == EMotor::LEFTMOTOR»
 			Robot.leftMotor.stop();

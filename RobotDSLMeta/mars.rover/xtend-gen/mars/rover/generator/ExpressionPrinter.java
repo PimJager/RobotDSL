@@ -47,7 +47,7 @@ public class ExpressionPrinter {
   
   protected static CharSequence _print(final IFExpression e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("if(Robot.iToB(");
+    _builder.append("if(Robot.makeBool(");
     ValueExpression _c = e.getC();
     CharSequence _print = ValueExpressionPrinter.print(_c);
     _builder.append(_print, "");
@@ -153,7 +153,7 @@ public class ExpressionPrinter {
           if (_isBlocking) {
             _builder.append("false");
           } else {
-            _builder.append("true);");
+            _builder.append("true");
           }
         }
         _builder.append(");");
@@ -175,7 +175,7 @@ public class ExpressionPrinter {
           if (_isBlocking_1) {
             _builder.append("false");
           } else {
-            _builder.append("true);");
+            _builder.append("true");
           }
         }
         _builder.append(");");
@@ -200,7 +200,7 @@ public class ExpressionPrinter {
       if (_equals) {
         _builder.append("Robot.leftMotor.stop();");
         _builder.newLine();
-        _builder.append("Robot.rightMotor.sop();");
+        _builder.append("Robot.rightMotor.stop();");
         _builder.newLine();
       } else {
         {
