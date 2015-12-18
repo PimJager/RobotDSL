@@ -27,7 +27,7 @@ public enum CompareOp implements Enumerator
    * @generated
    * @ordered
    */
-  EQ(0, "EQ", "=="),
+  EQ(0, "EQ", "equals"),
 
   /**
    * The '<em><b>NEQ</b></em>' literal object.
@@ -88,7 +88,7 @@ public enum CompareOp implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #EQ
-   * @model literal="=="
+   * @model literal="equals"
    * @generated
    * @ordered
    */

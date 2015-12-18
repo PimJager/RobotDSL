@@ -84,7 +84,10 @@ ruleAction :
 	ruleSAccelerationAction |
 	ruleSSpeedAction |
 	ruleSubRoutineAction |
-	ruleMeasureAction
+	ruleMeasureAction |
+	ruleShowAction |
+	ruleSoundAction |
+	ruleFreeAction
 ;
 
 // Rule ForwardAction
@@ -120,6 +123,24 @@ ruleSubRoutineAction :
 // Rule MeasureAction
 ruleMeasureAction :
 	'Measure'
+;
+
+// Rule ShowAction
+ruleShowAction :
+	'Show' (
+		RULE_STRING |
+		ruleSensor
+	)
+;
+
+// Rule SoundAction
+ruleSoundAction :
+	'Sound' ruleSound
+;
+
+// Rule FreeAction
+ruleFreeAction :
+	'Free' ruleMotor
 ;
 
 // Rule ValueExpression
@@ -158,7 +179,8 @@ ruleBlevel4 :
 	ruleBBLiteral |
 	ruleBVarLiteral |
 	ruleBSensorLiteral |
-	ruleBVBracket
+	ruleBVBracket |
+	ruleColorLiteral
 ;
 
 // Rule BVLiteral
@@ -186,6 +208,11 @@ ruleBVBracket :
 	'(' ruleValueExpression ')'
 ;
 
+// Rule ColorLiteral
+ruleColorLiteral :
+	ruleColor
+;
+
 // Rule Sensor
 ruleSensor :
 	'ColorID' |
@@ -204,6 +231,12 @@ ruleEMotor :
 	'RightMotor'
 ;
 
+// Rule Sound
+ruleSound :
+	'Beep' |
+	'Buzz'
+;
+
 // Rule BBinaryOp
 ruleBBinaryOp :
 	'&&' |
@@ -212,12 +245,30 @@ ruleBBinaryOp :
 
 // Rule CompareOp
 ruleCompareOp :
-	'==' |
+	'equals' |
 	'!=' |
 	'>=' |
 	'>' |
 	'<=' |
 	'<'
+;
+
+// Rule Color
+ruleColor :
+	'BLACK' |
+	'BLUE' |
+	'BROWN' |
+	'CYAN' |
+	'DARKGRAY' |
+	'GRAY' |
+	'GREEN' |
+	'LIGHTGRAY' |
+	'MAGENTA' |
+	'ORANGE' |
+	'PINK' |
+	'RED' |
+	'WHITE' |
+	'YELLOW'
 ;
 
 RULE_ALPHA :

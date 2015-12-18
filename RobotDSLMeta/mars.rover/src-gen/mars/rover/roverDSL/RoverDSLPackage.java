@@ -744,6 +744,99 @@ public interface RoverDSLPackage extends EPackage
   int MEASURE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link mars.rover.roverDSL.impl.ShowActionImpl <em>Show Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.impl.ShowActionImpl
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getShowAction()
+   * @generated
+   */
+  int SHOW_ACTION = 20;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHOW_ACTION__STRING = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Sensor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHOW_ACTION__SENSOR = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Show Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SHOW_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link mars.rover.roverDSL.impl.SoundActionImpl <em>Sound Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.impl.SoundActionImpl
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSoundAction()
+   * @generated
+   */
+  int SOUND_ACTION = 21;
+
+  /**
+   * The feature id for the '<em><b>Sound</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOUND_ACTION__SOUND = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Sound Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOUND_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link mars.rover.roverDSL.impl.FreeActionImpl <em>Free Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.impl.FreeActionImpl
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getFreeAction()
+   * @generated
+   */
+  int FREE_ACTION = 22;
+
+  /**
+   * The feature id for the '<em><b>Motor</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FREE_ACTION__MOTOR = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Free Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FREE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link mars.rover.roverDSL.impl.ValueExpressionImpl <em>Value Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -751,7 +844,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getValueExpression()
    * @generated
    */
-  int VALUE_EXPRESSION = 20;
+  int VALUE_EXPRESSION = 23;
 
   /**
    * The number of structural features of the '<em>Value Expression</em>' class.
@@ -770,7 +863,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBNotExpr()
    * @generated
    */
-  int BNOT_EXPR = 21;
+  int BNOT_EXPR = 24;
 
   /**
    * The feature id for the '<em><b>Sub</b></em>' containment reference.
@@ -798,7 +891,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVLiteral()
    * @generated
    */
-  int BV_LITERAL = 22;
+  int BV_LITERAL = 25;
 
   /**
    * The feature id for the '<em><b>Neg</b></em>' attribute.
@@ -835,7 +928,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBBLiteral()
    * @generated
    */
-  int BB_LITERAL = 23;
+  int BB_LITERAL = 26;
 
   /**
    * The feature id for the '<em><b>BValue</b></em>' attribute.
@@ -863,7 +956,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVarLiteral()
    * @generated
    */
-  int BVAR_LITERAL = 24;
+  int BVAR_LITERAL = 27;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -891,7 +984,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBSensorLiteral()
    * @generated
    */
-  int BSENSOR_LITERAL = 25;
+  int BSENSOR_LITERAL = 28;
 
   /**
    * The feature id for the '<em><b>Sensor</b></em>' attribute.
@@ -919,7 +1012,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBVBracket()
    * @generated
    */
-  int BV_BRACKET = 26;
+  int BV_BRACKET = 29;
 
   /**
    * The feature id for the '<em><b>Bsub</b></em>' containment reference.
@@ -940,6 +1033,34 @@ public interface RoverDSLPackage extends EPackage
   int BV_BRACKET_FEATURE_COUNT = VALUE_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link mars.rover.roverDSL.impl.ColorLiteralImpl <em>Color Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.impl.ColorLiteralImpl
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getColorLiteral()
+   * @generated
+   */
+  int COLOR_LITERAL = 30;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_LITERAL__COLOR = VALUE_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Color Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_LITERAL_FEATURE_COUNT = VALUE_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link mars.rover.roverDSL.impl.ExpressionBinOpImpl <em>Expression Bin Op</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -947,7 +1068,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getExpressionBinOp()
    * @generated
    */
-  int EXPRESSION_BIN_OP = 27;
+  int EXPRESSION_BIN_OP = 31;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -993,7 +1114,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getExpressionBinComp()
    * @generated
    */
-  int EXPRESSION_BIN_COMP = 28;
+  int EXPRESSION_BIN_COMP = 32;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1039,7 +1160,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSensor()
    * @generated
    */
-  int SENSOR = 29;
+  int SENSOR = 33;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.EMotor <em>EMotor</em>}' enum.
@@ -1049,7 +1170,17 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getEMotor()
    * @generated
    */
-  int EMOTOR = 30;
+  int EMOTOR = 34;
+
+  /**
+   * The meta object id for the '{@link mars.rover.roverDSL.Sound <em>Sound</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.Sound
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSound()
+   * @generated
+   */
+  int SOUND = 35;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.BBinaryOp <em>BBinary Op</em>}' enum.
@@ -1059,7 +1190,7 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getBBinaryOp()
    * @generated
    */
-  int BBINARY_OP = 31;
+  int BBINARY_OP = 36;
 
   /**
    * The meta object id for the '{@link mars.rover.roverDSL.CompareOp <em>Compare Op</em>}' enum.
@@ -1069,7 +1200,17 @@ public interface RoverDSLPackage extends EPackage
    * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getCompareOp()
    * @generated
    */
-  int COMPARE_OP = 32;
+  int COMPARE_OP = 37;
+
+  /**
+   * The meta object id for the '{@link mars.rover.roverDSL.Color <em>Color</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.rover.roverDSL.Color
+   * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getColor()
+   * @generated
+   */
+  int COLOR = 38;
 
 
   /**
@@ -1647,6 +1788,80 @@ public interface RoverDSLPackage extends EPackage
   EClass getMeasureAction();
 
   /**
+   * Returns the meta object for class '{@link mars.rover.roverDSL.ShowAction <em>Show Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Show Action</em>'.
+   * @see mars.rover.roverDSL.ShowAction
+   * @generated
+   */
+  EClass getShowAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link mars.rover.roverDSL.ShowAction#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see mars.rover.roverDSL.ShowAction#getString()
+   * @see #getShowAction()
+   * @generated
+   */
+  EAttribute getShowAction_String();
+
+  /**
+   * Returns the meta object for the attribute '{@link mars.rover.roverDSL.ShowAction#getSensor <em>Sensor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Sensor</em>'.
+   * @see mars.rover.roverDSL.ShowAction#getSensor()
+   * @see #getShowAction()
+   * @generated
+   */
+  EAttribute getShowAction_Sensor();
+
+  /**
+   * Returns the meta object for class '{@link mars.rover.roverDSL.SoundAction <em>Sound Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sound Action</em>'.
+   * @see mars.rover.roverDSL.SoundAction
+   * @generated
+   */
+  EClass getSoundAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link mars.rover.roverDSL.SoundAction#getSound <em>Sound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Sound</em>'.
+   * @see mars.rover.roverDSL.SoundAction#getSound()
+   * @see #getSoundAction()
+   * @generated
+   */
+  EAttribute getSoundAction_Sound();
+
+  /**
+   * Returns the meta object for class '{@link mars.rover.roverDSL.FreeAction <em>Free Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Free Action</em>'.
+   * @see mars.rover.roverDSL.FreeAction
+   * @generated
+   */
+  EClass getFreeAction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link mars.rover.roverDSL.FreeAction#getMotor <em>Motor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Motor</em>'.
+   * @see mars.rover.roverDSL.FreeAction#getMotor()
+   * @see #getFreeAction()
+   * @generated
+   */
+  EReference getFreeAction_Motor();
+
+  /**
    * Returns the meta object for class '{@link mars.rover.roverDSL.ValueExpression <em>Value Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1794,6 +2009,27 @@ public interface RoverDSLPackage extends EPackage
   EReference getBVBracket_Bsub();
 
   /**
+   * Returns the meta object for class '{@link mars.rover.roverDSL.ColorLiteral <em>Color Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Color Literal</em>'.
+   * @see mars.rover.roverDSL.ColorLiteral
+   * @generated
+   */
+  EClass getColorLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link mars.rover.roverDSL.ColorLiteral#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Color</em>'.
+   * @see mars.rover.roverDSL.ColorLiteral#getColor()
+   * @see #getColorLiteral()
+   * @generated
+   */
+  EAttribute getColorLiteral_Color();
+
+  /**
    * Returns the meta object for class '{@link mars.rover.roverDSL.ExpressionBinOp <em>Expression Bin Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1900,6 +2136,16 @@ public interface RoverDSLPackage extends EPackage
   EEnum getEMotor();
 
   /**
+   * Returns the meta object for enum '{@link mars.rover.roverDSL.Sound <em>Sound</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Sound</em>'.
+   * @see mars.rover.roverDSL.Sound
+   * @generated
+   */
+  EEnum getSound();
+
+  /**
    * Returns the meta object for enum '{@link mars.rover.roverDSL.BBinaryOp <em>BBinary Op</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1918,6 +2164,16 @@ public interface RoverDSLPackage extends EPackage
    * @generated
    */
   EEnum getCompareOp();
+
+  /**
+   * Returns the meta object for enum '{@link mars.rover.roverDSL.Color <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Color</em>'.
+   * @see mars.rover.roverDSL.Color
+   * @generated
+   */
+  EEnum getColor();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2415,6 +2671,68 @@ public interface RoverDSLPackage extends EPackage
     EClass MEASURE_ACTION = eINSTANCE.getMeasureAction();
 
     /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.impl.ShowActionImpl <em>Show Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.impl.ShowActionImpl
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getShowAction()
+     * @generated
+     */
+    EClass SHOW_ACTION = eINSTANCE.getShowAction();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SHOW_ACTION__STRING = eINSTANCE.getShowAction_String();
+
+    /**
+     * The meta object literal for the '<em><b>Sensor</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SHOW_ACTION__SENSOR = eINSTANCE.getShowAction_Sensor();
+
+    /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.impl.SoundActionImpl <em>Sound Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.impl.SoundActionImpl
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSoundAction()
+     * @generated
+     */
+    EClass SOUND_ACTION = eINSTANCE.getSoundAction();
+
+    /**
+     * The meta object literal for the '<em><b>Sound</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SOUND_ACTION__SOUND = eINSTANCE.getSoundAction_Sound();
+
+    /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.impl.FreeActionImpl <em>Free Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.impl.FreeActionImpl
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getFreeAction()
+     * @generated
+     */
+    EClass FREE_ACTION = eINSTANCE.getFreeAction();
+
+    /**
+     * The meta object literal for the '<em><b>Motor</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FREE_ACTION__MOTOR = eINSTANCE.getFreeAction_Motor();
+
+    /**
      * The meta object literal for the '{@link mars.rover.roverDSL.impl.ValueExpressionImpl <em>Value Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2541,6 +2859,24 @@ public interface RoverDSLPackage extends EPackage
     EReference BV_BRACKET__BSUB = eINSTANCE.getBVBracket_Bsub();
 
     /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.impl.ColorLiteralImpl <em>Color Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.impl.ColorLiteralImpl
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getColorLiteral()
+     * @generated
+     */
+    EClass COLOR_LITERAL = eINSTANCE.getColorLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLOR_LITERAL__COLOR = eINSTANCE.getColorLiteral_Color();
+
+    /**
      * The meta object literal for the '{@link mars.rover.roverDSL.impl.ExpressionBinOpImpl <em>Expression Bin Op</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2629,6 +2965,16 @@ public interface RoverDSLPackage extends EPackage
     EEnum EMOTOR = eINSTANCE.getEMotor();
 
     /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.Sound <em>Sound</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.Sound
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getSound()
+     * @generated
+     */
+    EEnum SOUND = eINSTANCE.getSound();
+
+    /**
      * The meta object literal for the '{@link mars.rover.roverDSL.BBinaryOp <em>BBinary Op</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2647,6 +2993,16 @@ public interface RoverDSLPackage extends EPackage
      * @generated
      */
     EEnum COMPARE_OP = eINSTANCE.getCompareOp();
+
+    /**
+     * The meta object literal for the '{@link mars.rover.roverDSL.Color <em>Color</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.rover.roverDSL.Color
+     * @see mars.rover.roverDSL.impl.RoverDSLPackageImpl#getColor()
+     * @generated
+     */
+    EEnum COLOR = eINSTANCE.getColor();
 
   }
 

@@ -1,9 +1,14 @@
 Behaviors:
 	DriveForward
 	DetectOutsideLine
+	DetectCliff
 	
+Variables:
+	doingSafety
+
 Constants:
-	LINE_TRESHOLD = 50;
+	LINE_TRESHOLD = 38;
+	CLIFF_TRESHOLD = 5;
 	ROTATE_SPEED = 100;
 	ROTATE_ACC = 6000;
 	DEFAULT_SPEED = 300; 
@@ -12,24 +17,42 @@ Constants:
 Stops when: False
 
 Implementation for DriveForward:
-	Takes control when: True
+	Takes control when: NOT doingSafety
 	Does:
 		Do setDefaults;
-		Forward; 
+		Forward;
 		
 Implementation for DetectOutsideLine:
 	Takes control when: LeftLight > LINE_TRESHOLD || RightLight > LINE_TRESHOLD
 	Does:
+		doingSafety = True;
 		Do beforeRatate;
-		IF LeftLight > LINE_TRESHOLD {
-			Rotate LeftMotor neg 300;
-			Rotate RightMotor neg 130 wait;
-		} 
-		IF RightLight > LINE_TRESHOLD {
-			Rotate LeftMotor neg 300;
-			Rotate RightMotor neg 130 wait;
-		}
-				
+		Do backup;
+		Do backup;
+		Do backup;
+		Rotate LeftMotor neg 130;
+		Rotate RightMotor 130 wait;
+		doingSafety = False;
+		
+Implementation for DetectCliff:
+	Takes control when: RearUS > CLIFF_TRESHOLD
+	Does:
+		doingSafety = True;
+		Do beforeRatate;
+		Do frontup;
+		Do frontup;
+		Rotate LeftMotor neg 130;
+		Rotate RightMotor 130 wait;
+		doingSafety = False;
+
+Routine backup:
+	Rotate LeftMotor neg 100;
+	Rotate RightMotor neg 100 wait;	
+	
+Routine frontup:
+	Rotate LeftMotor 100;
+	Rotate RightMotor 100 wait;
+			
 Routine beforeRatate:
 	Set Acceleration ROTATE_ACC;
 	Stop;

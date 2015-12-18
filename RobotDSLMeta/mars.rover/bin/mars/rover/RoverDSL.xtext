@@ -32,6 +32,11 @@ enum EMotor :
 	| RIGHTMOTOR = 'RightMotor'
 ;
 
+enum Sound : 
+	  BEEP = 'Beep'
+	| BUZZ = 'Buzz'
+;
+
 Global : name = ID;
 
 Static : name = ID ' = ' value = ValueExpression ';';
@@ -79,6 +84,9 @@ Action :
 	| SSpeedAction
 	| SubRoutineAction
 	| MeasureAction
+	| ShowAction
+	| SoundAction
+	| FreeAction
 ;
 ForwardAction : {ForwardAction} 
 	'Forward' (motor = Motor)? 
@@ -89,6 +97,9 @@ SAccelerationAction : 'Set Acceleration' (motor = Motor)? v = ValueExpression ;
 SSpeedAction : 'Set Speed' (motor = Motor)? v = ValueExpression ;
 SubRoutineAction : 'Do' routine = [SubRoutine] ;
 MeasureAction : {MeasureAction} 'Measure';
+ShowAction : 'Show' (string = STRING | sensor = Sensor);
+SoundAction : 'Sound' sound = Sound;
+FreeAction : 'Free' motor = Motor;
 
 ValueExpression :	Blevel1;
 
@@ -114,6 +125,7 @@ Blevel4 returns ValueExpression :
 	| BVarLiteral
 	| BSensorLiteral
 	| BVBracket
+	| ColorLiteral
 ;
 										//remove comment for fractional values
 BVLiteral : neg ?= ('neg')? aValue = INT; //('/' fraction = INT)?;
@@ -121,13 +133,31 @@ BBLiteral : bValue = BOOL_LITERAL;
 BVarLiteral : var = ID ;
 BSensorLiteral : sensor = Sensor;
 BVBracket : '(' bsub = ValueExpression ')' ;
+ColorLiteral : color = Color;
 
 
 enum BBinaryOp :
 	AND = '&&' | OR = '||'
 ;
 enum CompareOp :
-	EQ = "==" | NEQ = "!=" | GEQ = ">=" | GT = ">" | LEQ = "<=" | LT = "<"
+	EQ = "equals" | NEQ = "!=" | GEQ = ">=" | GT = ">" | LEQ = "<=" | LT = "<"
+;
+
+enum Color : 
+	  BLACK = 'BLACK'
+	| BLUE = 'BLUE'
+	| BROWN = 'BROWN'
+	| CYAN = 'CYAN'
+	| DARK_GRAY = 'DARKGRAY'
+	| GRAY = 'GRAY'
+	| GREEN = 'GREEN'
+	| LIGHT_GRAY = 'LIGHTGRAY'
+	| MAGENTA = 'MAGENTA'
+	| ORANGE = 'ORANGE'
+	| PINK = 'PINK'
+	| RED = 'RED'
+	| WHITE = 'WHITE'
+	| YELLOW = 'YELLOW'
 ;
 
 //terminals

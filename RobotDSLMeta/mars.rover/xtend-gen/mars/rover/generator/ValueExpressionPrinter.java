@@ -9,6 +9,8 @@ import mars.rover.roverDSL.BSensorLiteral;
 import mars.rover.roverDSL.BVBracket;
 import mars.rover.roverDSL.BVLiteral;
 import mars.rover.roverDSL.BVarLiteral;
+import mars.rover.roverDSL.Color;
+import mars.rover.roverDSL.ColorLiteral;
 import mars.rover.roverDSL.CompareOp;
 import mars.rover.roverDSL.ExpressionBinComp;
 import mars.rover.roverDSL.ExpressionBinOp;
@@ -119,6 +121,73 @@ public class ValueExpressionPrinter {
     return _builder;
   }
   
+  protected static CharSequence _print(final ColorLiteral e) {
+    Color _color = e.getColor();
+    if (_color != null) {
+      switch (_color) {
+        case BLACK:
+          StringConcatenation _builder = new StringConcatenation();
+          _builder.append("Color.BLACK");
+          return _builder;
+        case BLUE:
+          StringConcatenation _builder_1 = new StringConcatenation();
+          _builder_1.append("Color.BLUE");
+          return _builder_1;
+        case BROWN:
+          StringConcatenation _builder_2 = new StringConcatenation();
+          _builder_2.append("Color.BROWN");
+          return _builder_2;
+        case CYAN:
+          StringConcatenation _builder_3 = new StringConcatenation();
+          _builder_3.append("Color.CYAN");
+          return _builder_3;
+        case DARK_GRAY:
+          StringConcatenation _builder_4 = new StringConcatenation();
+          _builder_4.append("Color.DARK_GRAY");
+          return _builder_4;
+        case GRAY:
+          StringConcatenation _builder_5 = new StringConcatenation();
+          _builder_5.append("Color.GRAY");
+          return _builder_5;
+        case GREEN:
+          StringConcatenation _builder_6 = new StringConcatenation();
+          _builder_6.append("Color.GREEN");
+          return _builder_6;
+        case LIGHT_GRAY:
+          StringConcatenation _builder_7 = new StringConcatenation();
+          _builder_7.append("Color.LIGHT_GRAY");
+          return _builder_7;
+        case MAGENTA:
+          StringConcatenation _builder_8 = new StringConcatenation();
+          _builder_8.append("Color.MAGENTA");
+          return _builder_8;
+        case ORANGE:
+          StringConcatenation _builder_9 = new StringConcatenation();
+          _builder_9.append("Color.ORANGE");
+          return _builder_9;
+        case PINK:
+          StringConcatenation _builder_10 = new StringConcatenation();
+          _builder_10.append("Color.PINK");
+          return _builder_10;
+        case RED:
+          StringConcatenation _builder_11 = new StringConcatenation();
+          _builder_11.append("Color.RED");
+          return _builder_11;
+        case WHITE:
+          StringConcatenation _builder_12 = new StringConcatenation();
+          _builder_12.append("Color.WHITE");
+          return _builder_12;
+        case YELLOW:
+          StringConcatenation _builder_13 = new StringConcatenation();
+          _builder_13.append("Color.YELLOW");
+          return _builder_13;
+        default:
+          break;
+      }
+    }
+    return null;
+  }
+  
   public static String printBOp(final BBinaryOp op) {
     if (op != null) {
       switch (op) {
@@ -184,6 +253,8 @@ public class ValueExpressionPrinter {
       return _print((BVLiteral)e);
     } else if (e instanceof BVarLiteral) {
       return _print((BVarLiteral)e);
+    } else if (e instanceof ColorLiteral) {
+      return _print((ColorLiteral)e);
     } else if (e instanceof ExpressionBinComp) {
       return _print((ExpressionBinComp)e);
     } else if (e instanceof ExpressionBinOp) {

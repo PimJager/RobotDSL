@@ -1,0 +1,74 @@
+Behaviors:
+	DriveForward
+	MeasureBlock
+	DetectOutsideLine
+	DetectCliff
+	
+Variables:
+	doingSafety
+
+Constants:
+	LINE_TRESHOLD = 39;
+	CLIFF_TRESHOLD = 6;
+	ROTATE_SPEED = 100;
+	ROTATE_ACC = 6000;
+	DEFAULT_SPEED = 300; 
+	DEFAULT_ACC = 800; 
+
+Stops when: False
+
+Implementation for DriveForward:
+	Takes control when: NOT doingSafety
+	Does:
+		Do setDefaults;
+		Forward;
+		
+Implementation for DetectOutsideLine:
+	Takes control when: LeftLight > LINE_TRESHOLD || RightLight > LINE_TRESHOLD
+	Does:
+		doingSafety = True;
+		Do beforeRatate;
+		Do backup;
+		Do backup;
+		Do backup;
+		Do turnLeft;
+		doingSafety = False;
+		
+Implementation for DetectCliff:
+	Takes control when: RearUS > CLIFF_TRESHOLD
+	Does:
+		doingSafety = True;
+		Do beforeRatate;
+		Do frontup;
+		Do frontup;
+		Do turnLeft;
+		doingSafety = False;
+		
+Implementation for MeasureBlock:
+	Takes control when: LeftTouch || RightTouch
+	Does:
+		Do beforeRatate;
+		Measure;
+		Do backup;
+		Do turnLeft;
+
+Routine turnLeft:
+	Rotate LeftMotor neg 130;
+	Rotate RightMotor 130 wait;
+
+Routine backup:
+	Rotate LeftMotor neg 100;
+	Rotate RightMotor neg 100 wait;	
+	
+Routine frontup:
+	Rotate LeftMotor 100;
+	Rotate RightMotor 100 wait;
+			
+Routine beforeRatate:
+	Set Acceleration ROTATE_ACC;
+	Stop;
+	Set Speed ROTATE_SPEED;
+	
+Routine setDefaults:
+	Set Speed DEFAULT_SPEED;
+	Set Acceleration DEFAULT_ACC;

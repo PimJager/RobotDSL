@@ -13,9 +13,11 @@ import mars.rover.roverDSL.BVBracket;
 import mars.rover.roverDSL.BVLiteral;
 import mars.rover.roverDSL.BVarLiteral;
 import mars.rover.roverDSL.BehaviorName;
+import mars.rover.roverDSL.ColorLiteral;
 import mars.rover.roverDSL.ExpressionBinComp;
 import mars.rover.roverDSL.ExpressionBinOp;
 import mars.rover.roverDSL.ForwardAction;
+import mars.rover.roverDSL.FreeAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
 import mars.rover.roverDSL.Implementation;
@@ -26,6 +28,8 @@ import mars.rover.roverDSL.RotateAction;
 import mars.rover.roverDSL.RoverDSLPackage;
 import mars.rover.roverDSL.SAccelerationAction;
 import mars.rover.roverDSL.SSpeedAction;
+import mars.rover.roverDSL.ShowAction;
+import mars.rover.roverDSL.SoundAction;
 import mars.rover.roverDSL.Static;
 import mars.rover.roverDSL.StopAction;
 import mars.rover.roverDSL.SubRoutine;
@@ -78,6 +82,9 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case RoverDSLPackage.BEHAVIOR_NAME:
 				sequence_BehaviorName(context, (BehaviorName) semanticObject); 
 				return; 
+			case RoverDSLPackage.COLOR_LITERAL:
+				sequence_ColorLiteral(context, (ColorLiteral) semanticObject); 
+				return; 
 			case RoverDSLPackage.EXPRESSION_BIN_COMP:
 				sequence_Blevel3(context, (ExpressionBinComp) semanticObject); 
 				return; 
@@ -86,6 +93,9 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case RoverDSLPackage.FORWARD_ACTION:
 				sequence_ForwardAction(context, (ForwardAction) semanticObject); 
+				return; 
+			case RoverDSLPackage.FREE_ACTION:
+				sequence_FreeAction(context, (FreeAction) semanticObject); 
 				return; 
 			case RoverDSLPackage.GLOBAL:
 				sequence_Global(context, (Global) semanticObject); 
@@ -113,6 +123,12 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				return; 
 			case RoverDSLPackage.SSPEED_ACTION:
 				sequence_SSpeedAction(context, (SSpeedAction) semanticObject); 
+				return; 
+			case RoverDSLPackage.SHOW_ACTION:
+				sequence_ShowAction(context, (ShowAction) semanticObject); 
+				return; 
+			case RoverDSLPackage.SOUND_ACTION:
+				sequence_SoundAction(context, (SoundAction) semanticObject); 
 				return; 
 			case RoverDSLPackage.STATIC:
 				sequence_Static(context, (Static) semanticObject); 
@@ -306,10 +322,42 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     color=Color
+	 */
+	protected void sequence_ColorLiteral(EObject context, ColorLiteral semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RoverDSLPackage.Literals.COLOR_LITERAL__COLOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RoverDSLPackage.Literals.COLOR_LITERAL__COLOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getColorLiteralAccess().getColorColorEnumRuleCall_0(), semanticObject.getColor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (motor=Motor?)
 	 */
 	protected void sequence_ForwardAction(EObject context, ForwardAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     motor=Motor
+	 */
+	protected void sequence_FreeAction(EObject context, FreeAction semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RoverDSLPackage.Literals.FREE_ACTION__MOTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RoverDSLPackage.Literals.FREE_ACTION__MOTOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFreeActionAccess().getMotorMotorParserRuleCall_1_0(), semanticObject.getMotor());
+		feeder.finish();
 	}
 	
 	
@@ -412,6 +460,31 @@ public class RoverDSLSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_SSpeedAction(EObject context, SSpeedAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (string=STRING | sensor=Sensor)
+	 */
+	protected void sequence_ShowAction(EObject context, ShowAction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     sound=Sound
+	 */
+	protected void sequence_SoundAction(EObject context, SoundAction semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, RoverDSLPackage.Literals.SOUND_ACTION__SOUND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RoverDSLPackage.Literals.SOUND_ACTION__SOUND));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSoundActionAccess().getSoundSoundEnumRuleCall_1_0(), semanticObject.getSound());
+		feeder.finish();
 	}
 	
 	

@@ -40,12 +40,15 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
 					put(grammarAccess.getExpressionAccess().getAlternatives_0_0(), "rule__Expression__Alternatives_0_0");
 					put(grammarAccess.getActionAccess().getAlternatives(), "rule__Action__Alternatives");
+					put(grammarAccess.getShowActionAccess().getAlternatives_1(), "rule__ShowAction__Alternatives_1");
 					put(grammarAccess.getBlevel2Access().getAlternatives(), "rule__Blevel2__Alternatives");
 					put(grammarAccess.getBlevel4Access().getAlternatives(), "rule__Blevel4__Alternatives");
 					put(grammarAccess.getSensorAccess().getAlternatives(), "rule__Sensor__Alternatives");
 					put(grammarAccess.getEMotorAccess().getAlternatives(), "rule__EMotor__Alternatives");
+					put(grammarAccess.getSoundAccess().getAlternatives(), "rule__Sound__Alternatives");
 					put(grammarAccess.getBBinaryOpAccess().getAlternatives(), "rule__BBinaryOp__Alternatives");
 					put(grammarAccess.getCompareOpAccess().getAlternatives(), "rule__CompareOp__Alternatives");
+					put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
 					put(grammarAccess.getRobotAccess().getGroup(), "rule__Robot__Group__0");
 					put(grammarAccess.getRobotAccess().getGroup_2(), "rule__Robot__Group_2__0");
 					put(grammarAccess.getRobotAccess().getGroup_3(), "rule__Robot__Group_3__0");
@@ -64,6 +67,9 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSSpeedActionAccess().getGroup(), "rule__SSpeedAction__Group__0");
 					put(grammarAccess.getSubRoutineActionAccess().getGroup(), "rule__SubRoutineAction__Group__0");
 					put(grammarAccess.getMeasureActionAccess().getGroup(), "rule__MeasureAction__Group__0");
+					put(grammarAccess.getShowActionAccess().getGroup(), "rule__ShowAction__Group__0");
+					put(grammarAccess.getSoundActionAccess().getGroup(), "rule__SoundAction__Group__0");
+					put(grammarAccess.getFreeActionAccess().getGroup(), "rule__FreeAction__Group__0");
 					put(grammarAccess.getBlevel1Access().getGroup(), "rule__Blevel1__Group__0");
 					put(grammarAccess.getBlevel1Access().getGroup_1(), "rule__Blevel1__Group_1__0");
 					put(grammarAccess.getBNotExprAccess().getGroup(), "rule__BNotExpr__Group__0");
@@ -105,6 +111,10 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSSpeedActionAccess().getMotorAssignment_1(), "rule__SSpeedAction__MotorAssignment_1");
 					put(grammarAccess.getSSpeedActionAccess().getVAssignment_2(), "rule__SSpeedAction__VAssignment_2");
 					put(grammarAccess.getSubRoutineActionAccess().getRoutineAssignment_1(), "rule__SubRoutineAction__RoutineAssignment_1");
+					put(grammarAccess.getShowActionAccess().getStringAssignment_1_0(), "rule__ShowAction__StringAssignment_1_0");
+					put(grammarAccess.getShowActionAccess().getSensorAssignment_1_1(), "rule__ShowAction__SensorAssignment_1_1");
+					put(grammarAccess.getSoundActionAccess().getSoundAssignment_1(), "rule__SoundAction__SoundAssignment_1");
+					put(grammarAccess.getFreeActionAccess().getMotorAssignment_1(), "rule__FreeAction__MotorAssignment_1");
 					put(grammarAccess.getBlevel1Access().getBopAssignment_1_1(), "rule__Blevel1__BopAssignment_1_1");
 					put(grammarAccess.getBlevel1Access().getRightAssignment_1_2(), "rule__Blevel1__RightAssignment_1_2");
 					put(grammarAccess.getBNotExprAccess().getSubAssignment_1(), "rule__BNotExpr__SubAssignment_1");
@@ -116,6 +126,7 @@ public class RoverDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBVarLiteralAccess().getVarAssignment(), "rule__BVarLiteral__VarAssignment");
 					put(grammarAccess.getBSensorLiteralAccess().getSensorAssignment(), "rule__BSensorLiteral__SensorAssignment");
 					put(grammarAccess.getBVBracketAccess().getBsubAssignment_1(), "rule__BVBracket__BsubAssignment_1");
+					put(grammarAccess.getColorLiteralAccess().getColorAssignment(), "rule__ColorLiteral__ColorAssignment");
 				}
 			};
 		}

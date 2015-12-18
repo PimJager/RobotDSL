@@ -12,22 +12,32 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalRoverDSLLexer extends Lexer {
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__66=66;
     public static final int RULE_ID=4;
+    public static final int T__67=67;
     public static final int T__29=29;
+    public static final int T__64=64;
     public static final int T__28=28;
+    public static final int T__65=65;
     public static final int T__27=27;
+    public static final int T__62=62;
     public static final int T__26=26;
+    public static final int T__63=63;
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int T__21=21;
     public static final int RULE_ANY_OTHER=12;
+    public static final int T__21=21;
     public static final int T__20=20;
+    public static final int T__61=61;
     public static final int EOF=-1;
+    public static final int T__60=60;
     public static final int T__55=55;
-    public static final int T__19=19;
     public static final int T__56=56;
+    public static final int T__19=19;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__16=16;
@@ -40,7 +50,8 @@ public class InternalRoverDSLLexer extends Lexer {
     public static final int T__17=17;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int T__59=59;
+    public static final int RULE_INT=6;
     public static final int T__50=50;
     public static final int T__42=42;
     public static final int T__43=43;
@@ -52,22 +63,30 @@ public class InternalRoverDSLLexer extends Lexer {
     public static final int T__45=45;
     public static final int T__48=48;
     public static final int T__49=49;
-    public static final int RULE_ALPHA=7;
+    public static final int RULE_ALPHA=8;
     public static final int RULE_SL_COMMENT=10;
     public static final int RULE_ML_COMMENT=9;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_STRING=8;
+    public static final int RULE_STRING=5;
     public static final int T__33=33;
+    public static final int T__71=71;
     public static final int T__34=34;
+    public static final int T__72=72;
     public static final int T__35=35;
     public static final int T__36=36;
+    public static final int T__70=70;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int RULE_BOOL_LITERAL=6;
+    public static final int RULE_BOOL_LITERAL=7;
+    public static final int T__76=76;
     public static final int RULE_WS=11;
+    public static final int T__75=75;
+    public static final int T__74=74;
+    public static final int T__73=73;
+    public static final int T__77=77;
 
     // delegates
     // delegators
@@ -587,10 +606,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:35:7: ( 'NOT' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:35:9: 'NOT'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:35:7: ( 'Show' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:35:9: 'Show'
             {
-            match("NOT"); 
+            match("Show"); 
 
 
             }
@@ -608,10 +627,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:36:7: ( 'neg' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:36:9: 'neg'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:36:7: ( 'Sound' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:36:9: 'Sound'
             {
-            match("neg"); 
+            match("Sound"); 
 
 
             }
@@ -629,10 +648,11 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:37:7: ( '(' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:37:9: '('
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:37:7: ( 'Free' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:37:9: 'Free'
             {
-            match('('); 
+            match("Free"); 
+
 
             }
 
@@ -649,10 +669,11 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:38:7: ( ')' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:38:9: ')'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:38:7: ( 'NOT' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:38:9: 'NOT'
             {
-            match(')'); 
+            match("NOT"); 
+
 
             }
 
@@ -669,10 +690,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:39:7: ( 'ColorID' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:39:9: 'ColorID'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:39:7: ( 'neg' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:39:9: 'neg'
             {
-            match("ColorID"); 
+            match("neg"); 
 
 
             }
@@ -690,11 +711,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:40:7: ( 'LeftLight' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:40:9: 'LeftLight'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:40:7: ( '(' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:40:9: '('
             {
-            match("LeftLight"); 
-
+            match('('); 
 
             }
 
@@ -711,11 +731,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:41:7: ( 'RightLight' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:41:9: 'RightLight'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:41:7: ( ')' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:41:9: ')'
             {
-            match("RightLight"); 
-
+            match(')'); 
 
             }
 
@@ -732,10 +751,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:42:7: ( 'FrontUS' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:42:9: 'FrontUS'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:42:7: ( 'ColorID' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:42:9: 'ColorID'
             {
-            match("FrontUS"); 
+            match("ColorID"); 
 
 
             }
@@ -753,10 +772,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:43:7: ( 'RearUS' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:43:9: 'RearUS'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:43:7: ( 'LeftLight' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:43:9: 'LeftLight'
             {
-            match("RearUS"); 
+            match("LeftLight"); 
 
 
             }
@@ -774,10 +793,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:44:7: ( 'LeftTouch' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:44:9: 'LeftTouch'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:44:7: ( 'RightLight' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:44:9: 'RightLight'
             {
-            match("LeftTouch"); 
+            match("RightLight"); 
 
 
             }
@@ -795,10 +814,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:45:7: ( 'RightTouch' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:45:9: 'RightTouch'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:45:7: ( 'FrontUS' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:45:9: 'FrontUS'
             {
-            match("RightTouch"); 
+            match("FrontUS"); 
 
 
             }
@@ -816,10 +835,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:46:7: ( 'Angle' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:46:9: 'Angle'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:46:7: ( 'RearUS' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:46:9: 'RearUS'
             {
-            match("Angle"); 
+            match("RearUS"); 
 
 
             }
@@ -837,10 +856,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:47:7: ( 'LeftMotor' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:47:9: 'LeftMotor'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:47:7: ( 'LeftTouch' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:47:9: 'LeftTouch'
             {
-            match("LeftMotor"); 
+            match("LeftTouch"); 
 
 
             }
@@ -858,10 +877,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:48:7: ( 'RightMotor' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:48:9: 'RightMotor'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:48:7: ( 'RightTouch' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:48:9: 'RightTouch'
             {
-            match("RightMotor"); 
+            match("RightTouch"); 
 
 
             }
@@ -879,10 +898,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:49:7: ( '&&' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:49:9: '&&'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:49:7: ( 'Angle' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:49:9: 'Angle'
             {
-            match("&&"); 
+            match("Angle"); 
 
 
             }
@@ -900,10 +919,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:50:7: ( '||' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:50:9: '||'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:50:7: ( 'LeftMotor' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:50:9: 'LeftMotor'
             {
-            match("||"); 
+            match("LeftMotor"); 
 
 
             }
@@ -921,10 +940,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:51:7: ( '==' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:51:9: '=='
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:51:7: ( 'RightMotor' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:51:9: 'RightMotor'
             {
-            match("=="); 
+            match("RightMotor"); 
 
 
             }
@@ -942,10 +961,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:52:7: ( '!=' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:52:9: '!='
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:52:7: ( 'Beep' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:52:9: 'Beep'
             {
-            match("!="); 
+            match("Beep"); 
 
 
             }
@@ -963,10 +982,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:53:7: ( '>=' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:53:9: '>='
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:53:7: ( 'Buzz' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:53:9: 'Buzz'
             {
-            match(">="); 
+            match("Buzz"); 
 
 
             }
@@ -984,10 +1003,11 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:54:7: ( '>' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:54:9: '>'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:54:7: ( '&&' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:54:9: '&&'
             {
-            match('>'); 
+            match("&&"); 
+
 
             }
 
@@ -1004,10 +1024,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:55:7: ( '<=' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:55:9: '<='
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:55:7: ( '||' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:55:9: '||'
             {
-            match("<="); 
+            match("||"); 
 
 
             }
@@ -1025,10 +1045,11 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:56:7: ( '<' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:56:9: '<'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:56:7: ( 'equals' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:56:9: 'equals'
             {
-            match('<'); 
+            match("equals"); 
+
 
             }
 
@@ -1040,13 +1061,410 @@ public class InternalRoverDSLLexer extends Lexer {
     }
     // $ANTLR end "T__58"
 
+    // $ANTLR start "T__59"
+    public final void mT__59() throws RecognitionException {
+        try {
+            int _type = T__59;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:57:7: ( '!=' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:57:9: '!='
+            {
+            match("!="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__59"
+
+    // $ANTLR start "T__60"
+    public final void mT__60() throws RecognitionException {
+        try {
+            int _type = T__60;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:58:7: ( '>=' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:58:9: '>='
+            {
+            match(">="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__60"
+
+    // $ANTLR start "T__61"
+    public final void mT__61() throws RecognitionException {
+        try {
+            int _type = T__61;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:59:7: ( '>' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:59:9: '>'
+            {
+            match('>'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__61"
+
+    // $ANTLR start "T__62"
+    public final void mT__62() throws RecognitionException {
+        try {
+            int _type = T__62;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:60:7: ( '<=' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:60:9: '<='
+            {
+            match("<="); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__62"
+
+    // $ANTLR start "T__63"
+    public final void mT__63() throws RecognitionException {
+        try {
+            int _type = T__63;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:61:7: ( '<' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:61:9: '<'
+            {
+            match('<'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__63"
+
+    // $ANTLR start "T__64"
+    public final void mT__64() throws RecognitionException {
+        try {
+            int _type = T__64;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:62:7: ( 'BLACK' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:62:9: 'BLACK'
+            {
+            match("BLACK"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__64"
+
+    // $ANTLR start "T__65"
+    public final void mT__65() throws RecognitionException {
+        try {
+            int _type = T__65;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:63:7: ( 'BLUE' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:63:9: 'BLUE'
+            {
+            match("BLUE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__65"
+
+    // $ANTLR start "T__66"
+    public final void mT__66() throws RecognitionException {
+        try {
+            int _type = T__66;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:64:7: ( 'BROWN' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:64:9: 'BROWN'
+            {
+            match("BROWN"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__66"
+
+    // $ANTLR start "T__67"
+    public final void mT__67() throws RecognitionException {
+        try {
+            int _type = T__67;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:65:7: ( 'CYAN' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:65:9: 'CYAN'
+            {
+            match("CYAN"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__67"
+
+    // $ANTLR start "T__68"
+    public final void mT__68() throws RecognitionException {
+        try {
+            int _type = T__68;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:66:7: ( 'DARKGRAY' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:66:9: 'DARKGRAY'
+            {
+            match("DARKGRAY"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__68"
+
+    // $ANTLR start "T__69"
+    public final void mT__69() throws RecognitionException {
+        try {
+            int _type = T__69;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:67:7: ( 'GRAY' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:67:9: 'GRAY'
+            {
+            match("GRAY"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__69"
+
+    // $ANTLR start "T__70"
+    public final void mT__70() throws RecognitionException {
+        try {
+            int _type = T__70;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:68:7: ( 'GREEN' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:68:9: 'GREEN'
+            {
+            match("GREEN"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__70"
+
+    // $ANTLR start "T__71"
+    public final void mT__71() throws RecognitionException {
+        try {
+            int _type = T__71;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:69:7: ( 'LIGHTGRAY' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:69:9: 'LIGHTGRAY'
+            {
+            match("LIGHTGRAY"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__71"
+
+    // $ANTLR start "T__72"
+    public final void mT__72() throws RecognitionException {
+        try {
+            int _type = T__72;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:70:7: ( 'MAGENTA' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:70:9: 'MAGENTA'
+            {
+            match("MAGENTA"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__72"
+
+    // $ANTLR start "T__73"
+    public final void mT__73() throws RecognitionException {
+        try {
+            int _type = T__73;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:71:7: ( 'ORANGE' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:71:9: 'ORANGE'
+            {
+            match("ORANGE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__73"
+
+    // $ANTLR start "T__74"
+    public final void mT__74() throws RecognitionException {
+        try {
+            int _type = T__74;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:72:7: ( 'PINK' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:72:9: 'PINK'
+            {
+            match("PINK"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__74"
+
+    // $ANTLR start "T__75"
+    public final void mT__75() throws RecognitionException {
+        try {
+            int _type = T__75;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:73:7: ( 'RED' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:73:9: 'RED'
+            {
+            match("RED"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__75"
+
+    // $ANTLR start "T__76"
+    public final void mT__76() throws RecognitionException {
+        try {
+            int _type = T__76;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:74:7: ( 'WHITE' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:74:9: 'WHITE'
+            {
+            match("WHITE"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__76"
+
+    // $ANTLR start "T__77"
+    public final void mT__77() throws RecognitionException {
+        try {
+            int _type = T__77;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:75:7: ( 'YELLOW' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:75:9: 'YELLOW'
+            {
+            match("YELLOW"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__77"
+
     // $ANTLR start "RULE_ALPHA"
     public final void mRULE_ALPHA() throws RecognitionException {
         try {
             int _type = RULE_ALPHA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2018:12: ( 'A' .. 'Z' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2018:14: 'A' .. 'Z'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2355:12: ( 'A' .. 'Z' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2355:14: 'A' .. 'Z'
             {
             matchRange('A','Z'); 
 
@@ -1065,10 +1483,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_BOOL_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:19: ( ( 'True' | 'False' | 'TRUE' | 'FALSE' ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:21: ( 'True' | 'False' | 'TRUE' | 'FALSE' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:19: ( ( 'True' | 'False' | 'TRUE' | 'FALSE' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:21: ( 'True' | 'False' | 'TRUE' | 'FALSE' )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:21: ( 'True' | 'False' | 'TRUE' | 'FALSE' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:21: ( 'True' | 'False' | 'TRUE' | 'FALSE' )
             int alt1=4;
             int LA1_0 = input.LA(1);
 
@@ -1112,7 +1530,7 @@ public class InternalRoverDSLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:22: 'True'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:22: 'True'
                     {
                     match("True"); 
 
@@ -1120,7 +1538,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:29: 'False'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:29: 'False'
                     {
                     match("False"); 
 
@@ -1128,7 +1546,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:37: 'TRUE'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:37: 'TRUE'
                     {
                     match("TRUE"); 
 
@@ -1136,7 +1554,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2020:44: 'FALSE'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2357:44: 'FALSE'
                     {
                     match("FALSE"); 
 
@@ -1162,10 +1580,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2022:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2022:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2359:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2359:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2022:11: ( '^' )?
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2359:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1174,7 +1592,7 @@ public class InternalRoverDSLLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2022:11: '^'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2359:11: '^'
                     {
                     match('^'); 
 
@@ -1192,7 +1610,7 @@ public class InternalRoverDSLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2022:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2359:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -1241,10 +1659,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2024:10: ( ( '0' .. '9' )+ )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2024:12: ( '0' .. '9' )+
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2361:10: ( ( '0' .. '9' )+ )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2361:12: ( '0' .. '9' )+
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2024:12: ( '0' .. '9' )+
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2361:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1258,7 +1676,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2024:13: '0' .. '9'
+            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2361:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1290,10 +1708,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1311,10 +1729,10 @@ public class InternalRoverDSLLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1330,7 +1748,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:21: '\\\\' .
+                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1338,7 +1756,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1363,10 +1781,10 @@ public class InternalRoverDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1382,7 +1800,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:54: '\\\\' .
+                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1390,7 +1808,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2026:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2363:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1433,12 +1851,12 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2028:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2028:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2365:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2365:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2028:24: ( options {greedy=false; } : . )*
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2365:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1463,7 +1881,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2028:52: .
+            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2365:52: .
             	    {
             	    matchAny(); 
 
@@ -1493,12 +1911,12 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1511,7 +1929,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1531,7 +1949,7 @@ public class InternalRoverDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:40: ( ( '\\r' )? '\\n' )?
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1540,9 +1958,9 @@ public class InternalRoverDSLLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:41: ( '\\r' )? '\\n'
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:41: ( '\\r' )? '\\n'
                     {
-                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:41: ( '\\r' )?
+                    // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1551,7 +1969,7 @@ public class InternalRoverDSLLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2030:41: '\\r'
+                            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2367:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1583,10 +2001,10 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2032:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2032:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2369:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2369:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2032:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2369:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1640,8 +2058,8 @@ public class InternalRoverDSLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2034:16: ( . )
-            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2034:18: .
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2371:16: ( . )
+            // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:2371:18: .
             {
             matchAny(); 
 
@@ -1656,8 +2074,8 @@ public class InternalRoverDSLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | RULE_ALPHA | RULE_BOOL_LITERAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=55;
+        // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_ALPHA | RULE_BOOL_LITERAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=74;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1983,63 +2401,196 @@ public class InternalRoverDSLLexer extends Lexer {
                 }
                 break;
             case 47 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:286: RULE_ALPHA
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:286: T__59
+                {
+                mT__59(); 
+
+                }
+                break;
+            case 48 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:292: T__60
+                {
+                mT__60(); 
+
+                }
+                break;
+            case 49 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:298: T__61
+                {
+                mT__61(); 
+
+                }
+                break;
+            case 50 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:304: T__62
+                {
+                mT__62(); 
+
+                }
+                break;
+            case 51 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:310: T__63
+                {
+                mT__63(); 
+
+                }
+                break;
+            case 52 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:316: T__64
+                {
+                mT__64(); 
+
+                }
+                break;
+            case 53 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:322: T__65
+                {
+                mT__65(); 
+
+                }
+                break;
+            case 54 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:328: T__66
+                {
+                mT__66(); 
+
+                }
+                break;
+            case 55 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:334: T__67
+                {
+                mT__67(); 
+
+                }
+                break;
+            case 56 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:340: T__68
+                {
+                mT__68(); 
+
+                }
+                break;
+            case 57 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:346: T__69
+                {
+                mT__69(); 
+
+                }
+                break;
+            case 58 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:352: T__70
+                {
+                mT__70(); 
+
+                }
+                break;
+            case 59 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:358: T__71
+                {
+                mT__71(); 
+
+                }
+                break;
+            case 60 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:364: T__72
+                {
+                mT__72(); 
+
+                }
+                break;
+            case 61 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:370: T__73
+                {
+                mT__73(); 
+
+                }
+                break;
+            case 62 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:376: T__74
+                {
+                mT__74(); 
+
+                }
+                break;
+            case 63 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:382: T__75
+                {
+                mT__75(); 
+
+                }
+                break;
+            case 64 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:388: T__76
+                {
+                mT__76(); 
+
+                }
+                break;
+            case 65 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:394: T__77
+                {
+                mT__77(); 
+
+                }
+                break;
+            case 66 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:400: RULE_ALPHA
                 {
                 mRULE_ALPHA(); 
 
                 }
                 break;
-            case 48 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:297: RULE_BOOL_LITERAL
+            case 67 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:411: RULE_BOOL_LITERAL
                 {
                 mRULE_BOOL_LITERAL(); 
 
                 }
                 break;
-            case 49 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:315: RULE_ID
+            case 68 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:429: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 50 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:323: RULE_INT
+            case 69 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:437: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 51 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:332: RULE_STRING
+            case 70 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:446: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 52 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:344: RULE_ML_COMMENT
+            case 71 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:458: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 53 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:360: RULE_SL_COMMENT
+            case 72 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:474: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 54 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:376: RULE_WS
+            case 73 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:490: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 55 :
-                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:384: RULE_ANY_OTHER
+            case 74 :
+                // ../mars.rover/src-gen/mars/rover/parser/antlr/internal/InternalRoverDSL.g:1:498: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2053,270 +2604,369 @@ public class InternalRoverDSLLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\4\52\1\60\1\uffff\1\52\1\uffff\3\52\2\uffff\3\52\1\51\2\52\1\51\2\uffff\2\52\4\47\1\121\1\123\1\52\1\47\2\uffff\3\47\2\uffff\1\51\2\uffff\4\51\3\uffff\1\51\1\137\1\uffff\3\51\1\144\3\51\2\uffff\12\51\2\uffff\2\51\14\uffff\7\51\1\uffff\4\51\1\uffff\14\51\1\u008c\1\u008d\6\51\1\u0095\1\uffff\2\51\2\u009a\5\51\1\u00a0\5\51\1\u00a6\1\51\2\uffff\7\51\3\uffff\2\51\2\uffff\4\51\1\uffff\1\u00b9\2\51\2\u009a\1\uffff\4\51\1\u00c0\4\51\1\uffff\1\51\1\uffff\1\51\1\u00c7\3\51\1\u00cb\1\uffff\6\51\1\uffff\3\51\1\u00d5\2\51\1\uffff\3\51\1\uffff\1\u00db\1\u00dc\1\u00dd\6\51\1\uffff\1\51\1\uffff\3\51\3\uffff\12\51\1\u00f2\1\u00f3\1\u00f4\3\uffff\1\51\1\u00f6\1\u00f7\1\u00f8\3\uffff\1\51\3\uffff\3\51\1\uffff";
+        "\1\uffff\4\60\1\72\1\uffff\1\60\1\uffff\3\60\2\uffff\3\60\1\61\2\60\1\61\2\uffff\2\60\2\53\1\61\1\53\1\137\1\141\5\60\1\53\2\uffff\3\53\2\uffff\4\61\2\uffff\7\61\3\uffff\1\61\1\171\1\uffff\3\61\1\176\5\61\2\uffff\13\61\2\uffff\3\61\2\uffff\1\61\5\uffff\4\61\4\uffff\17\61\1\uffff\4\61\1\uffff\5\61\1\u00b2\12\61\1\u00be\1\u00bf\12\61\1\u00ca\1\u00cb\1\61\1\u00cd\4\61\1\u00d2\1\u00d4\1\uffff\1\u00d7\3\61\2\u00db\6\61\1\uffff\1\u00e2\3\61\1\u00e6\3\61\1\u00ea\2\61\2\uffff\4\61\1\u00f3\2\61\1\u00f6\2\61\2\uffff\1\u00f9\1\uffff\1\u00fa\3\61\1\uffff\1\61\4\uffff\1\u00ff\2\61\2\uffff\5\61\1\uffff\1\u0109\1\u010a\1\61\1\uffff\1\61\2\u00db\1\uffff\6\61\1\u0113\1\61\1\uffff\1\u0115\1\61\1\uffff\2\61\2\uffff\3\61\2\uffff\1\61\1\uffff\2\61\1\u011f\3\61\1\u0123\2\uffff\10\61\1\uffff\1\u012c\1\uffff\1\u012d\1\u012e\3\61\1\u0132\3\61\1\uffff\3\61\1\uffff\1\u0139\1\u013a\1\u013b\1\u013c\4\61\3\uffff\3\61\1\uffff\1\61\1\u0145\1\uffff\3\61\4\uffff\10\61\1\uffff\3\61\1\u0154\1\u0155\1\u0156\1\u0157\3\uffff\1\61\1\u0159\1\u015a\1\u015b\4\uffff\1\61\3\uffff\3\61\1\uffff";
     static final String DFA13_eofS =
-        "\u00fd\uffff";
+        "\u0160\uffff";
     static final String DFA13_minS =
-        "\1\0\4\60\1\75\1\uffff\1\60\1\uffff\3\60\2\uffff\3\60\1\141\2\60\1\145\2\uffff\2\60\1\46\1\174\4\75\1\60\1\101\2\uffff\2\0\1\52\2\uffff\1\150\2\uffff\1\162\1\154\1\157\1\164\3\uffff\1\160\1\60\1\uffff\1\153\1\165\1\125\1\60\1\164\1\147\1\141\2\uffff\1\123\1\111\1\162\1\157\1\154\1\114\1\151\1\141\1\124\1\147\2\uffff\1\146\1\147\14\uffff\1\141\1\151\1\163\1\157\1\160\1\40\1\154\1\uffff\2\145\1\105\1\163\1\uffff\1\164\1\141\1\150\1\162\1\105\1\114\1\167\1\156\1\163\1\123\1\164\1\163\2\60\1\164\1\154\1\166\1\141\1\164\1\162\1\60\1\101\1\145\1\163\2\60\1\72\1\151\2\164\1\125\1\60\1\105\1\141\1\164\1\145\1\105\1\60\1\165\2\uffff\1\114\1\145\1\151\1\142\1\141\1\111\1\40\3\uffff\1\155\1\40\2\uffff\1\156\1\145\1\114\1\123\1\uffff\1\60\1\162\1\125\2\60\1\uffff\1\162\1\151\2\157\1\60\1\157\1\154\1\156\1\104\1\uffff\1\145\1\uffff\1\145\1\60\1\151\2\157\1\60\1\uffff\1\144\1\123\1\145\1\147\1\165\1\164\1\uffff\1\162\1\145\1\164\1\60\1\156\1\40\1\uffff\1\147\1\165\1\164\1\uffff\3\60\1\150\1\143\1\157\3\163\1\uffff\1\164\1\uffff\1\150\1\143\1\157\3\uffff\1\164\1\150\1\162\3\72\1\141\1\164\1\150\1\162\3\60\3\uffff\1\164\3\60\3\uffff\1\151\3\uffff\1\157\1\156\1\40\1\uffff";
+        "\1\0\4\60\1\75\1\uffff\1\60\1\uffff\3\60\2\uffff\3\60\1\141\2\60\1\145\2\uffff\2\60\1\46\1\174\1\161\3\75\5\60\1\101\2\uffff\2\0\1\52\2\uffff\1\145\1\172\1\101\1\117\2\uffff\1\162\1\154\1\101\1\157\1\164\1\157\1\165\3\uffff\1\160\1\60\1\uffff\1\153\1\165\1\125\1\60\1\122\1\164\1\147\1\141\1\104\2\uffff\1\123\1\111\1\162\1\145\1\154\1\114\1\151\1\141\1\107\1\124\1\147\2\uffff\1\146\1\107\1\147\2\uffff\1\165\5\uffff\2\101\1\116\1\114\4\uffff\1\141\1\160\1\172\1\103\1\105\1\127\1\151\1\163\1\157\1\116\1\160\1\40\1\167\1\156\1\154\1\uffff\2\145\1\105\1\163\1\uffff\1\113\1\164\1\141\1\150\1\162\1\60\1\105\1\114\1\167\1\145\1\156\1\163\1\123\1\164\1\163\1\105\2\60\1\164\1\110\1\154\1\141\1\131\1\105\1\116\1\113\1\114\1\166\2\60\1\113\1\60\1\116\1\141\1\164\1\162\2\60\1\101\1\60\1\144\1\145\1\163\2\60\1\72\1\107\1\151\2\164\1\125\1\uffff\1\60\2\105\1\141\1\60\1\164\1\145\1\105\1\60\1\165\1\116\2\uffff\1\114\1\124\1\145\1\154\1\60\1\116\1\107\1\60\1\117\1\151\2\uffff\1\60\1\uffff\1\60\1\142\1\141\1\111\1\uffff\1\40\4\uffff\1\60\1\155\1\40\2\uffff\1\122\1\156\1\145\1\114\1\123\1\uffff\2\60\1\162\1\uffff\1\125\2\60\1\uffff\1\162\1\124\1\151\2\157\1\107\1\60\1\163\1\uffff\1\60\1\105\1\uffff\1\127\1\157\2\uffff\1\154\1\156\1\104\2\uffff\1\145\1\uffff\1\101\1\145\1\60\1\151\2\157\1\60\2\uffff\1\144\1\123\1\145\1\101\1\147\1\165\1\164\1\122\1\uffff\1\60\1\uffff\2\60\1\162\1\145\1\164\1\60\1\156\1\131\1\40\1\uffff\1\147\1\165\1\164\1\uffff\4\60\1\150\1\143\1\157\1\101\3\uffff\3\163\1\uffff\1\164\1\60\1\uffff\1\150\1\143\1\157\4\uffff\1\164\1\150\1\162\1\131\3\72\1\141\1\uffff\1\164\1\150\1\162\4\60\3\uffff\1\164\3\60\4\uffff\1\151\3\uffff\1\157\1\156\1\40\1\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\4\172\1\75\1\uffff\1\172\1\uffff\3\172\2\uffff\3\172\1\141\2\172\1\145\2\uffff\2\172\1\46\1\174\4\75\2\172\2\uffff\2\uffff\1\57\2\uffff\1\150\2\uffff\1\162\1\156\1\157\1\164\3\uffff\1\160\1\172\1\uffff\1\153\1\165\1\125\1\172\1\165\1\147\1\141\2\uffff\1\123\1\111\1\162\1\157\1\154\1\114\1\151\1\141\1\124\1\147\2\uffff\1\146\1\147\14\uffff\1\141\1\151\1\163\1\157\1\160\1\40\1\154\1\uffff\2\145\1\105\1\163\1\uffff\1\164\1\141\1\150\1\162\1\105\1\114\1\167\1\156\1\163\1\123\1\164\1\163\2\172\1\164\1\154\1\166\1\141\1\164\1\162\1\172\1\123\1\145\1\163\2\172\1\72\1\151\2\164\1\125\1\172\1\105\1\141\1\164\1\145\1\105\1\172\1\165\2\uffff\1\124\1\145\1\151\1\142\1\141\1\111\1\40\3\uffff\1\155\1\40\2\uffff\1\156\1\145\1\124\1\123\1\uffff\1\172\1\162\1\125\2\172\1\uffff\1\162\1\151\2\157\1\172\1\157\1\154\1\156\1\104\1\uffff\1\145\1\uffff\1\145\1\172\1\151\2\157\1\172\1\uffff\1\144\1\123\1\145\1\147\1\165\1\164\1\uffff\1\162\1\145\1\164\1\172\1\156\1\40\1\uffff\1\147\1\165\1\164\1\uffff\3\172\1\150\1\143\1\157\3\163\1\uffff\1\164\1\uffff\1\150\1\143\1\157\3\uffff\1\164\1\150\1\162\3\72\1\141\1\164\1\150\1\162\3\172\3\uffff\1\164\3\172\3\uffff\1\151\3\uffff\1\157\1\156\1\40\1\uffff";
+        "\1\uffff\4\172\1\75\1\uffff\1\172\1\uffff\3\172\2\uffff\3\172\1\141\2\172\1\145\2\uffff\2\172\1\46\1\174\1\161\3\75\6\172\2\uffff\2\uffff\1\57\2\uffff\1\150\1\172\1\125\1\117\2\uffff\1\162\1\156\1\101\1\157\1\164\1\157\1\165\3\uffff\1\160\1\172\1\uffff\1\153\1\165\1\125\1\172\1\122\1\165\1\147\1\141\1\104\2\uffff\1\123\1\111\1\162\1\157\1\154\1\114\1\151\1\141\1\107\1\124\1\147\2\uffff\1\146\1\107\1\147\2\uffff\1\165\5\uffff\1\105\1\101\1\116\1\114\4\uffff\1\141\1\160\1\172\1\103\1\105\1\127\1\151\1\163\1\157\1\116\1\160\1\40\1\167\1\156\1\154\1\uffff\2\145\1\105\1\163\1\uffff\1\113\1\164\1\141\1\150\1\162\1\172\1\105\1\124\1\167\1\145\1\156\1\163\1\123\1\164\1\163\1\105\2\172\1\164\1\110\1\154\1\141\1\131\1\105\1\116\1\113\1\114\1\166\2\172\1\113\1\172\1\116\1\141\1\164\1\162\2\172\1\123\1\172\1\144\1\145\1\163\2\172\1\72\1\107\1\151\2\164\1\125\1\uffff\1\172\2\105\1\141\1\172\1\164\1\145\1\105\1\172\1\165\1\116\2\uffff\2\124\1\145\1\154\1\172\1\116\1\107\1\172\1\117\1\151\2\uffff\1\172\1\uffff\1\172\1\142\1\141\1\111\1\uffff\1\40\4\uffff\1\172\1\155\1\40\2\uffff\1\122\1\156\1\145\1\124\1\123\1\uffff\2\172\1\162\1\uffff\1\125\2\172\1\uffff\1\162\1\124\1\151\2\157\1\107\1\172\1\163\1\uffff\1\172\1\105\1\uffff\1\127\1\157\2\uffff\1\154\1\156\1\104\2\uffff\1\145\1\uffff\1\101\1\145\1\172\1\151\2\157\1\172\2\uffff\1\144\1\123\1\145\1\101\1\147\1\165\1\164\1\122\1\uffff\1\172\1\uffff\2\172\1\162\1\145\1\164\1\172\1\156\1\131\1\40\1\uffff\1\147\1\165\1\164\1\uffff\4\172\1\150\1\143\1\157\1\101\3\uffff\3\163\1\uffff\1\164\1\172\1\uffff\1\150\1\143\1\157\4\uffff\1\164\1\150\1\162\1\131\3\72\1\141\1\uffff\1\164\1\150\1\162\4\172\3\uffff\1\164\3\172\4\uffff\1\151\3\uffff\1\157\1\156\1\40\1\uffff";
     static final String DFA13_acceptS =
-        "\6\uffff\1\6\1\uffff\1\10\3\uffff\1\15\1\16\7\uffff\1\33\1\34\12\uffff\1\61\1\62\3\uffff\1\66\1\67\1\uffff\1\61\1\57\4\uffff\1\5\1\66\1\6\2\uffff\1\10\7\uffff\1\15\1\16\12\uffff\1\33\1\34\2\uffff\1\47\1\50\1\51\1\52\1\53\1\54\1\55\1\56\1\62\1\63\1\64\1\65\7\uffff\1\14\4\uffff\1\27\47\uffff\1\31\1\32\7\uffff\1\24\1\25\1\26\2\uffff\1\60\1\12\4\uffff\1\17\5\uffff\1\23\11\uffff\1\4\1\uffff\1\11\6\uffff\1\20\6\uffff\1\44\6\uffff\1\22\3\uffff\1\41\11\uffff\1\35\1\uffff\1\13\3\uffff\1\21\1\40\1\30\15\uffff\1\1\1\2\1\3\4\uffff\1\36\1\42\1\45\1\uffff\1\37\1\43\1\46\3\uffff\1\7";
+        "\6\uffff\1\6\1\uffff\1\10\3\uffff\1\15\1\16\7\uffff\1\36\1\37\16\uffff\1\104\1\105\3\uffff\1\111\1\112\4\uffff\1\102\1\104\7\uffff\1\5\1\111\1\6\2\uffff\1\10\11\uffff\1\15\1\16\13\uffff\1\36\1\37\3\uffff\1\54\1\55\1\uffff\1\57\1\60\1\61\1\62\1\63\4\uffff\1\105\1\106\1\107\1\110\17\uffff\1\14\4\uffff\1\27\63\uffff\1\77\13\uffff\1\34\1\35\12\uffff\1\52\1\53\1\uffff\1\65\4\uffff\1\67\1\uffff\1\24\1\25\1\26\1\31\3\uffff\1\103\1\12\5\uffff\1\17\3\uffff\1\33\3\uffff\1\23\10\uffff\1\71\2\uffff\1\76\2\uffff\1\64\1\66\3\uffff\1\4\1\32\1\uffff\1\11\7\uffff\1\20\1\100\10\uffff\1\47\1\uffff\1\72\11\uffff\1\22\3\uffff\1\44\10\uffff\1\56\1\75\1\101\3\uffff\1\40\2\uffff\1\13\3\uffff\1\21\1\43\1\30\1\74\10\uffff\1\70\7\uffff\1\1\1\2\1\3\4\uffff\1\41\1\45\1\50\1\73\1\uffff\1\42\1\46\1\51\3\uffff\1\7";
     static final String DFA13_specialS =
-        "\1\0\42\uffff\1\2\1\1\u00d8\uffff}>";
+        "\1\1\46\uffff\1\0\1\2\u0137\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\47\2\46\2\47\1\46\22\47\1\5\1\34\1\43\3\47\1\31\1\44\1\25\1\26\5\47\1\45\12\42\1\10\1\6\1\36\1\33\1\35\2\47\1\30\1\1\1\3\1\12\1\16\1\20\2\37\1\7\2\37\1\27\1\22\1\23\3\37\1\13\1\4\1\11\1\37\1\2\1\17\3\37\3\47\1\40\1\41\1\47\15\41\1\24\10\41\1\21\3\41\1\14\1\32\1\15\uff82\47",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\50\25\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\1\53\31\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\16\51\1\54\13\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\56\16\51\1\55\6\51",
-            "\1\57",
+            "\11\53\2\52\2\53\1\52\22\53\1\5\1\34\1\47\3\53\1\31\1\50\1\25\1\26\5\53\1\51\12\46\1\10\1\6\1\36\1\53\1\35\2\53\1\30\1\1\1\3\1\12\1\16\1\20\1\37\1\43\1\7\2\43\1\27\1\22\1\23\1\40\1\41\1\43\1\13\1\4\1\11\1\43\1\2\1\17\1\43\1\42\1\43\3\53\1\44\1\45\1\53\4\45\1\33\10\45\1\24\10\45\1\21\3\45\1\14\1\32\1\15\uff82\53",
+            "\12\61\7\uffff\13\61\1\56\5\61\1\57\10\61\4\uffff\1\61\1\uffff\4\61\1\54\17\61\1\55\5\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\1\62\31\61",
+            "\12\61\7\uffff\30\61\1\64\1\61\4\uffff\1\61\1\uffff\16\61\1\63\13\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\4\61\1\66\2\61\1\67\6\61\1\70\4\61\1\65\6\61",
+            "\1\71",
             "",
-            "\12\51\7\uffff\5\51\1\63\24\51\4\uffff\1\51\1\uffff\14\51\1\62\15\51",
+            "\12\61\7\uffff\5\61\1\75\24\61\4\uffff\1\61\1\uffff\14\61\1\74\15\61",
             "",
-            "\12\51\7\uffff\21\51\1\67\10\51\4\uffff\1\51\1\uffff\1\65\20\51\1\66\10\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\16\51\1\70\13\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\73\3\51\1\72\5\51\1\71\13\51",
-            "",
-            "",
-            "\12\51\7\uffff\13\51\1\76\16\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\7\51\1\77\22\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\1\103\31\51\4\uffff\1\51\1\uffff\1\102\15\51\1\100\2\51\1\101\10\51",
-            "\1\104",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\105\25\51",
-            "\12\51\7\uffff\16\51\1\106\13\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\107",
+            "\12\61\7\uffff\21\61\1\101\10\61\4\uffff\1\61\1\uffff\1\77\20\61\1\100\10\61",
+            "\12\61\7\uffff\1\103\31\61\4\uffff\1\61\1\uffff\16\61\1\102\13\61",
+            "\12\61\7\uffff\4\61\1\107\25\61\4\uffff\1\61\1\uffff\4\61\1\106\3\61\1\105\5\61\1\104\13\61",
             "",
             "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\112\25\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\15\51\1\113\14\51",
-            "\1\114",
-            "\1\115",
-            "\1\116",
-            "\1\117",
+            "\12\61\7\uffff\13\61\1\112\16\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\7\61\1\113\22\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\1\117\31\61\4\uffff\1\61\1\uffff\1\116\15\61\1\114\2\61\1\115\10\61",
             "\1\120",
-            "\1\122",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\61\7\uffff\1\122\31\61\4\uffff\1\61\1\uffff\4\61\1\121\25\61",
+            "\12\61\7\uffff\16\61\1\123\13\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\124",
             "",
             "",
-            "\0\125",
-            "\0\125",
-            "\1\126\4\uffff\1\127",
-            "",
-            "",
-            "\1\130",
-            "",
-            "",
-            "\1\131",
-            "\1\133\1\uffff\1\132",
+            "\12\61\7\uffff\10\61\1\130\21\61\4\uffff\1\61\1\uffff\4\61\1\127\25\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\15\61\1\131\14\61",
+            "\1\132",
+            "\1\133",
             "\1\134",
             "\1\135",
-            "",
-            "",
-            "",
             "\1\136",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
             "\1\140",
-            "\1\141",
-            "\1\142",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\4\51\1\143\25\51",
-            "\1\146\1\145",
-            "\1\147",
-            "\1\150",
+            "\12\61\7\uffff\21\61\1\142\10\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\21\61\1\143\10\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\10\61\1\144\21\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\4\61\1\145\25\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
             "",
-            "\1\151",
-            "\1\152",
-            "\1\153",
+            "\0\147",
+            "\0\147",
+            "\1\150\4\uffff\1\151",
+            "",
+            "",
+            "\1\153\2\uffff\1\152",
             "\1\154",
-            "\1\155",
-            "\1\156",
+            "\1\155\23\uffff\1\156",
             "\1\157",
+            "",
+            "",
             "\1\160",
-            "\1\161",
-            "\1\162",
-            "",
-            "",
+            "\1\162\1\uffff\1\161",
             "\1\163",
             "\1\164",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\165",
             "\1\166",
             "\1\167",
+            "",
+            "",
+            "",
             "\1\170",
-            "\1\171",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
             "\1\172",
             "\1\173",
-            "",
             "\1\174",
-            "\1\175",
-            "\1\176",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\4\61\1\175\25\61",
             "\1\177",
-            "",
-            "\1\u0080",
-            "\1\u0081",
+            "\1\u0081\1\u0080",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
+            "",
+            "",
             "\1\u0085",
             "\1\u0086",
             "\1\u0087",
-            "\1\u0088",
-            "\1\u0089",
+            "\1\u0088\11\uffff\1\u0089",
             "\1\u008a",
             "\1\u008b",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u008c",
+            "\1\u008d",
             "\1\u008e",
             "\1\u008f",
             "\1\u0090",
+            "",
+            "",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\22\51\1\u0094\7\51",
-            "\1\u0096\21\uffff\1\u0097",
+            "",
+            "",
+            "\1\u0094",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u0095\3\uffff\1\u0096",
+            "\1\u0097",
             "\1\u0098",
             "\1\u0099",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "",
+            "",
+            "",
+            "\1\u009a",
             "\1\u009b",
             "\1\u009c",
             "\1\u009d",
             "\1\u009e",
             "\1\u009f",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00a0",
             "\1\u00a1",
             "\1\u00a2",
             "\1\u00a3",
             "\1\u00a4",
             "\1\u00a5",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00a6",
             "\1\u00a7",
+            "\1\u00a8",
             "",
-            "",
-            "\1\u00a8\1\u00aa\6\uffff\1\u00a9",
+            "\1\u00a9",
+            "\1\u00aa",
             "\1\u00ab",
             "\1\u00ac",
+            "",
             "\1\u00ad",
             "\1\u00ae",
             "\1\u00af",
             "\1\u00b0",
-            "",
-            "",
-            "",
             "\1\u00b1",
-            "\1\u00b2",
-            "",
-            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00b3",
-            "\1\u00b4",
-            "\1\u00b5\1\u00b7\6\uffff\1\u00b6",
+            "\1\u00b4\7\uffff\1\u00b5",
+            "\1\u00b6",
+            "\1\u00b7",
             "\1\u00b8",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00b9",
             "\1\u00ba",
             "\1\u00bb",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
             "\1\u00bc",
             "\1\u00bd",
-            "\1\u00be",
-            "\1\u00bf",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
             "\1\u00c3",
             "\1\u00c4",
-            "",
             "\1\u00c5",
-            "",
             "\1\u00c6",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u00c7",
             "\1\u00c8",
             "\1\u00c9",
-            "\1\u00ca",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00cc",
-            "\1\u00cd",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00ce",
             "\1\u00cf",
             "\1\u00d0",
             "\1\u00d1",
-            "",
-            "\1\u00d2",
-            "\1\u00d3",
-            "\1\u00d4",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\1\u00d6",
-            "\1\u00d7",
-            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\22\61\1\u00d3\7\61",
+            "\1\u00d5\21\uffff\1\u00d6",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
-            "",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00dc",
+            "\1\u00dd",
             "\1\u00de",
             "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
-            "\1\u00e2",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00e3",
-            "",
             "\1\u00e4",
-            "",
             "\1\u00e5",
-            "\1\u00e6",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00e7",
-            "",
-            "",
-            "",
             "\1\u00e8",
             "\1\u00e9",
-            "\1\u00ea",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00eb",
             "\1\u00ec",
-            "\1\u00ed",
-            "\1\u00ee",
-            "\1\u00ef",
+            "",
+            "",
+            "\1\u00ed\1\u00ef\6\uffff\1\u00ee",
             "\1\u00f0",
             "\1\u00f1",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "",
-            "",
-            "",
+            "\1\u00f2",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00f4",
             "\1\u00f5",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
-            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u00f7",
+            "\1\u00f8",
             "",
             "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "",
-            "\1\u00f9",
-            "",
-            "",
-            "",
-            "\1\u00fa",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
             "\1\u00fb",
             "\1\u00fc",
+            "\1\u00fd",
+            "",
+            "\1\u00fe",
+            "",
+            "",
+            "",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0100",
+            "\1\u0101",
+            "",
+            "",
+            "\1\u0102",
+            "\1\u0103",
+            "\1\u0104",
+            "\1\u0105\1\u0107\6\uffff\1\u0106",
+            "\1\u0108",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u010b",
+            "",
+            "\1\u010c",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\1\u010d",
+            "\1\u010e",
+            "\1\u010f",
+            "\1\u0110",
+            "\1\u0111",
+            "\1\u0112",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0114",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0116",
+            "",
+            "\1\u0117",
+            "\1\u0118",
+            "",
+            "",
+            "\1\u0119",
+            "\1\u011a",
+            "\1\u011b",
+            "",
+            "",
+            "\1\u011c",
+            "",
+            "\1\u011d",
+            "\1\u011e",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0120",
+            "\1\u0121",
+            "\1\u0122",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "",
+            "\1\u0124",
+            "\1\u0125",
+            "\1\u0126",
+            "\1\u0127",
+            "\1\u0128",
+            "\1\u0129",
+            "\1\u012a",
+            "\1\u012b",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u012f",
+            "\1\u0130",
+            "\1\u0131",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u0133",
+            "\1\u0134",
+            "\1\u0135",
+            "",
+            "\1\u0136",
+            "\1\u0137",
+            "\1\u0138",
+            "",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\1\u013d",
+            "\1\u013e",
+            "\1\u013f",
+            "\1\u0140",
+            "",
+            "",
+            "",
+            "\1\u0141",
+            "\1\u0142",
+            "\1\u0143",
+            "",
+            "\1\u0144",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "\1\u0146",
+            "\1\u0147",
+            "\1\u0148",
+            "",
+            "",
+            "",
+            "",
+            "\1\u0149",
+            "\1\u014a",
+            "\1\u014b",
+            "\1\u014c",
+            "\1\u014d",
+            "\1\u014e",
+            "\1\u014f",
+            "\1\u0150",
+            "",
+            "\1\u0151",
+            "\1\u0152",
+            "\1\u0153",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "",
+            "",
+            "\1\u0158",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "\12\61\7\uffff\32\61\4\uffff\1\61\1\uffff\32\61",
+            "",
+            "",
+            "",
+            "",
+            "\1\u015c",
+            "",
+            "",
+            "",
+            "\1\u015d",
+            "\1\u015e",
+            "\1\u015f",
             ""
     };
 
@@ -2350,13 +3000,23 @@ public class InternalRoverDSLLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | RULE_ALPHA | RULE_BOOL_LITERAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | RULE_ALPHA | RULE_BOOL_LITERAL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA13_39 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_39>='\u0000' && LA13_39<='\uFFFF')) ) {s = 103;}
+
+                        else s = 43;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA13_0 = input.LA(1);
 
                         s = -1;
@@ -2412,7 +3072,7 @@ public class InternalRoverDSLLexer extends Lexer {
 
                         else if ( (LA13_0=='|') ) {s = 26;}
 
-                        else if ( (LA13_0=='=') ) {s = 27;}
+                        else if ( (LA13_0=='e') ) {s = 27;}
 
                         else if ( (LA13_0=='!') ) {s = 28;}
 
@@ -2420,43 +3080,41 @@ public class InternalRoverDSLLexer extends Lexer {
 
                         else if ( (LA13_0=='<') ) {s = 30;}
 
-                        else if ( ((LA13_0>='G' && LA13_0<='H')||(LA13_0>='J' && LA13_0<='K')||(LA13_0>='O' && LA13_0<='Q')||LA13_0=='U'||(LA13_0>='X' && LA13_0<='Z')) ) {s = 31;}
+                        else if ( (LA13_0=='G') ) {s = 31;}
 
-                        else if ( (LA13_0=='^') ) {s = 32;}
+                        else if ( (LA13_0=='O') ) {s = 32;}
 
-                        else if ( (LA13_0=='_'||(LA13_0>='a' && LA13_0<='m')||(LA13_0>='o' && LA13_0<='v')||(LA13_0>='x' && LA13_0<='z')) ) {s = 33;}
+                        else if ( (LA13_0=='P') ) {s = 33;}
 
-                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 34;}
+                        else if ( (LA13_0=='Y') ) {s = 34;}
 
-                        else if ( (LA13_0=='\"') ) {s = 35;}
+                        else if ( (LA13_0=='H'||(LA13_0>='J' && LA13_0<='K')||LA13_0=='Q'||LA13_0=='U'||LA13_0=='X'||LA13_0=='Z') ) {s = 35;}
 
-                        else if ( (LA13_0=='\'') ) {s = 36;}
+                        else if ( (LA13_0=='^') ) {s = 36;}
 
-                        else if ( (LA13_0=='/') ) {s = 37;}
+                        else if ( (LA13_0=='_'||(LA13_0>='a' && LA13_0<='d')||(LA13_0>='f' && LA13_0<='m')||(LA13_0>='o' && LA13_0<='v')||(LA13_0>='x' && LA13_0<='z')) ) {s = 37;}
 
-                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r') ) {s = 38;}
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 38;}
 
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='*' && LA13_0<='.')||(LA13_0>='?' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 39;}
+                        else if ( (LA13_0=='\"') ) {s = 39;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA13_36 = input.LA(1);
+                        else if ( (LA13_0=='\'') ) {s = 40;}
 
-                        s = -1;
-                        if ( ((LA13_36>='\u0000' && LA13_36<='\uFFFF')) ) {s = 85;}
+                        else if ( (LA13_0=='/') ) {s = 41;}
 
-                        else s = 39;
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r') ) {s = 42;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='*' && LA13_0<='.')||LA13_0=='='||(LA13_0>='?' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 43;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA13_35 = input.LA(1);
+                        int LA13_40 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_35>='\u0000' && LA13_35<='\uFFFF')) ) {s = 85;}
+                        if ( ((LA13_40>='\u0000' && LA13_40<='\uFFFF')) ) {s = 103;}
 
-                        else s = 39;
+                        else s = 43;
 
                         if ( s>=0 ) return s;
                         break;

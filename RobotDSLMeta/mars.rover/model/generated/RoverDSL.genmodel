@@ -21,6 +21,10 @@
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//EMotor/LEFTMOTOR"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//EMotor/RIGHTMOTOR"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RoverDSL.ecore#//Sound">
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sound/BEEP"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Sound/BUZZ"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="RoverDSL.ecore#//BBinaryOp">
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//BBinaryOp/AND"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//BBinaryOp/OR"/>
@@ -32,6 +36,22 @@
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//CompareOp/GT"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//CompareOp/LEQ"/>
       <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//CompareOp/LT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="RoverDSL.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/BLACK"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/BROWN"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/CYAN"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/DARK_GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/LIGHT_GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/MAGENTA"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/ORANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/PINK"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/WHITE"/>
+      <genEnumLiterals ecoreEnumLiteral="RoverDSL.ecore#//Color/YELLOW"/>
     </genEnums>
     <genClasses ecoreClass="RoverDSL.ecore#//Robot">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//Robot/behaviorOrder"/>
@@ -104,6 +124,16 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//SubRoutineAction/routine"/>
     </genClasses>
     <genClasses ecoreClass="RoverDSL.ecore#//MeasureAction"/>
+    <genClasses ecoreClass="RoverDSL.ecore#//ShowAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//ShowAction/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//ShowAction/sensor"/>
+    </genClasses>
+    <genClasses ecoreClass="RoverDSL.ecore#//SoundAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//SoundAction/sound"/>
+    </genClasses>
+    <genClasses ecoreClass="RoverDSL.ecore#//FreeAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//FreeAction/motor"/>
+    </genClasses>
     <genClasses ecoreClass="RoverDSL.ecore#//ValueExpression"/>
     <genClasses ecoreClass="RoverDSL.ecore#//BNotExpr">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//BNotExpr/sub"/>
@@ -123,6 +153,9 @@
     </genClasses>
     <genClasses ecoreClass="RoverDSL.ecore#//BVBracket">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//BVBracket/bsub"/>
+    </genClasses>
+    <genClasses ecoreClass="RoverDSL.ecore#//ColorLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RoverDSL.ecore#//ColorLiteral/color"/>
     </genClasses>
     <genClasses ecoreClass="RoverDSL.ecore#//ExpressionBinOp">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RoverDSL.ecore#//ExpressionBinOp/left"/>

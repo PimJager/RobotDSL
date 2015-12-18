@@ -231,6 +231,33 @@ public class RoverDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RoverDSLPackage.SHOW_ACTION:
+      {
+        ShowAction showAction = (ShowAction)theEObject;
+        T result = caseShowAction(showAction);
+        if (result == null) result = caseAction(showAction);
+        if (result == null) result = caseExpression(showAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RoverDSLPackage.SOUND_ACTION:
+      {
+        SoundAction soundAction = (SoundAction)theEObject;
+        T result = caseSoundAction(soundAction);
+        if (result == null) result = caseAction(soundAction);
+        if (result == null) result = caseExpression(soundAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RoverDSLPackage.FREE_ACTION:
+      {
+        FreeAction freeAction = (FreeAction)theEObject;
+        T result = caseFreeAction(freeAction);
+        if (result == null) result = caseAction(freeAction);
+        if (result == null) result = caseExpression(freeAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case RoverDSLPackage.VALUE_EXPRESSION:
       {
         ValueExpression valueExpression = (ValueExpression)theEObject;
@@ -283,6 +310,14 @@ public class RoverDSLSwitch<T> extends Switch<T>
         BVBracket bvBracket = (BVBracket)theEObject;
         T result = caseBVBracket(bvBracket);
         if (result == null) result = caseValueExpression(bvBracket);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RoverDSLPackage.COLOR_LITERAL:
+      {
+        ColorLiteral colorLiteral = (ColorLiteral)theEObject;
+        T result = caseColorLiteral(colorLiteral);
+        if (result == null) result = caseValueExpression(colorLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -627,6 +662,54 @@ public class RoverDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Show Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Show Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseShowAction(ShowAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sound Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sound Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSoundAction(SoundAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Free Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Free Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFreeAction(FreeAction object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Value Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -734,6 +817,22 @@ public class RoverDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBVBracket(BVBracket object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Color Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Color Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColorLiteral(ColorLiteral object)
   {
     return null;
   }

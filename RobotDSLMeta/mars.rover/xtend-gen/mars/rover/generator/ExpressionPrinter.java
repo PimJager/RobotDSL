@@ -3,11 +3,13 @@ package mars.rover.generator;
 import com.google.common.base.Objects;
 import java.util.Arrays;
 import mars.rover.generator.RobotGenerator;
+import mars.rover.generator.SensorAux;
 import mars.rover.generator.ValueExpressionPrinter;
 import mars.rover.roverDSL.AssignExpression;
 import mars.rover.roverDSL.EMotor;
 import mars.rover.roverDSL.Expression;
 import mars.rover.roverDSL.ForwardAction;
+import mars.rover.roverDSL.FreeAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
 import mars.rover.roverDSL.MeasureAction;
@@ -15,6 +17,10 @@ import mars.rover.roverDSL.Motor;
 import mars.rover.roverDSL.RotateAction;
 import mars.rover.roverDSL.SAccelerationAction;
 import mars.rover.roverDSL.SSpeedAction;
+import mars.rover.roverDSL.Sensor;
+import mars.rover.roverDSL.ShowAction;
+import mars.rover.roverDSL.Sound;
+import mars.rover.roverDSL.SoundAction;
 import mars.rover.roverDSL.StopAction;
 import mars.rover.roverDSL.SubRoutine;
 import mars.rover.roverDSL.SubRoutineAction;
@@ -71,7 +77,7 @@ public class ExpressionPrinter {
   
   protected static CharSequence _print(final WHILEExpression e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("while(Robot.iToB(");
+    _builder.append("while(Robot.makeBool(");
     ValueExpression _c = e.getC();
     CharSequence _print = ValueExpressionPrinter.print(_c);
     _builder.append(_print, "");
@@ -185,6 +191,36 @@ public class ExpressionPrinter {
     return _builder;
   }
   
+  protected static CharSequence _print(final FreeAction a) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      boolean _shouldSuppress = RobotGenerator.shouldSuppress();
+      if (_shouldSuppress) {
+        _builder.append("if(_supressed) return; ");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    {
+      Motor _motor = a.getMotor();
+      EMotor _m = _motor.getM();
+      boolean _equals = Objects.equal(_m, EMotor.LEFTMOTOR);
+      if (_equals) {
+        _builder.append("Robot.leftMotor.flt(true);");
+        _builder.newLine();
+      }
+    }
+    {
+      Motor _motor_1 = a.getMotor();
+      EMotor _m_1 = _motor_1.getM();
+      boolean _equals_1 = Objects.equal(_m_1, EMotor.RIGHTMOTOR);
+      if (_equals_1) {
+        _builder.append("Robot.rightMotor.flt(true);");
+        _builder.newLine();
+      }
+    }
+    return _builder;
+  }
+  
   protected static CharSequence _print(final StopAction a) {
     StringConcatenation _builder = new StringConcatenation();
     {
@@ -198,7 +234,7 @@ public class ExpressionPrinter {
       Motor _motor = a.getMotor();
       boolean _equals = Objects.equal(_motor, null);
       if (_equals) {
-        _builder.append("Robot.leftMotor.stop();");
+        _builder.append("Robot.leftMotor.stop(true);");
         _builder.newLine();
         _builder.append("Robot.rightMotor.stop();");
         _builder.newLine();
@@ -345,6 +381,13 @@ public class ExpressionPrinter {
   
   protected static CharSequence _print(final SubRoutineAction a) {
     StringConcatenation _builder = new StringConcatenation();
+    {
+      boolean _shouldSuppress = RobotGenerator.shouldSuppress();
+      if (_shouldSuppress) {
+        _builder.append("if(_supressed) return; ");
+      }
+    }
+    _builder.newLineIfNotEmpty();
     _builder.append("Robot.");
     SubRoutine _routine = a.getRoutine();
     String _name = _routine.getName();
@@ -356,9 +399,69 @@ public class ExpressionPrinter {
   
   protected static CharSequence _print(final MeasureAction a) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("//INSERT MEASURE ACTION CODE HERE!");
+    {
+      boolean _shouldSuppress = RobotGenerator.shouldSuppress();
+      if (_shouldSuppress) {
+        _builder.append("if(_supressed) return; ");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    _builder.append("Robot.measure();");
     _builder.newLine();
     return _builder;
+  }
+  
+  protected static CharSequence _print(final ShowAction a) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("System.out.println(");
+    {
+      String _string = a.getString();
+      boolean _equals = Objects.equal(_string, null);
+      if (_equals) {
+        _builder.append("\"\"+");
+        Sensor _sensor = a.getSensor();
+        CharSequence _printVal = SensorAux.printVal(_sensor);
+        _builder.append(_printVal, "");
+      } else {
+        _builder.append("\"");
+        String _string_1 = a.getString();
+        _builder.append(_string_1, "");
+        _builder.append("\"");
+      }
+    }
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected static CharSequence _print(final SoundAction a) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      boolean _shouldSuppress = RobotGenerator.shouldSuppress();
+      if (_shouldSuppress) {
+        _builder.append("if(_supressed) return; ");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    Sound _sound = a.getSound();
+    CharSequence _printSoundFunc = ExpressionPrinter.printSoundFunc(_sound);
+    _builder.append(_printSoundFunc, "");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  public static CharSequence printSoundFunc(final Sound s) {
+    if (s != null) {
+      switch (s) {
+        case BEEP:
+          return "Sound.beep();";
+        case BUZZ:
+          return "Sound.buzz();";
+        default:
+          break;
+      }
+    }
+    return null;
   }
   
   public static CharSequence printExprList(final EList<Expression> es) {
@@ -382,6 +485,8 @@ public class ExpressionPrinter {
   public static CharSequence print(final Expression a) {
     if (a instanceof ForwardAction) {
       return _print((ForwardAction)a);
+    } else if (a instanceof FreeAction) {
+      return _print((FreeAction)a);
     } else if (a instanceof MeasureAction) {
       return _print((MeasureAction)a);
     } else if (a instanceof RotateAction) {
@@ -390,6 +495,10 @@ public class ExpressionPrinter {
       return _print((SAccelerationAction)a);
     } else if (a instanceof SSpeedAction) {
       return _print((SSpeedAction)a);
+    } else if (a instanceof ShowAction) {
+      return _print((ShowAction)a);
+    } else if (a instanceof SoundAction) {
+      return _print((SoundAction)a);
     } else if (a instanceof StopAction) {
       return _print((StopAction)a);
     } else if (a instanceof SubRoutineAction) {

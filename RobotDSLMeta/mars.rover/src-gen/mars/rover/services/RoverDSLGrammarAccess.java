@@ -493,14 +493,19 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSSpeedActionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cSubRoutineActionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cMeasureActionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cShowActionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cSoundActionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cFreeActionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
 		/// *Var :
 		//	'VAR' name = ID ' = ' v = Expression
 		//;* / Action:
-		//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction;
+		//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction |
+		//	ShowAction | SoundAction | FreeAction;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction
+		//ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction |
+		//ShowAction | SoundAction | FreeAction
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ForwardAction
@@ -523,6 +528,15 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//MeasureAction
 		public RuleCall getMeasureActionParserRuleCall_6() { return cMeasureActionParserRuleCall_6; }
+
+		//ShowAction
+		public RuleCall getShowActionParserRuleCall_7() { return cShowActionParserRuleCall_7; }
+
+		//SoundAction
+		public RuleCall getSoundActionParserRuleCall_8() { return cSoundActionParserRuleCall_8; }
+
+		//FreeAction
+		public RuleCall getFreeActionParserRuleCall_9() { return cFreeActionParserRuleCall_9; }
 	}
 
 	public class ForwardActionElements extends AbstractParserRuleElementFinder {
@@ -733,6 +747,90 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getMeasureKeyword_1() { return cMeasureKeyword_1; }
 	}
 
+	public class ShowActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ShowAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cShowKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cStringAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cStringSTRINGTerminalRuleCall_1_0_0 = (RuleCall)cStringAssignment_1_0.eContents().get(0);
+		private final Assignment cSensorAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cSensorSensorEnumRuleCall_1_1_0 = (RuleCall)cSensorAssignment_1_1.eContents().get(0);
+		
+		//ShowAction:
+		//	"Show" (string=STRING | sensor=Sensor);
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Show" (string=STRING | sensor=Sensor)
+		public Group getGroup() { return cGroup; }
+
+		//"Show"
+		public Keyword getShowKeyword_0() { return cShowKeyword_0; }
+
+		//string=STRING | sensor=Sensor
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+
+		//string=STRING
+		public Assignment getStringAssignment_1_0() { return cStringAssignment_1_0; }
+
+		//STRING
+		public RuleCall getStringSTRINGTerminalRuleCall_1_0_0() { return cStringSTRINGTerminalRuleCall_1_0_0; }
+
+		//sensor=Sensor
+		public Assignment getSensorAssignment_1_1() { return cSensorAssignment_1_1; }
+
+		//Sensor
+		public RuleCall getSensorSensorEnumRuleCall_1_1_0() { return cSensorSensorEnumRuleCall_1_1_0; }
+	}
+
+	public class SoundActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SoundAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSoundKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSoundAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSoundSoundEnumRuleCall_1_0 = (RuleCall)cSoundAssignment_1.eContents().get(0);
+		
+		//SoundAction:
+		//	"Sound" sound=Sound;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Sound" sound=Sound
+		public Group getGroup() { return cGroup; }
+
+		//"Sound"
+		public Keyword getSoundKeyword_0() { return cSoundKeyword_0; }
+
+		//sound=Sound
+		public Assignment getSoundAssignment_1() { return cSoundAssignment_1; }
+
+		//Sound
+		public RuleCall getSoundSoundEnumRuleCall_1_0() { return cSoundSoundEnumRuleCall_1_0; }
+	}
+
+	public class FreeActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FreeAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFreeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cMotorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cMotorMotorParserRuleCall_1_0 = (RuleCall)cMotorAssignment_1.eContents().get(0);
+		
+		//FreeAction:
+		//	"Free" motor=Motor;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"Free" motor=Motor
+		public Group getGroup() { return cGroup; }
+
+		//"Free"
+		public Keyword getFreeKeyword_0() { return cFreeKeyword_0; }
+
+		//motor=Motor
+		public Assignment getMotorAssignment_1() { return cMotorAssignment_1; }
+
+		//Motor
+		public RuleCall getMotorMotorParserRuleCall_1_0() { return cMotorMotorParserRuleCall_1_0; }
+	}
+
 	public class ValueExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ValueExpression");
 		private final RuleCall cBlevel1ParserRuleCall = (RuleCall)rule.eContents().get(1);
@@ -877,12 +975,13 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBVarLiteralParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cBSensorLiteralParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cBVBracketParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cColorLiteralParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//Blevel4 returns ValueExpression:
-		//	BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket;
+		//	BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket | ColorLiteral;
 		@Override public ParserRule getRule() { return rule; }
 
-		//BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket
+		//BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket | ColorLiteral
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//BVLiteral
@@ -899,6 +998,9 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//BVBracket
 		public RuleCall getBVBracketParserRuleCall_4() { return cBVBracketParserRuleCall_4; }
+
+		//ColorLiteral
+		public RuleCall getColorLiteralParserRuleCall_5() { return cColorLiteralParserRuleCall_5; }
 	}
 
 	public class BVLiteralElements extends AbstractParserRuleElementFinder {
@@ -1005,6 +1107,22 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//")"
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+	}
+
+	public class ColorLiteralElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ColorLiteral");
+		private final Assignment cColorAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cColorColorEnumRuleCall_0 = (RuleCall)cColorAssignment.eContents().get(0);
+		
+		//ColorLiteral:
+		//	color=Color;
+		@Override public ParserRule getRule() { return rule; }
+
+		//color=Color
+		public Assignment getColorAssignment() { return cColorAssignment; }
+
+		//Color
+		public RuleCall getColorColorEnumRuleCall_0() { return cColorColorEnumRuleCall_0; }
 	}
 	
 	
@@ -1115,6 +1233,34 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRIGHTMOTORRightMotorKeyword_1_0() { return cRIGHTMOTORRightMotorKeyword_1_0; }
 	}
 
+	public class SoundElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Sound");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBEEPEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBEEPBeepKeyword_0_0 = (Keyword)cBEEPEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cBUZZEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cBUZZBuzzKeyword_1_0 = (Keyword)cBUZZEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum Sound:
+		//	BEEP="Beep" | BUZZ="Buzz";
+		public EnumRule getRule() { return rule; }
+
+		//BEEP="Beep" | BUZZ="Buzz"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//BEEP="Beep"
+		public EnumLiteralDeclaration getBEEPEnumLiteralDeclaration_0() { return cBEEPEnumLiteralDeclaration_0; }
+
+		//"Beep"
+		public Keyword getBEEPBeepKeyword_0_0() { return cBEEPBeepKeyword_0_0; }
+
+		//BUZZ="Buzz"
+		public EnumLiteralDeclaration getBUZZEnumLiteralDeclaration_1() { return cBUZZEnumLiteralDeclaration_1; }
+
+		//"Buzz"
+		public Keyword getBUZZBuzzKeyword_1_0() { return cBUZZBuzzKeyword_1_0; }
+	}
+
 	public class BBinaryOpElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BBinaryOp");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -1147,7 +1293,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "CompareOp");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEQEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cEQEqualsSignEqualsSignKeyword_0_0 = (Keyword)cEQEnumLiteralDeclaration_0.eContents().get(0);
+		private final Keyword cEQEqualsKeyword_0_0 = (Keyword)cEQEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cNEQEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cNEQExclamationMarkEqualsSignKeyword_1_0 = (Keyword)cNEQEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cGEQEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
@@ -1160,17 +1306,17 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLTLessThanSignKeyword_5_0 = (Keyword)cLTEnumLiteralDeclaration_5.eContents().get(0);
 		
 		//enum CompareOp:
-		//	EQ="==" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<";
+		//	EQ="equals" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<";
 		public EnumRule getRule() { return rule; }
 
-		//EQ="==" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<"
+		//EQ="equals" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//EQ="=="
+		//EQ="equals"
 		public EnumLiteralDeclaration getEQEnumLiteralDeclaration_0() { return cEQEnumLiteralDeclaration_0; }
 
-		//"=="
-		public Keyword getEQEqualsSignEqualsSignKeyword_0_0() { return cEQEqualsSignEqualsSignKeyword_0_0; }
+		//"equals"
+		public Keyword getEQEqualsKeyword_0_0() { return cEQEqualsKeyword_0_0; }
 
 		//NEQ="!="
 		public EnumLiteralDeclaration getNEQEnumLiteralDeclaration_1() { return cNEQEnumLiteralDeclaration_1; }
@@ -1202,12 +1348,139 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//"<"
 		public Keyword getLTLessThanSignKeyword_5_0() { return cLTLessThanSignKeyword_5_0; }
 	}
+
+	public class ColorElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBLACKEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBLACKBLACKKeyword_0_0 = (Keyword)cBLACKEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cBLUEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cBLUEBLUEKeyword_1_0 = (Keyword)cBLUEEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cBROWNEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cBROWNBROWNKeyword_2_0 = (Keyword)cBROWNEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cCYANEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cCYANCYANKeyword_3_0 = (Keyword)cCYANEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cDARK_GRAYEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cDARK_GRAYDARKGRAYKeyword_4_0 = (Keyword)cDARK_GRAYEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cGRAYEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cGRAYGRAYKeyword_5_0 = (Keyword)cGRAYEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cGREENEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cGREENGREENKeyword_6_0 = (Keyword)cGREENEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cLIGHT_GRAYEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cLIGHT_GRAYLIGHTGRAYKeyword_7_0 = (Keyword)cLIGHT_GRAYEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cMAGENTAEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cMAGENTAMAGENTAKeyword_8_0 = (Keyword)cMAGENTAEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cORANGEEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cORANGEORANGEKeyword_9_0 = (Keyword)cORANGEEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cPINKEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cPINKPINKKeyword_10_0 = (Keyword)cPINKEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cREDEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cREDREDKeyword_11_0 = (Keyword)cREDEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cWHITEEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
+		private final Keyword cWHITEWHITEKeyword_12_0 = (Keyword)cWHITEEnumLiteralDeclaration_12.eContents().get(0);
+		private final EnumLiteralDeclaration cYELLOWEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
+		private final Keyword cYELLOWYELLOWKeyword_13_0 = (Keyword)cYELLOWEnumLiteralDeclaration_13.eContents().get(0);
+		
+		//enum Color:
+		//	BLACK | BLUE | BROWN | CYAN | DARK_GRAY="DARKGRAY" | GRAY | GREEN | LIGHT_GRAY="LIGHTGRAY" | MAGENTA | ORANGE | PINK |
+		//	RED | WHITE | YELLOW;
+		public EnumRule getRule() { return rule; }
+
+		//BLACK | BLUE | BROWN | CYAN | DARK_GRAY="DARKGRAY" | GRAY | GREEN | LIGHT_GRAY="LIGHTGRAY" | MAGENTA | ORANGE | PINK |
+		//RED | WHITE | YELLOW
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//BLACK
+		public EnumLiteralDeclaration getBLACKEnumLiteralDeclaration_0() { return cBLACKEnumLiteralDeclaration_0; }
+
+		//"BLACK"
+		public Keyword getBLACKBLACKKeyword_0_0() { return cBLACKBLACKKeyword_0_0; }
+
+		//BLUE
+		public EnumLiteralDeclaration getBLUEEnumLiteralDeclaration_1() { return cBLUEEnumLiteralDeclaration_1; }
+
+		//"BLUE"
+		public Keyword getBLUEBLUEKeyword_1_0() { return cBLUEBLUEKeyword_1_0; }
+
+		//BROWN
+		public EnumLiteralDeclaration getBROWNEnumLiteralDeclaration_2() { return cBROWNEnumLiteralDeclaration_2; }
+
+		//"BROWN"
+		public Keyword getBROWNBROWNKeyword_2_0() { return cBROWNBROWNKeyword_2_0; }
+
+		//CYAN
+		public EnumLiteralDeclaration getCYANEnumLiteralDeclaration_3() { return cCYANEnumLiteralDeclaration_3; }
+
+		//"CYAN"
+		public Keyword getCYANCYANKeyword_3_0() { return cCYANCYANKeyword_3_0; }
+
+		//DARK_GRAY="DARKGRAY"
+		public EnumLiteralDeclaration getDARK_GRAYEnumLiteralDeclaration_4() { return cDARK_GRAYEnumLiteralDeclaration_4; }
+
+		//"DARKGRAY"
+		public Keyword getDARK_GRAYDARKGRAYKeyword_4_0() { return cDARK_GRAYDARKGRAYKeyword_4_0; }
+
+		//GRAY
+		public EnumLiteralDeclaration getGRAYEnumLiteralDeclaration_5() { return cGRAYEnumLiteralDeclaration_5; }
+
+		//"GRAY"
+		public Keyword getGRAYGRAYKeyword_5_0() { return cGRAYGRAYKeyword_5_0; }
+
+		//GREEN
+		public EnumLiteralDeclaration getGREENEnumLiteralDeclaration_6() { return cGREENEnumLiteralDeclaration_6; }
+
+		//"GREEN"
+		public Keyword getGREENGREENKeyword_6_0() { return cGREENGREENKeyword_6_0; }
+
+		//LIGHT_GRAY="LIGHTGRAY"
+		public EnumLiteralDeclaration getLIGHT_GRAYEnumLiteralDeclaration_7() { return cLIGHT_GRAYEnumLiteralDeclaration_7; }
+
+		//"LIGHTGRAY"
+		public Keyword getLIGHT_GRAYLIGHTGRAYKeyword_7_0() { return cLIGHT_GRAYLIGHTGRAYKeyword_7_0; }
+
+		//MAGENTA
+		public EnumLiteralDeclaration getMAGENTAEnumLiteralDeclaration_8() { return cMAGENTAEnumLiteralDeclaration_8; }
+
+		//"MAGENTA"
+		public Keyword getMAGENTAMAGENTAKeyword_8_0() { return cMAGENTAMAGENTAKeyword_8_0; }
+
+		//ORANGE
+		public EnumLiteralDeclaration getORANGEEnumLiteralDeclaration_9() { return cORANGEEnumLiteralDeclaration_9; }
+
+		//"ORANGE"
+		public Keyword getORANGEORANGEKeyword_9_0() { return cORANGEORANGEKeyword_9_0; }
+
+		//PINK
+		public EnumLiteralDeclaration getPINKEnumLiteralDeclaration_10() { return cPINKEnumLiteralDeclaration_10; }
+
+		//"PINK"
+		public Keyword getPINKPINKKeyword_10_0() { return cPINKPINKKeyword_10_0; }
+
+		//RED
+		public EnumLiteralDeclaration getREDEnumLiteralDeclaration_11() { return cREDEnumLiteralDeclaration_11; }
+
+		//"RED"
+		public Keyword getREDREDKeyword_11_0() { return cREDREDKeyword_11_0; }
+
+		//WHITE
+		public EnumLiteralDeclaration getWHITEEnumLiteralDeclaration_12() { return cWHITEEnumLiteralDeclaration_12; }
+
+		//"WHITE"
+		public Keyword getWHITEWHITEKeyword_12_0() { return cWHITEWHITEKeyword_12_0; }
+
+		//YELLOW
+		public EnumLiteralDeclaration getYELLOWEnumLiteralDeclaration_13() { return cYELLOWEnumLiteralDeclaration_13; }
+
+		//"YELLOW"
+		public Keyword getYELLOWYELLOWKeyword_13_0() { return cYELLOWYELLOWKeyword_13_0; }
+	}
 	
 	private final RobotElements pRobot;
 	private final BehaviorNameElements pBehaviorName;
 	private final SensorElements unknownRuleSensor;
 	private final MotorElements pMotor;
 	private final EMotorElements unknownRuleEMotor;
+	private final SoundElements unknownRuleSound;
 	private final GlobalElements pGlobal;
 	private final StaticElements pStatic;
 	private final ImplementationElements pImplementation;
@@ -1225,6 +1498,9 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final SSpeedActionElements pSSpeedAction;
 	private final SubRoutineActionElements pSubRoutineAction;
 	private final MeasureActionElements pMeasureAction;
+	private final ShowActionElements pShowAction;
+	private final SoundActionElements pSoundAction;
+	private final FreeActionElements pFreeAction;
 	private final ValueExpressionElements pValueExpression;
 	private final Blevel1Elements pBlevel1;
 	private final Blevel2Elements pBlevel2;
@@ -1236,8 +1512,10 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	private final BVarLiteralElements pBVarLiteral;
 	private final BSensorLiteralElements pBSensorLiteral;
 	private final BVBracketElements pBVBracket;
+	private final ColorLiteralElements pColorLiteral;
 	private final BBinaryOpElements unknownRuleBBinaryOp;
 	private final CompareOpElements unknownRuleCompareOp;
+	private final ColorElements unknownRuleColor;
 	private final TerminalRule tALPHA;
 	private final TerminalRule tBOOL_LITERAL;
 	
@@ -1255,6 +1533,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.unknownRuleSensor = new SensorElements();
 		this.pMotor = new MotorElements();
 		this.unknownRuleEMotor = new EMotorElements();
+		this.unknownRuleSound = new SoundElements();
 		this.pGlobal = new GlobalElements();
 		this.pStatic = new StaticElements();
 		this.pImplementation = new ImplementationElements();
@@ -1272,6 +1551,9 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pSSpeedAction = new SSpeedActionElements();
 		this.pSubRoutineAction = new SubRoutineActionElements();
 		this.pMeasureAction = new MeasureActionElements();
+		this.pShowAction = new ShowActionElements();
+		this.pSoundAction = new SoundActionElements();
+		this.pFreeAction = new FreeActionElements();
 		this.pValueExpression = new ValueExpressionElements();
 		this.pBlevel1 = new Blevel1Elements();
 		this.pBlevel2 = new Blevel2Elements();
@@ -1283,8 +1565,10 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pBVarLiteral = new BVarLiteralElements();
 		this.pBSensorLiteral = new BSensorLiteralElements();
 		this.pBVBracket = new BVBracketElements();
+		this.pColorLiteral = new ColorLiteralElements();
 		this.unknownRuleBBinaryOp = new BBinaryOpElements();
 		this.unknownRuleCompareOp = new CompareOpElements();
+		this.unknownRuleColor = new ColorElements();
 		this.tALPHA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ALPHA");
 		this.tBOOL_LITERAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOL_LITERAL");
 	}
@@ -1367,6 +1651,16 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getEMotorRule() {
 		return getEMotorAccess().getRule();
+	}
+
+	//enum Sound:
+	//	BEEP="Beep" | BUZZ="Buzz";
+	public SoundElements getSoundAccess() {
+		return unknownRuleSound;
+	}
+	
+	public EnumRule getSoundRule() {
+		return getSoundAccess().getRule();
 	}
 
 	//Global:
@@ -1464,7 +1758,8 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	/// *Var :
 	//	'VAR' name = ID ' = ' v = Expression
 	//;* / Action:
-	//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction;
+	//	ForwardAction | RotateAction | StopAction | SAccelerationAction | SSpeedAction | SubRoutineAction | MeasureAction |
+	//	ShowAction | SoundAction | FreeAction;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
@@ -1543,6 +1838,36 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getMeasureActionAccess().getRule();
 	}
 
+	//ShowAction:
+	//	"Show" (string=STRING | sensor=Sensor);
+	public ShowActionElements getShowActionAccess() {
+		return pShowAction;
+	}
+	
+	public ParserRule getShowActionRule() {
+		return getShowActionAccess().getRule();
+	}
+
+	//SoundAction:
+	//	"Sound" sound=Sound;
+	public SoundActionElements getSoundActionAccess() {
+		return pSoundAction;
+	}
+	
+	public ParserRule getSoundActionRule() {
+		return getSoundActionAccess().getRule();
+	}
+
+	//FreeAction:
+	//	"Free" motor=Motor;
+	public FreeActionElements getFreeActionAccess() {
+		return pFreeAction;
+	}
+	
+	public ParserRule getFreeActionRule() {
+		return getFreeActionAccess().getRule();
+	}
+
 	//ValueExpression:
 	//	Blevel1;
 	public ValueExpressionElements getValueExpressionAccess() {
@@ -1594,7 +1919,7 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Blevel4 returns ValueExpression:
-	//	BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket;
+	//	BVLiteral | BBLiteral | BVarLiteral | BSensorLiteral | BVBracket | ColorLiteral;
 	public Blevel4Elements getBlevel4Access() {
 		return pBlevel4;
 	}
@@ -1655,6 +1980,16 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getBVBracketAccess().getRule();
 	}
 
+	//ColorLiteral:
+	//	color=Color;
+	public ColorLiteralElements getColorLiteralAccess() {
+		return pColorLiteral;
+	}
+	
+	public ParserRule getColorLiteralRule() {
+		return getColorLiteralAccess().getRule();
+	}
+
 	//enum BBinaryOp:
 	//	AND="&&" | OR="||";
 	public BBinaryOpElements getBBinaryOpAccess() {
@@ -1666,13 +2001,24 @@ public class RoverDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum CompareOp:
-	//	EQ="==" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<";
+	//	EQ="equals" | NEQ="!=" | GEQ=">=" | GT=">" | LEQ="<=" | LT="<";
 	public CompareOpElements getCompareOpAccess() {
 		return unknownRuleCompareOp;
 	}
 	
 	public EnumRule getCompareOpRule() {
 		return getCompareOpAccess().getRule();
+	}
+
+	//enum Color:
+	//	BLACK | BLUE | BROWN | CYAN | DARK_GRAY="DARKGRAY" | GRAY | GREEN | LIGHT_GRAY="LIGHTGRAY" | MAGENTA | ORANGE | PINK |
+	//	RED | WHITE | YELLOW;
+	public ColorElements getColorAccess() {
+		return unknownRuleColor;
+	}
+	
+	public EnumRule getColorRule() {
+		return getColorAccess().getRule();
 	}
 
 	////terminals

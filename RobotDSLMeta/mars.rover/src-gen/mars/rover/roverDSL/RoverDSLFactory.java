@@ -203,6 +203,33 @@ public interface RoverDSLFactory extends EFactory
   MeasureAction createMeasureAction();
 
   /**
+   * Returns a new object of class '<em>Show Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Show Action</em>'.
+   * @generated
+   */
+  ShowAction createShowAction();
+
+  /**
+   * Returns a new object of class '<em>Sound Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sound Action</em>'.
+   * @generated
+   */
+  SoundAction createSoundAction();
+
+  /**
+   * Returns a new object of class '<em>Free Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Free Action</em>'.
+   * @generated
+   */
+  FreeAction createFreeAction();
+
+  /**
    * Returns a new object of class '<em>Value Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -264,6 +291,15 @@ public interface RoverDSLFactory extends EFactory
    * @generated
    */
   BVBracket createBVBracket();
+
+  /**
+   * Returns a new object of class '<em>Color Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Color Literal</em>'.
+   * @generated
+   */
+  ColorLiteral createColorLiteral();
 
   /**
    * Returns a new object of class '<em>Expression Bin Op</em>'.

@@ -175,6 +175,21 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
         return createMeasureActionAdapter();
       }
       @Override
+      public Adapter caseShowAction(ShowAction object)
+      {
+        return createShowActionAdapter();
+      }
+      @Override
+      public Adapter caseSoundAction(SoundAction object)
+      {
+        return createSoundActionAdapter();
+      }
+      @Override
+      public Adapter caseFreeAction(FreeAction object)
+      {
+        return createFreeActionAdapter();
+      }
+      @Override
       public Adapter caseValueExpression(ValueExpression object)
       {
         return createValueExpressionAdapter();
@@ -208,6 +223,11 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBVBracket(BVBracket object)
       {
         return createBVBracketAdapter();
+      }
+      @Override
+      public Adapter caseColorLiteral(ColorLiteral object)
+      {
+        return createColorLiteralAdapter();
       }
       @Override
       public Adapter caseExpressionBinOp(ExpressionBinOp object)
@@ -542,6 +562,51 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.ShowAction <em>Show Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.rover.roverDSL.ShowAction
+   * @generated
+   */
+  public Adapter createShowActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.SoundAction <em>Sound Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.rover.roverDSL.SoundAction
+   * @generated
+   */
+  public Adapter createSoundActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.FreeAction <em>Free Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.rover.roverDSL.FreeAction
+   * @generated
+   */
+  public Adapter createFreeActionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.ValueExpression <em>Value Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -642,6 +707,21 @@ public class RoverDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBVBracketAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.rover.roverDSL.ColorLiteral <em>Color Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.rover.roverDSL.ColorLiteral
+   * @generated
+   */
+  public Adapter createColorLiteralAdapter()
   {
     return null;
   }

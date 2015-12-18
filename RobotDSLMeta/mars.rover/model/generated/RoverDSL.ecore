@@ -35,6 +35,10 @@
     <eLiterals name="LEFTMOTOR" literal="LeftMotor"/>
     <eLiterals name="RIGHTMOTOR" value="1" literal="RightMotor"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Sound">
+    <eLiterals name="BEEP" literal="Beep"/>
+    <eLiterals name="BUZZ" value="1" literal="Buzz"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Global">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -111,6 +115,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="routine" eType="#//SubRoutine"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasureAction" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ShowAction" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sensor" eType="#//Sensor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoundAction" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sound" eType="#//Sound"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FreeAction" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="motor" eType="#//Motor"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValueExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="BNotExpr" eSuperTypes="#//ValueExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sub" eType="#//ValueExpression"
@@ -133,17 +148,36 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="bsub" eType="#//ValueExpression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorLiteral" eSuperTypes="#//ValueExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BBinaryOp">
     <eLiterals name="AND" literal="&amp;&amp;"/>
     <eLiterals name="OR" value="1" literal="||"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CompareOp">
-    <eLiterals name="EQ" literal="=="/>
+    <eLiterals name="EQ" literal="equals"/>
     <eLiterals name="NEQ" value="1" literal="!="/>
     <eLiterals name="GEQ" value="2" literal=">="/>
     <eLiterals name="GT" value="3" literal=">"/>
     <eLiterals name="LEQ" value="4" literal="&lt;="/>
     <eLiterals name="LT" value="5" literal="&lt;"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eLiterals name="BLACK" literal="BLACK"/>
+    <eLiterals name="BLUE" value="1" literal="BLUE"/>
+    <eLiterals name="BROWN" value="2" literal="BROWN"/>
+    <eLiterals name="CYAN" value="3" literal="CYAN"/>
+    <eLiterals name="DARK_GRAY" value="4" literal="DARKGRAY"/>
+    <eLiterals name="GRAY" value="5" literal="GRAY"/>
+    <eLiterals name="GREEN" value="6" literal="GREEN"/>
+    <eLiterals name="LIGHT_GRAY" value="7" literal="LIGHTGRAY"/>
+    <eLiterals name="MAGENTA" value="8" literal="MAGENTA"/>
+    <eLiterals name="ORANGE" value="9" literal="ORANGE"/>
+    <eLiterals name="PINK" value="10" literal="PINK"/>
+    <eLiterals name="RED" value="11" literal="RED"/>
+    <eLiterals name="WHITE" value="12" literal="WHITE"/>
+    <eLiterals name="YELLOW" value="13" literal="YELLOW"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExpressionBinOp" eSuperTypes="#//ValueExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//ValueExpression"

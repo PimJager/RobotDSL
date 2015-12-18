@@ -14,6 +14,10 @@ import mars.rover.roverDSL.ValExpr
 import mars.rover.roverDSL.WHILEExpression
 import org.eclipse.emf.common.util.EList
 import mars.rover.roverDSL.MeasureAction
+import mars.rover.roverDSL.ShowAction
+import mars.rover.roverDSL.SoundAction
+import mars.rover.roverDSL.Sound
+import mars.rover.roverDSL.FreeAction
 
 class ExpressionPrinter  {
 	
@@ -32,7 +36,7 @@ class ExpressionPrinter  {
 	}'''
 	
 	def static dispatch CharSequence print(WHILEExpression e)'''
-	while(Robot.iToB(«ValueExpressionPrinter.print(e.c)»)){
+	while(Robot.makeBool(«ValueExpressionPrinter.print(e.c)»)){
 		«ExpressionPrinter.printExprList(e.b)»
 	}'''
 	
@@ -60,10 +64,20 @@ class ExpressionPrinter  {
 		«ENDIF»
 	'''
 	
+	def static dispatch CharSequence print(FreeAction a)'''
+		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
+		«IF a.motor.m == EMotor::LEFTMOTOR»
+		Robot.leftMotor.flt(true);
+		«ENDIF»
+		«IF a.motor.m == EMotor::RIGHTMOTOR»
+		Robot.rightMotor.flt(true);
+		«ENDIF»
+	'''
+	
 	def static dispatch CharSequence print(StopAction a)'''
 		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
 		«IF a.motor == null»
-		Robot.leftMotor.stop();
+		Robot.leftMotor.stop(true);
 		Robot.rightMotor.stop();
 		«ELSE»
 			«IF a.motor.m == EMotor::LEFTMOTOR»
@@ -103,12 +117,30 @@ class ExpressionPrinter  {
 		«ENDIF»'''
 		
 	def static dispatch CharSequence print(SubRoutineAction a)'''
+		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
 		Robot.«a.routine.name»();
 	'''
 	
 	def static dispatch CharSequence print(MeasureAction a)'''
-		//INSERT MEASURE ACTION CODE HERE!
+		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
+		Robot.measure();
 	'''
+	
+	def static dispatch CharSequence print(ShowAction a)'''
+		System.out.println(«IF a.string == null»""+«SensorAux.printVal(a.sensor)»«ELSE»"«a.string»"«ENDIF»);
+	'''
+	
+	def static dispatch CharSequence print(SoundAction a)'''
+		«IF RobotGenerator.shouldSuppress»if(_supressed) return; «ENDIF»
+		«printSoundFunc(a.sound)»
+	'''
+	
+	def static CharSequence printSoundFunc(Sound s){
+		switch(s){
+			case Sound::BEEP:	return "Sound.beep();"
+			case Sound::BUZZ:	return "Sound.buzz();"
+		}
+	}
 	
 	def static CharSequence printExprList(EList<Expression> es)'''
 		«FOR e : es SEPARATOR "\n"»«print(e)»«ENDFOR»

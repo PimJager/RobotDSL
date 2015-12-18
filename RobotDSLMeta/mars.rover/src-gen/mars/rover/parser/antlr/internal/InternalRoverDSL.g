@@ -962,6 +962,36 @@ ruleAction returns [EObject current=null]
         $current = $this_MeasureAction_6.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getShowActionParserRuleCall_7()); 
+    }
+    this_ShowAction_7=ruleShowAction
+    { 
+        $current = $this_ShowAction_7.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getSoundActionParserRuleCall_8()); 
+    }
+    this_SoundAction_8=ruleSoundAction
+    { 
+        $current = $this_SoundAction_8.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionAccess().getFreeActionParserRuleCall_9()); 
+    }
+    this_FreeAction_9=ruleFreeAction
+    { 
+        $current = $this_FreeAction_9.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -1334,6 +1364,154 @@ ruleMeasureAction returns [EObject current=null]
 
 
 
+// Entry rule entryRuleShowAction
+entryRuleShowAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getShowActionRule()); }
+	 iv_ruleShowAction=ruleShowAction 
+	 { $current=$iv_ruleShowAction.current; } 
+	 EOF 
+;
+
+// Rule ShowAction
+ruleShowAction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Show' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getShowActionAccess().getShowKeyword_0());
+    }
+((
+(
+		lv_string_1_0=RULE_STRING
+		{
+			newLeafNode(lv_string_1_0, grammarAccess.getShowActionAccess().getStringSTRINGTerminalRuleCall_1_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getShowActionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"string",
+        		lv_string_1_0, 
+        		"STRING");
+	    }
+
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getShowActionAccess().getSensorSensorEnumRuleCall_1_1_0()); 
+	    }
+		lv_sensor_2_0=ruleSensor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getShowActionRule());
+	        }
+       		set(
+       			$current, 
+       			"sensor",
+        		lv_sensor_2_0, 
+        		"Sensor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)))
+;
+
+
+
+
+
+// Entry rule entryRuleSoundAction
+entryRuleSoundAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSoundActionRule()); }
+	 iv_ruleSoundAction=ruleSoundAction 
+	 { $current=$iv_ruleSoundAction.current; } 
+	 EOF 
+;
+
+// Rule SoundAction
+ruleSoundAction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Sound' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getSoundActionAccess().getSoundKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSoundActionAccess().getSoundSoundEnumRuleCall_1_0()); 
+	    }
+		lv_sound_1_0=ruleSound		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSoundActionRule());
+	        }
+       		set(
+       			$current, 
+       			"sound",
+        		lv_sound_1_0, 
+        		"Sound");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleFreeAction
+entryRuleFreeAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getFreeActionRule()); }
+	 iv_ruleFreeAction=ruleFreeAction 
+	 { $current=$iv_ruleFreeAction.current; } 
+	 EOF 
+;
+
+// Rule FreeAction
+ruleFreeAction returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='Free' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getFreeActionAccess().getFreeKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getFreeActionAccess().getMotorMotorParserRuleCall_1_0()); 
+	    }
+		lv_motor_1_0=ruleMotor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getFreeActionRule());
+	        }
+       		set(
+       			$current, 
+       			"motor",
+        		lv_motor_1_0, 
+        		"Motor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
 // Entry rule entryRuleValueExpression
 entryRuleValueExpression returns [EObject current=null] 
 	:
@@ -1654,6 +1832,16 @@ ruleBlevel4 returns [EObject current=null]
         $current = $this_BVBracket_4.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getBlevel4Access().getColorLiteralParserRuleCall_5()); 
+    }
+    this_ColorLiteral_5=ruleColorLiteral
+    { 
+        $current = $this_ColorLiteral_5.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -1879,6 +2067,45 @@ ruleBVBracket returns [EObject current=null]
 
 
 
+// Entry rule entryRuleColorLiteral
+entryRuleColorLiteral returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getColorLiteralRule()); }
+	 iv_ruleColorLiteral=ruleColorLiteral 
+	 { $current=$iv_ruleColorLiteral.current; } 
+	 EOF 
+;
+
+// Rule ColorLiteral
+ruleColorLiteral returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getColorLiteralAccess().getColorColorEnumRuleCall_0()); 
+	    }
+		lv_color_0_0=ruleColor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getColorLiteralRule());
+	        }
+       		set(
+       			$current, 
+       			"color",
+        		lv_color_0_0, 
+        		"Color");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+;
+
+
+
+
+
 // Rule Sensor
 ruleSensor returns [Enumerator current=null] 
     @init { enterRule(); }
@@ -1953,6 +2180,25 @@ ruleEMotor returns [Enumerator current=null]
 
 
 
+// Rule Sound
+ruleSound returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='Beep' 
+	{
+        $current = grammarAccess.getSoundAccess().getBEEPEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getSoundAccess().getBEEPEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='Buzz' 
+	{
+        $current = grammarAccess.getSoundAccess().getBUZZEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getSoundAccess().getBUZZEnumLiteralDeclaration_1()); 
+    }
+));
+
+
+
 // Rule BBinaryOp
 ruleBBinaryOp returns [Enumerator current=null] 
     @init { enterRule(); }
@@ -1976,7 +2222,7 @@ ruleBBinaryOp returns [Enumerator current=null]
 ruleCompareOp returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='==' 
+((	enumLiteral_0='equals' 
 	{
         $current = grammarAccess.getCompareOpAccess().getEQEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getCompareOpAccess().getEQEnumLiteralDeclaration_0()); 
@@ -2010,6 +2256,97 @@ ruleCompareOp returns [Enumerator current=null]
 	{
         $current = grammarAccess.getCompareOpAccess().getLTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_5, grammarAccess.getCompareOpAccess().getLTEnumLiteralDeclaration_5()); 
+    }
+));
+
+
+
+// Rule Color
+ruleColor returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='BLACK' 
+	{
+        $current = grammarAccess.getColorAccess().getBLACKEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getColorAccess().getBLACKEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='BLUE' 
+	{
+        $current = grammarAccess.getColorAccess().getBLUEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getColorAccess().getBLUEEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='BROWN' 
+	{
+        $current = grammarAccess.getColorAccess().getBROWNEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getColorAccess().getBROWNEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='CYAN' 
+	{
+        $current = grammarAccess.getColorAccess().getCYANEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getColorAccess().getCYANEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='DARKGRAY' 
+	{
+        $current = grammarAccess.getColorAccess().getDARK_GRAYEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getColorAccess().getDARK_GRAYEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='GRAY' 
+	{
+        $current = grammarAccess.getColorAccess().getGRAYEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getColorAccess().getGRAYEnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='GREEN' 
+	{
+        $current = grammarAccess.getColorAccess().getGREENEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getColorAccess().getGREENEnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='LIGHTGRAY' 
+	{
+        $current = grammarAccess.getColorAccess().getLIGHT_GRAYEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getColorAccess().getLIGHT_GRAYEnumLiteralDeclaration_7()); 
+    }
+)
+    |(	enumLiteral_8='MAGENTA' 
+	{
+        $current = grammarAccess.getColorAccess().getMAGENTAEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_8, grammarAccess.getColorAccess().getMAGENTAEnumLiteralDeclaration_8()); 
+    }
+)
+    |(	enumLiteral_9='ORANGE' 
+	{
+        $current = grammarAccess.getColorAccess().getORANGEEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_9, grammarAccess.getColorAccess().getORANGEEnumLiteralDeclaration_9()); 
+    }
+)
+    |(	enumLiteral_10='PINK' 
+	{
+        $current = grammarAccess.getColorAccess().getPINKEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_10, grammarAccess.getColorAccess().getPINKEnumLiteralDeclaration_10()); 
+    }
+)
+    |(	enumLiteral_11='RED' 
+	{
+        $current = grammarAccess.getColorAccess().getREDEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_11, grammarAccess.getColorAccess().getREDEnumLiteralDeclaration_11()); 
+    }
+)
+    |(	enumLiteral_12='WHITE' 
+	{
+        $current = grammarAccess.getColorAccess().getWHITEEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_12, grammarAccess.getColorAccess().getWHITEEnumLiteralDeclaration_12()); 
+    }
+)
+    |(	enumLiteral_13='YELLOW' 
+	{
+        $current = grammarAccess.getColorAccess().getYELLOWEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_13, grammarAccess.getColorAccess().getYELLOWEnumLiteralDeclaration_13()); 
     }
 ));
 

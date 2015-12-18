@@ -12,12 +12,15 @@ import mars.rover.roverDSL.BVBracket;
 import mars.rover.roverDSL.BVLiteral;
 import mars.rover.roverDSL.BVarLiteral;
 import mars.rover.roverDSL.BehaviorName;
+import mars.rover.roverDSL.Color;
+import mars.rover.roverDSL.ColorLiteral;
 import mars.rover.roverDSL.CompareOp;
 import mars.rover.roverDSL.EMotor;
 import mars.rover.roverDSL.Expression;
 import mars.rover.roverDSL.ExpressionBinComp;
 import mars.rover.roverDSL.ExpressionBinOp;
 import mars.rover.roverDSL.ForwardAction;
+import mars.rover.roverDSL.FreeAction;
 import mars.rover.roverDSL.Global;
 import mars.rover.roverDSL.IFExpression;
 import mars.rover.roverDSL.Implementation;
@@ -30,6 +33,9 @@ import mars.rover.roverDSL.RoverDSLPackage;
 import mars.rover.roverDSL.SAccelerationAction;
 import mars.rover.roverDSL.SSpeedAction;
 import mars.rover.roverDSL.Sensor;
+import mars.rover.roverDSL.ShowAction;
+import mars.rover.roverDSL.Sound;
+import mars.rover.roverDSL.SoundAction;
 import mars.rover.roverDSL.Static;
 import mars.rover.roverDSL.StopAction;
 import mars.rover.roverDSL.SubRoutine;
@@ -199,6 +205,27 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass showActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass soundActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass freeActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass valueExpressionEClass = null;
 
   /**
@@ -248,6 +275,13 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass colorLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass expressionBinOpEClass = null;
 
   /**
@@ -276,6 +310,13 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EEnum soundEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum bBinaryOpEEnum = null;
 
   /**
@@ -284,6 +325,13 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * @generated
    */
   private EEnum compareOpEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum colorEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -893,6 +941,76 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getShowAction()
+  {
+    return showActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getShowAction_String()
+  {
+    return (EAttribute)showActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getShowAction_Sensor()
+  {
+    return (EAttribute)showActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSoundAction()
+  {
+    return soundActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSoundAction_Sound()
+  {
+    return (EAttribute)soundActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFreeAction()
+  {
+    return freeActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFreeAction_Motor()
+  {
+    return (EReference)freeActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getValueExpression()
   {
     return valueExpressionEClass;
@@ -1033,6 +1151,26 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getColorLiteral()
+  {
+    return colorLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColorLiteral_Color()
+  {
+    return (EAttribute)colorLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getExpressionBinOp()
   {
     return expressionBinOpEClass;
@@ -1133,6 +1271,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getSound()
+  {
+    return soundEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getBBinaryOp()
   {
     return bBinaryOpEEnum;
@@ -1146,6 +1294,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
   public EEnum getCompareOp()
   {
     return compareOpEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getColor()
+  {
+    return colorEEnum;
   }
 
   /**
@@ -1252,6 +1410,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
 
     measureActionEClass = createEClass(MEASURE_ACTION);
 
+    showActionEClass = createEClass(SHOW_ACTION);
+    createEAttribute(showActionEClass, SHOW_ACTION__STRING);
+    createEAttribute(showActionEClass, SHOW_ACTION__SENSOR);
+
+    soundActionEClass = createEClass(SOUND_ACTION);
+    createEAttribute(soundActionEClass, SOUND_ACTION__SOUND);
+
+    freeActionEClass = createEClass(FREE_ACTION);
+    createEReference(freeActionEClass, FREE_ACTION__MOTOR);
+
     valueExpressionEClass = createEClass(VALUE_EXPRESSION);
 
     bNotExprEClass = createEClass(BNOT_EXPR);
@@ -1273,6 +1441,9 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     bvBracketEClass = createEClass(BV_BRACKET);
     createEReference(bvBracketEClass, BV_BRACKET__BSUB);
 
+    colorLiteralEClass = createEClass(COLOR_LITERAL);
+    createEAttribute(colorLiteralEClass, COLOR_LITERAL__COLOR);
+
     expressionBinOpEClass = createEClass(EXPRESSION_BIN_OP);
     createEReference(expressionBinOpEClass, EXPRESSION_BIN_OP__LEFT);
     createEAttribute(expressionBinOpEClass, EXPRESSION_BIN_OP__BOP);
@@ -1286,8 +1457,10 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     // Create enums
     sensorEEnum = createEEnum(SENSOR);
     eMotorEEnum = createEEnum(EMOTOR);
+    soundEEnum = createEEnum(SOUND);
     bBinaryOpEEnum = createEEnum(BBINARY_OP);
     compareOpEEnum = createEEnum(COMPARE_OP);
+    colorEEnum = createEEnum(COLOR);
   }
 
   /**
@@ -1331,12 +1504,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     sSpeedActionEClass.getESuperTypes().add(this.getAction());
     subRoutineActionEClass.getESuperTypes().add(this.getAction());
     measureActionEClass.getESuperTypes().add(this.getAction());
+    showActionEClass.getESuperTypes().add(this.getAction());
+    soundActionEClass.getESuperTypes().add(this.getAction());
+    freeActionEClass.getESuperTypes().add(this.getAction());
     bNotExprEClass.getESuperTypes().add(this.getValueExpression());
     bvLiteralEClass.getESuperTypes().add(this.getValueExpression());
     bbLiteralEClass.getESuperTypes().add(this.getValueExpression());
     bVarLiteralEClass.getESuperTypes().add(this.getValueExpression());
     bSensorLiteralEClass.getESuperTypes().add(this.getValueExpression());
     bvBracketEClass.getESuperTypes().add(this.getValueExpression());
+    colorLiteralEClass.getESuperTypes().add(this.getValueExpression());
     expressionBinOpEClass.getESuperTypes().add(this.getValueExpression());
     expressionBinCompEClass.getESuperTypes().add(this.getValueExpression());
 
@@ -1415,6 +1592,16 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
 
     initEClass(measureActionEClass, MeasureAction.class, "MeasureAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(showActionEClass, ShowAction.class, "ShowAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getShowAction_String(), ecorePackage.getEString(), "string", null, 0, 1, ShowAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getShowAction_Sensor(), this.getSensor(), "sensor", null, 0, 1, ShowAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(soundActionEClass, SoundAction.class, "SoundAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSoundAction_Sound(), this.getSound(), "sound", null, 0, 1, SoundAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(freeActionEClass, FreeAction.class, "FreeAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFreeAction_Motor(), this.getMotor(), null, "motor", null, 0, 1, FreeAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(valueExpressionEClass, ValueExpression.class, "ValueExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(bNotExprEClass, BNotExpr.class, "BNotExpr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1435,6 +1622,9 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
 
     initEClass(bvBracketEClass, BVBracket.class, "BVBracket", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBVBracket_Bsub(), this.getValueExpression(), null, "bsub", null, 0, 1, BVBracket.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorLiteralEClass, ColorLiteral.class, "ColorLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColorLiteral_Color(), this.getColor(), "color", null, 0, 1, ColorLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionBinOpEClass, ExpressionBinOp.class, "ExpressionBinOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpressionBinOp_Left(), this.getValueExpression(), null, "left", null, 0, 1, ExpressionBinOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1461,6 +1651,10 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     addEEnumLiteral(eMotorEEnum, EMotor.LEFTMOTOR);
     addEEnumLiteral(eMotorEEnum, EMotor.RIGHTMOTOR);
 
+    initEEnum(soundEEnum, Sound.class, "Sound");
+    addEEnumLiteral(soundEEnum, Sound.BEEP);
+    addEEnumLiteral(soundEEnum, Sound.BUZZ);
+
     initEEnum(bBinaryOpEEnum, BBinaryOp.class, "BBinaryOp");
     addEEnumLiteral(bBinaryOpEEnum, BBinaryOp.AND);
     addEEnumLiteral(bBinaryOpEEnum, BBinaryOp.OR);
@@ -1472,6 +1666,22 @@ public class RoverDSLPackageImpl extends EPackageImpl implements RoverDSLPackage
     addEEnumLiteral(compareOpEEnum, CompareOp.GT);
     addEEnumLiteral(compareOpEEnum, CompareOp.LEQ);
     addEEnumLiteral(compareOpEEnum, CompareOp.LT);
+
+    initEEnum(colorEEnum, Color.class, "Color");
+    addEEnumLiteral(colorEEnum, Color.BLACK);
+    addEEnumLiteral(colorEEnum, Color.BLUE);
+    addEEnumLiteral(colorEEnum, Color.BROWN);
+    addEEnumLiteral(colorEEnum, Color.CYAN);
+    addEEnumLiteral(colorEEnum, Color.DARK_GRAY);
+    addEEnumLiteral(colorEEnum, Color.GRAY);
+    addEEnumLiteral(colorEEnum, Color.GREEN);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_GRAY);
+    addEEnumLiteral(colorEEnum, Color.MAGENTA);
+    addEEnumLiteral(colorEEnum, Color.ORANGE);
+    addEEnumLiteral(colorEEnum, Color.PINK);
+    addEEnumLiteral(colorEEnum, Color.RED);
+    addEEnumLiteral(colorEEnum, Color.WHITE);
+    addEEnumLiteral(colorEEnum, Color.YELLOW);
 
     // Create resource
     createResource(eNS_URI);

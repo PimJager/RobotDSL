@@ -1,0 +1,192 @@
+Behaviors:
+	DriveForward
+	DetectLakeLineLeft
+	FollowLine2
+	FollowLine1
+	DetectOutsideLineColor
+	DetectLakeLineRight
+	DetectLakeColor
+	AvoidBlock
+	DetectCliff
+	DetectOutsideLine
+	MeasureBlueLake
+	MeasureRedLake
+	MeasureGreenLake
+	
+Variables:
+	searchingForCorner
+	doingSafety
+	foundRed
+	foundBlue
+	foundGreen
+	
+Constants:
+	OUTSIDE_LINE_TRESHOLD = 47;
+	LAKE_LINE_TRESHOLD = 40;
+	BLOCK_TRESHOLD = 23;
+	CLIFF_TRESHOLD = 5;
+	ROTATE_SPEED = 100;
+	ROTATE_ACC = 6000;
+	DEFAULT_SPEED = 300; 
+	DEFAULT_ACC = 800; 
+	
+Stops when: RightLight > OUTSIDE_LINE_TRESHOLD && searchingForCorner
+
+Implementation for DriveForward:
+	Takes control when: NOT searchingForCorner && NOT doingSafety
+	Does:
+		Do setDefaults;
+		Forward;
+		
+Implementation for DetectLakeLineLeft:
+	Takes control when: LeftLight > LAKE_LINE_TRESHOLD
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do backup;
+		Do backup;
+		Do backup;
+		Do turnRight;
+		doingSafety = False;
+	
+Implementation for DetectLakeLineRight:
+	Takes control when: RightLight > LAKE_LINE_TRESHOLD
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do backup;
+		Do backup;
+		Do backup;
+		Do turnRight;
+		doingSafety = False;
+		
+Implementation for DetectLakeColor:
+	Takes control when: ColorID equals BLUE || ColorID equals RED || ColorID equals GREEN
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do backup;
+		Do backup;
+		Do backup;
+		Do turnRight;
+		doingSafety = False;
+		
+Implementation for DetectCliff:
+	Takes control when: RearUS > CLIFF_TRESHOLD
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do frontup;
+		Do frontup;
+		Do turnRight;
+		doingSafety = False;
+		
+Implementation for AvoidBlock:
+	Takes control when: FrontUS < BLOCK_TRESHOLD || LeftTouch || RightTouch
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do backup;
+		Do turnRight;
+		doingSafety = False;
+		
+Implementation for DetectOutsideLine:
+	Takes control when: LeftLight > OUTSIDE_LINE_TRESHOLD && NOT searchingForCorner
+	Does:
+		Do beforeRatate;
+		IF foundRed && foundGreen && foundBlue {
+			Show "Detected line";
+			searchingForCorner = True;	
+		} ELSE {
+			doingSafety = True;
+			Do beforeRatate;
+			Do backup;
+			Do backup;
+			Do backup;
+			Do turnRight;
+			doingSafety = False;
+		}
+		
+Implementation for MeasureBlueLake:
+	Takes control when: ColorID equals BLUE && NOT foundBlue
+	Does:
+		Do beforeRatate;
+		Measure;
+		Show "Blue lake found!";
+		Sound Beep;
+		foundBlue = True;
+		Do backup;
+		Do turnRight;
+		
+Implementation for MeasureRedLake:
+	Takes control when: ColorID equals RED && NOT foundRed
+	Does:
+		Do beforeRatate;
+		Measure;
+		Show "Red lake found!";
+		Sound Beep;
+		foundRed = True;
+		Do backup;
+		Do turnRight;
+		
+Implementation for MeasureGreenLake:
+	Takes control when: ColorID equals GREEN && NOT foundGreen
+	Does:
+		Do beforeRatate;
+		Measure;
+		Show "Green lake found!";
+		Sound Beep;
+		foundGreen = True;
+		Do backup;
+		Do turnRight;
+		
+Implementation for DetectOutsideLineColor:
+	Takes control when: NOT (ColorID equals BLACK || ColorID equals RED || ColorID equals BLUE || ColorID equals GREEN) && searchingForCorner
+	Does:
+		doingSafety = True;
+		searchingForCorner = False;
+		Do beforeRatate;
+		Do backup;
+		Do backup;
+		Do backup;
+		Do turnRight;
+		doingSafety = False;
+
+Implementation for FollowLine1:
+	Takes control when: LeftLight > OUTSIDE_LINE_TRESHOLD && searchingForCorner
+	Does:
+		Rotate LeftMotor 10;
+		Free LeftMotor;
+		Rotate RightMotor neg 30 wait;
+	
+Implementation for FollowLine2:
+	Takes control when: searchingForCorner
+	Does:
+		Rotate LeftMotor 50;
+		Rotate RightMotor 50 wait; 	
+				
+Routine turnRight:
+	Rotate RightMotor neg 130;
+	Rotate LeftMotor 130 wait;
+
+Routine backup:
+	Rotate LeftMotor neg 100;
+	Rotate RightMotor neg 100 wait;	
+	
+Routine frontup:
+	Rotate LeftMotor 100;
+	Rotate RightMotor 100 wait;
+
+Routine beforeRatate:
+	Set Acceleration ROTATE_ACC;
+	Stop;
+	Set Speed ROTATE_SPEED;
+	
+Routine setDefaults:
+	Set Speed DEFAULT_SPEED;
+	Set Acceleration DEFAULT_ACC;

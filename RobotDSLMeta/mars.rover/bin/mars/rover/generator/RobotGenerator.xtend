@@ -16,6 +16,7 @@ class RobotGenerator {
 	import lejos.hardware.ev3.LocalEV3;
 	import lejos.hardware.lcd.LCD;
 	import lejos.hardware.motor.EV3LargeRegulatedMotor;
+	import lejos.hardware.motor.EV3MediumRegulatedMotor;
 	import lejos.hardware.port.MotorPort;
 	import lejos.hardware.sensor.EV3GyroSensor;
 	import lejos.hardware.sensor.EV3UltrasonicSensor;
@@ -25,12 +26,13 @@ class RobotGenerator {
 	import lejos.robotics.SampleProvider;
 	import lejos.robotics.subsumption.Arbitrator;
 	import lejos.robotics.subsumption.Behavior;
+	import lejos.robotics.Color;
 	
 	public class Robot {
 	
 		public static EV3LargeRegulatedMotor leftMotor 	= new EV3LargeRegulatedMotor(MotorPort.A);
 	    public static EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.B);
-	    public static EV3LargeRegulatedMotor mesMotor 	= new EV3LargeRegulatedMotor(MotorPort.C);
+	    public static EV3MediumRegulatedMotor mesMotor 	= new EV3MediumRegulatedMotor(MotorPort.C); 
 	    
 	    public static NXTLightSensor leftLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S1"));
 	    public static NXTLightSensor rightLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S2"));
@@ -97,20 +99,15 @@ class RobotGenerator {
 	    	rearUSProvider.fetchSample(rearUSSamples, 0);
 	    	gyroProvider.fetchSample(gyroSamples, 0);
 	    	leftLightSample = (int) (leftLightSamples[0] * 100);
-	    	rightLightSample = (int) (leftLightSamples[0] * 100);
+	    	rightLightSample = (int) (rightLightSamples[0] * 100);
 	    	rearUSSample = (int) (rearUSSamples[0] * 100);
 	    	gyroSample = (int) gyroSamples[0];
-	    	synchronized (valsLock) {
-				frontUSSample = (int) (vals.frontUS * 100);
-				touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
-				touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
-				colorSample = (int) vals.color;
-			}
 		}
 		
 		public static void init(){
 	    	btSetup();
 	    	gyroSensor.reset();
+	    	mesMotor.setSpeed(100);
 	    	listener.start();
 	    	updateLCD.start();
 		}
@@ -150,7 +147,8 @@ class RobotGenerator {
 			@Override
 			public void run() {
 				while(true) {
-					updateSensors();
+					updateSensors();				
+					LCD.clear();	
 					LCD.drawString("LeftL: " + leftLightSample, 0, 0);
 					LCD.drawString("RightL: " + rightLightSample, 0, 1);
 					LCD.drawString("RearUs: " + rearUSSample, 0, 2);
@@ -160,6 +158,9 @@ class RobotGenerator {
 					LCD.drawString("color:" + colorSample, 0, 6);
 					LCD.drawString("" + Robot.normalise(_running), 0, 7);	
 					LCD.drawString(currentBehaviour, 1, 7);
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) { }
 				}
 			}	
 		});
@@ -180,6 +181,12 @@ class RobotGenerator {
 						synchronized (valsLock) {
 							vals = SensorValues.fromString(rec);
 							if(vals == null) Sound.buzz();
+							else {
+								frontUSSample = (int) (vals.frontUS * 100);
+								touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
+								touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
+								colorSample = (int) vals.color;	
+							}
 						}
 					} catch(Exception e) {
 						e.printStackTrace();
@@ -188,6 +195,15 @@ class RobotGenerator {
 				}
 			}	
 		});
+		
+		//measurement function
+		public static void measure(){
+			mesMotor.backward();
+			while(!mesMotor.isStalled()) {} //wait for arm to touch something
+			mesMotor.forward();
+			while(!mesMotor.isStalled()) {} //wait for arm to go all the way back up
+			mesMotor.stop();
+		}
 		
 		//Generated list of subroutines
 		«FOR routine : root.subRoutines»
@@ -198,6 +214,9 @@ class RobotGenerator {
 	}
 		
 	class DefaultQuitBehaviour implements Behavior {
+		
+		private boolean beeped = false;
+		
 		@Override
 		public boolean takeControl() {
 			return Robot.makeBool(«ValueExpressionPrinter.print(root.stopBehaviour)»);
@@ -205,6 +224,12 @@ class RobotGenerator {
 		@Override
 		public void action() {
 			Robot._running = 0;
+			if(!beeped) {
+				Sound.beep();
+				Sound.beep();
+				Sound.beep();
+			} 
+			beeped = true;
 		}
 		@Override
 		public void suppress() {}

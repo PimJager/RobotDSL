@@ -85,6 +85,9 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
       case RoverDSLPackage.SSPEED_ACTION: return createSSpeedAction();
       case RoverDSLPackage.SUB_ROUTINE_ACTION: return createSubRoutineAction();
       case RoverDSLPackage.MEASURE_ACTION: return createMeasureAction();
+      case RoverDSLPackage.SHOW_ACTION: return createShowAction();
+      case RoverDSLPackage.SOUND_ACTION: return createSoundAction();
+      case RoverDSLPackage.FREE_ACTION: return createFreeAction();
       case RoverDSLPackage.VALUE_EXPRESSION: return createValueExpression();
       case RoverDSLPackage.BNOT_EXPR: return createBNotExpr();
       case RoverDSLPackage.BV_LITERAL: return createBVLiteral();
@@ -92,6 +95,7 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
       case RoverDSLPackage.BVAR_LITERAL: return createBVarLiteral();
       case RoverDSLPackage.BSENSOR_LITERAL: return createBSensorLiteral();
       case RoverDSLPackage.BV_BRACKET: return createBVBracket();
+      case RoverDSLPackage.COLOR_LITERAL: return createColorLiteral();
       case RoverDSLPackage.EXPRESSION_BIN_OP: return createExpressionBinOp();
       case RoverDSLPackage.EXPRESSION_BIN_COMP: return createExpressionBinComp();
       default:
@@ -113,10 +117,14 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
         return createSensorFromString(eDataType, initialValue);
       case RoverDSLPackage.EMOTOR:
         return createEMotorFromString(eDataType, initialValue);
+      case RoverDSLPackage.SOUND:
+        return createSoundFromString(eDataType, initialValue);
       case RoverDSLPackage.BBINARY_OP:
         return createBBinaryOpFromString(eDataType, initialValue);
       case RoverDSLPackage.COMPARE_OP:
         return createCompareOpFromString(eDataType, initialValue);
+      case RoverDSLPackage.COLOR:
+        return createColorFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -136,10 +144,14 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
         return convertSensorToString(eDataType, instanceValue);
       case RoverDSLPackage.EMOTOR:
         return convertEMotorToString(eDataType, instanceValue);
+      case RoverDSLPackage.SOUND:
+        return convertSoundToString(eDataType, instanceValue);
       case RoverDSLPackage.BBINARY_OP:
         return convertBBinaryOpToString(eDataType, instanceValue);
       case RoverDSLPackage.COMPARE_OP:
         return convertCompareOpToString(eDataType, instanceValue);
+      case RoverDSLPackage.COLOR:
+        return convertColorToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -370,6 +382,39 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ShowAction createShowAction()
+  {
+    ShowActionImpl showAction = new ShowActionImpl();
+    return showAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SoundAction createSoundAction()
+  {
+    SoundActionImpl soundAction = new SoundActionImpl();
+    return soundAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FreeAction createFreeAction()
+  {
+    FreeActionImpl freeAction = new FreeActionImpl();
+    return freeAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ValueExpression createValueExpression()
   {
     ValueExpressionImpl valueExpression = new ValueExpressionImpl();
@@ -447,6 +492,17 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ColorLiteral createColorLiteral()
+  {
+    ColorLiteralImpl colorLiteral = new ColorLiteralImpl();
+    return colorLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ExpressionBinOp createExpressionBinOp()
   {
     ExpressionBinOpImpl expressionBinOp = new ExpressionBinOpImpl();
@@ -513,6 +569,28 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Sound createSoundFromString(EDataType eDataType, String initialValue)
+  {
+    Sound result = Sound.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertSoundToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BBinaryOp createBBinaryOpFromString(EDataType eDataType, String initialValue)
   {
     BBinaryOp result = BBinaryOp.get(initialValue);
@@ -548,6 +626,28 @@ public class RoverDSLFactoryImpl extends EFactoryImpl implements RoverDSLFactory
    * @generated
    */
   public String convertCompareOpToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Color createColorFromString(EDataType eDataType, String initialValue)
+  {
+    Color result = Color.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertColorToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
