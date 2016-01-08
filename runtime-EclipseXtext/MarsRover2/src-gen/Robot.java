@@ -56,10 +56,8 @@ public class Robot {
 
 	//CONSTANTS
     //generated from constant list
-    public static int OUTSIDE_LINE_TRESHOLD = (47);
-    public static int LAKE_LINE_TRESHOLD = (40);
-    public static int BLOCK_TRESHOLD = (23);
-    public static int CLIFF_TRESHOLD = (5);
+    public static int LINE_TRESHOLD = (39);
+    public static int CLIFF_TRESHOLD = (6);
     public static int ROTATE_SPEED = (100);
     public static int ROTATE_ACC = (6000);
     public static int DEFAULT_SPEED = (300);
@@ -69,11 +67,7 @@ public class Robot {
     //To implement quit
     public static int _running = 1;
     //generated from globals list
-    public static int searchingForCorner;
     public static int doingSafety;
-    public static int foundRed;
-    public static int foundBlue;
-    public static int foundGreen;
     
     	    
     public static void main(String[] args) {
@@ -81,18 +75,9 @@ public class Robot {
 		
 		Behavior[] bList = {
 								new DriveForward(),
-																	new DetectLakeLineLeft(),
-																	new FollowLine2(),
-																	new FollowLine1(),
-																	new DetectOutsideLineColor(),
-																	new DetectLakeLineRight(),
-																	new DetectLakeColor(),
-																	new AvoidBlock(),
-																	new DetectCliff(),
+																	new MeasureBlock(),
 																	new DetectOutsideLine(),
-																	new MeasureBlueLake(),
-																	new MeasureRedLake(),
-																	new MeasureGreenLake()
+																	new DetectCliff()
 									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
@@ -212,10 +197,10 @@ public class Robot {
 	}
 	
 	//Generated list of subroutines
-	public static void turnRight(){
-		Robot.rightMotor.rotate((-130),true);
+	public static void turnLeft(){
+		Robot.leftMotor.rotate((-130),true);
 		
-		Robot.leftMotor.rotate((130),false);
+		Robot.rightMotor.rotate((130),false);
 	}
 	public static void backup(){
 		Robot.leftMotor.rotate((-100),true);
@@ -252,7 +237,7 @@ class DefaultQuitBehaviour implements Behavior {
 	
 	@Override
 	public boolean takeControl() {
-		return Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.OUTSIDE_LINE_TRESHOLD))) && Robot.makeBool((Robot.searchingForCorner))));
+		return Robot.makeBool(0);
 	}
 	@Override
 	public void action() {
@@ -275,7 +260,7 @@ class DriveForward implements Behavior {
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.searchingForCorner)))) && Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.doingSafety))))));
+				Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.doingSafety))));
 	}
 	@Override
 	public void action() {
@@ -294,22 +279,21 @@ class DriveForward implements Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-class DetectLakeLineLeft implements Behavior {
+class DetectOutsideLine implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LAKE_LINE_TRESHOLD)));
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD))) || Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
 		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectLakeLineLeft";
+		Robot.currentBehaviour = "DetectOutsideLine";
 		// supressioncontext = true
 		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
 		if(_supressed) return; 
 		Robot.beforeRatate();
 		
@@ -323,81 +307,7 @@ class DetectLakeLineLeft implements Behavior {
 		Robot.backup();
 		
 		if(_supressed) return; 
-		Robot.turnRight();
-		
-		Robot.doingSafety = 0;
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class DetectLakeLineRight implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LAKE_LINE_TRESHOLD)));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectLakeLineRight";
-		// supressioncontext = true
-		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
-		
-		Robot.doingSafety = 0;
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class DetectLakeColor implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.colorSample == Color.BLUE)) || Robot.makeBool(Robot.normalise(Robot.colorSample == Color.RED)))) || Robot.makeBool(Robot.normalise(Robot.colorSample == Color.GREEN))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectLakeColor";
-		// supressioncontext = true
-		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
+		Robot.turnLeft();
 		
 		Robot.doingSafety = 0;
 		// supressioncontext = false
@@ -420,7 +330,6 @@ class DetectCliff implements Behavior {
 		Robot.currentBehaviour = "DetectCliff";
 		// supressioncontext = true
 		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
 		if(_supressed) return; 
 		Robot.beforeRatate();
 		
@@ -431,7 +340,7 @@ class DetectCliff implements Behavior {
 		Robot.frontup();
 		
 		if(_supressed) return; 
-		Robot.turnRight();
+		Robot.turnLeft();
 		
 		Robot.doingSafety = 0;
 		// supressioncontext = false
@@ -439,95 +348,19 @@ class DetectCliff implements Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-class AvoidBlock implements Behavior {
+class MeasureBlock implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.frontUSSample < (Robot.BLOCK_TRESHOLD))) || Robot.makeBool(Robot.touchLeftSample))) || Robot.makeBool(Robot.touchRightSample)));
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.touchLeftSample) || Robot.makeBool(Robot.touchRightSample)));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
 		Robot.updateSensors();
-		Robot.currentBehaviour = "AvoidBlock";
-		// supressioncontext = true
-		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
-		
-		Robot.doingSafety = 0;
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class DetectOutsideLine implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.OUTSIDE_LINE_TRESHOLD))) && Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.searchingForCorner))))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectOutsideLine";
-		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool((Robot.foundRed)) && Robot.makeBool((Robot.foundGreen)))) && Robot.makeBool((Robot.foundBlue))))){
-			System.out.println("Detected line");
-			
-			Robot.searchingForCorner = 1;
-		} else {
-			Robot.doingSafety = 1;
-			if(_supressed) return; 
-			Robot.beforeRatate();
-			
-			if(_supressed) return; 
-			Robot.backup();
-			
-			if(_supressed) return; 
-			Robot.backup();
-			
-			if(_supressed) return; 
-			Robot.backup();
-			
-			if(_supressed) return; 
-			Robot.turnRight();
-			
-			Robot.doingSafety = 0;
-		}
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class MeasureBlueLake implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.colorSample == Color.BLUE)) && Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.foundBlue))))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "MeasureBlueLake";
+		Robot.currentBehaviour = "MeasureBlock";
 		// supressioncontext = true
 		if(_supressed) return; 
 		Robot.beforeRatate();
@@ -535,177 +368,11 @@ class MeasureBlueLake implements Behavior {
 		if(_supressed) return; 
 		Robot.measure();
 		
-		System.out.println("Blue lake found!");
-		
-		if(_supressed) return; 
-		Sound.beep();
-		
-		Robot.foundBlue = 1;
 		if(_supressed) return; 
 		Robot.backup();
 		
 		if(_supressed) return; 
-		Robot.turnRight();
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class MeasureRedLake implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.colorSample == Color.RED)) && Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.foundRed))))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "MeasureRedLake";
-		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.measure();
-		
-		System.out.println("Red lake found!");
-		
-		if(_supressed) return; 
-		Sound.beep();
-		
-		Robot.foundRed = 1;
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class MeasureGreenLake implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.colorSample == Color.GREEN)) && Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.foundGreen))))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "MeasureGreenLake";
-		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.measure();
-		
-		System.out.println("Green lake found!");
-		
-		if(_supressed) return; 
-		Sound.beep();
-		
-		Robot.foundGreen = 1;
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class DetectOutsideLineColor implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(!Robot.makeBool((Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.colorSample == Color.BLACK)) || Robot.makeBool(Robot.normalise(Robot.colorSample == Color.RED)))) || Robot.makeBool(Robot.normalise(Robot.colorSample == Color.BLUE)))) || Robot.makeBool(Robot.normalise(Robot.colorSample == Color.GREEN))))))) && Robot.makeBool((Robot.searchingForCorner))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectOutsideLineColor";
-		// supressioncontext = true
-		Robot.doingSafety = 1;
-		Robot.searchingForCorner = 0;
-		if(_supressed) return; 
-		Robot.beforeRatate();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.backup();
-		
-		if(_supressed) return; 
-		Robot.turnRight();
-		
-		Robot.doingSafety = 0;
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class FollowLine1 implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.OUTSIDE_LINE_TRESHOLD))) && Robot.makeBool((Robot.searchingForCorner))));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "FollowLine1";
-		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.leftMotor.rotate((10),true);
-		
-		if(_supressed) return; 
-		Robot.leftMotor.flt(true);
-		
-		if(_supressed) return; 
-		Robot.rightMotor.rotate((-30),false);
-		// supressioncontext = false
-	}
-	@Override
-	public void suppress() {_supressed = true;}
-}
-class FollowLine2 implements Behavior {
-	private boolean _supressed = true;
-	@Override
-	public boolean takeControl() {
-		Robot.updateSensors();
-		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool((Robot.searchingForCorner));
-	}
-	@Override
-	public void action() {
-		_supressed = false;
-		Robot.updateSensors();
-		Robot.currentBehaviour = "FollowLine2";
-		// supressioncontext = true
-		if(_supressed) return; 
-		Robot.leftMotor.rotate((50),true);
-		
-		if(_supressed) return; 
-		Robot.rightMotor.rotate((50),false);
+		Robot.turnLeft();
 		// supressioncontext = false
 	}
 	@Override

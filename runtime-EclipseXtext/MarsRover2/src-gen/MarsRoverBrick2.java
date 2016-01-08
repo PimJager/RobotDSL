@@ -12,7 +12,7 @@ import lejos.robotics.SampleProvider;
 
 public class MarsRoverBrick2 {
 
-	public static String connectTo = "Rover7";
+	public static String connectTo = "Rover5";
 	
     public static EV3TouchSensor leftTouchSensor 	= new EV3TouchSensor(LocalEV3.get().getPort("S1"));
     public static EV3TouchSensor rightTouchSensor 	= new EV3TouchSensor(LocalEV3.get().getPort("S2"));

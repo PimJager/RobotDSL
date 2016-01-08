@@ -4,6 +4,7 @@ import lejos.hardware.Sound;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.LCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.sensor.EV3GyroSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
@@ -13,12 +14,13 @@ import lejos.remote.nxt.NXTConnection;
 import lejos.robotics.SampleProvider;
 import lejos.robotics.subsumption.Arbitrator;
 import lejos.robotics.subsumption.Behavior;
+import lejos.robotics.Color;
 
 public class Robot {
 
 	public static EV3LargeRegulatedMotor leftMotor 	= new EV3LargeRegulatedMotor(MotorPort.A);
     public static EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.B);
-    public static EV3LargeRegulatedMotor mesMotor 	= new EV3LargeRegulatedMotor(MotorPort.C);
+    public static EV3MediumRegulatedMotor mesMotor 	= new EV3MediumRegulatedMotor(MotorPort.C); 
     
     public static NXTLightSensor leftLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S1"));
     public static NXTLightSensor rightLightSensor 	= new NXTLightSensor(LocalEV3.get().getPort("S2"));
@@ -54,11 +56,6 @@ public class Robot {
 
 	//CONSTANTS
     //generated from constant list
-    public static int LINE_TRESHOLD = (50);
-    public static int ROTATE_SPEED = (100);
-    public static int ROTATE_ACC = (6000);
-    public static int DEFAULT_SPEED = (300);
-    public static int DEFAULT_ACC = (800);
     
     //GLOBALS
     //To implement quit
@@ -71,7 +68,7 @@ public class Robot {
 		
 		Behavior[] bList = {
 								new DriveForward(),
-																	new DetectOutsideLine()
+																	new DetectLine()
 									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
@@ -84,20 +81,15 @@ public class Robot {
     	rearUSProvider.fetchSample(rearUSSamples, 0);
     	gyroProvider.fetchSample(gyroSamples, 0);
     	leftLightSample = (int) (leftLightSamples[0] * 100);
-    	rightLightSample = (int) (leftLightSamples[0] * 100);
+    	rightLightSample = (int) (rightLightSamples[0] * 100);
     	rearUSSample = (int) (rearUSSamples[0] * 100);
     	gyroSample = (int) gyroSamples[0];
-    	synchronized (valsLock) {
-			frontUSSample = (int) (vals.frontUS * 100);
-			touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
-			touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
-			colorSample = (int) vals.color;
-		}
 	}
 	
 	public static void init(){
     	btSetup();
     	gyroSensor.reset();
+    	mesMotor.setSpeed(100);
     	listener.start();
     	updateLCD.start();
 	}
@@ -137,7 +129,8 @@ public class Robot {
 		@Override
 		public void run() {
 			while(true) {
-				updateSensors();
+				updateSensors();				
+				LCD.clear();	
 				LCD.drawString("LeftL: " + leftLightSample, 0, 0);
 				LCD.drawString("RightL: " + rightLightSample, 0, 1);
 				LCD.drawString("RearUs: " + rearUSSample, 0, 2);
@@ -147,6 +140,9 @@ public class Robot {
 				LCD.drawString("color:" + colorSample, 0, 6);
 				LCD.drawString("" + Robot.normalise(_running), 0, 7);	
 				LCD.drawString(currentBehaviour, 1, 7);
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) { }
 			}
 		}	
 	});
@@ -167,6 +163,12 @@ public class Robot {
 					synchronized (valsLock) {
 						vals = SensorValues.fromString(rec);
 						if(vals == null) Sound.buzz();
+						else {
+							frontUSSample = (int) (vals.frontUS * 100);
+							touchLeftSample = vals.touchLeft > 0.9 ? 1 : 0;
+							touchRightSample = vals.touchRight > 0.9 ? 1 : 0;
+							colorSample = (int) vals.color;	
+						}
 					}
 				} catch(Exception e) {
 					e.printStackTrace();
@@ -176,27 +178,22 @@ public class Robot {
 		}	
 	});
 	
+	//measurement function
+	public static void measure(){
+		mesMotor.backward();
+		while(!mesMotor.isStalled()) {} //wait for arm to touch something
+		mesMotor.forward();
+		while(!mesMotor.isStalled()) {} //wait for arm to go all the way back up
+		mesMotor.stop();
+	}
+	
 	//Generated list of subroutines
-	public static void beforeRatate(){
-		Robot.leftMotor.setSpeed((Robot.ROTATE_SPEED));
-		Robot.rightMotor.setSpeed((Robot.ROTATE_SPEED));
-		
-		Robot.leftMotor.setAcceleration((Robot.ROTATE_ACC));
-		Robot.rightMotor.setAcceleration((Robot.ROTATE_ACC));
-		
-		Robot.leftMotor.stop();
-		Robot.rightMotor.stop();
-	}
-	public static void setDefaults(){
-		Robot.leftMotor.setSpeed((Robot.DEFAULT_SPEED));
-		Robot.rightMotor.setSpeed((Robot.DEFAULT_SPEED));
-		
-		Robot.leftMotor.setAcceleration((Robot.DEFAULT_ACC));
-		Robot.rightMotor.setAcceleration((Robot.DEFAULT_ACC));
-	}
 }
 	
 class DefaultQuitBehaviour implements Behavior {
+	
+	private boolean beeped = false;
+	
 	@Override
 	public boolean takeControl() {
 		return Robot.makeBool(0);
@@ -204,6 +201,12 @@ class DefaultQuitBehaviour implements Behavior {
 	@Override
 	public void action() {
 		Robot._running = 0;
+		if(!beeped) {
+			Sound.beep();
+			Sound.beep();
+			Sound.beep();
+		} 
+		beeped = true;
 	}
 	@Override
 	public void suppress() {}
@@ -224,8 +227,6 @@ class DriveForward implements Behavior {
 		Robot.updateSensors();
 		Robot.currentBehaviour = "DriveForward";
 		// supressioncontext = true
-		Robot.setDefaults();
-		
 		if(_supressed) return; 
 		Robot.leftMotor.forward();
 		Robot.rightMotor.forward();
@@ -234,38 +235,23 @@ class DriveForward implements Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-class DetectOutsideLine implements Behavior {
+class DetectLine implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD))) || Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))));
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (50))) || Robot.makeBool(Robot.normalise(Robot.rightLightSample > (50)))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
 		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectOutsideLine";
+		Robot.currentBehaviour = "DetectLine";
 		// supressioncontext = true
-		Robot.beforeRatate();
-		
-		if(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD)))){
-			if(_supressed) return; 
-			Robot.leftMotor.rotate((-130),true);
-			
-			if(_supressed) return; 
-			Robot.rightMotor.rotate((-20),false);
-		} else {
-		}
-		if(Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))){
-			if(_supressed) return; 
-			Robot.leftMotor.rotate((-20),true);
-			
-			if(_supressed) return; 
-			Robot.rightMotor.rotate((-130),false);
-		} else {
-		}
+		if(_supressed) return; 
+		Robot.leftMotor.stop(true);
+		Robot.rightMotor.stop();
 		// supressioncontext = false
 	}
 	@Override
