@@ -75,7 +75,9 @@ public class Robot {
 		
 		Behavior[] bList = {
 								new DriveForward(),
-																	new MeasureBlock(),
+																	new MeasureBlockLeft(),
+																	new MeasureBlockRight(),
+																	new MeasureBlockBoth(),
 																	new DetectOutsideLine(),
 																	new DetectCliff()
 									,new DefaultQuitBehaviour() 
@@ -348,19 +350,91 @@ class DetectCliff implements Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-class MeasureBlock implements Behavior {
+class MeasureBlockLeft implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.touchLeftSample) || Robot.makeBool(Robot.touchRightSample)));
+				Robot.makeBool(Robot.touchLeftSample);
 	}
 	@Override
 	public void action() {
 		_supressed = false;
 		Robot.updateSensors();
-		Robot.currentBehaviour = "MeasureBlock";
+		Robot.currentBehaviour = "MeasureBlockLeft";
+		// supressioncontext = true
+		if(_supressed) return; 
+		Robot.beforeRatate();
+		
+		if(_supressed) return; 
+		Robot.leftMotor.rotate((-45),true);
+		
+		if(_supressed) return; 
+		Robot.rightMotor.rotate((45),false);
+		
+		if(_supressed) return; 
+		Robot.measure();
+		
+		if(_supressed) return; 
+		Robot.backup();
+		
+		if(_supressed) return; 
+		Robot.turnLeft();
+		// supressioncontext = false
+	}
+	@Override
+	public void suppress() {_supressed = true;}
+}
+class MeasureBlockRight implements Behavior {
+	private boolean _supressed = true;
+	@Override
+	public boolean takeControl() {
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.touchRightSample);
+	}
+	@Override
+	public void action() {
+		_supressed = false;
+		Robot.updateSensors();
+		Robot.currentBehaviour = "MeasureBlockRight";
+		// supressioncontext = true
+		if(_supressed) return; 
+		Robot.beforeRatate();
+		
+		if(_supressed) return; 
+		Robot.rightMotor.rotate((-45),true);
+		
+		if(_supressed) return; 
+		Robot.leftMotor.rotate((45),false);
+		
+		if(_supressed) return; 
+		Robot.measure();
+		
+		if(_supressed) return; 
+		Robot.backup();
+		
+		if(_supressed) return; 
+		Robot.turnLeft();
+		// supressioncontext = false
+	}
+	@Override
+	public void suppress() {_supressed = true;}
+}
+class MeasureBlockBoth implements Behavior {
+	private boolean _supressed = true;
+	@Override
+	public boolean takeControl() {
+		Robot.updateSensors();
+		return 	Robot.makeBool(Robot._running) &&
+				Robot.makeBool(Robot.touchRightSample);
+	}
+	@Override
+	public void action() {
+		_supressed = false;
+		Robot.updateSensors();
+		Robot.currentBehaviour = "MeasureBlockBoth";
 		// supressioncontext = true
 		if(_supressed) return; 
 		Robot.beforeRatate();

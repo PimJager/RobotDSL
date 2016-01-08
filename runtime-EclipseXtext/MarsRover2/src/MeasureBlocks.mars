@@ -1,6 +1,8 @@
 Behaviors:
 	DriveForward
-	MeasureBlock
+	MeasureBlockLeft
+	MeasureBlockRight
+	MeasureBlockBoth
 	DetectOutsideLine
 	DetectCliff
 	
@@ -44,8 +46,28 @@ Implementation for DetectCliff:
 		Do turnLeft;
 		doingSafety = False;
 		
-Implementation for MeasureBlock:
-	Takes control when: LeftTouch || RightTouch
+Implementation for MeasureBlockLeft:
+	Takes control when: LeftTouch
+	Does:
+		Do beforeRatate;
+		Rotate LeftMotor neg 45;
+		Rotate RightMotor 45 wait;
+		Measure;
+		Do backup;
+		Do turnLeft;
+		
+Implementation for MeasureBlockRight:
+	Takes control when: RightTouch
+	Does:
+		Do beforeRatate;
+		Rotate RightMotor neg 45;
+		Rotate LeftMotor 45 wait;
+		Measure;
+		Do backup;
+		Do turnLeft;
+		
+Implementation for MeasureBlockBoth:
+	Takes control when: RightTouch
 	Does:
 		Do beforeRatate;
 		Measure;
