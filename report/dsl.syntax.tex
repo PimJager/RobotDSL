@@ -1,0 +1,309 @@
+In this subsection we will describe the syntax and the semantics of our mars
+rover DSL and why certain design decisions were made. Code~\ref{stx:robot} shows
+the syntactic rule for a program in the dsl. Below we will descibe each of the
+refrenced rules further:
+
+\begin{lstlisting}[caption=Main syntactic rule, label=stc:robot]
+Robot:
+    'Behaviors:' behaviorOrder += BehaviorName+
+    ('Variables:' globals += Global*)?
+    ('Constants:' statics += Static*)?
+    ('Stops when:') stopBehaviour = ValueExpression
+    behaviors += Implementation+
+    subRoutines += SubRoutine*
+;
+
+BehaviorName : name = ID;
+Global : name = ID;
+\end{lstlisting}
+
+\paragraph{Behaviours} In the syntax choices we've made for our DSL we assume 
+that the programmer
+writing programs for the mars rover wants to write missions using the 
+subsumption pattern. Therefore the building blocks of a program the mars rover 
+DSL are behaviours. A program starts with a list of behaviours which form the 
+mission. The implementation of these behaviours must be later specified in the
+program. The list of behaviours is ordered by importance of the behaviour, with
+the most important behaviour being the last behaviour in the list. 
+
+\paragraph{Variables} We also assume that the who programmers want to write 
+programs using our mars
+rover DSL are experienced programmers who would like to have extended control
+over the rover and want to be able to write more complex control or data flow 
+than that offered by basic subsumption pattern. Therefore our DSL has variables.
+
+These variables are global to all behaviours. Variables are untyped and can be 
+assigned Integer or Boolean values. Boolean values are interpreted as integer
+values, \texttt{True} as 1 and \texttt{False} 0. Likewise when a variable is 
+used as a boolean expression then any value $>0$ is interpreted as \texttt{True}
+and a value $\leq 0$ is interpreted as \texttt{False}. Variables need to be 
+declared in the list of variables.
+
+\paragraph{Constants} Often various constants are needed when programming a
+rover robot, for example a safe speed to drive at. These constants 
+are depended on the kind of mission. 
+
+To help the programmer with this our DSL
+allows the definition of arbitrary constants. These constants are avalaible
+throughout the mars rover program, and have the same semantics regarding type
+as variables. When defining a constant it has to be assigned a value, this can 
+not be changed later in the program. 
+
+Code~\ref{stx:constants} shows the syntax for defining constants. The rule
+\emph{ValueExpression} will be discussed below.
+
+\begin{lstlisting}[caption=Syntax for defining constants, label=stx:constants]
+Static : name = ID ' = ' value = ValueExpression ';';
+\end{lstlisting}
+
+\paragraph{Goal} A lot of mission have a goal and the robot can stop after 
+completing this goal, eg. measuring all three lakes. 
+
+The programmer can define such a goal in our DSL as an expression in the
+\texttt{'Stops when'} rule of the mission. Whenever this expression evaluates to
+$>0$ the robot will halt and no more behaviours will be executed.
+
+\paragraph{Behaviour implementation}
+Code~\ref{stx:implementation} shows the syntax for implementing behaviours. 
+The name of the behaviour to be implemented has to be specified, this has to be
+one of the behaviours in the list of behaviours specified at the start of the 
+mission. 
+
+When the expression after \texttt{Takes control when: } evaluates to $>0$
+and this behaviour is the behaviour with the highest priority for which this
+expression evaluates to $>0$, then this behaviour will get control and the 
+list of expression in the \texttt{Does:} block will be evaluated in the order
+in which they occur. When after any of these expressions another behaviour with
+a higher priority wants control, than this behaviour will stop, the remaninder 
+of the expressions to be evaluated will be discarded and the other behaviour
+will get control and start execution at the top of its \texttt{Does:} block.
+
+\begin{lstlisting}[caption=Syntax for implementing behaviours, label=stx:implementation]
+Implementation :
+    'Implementation for' for = [BehaviorName] ':'
+    'Takes control when:'
+        controlCheck = ValueExpression
+    'Does:'
+        expressions += Expression+
+;
+\end{lstlisting}
+
+\paragraph{Subroutines} Often behaviours share similar subroutines, eg. drive
+backwards and then turn. To lessen the amount of code a programmer needs to 
+write our DSL allows for the specification of arbitrary subroutines.
+
+Code~\ref{stx:subroutine} shows the syntax for defining these subroutines. 
+Subroutines should be uniquely defined using a name, which can be used to later 
+call the subroutine. When a subroutine is called all its expressions are
+executed in the order in which they occur. Unlike behaviours, subroutines are 
+atomic, which means always all their expressions are executed, even if this gets
+the robot in dangerous situations. Therefore a programmer needs to take care 
+when using subroutines.
+
+\begin{lstlisting}[caption=Syntax for subroutine definition, label=stx:subroutine]
+SubRoutine :
+    'Routine ' name = ID ':'
+    expressions += Expression+
+;
+\end{lstlisting}
+
+\paragraph{Expressions} Expressions are statements to be executed.\footnote{
+For historic reasons they are called expressions, however, statements might
+be a more accurate name.} Code~\ref{stx:expressions} shows the syntax for 
+expressions. Expresisons have the following semantics:
+
+\begin{description}
+    \item[ValueExpression] This is just a ValueExpression without any side 
+            effects.
+    \item[Action] An Action to be executed by the robot, see below.
+    \item[AssignExpression] Assigns the result of a ValueExpression to a
+            variable.
+    \item[IFExpression] If the first ValueExpression evaluates to $>0$ then
+            execute the fist list of Expressions, otherwise execute the second
+            list of Expressions if it is provided, otherwise do noting.
+    \item[WHILEExpression] If the ValueExpression evaluates to $>0$ execute
+            the Expressions and reevaluate the complete WHILEExpression, 
+            otherwise do nothing. 
+\end{description}
+
+\begin{lstlisting}[caption=Syntax for expressions, label=stx:expressions]
+Expression : 
+    ((
+      ValExpr
+    | Action
+    | AssignExpression
+    ) ';')
+    | IFExpression
+    | WHILEExpression
+;
+
+ValExpr : vExpr = ValueExpression;
+IFExpression :
+    'IF' c=ValueExpression 
+        '{' t+=Expression+ '}' 
+        ('ELSE' '{' e+=Expression+ '}')?
+;
+WHILEExpression: 'WHILE' c=ValueExpression '{' b+=Expression+ '}' ;
+AssignExpression: global = [Global] ' = ' v = ValueExpression ;
+\end{lstlisting}
+
+\paragraph{Action}
+Actions are things done by the Robot. Code~\ref{stx:actions} shows the syntax
+for actions. The actions have the following semantics \textit{-unless otherwise 
+specified motors only include the left and right driving motor-}:
+
+\begin{description}
+    \item[ForwardAction] Set the specified motor to moving forward, if no motor
+            is specified both will start moving forward.
+    \item[RotateAction] Rotate the specified motor the specified value, 
+            interpreted as degrees. If \texttt{wait} is specified then execution
+            of the next statement will hold until the rotation has completed,
+            otherwise it will continue immediately.
+    \item[StopAction] Stop the specified motor, if no motor is specified both 
+            motors are stopped.
+    \item[SAccelerationAction] Set the acceleration for the specified motor to
+            the specified value, if no motor is specified the acceleration is 
+            set for both motors.
+    \item[SSpeedAction] Like SAccelerationAction, but for the speed of the 
+            motor(s).
+    \item[SubRoutineAction] Execute the subroutine identified by its name.
+    \item[MeasureAction] Lowers the measurement arm and then rises it again. 
+    \item[ShowAction] Print either a string, or the value of a sensor to the 
+            LCD.
+    \item[SoundAction] Sound either a Beep or a Buzz
+    \item[FreeAction] Set the specified motor to free rolling. 
+\end{description}
+
+\begin{lstlisting}[caption=Syntax for actions, label=stx:actions]
+Action : 
+      ForwardAction
+    | RotateAction
+    | StopAction
+    | SAccelerationAction
+    | SSpeedAction
+    | SubRoutineAction
+    | MeasureAction
+    | ShowAction
+    | SoundAction
+    | FreeAction
+;
+ForwardAction : {ForwardAction} 'Forward' (motor = Motor)? ;
+RotateAction :  'Rotate' motor = Motor degrees = ValueExpression (blocking ?= 'wait')? ; 
+StopAction : {StopAction} 'Stop' (motor = Motor)? ;
+SAccelerationAction : 'Set Acceleration' (motor = Motor)? v = ValueExpression ;
+SSpeedAction : 'Set Speed' (motor = Motor)? v = ValueExpression ;
+SubRoutineAction : 'Do' routine = [SubRoutine] ;
+MeasureAction : {MeasureAction} 'Measure';
+ShowAction : 'Show' (string = STRING | sensor = Sensor);
+SoundAction : 'Sound' sound = Sound;
+FreeAction : 'Free' motor = Motor;
+
+Motor : m = EMotor;
+enum EMotor :
+      LEFTMOTOR = 'LeftMotor'
+    | RIGHTMOTOR = 'RightMotor'
+;
+
+enum Sound : 
+      BEEP = 'Beep'
+    | BUZZ = 'Buzz'
+;
+\end{lstlisting}
+
+\paragraph{ValueExpressions} ValueExpressions allow for the access of sensor 
+values, constants, variables, literals and allows for comparison of these
+values. Code~\ref{stx:vexpr} Shows the syntax for defining ValueExpressions.
+The syntax seems complex at first to allow infix with 
+priority, however the semantics are rather straightforward and will therefore
+not explained in more detail.
+
+\begin{lstlisting}[caption=Syntax for ValueExpression, label=stx:vexpr]
+ValueExpression :   Blevel1;
+
+Blevel1 returns ValueExpression:
+    Blevel2 
+    ( {ExpressionBinOp.left = current} bop = BBinaryOp right=Blevel2)*
+;
+
+Blevel2 returns ValueExpression :
+    BNotExpr | Blevel3
+;
+
+BNotExpr : "NOT" sub = Blevel3;
+
+Blevel3 returns ValueExpression :
+    Blevel4
+    ( {ExpressionBinComp.left = current} bcomp = CompareOp right=Blevel4)*
+;
+
+Blevel4 returns ValueExpression :
+      BVLiteral
+    | BBLiteral
+    | BVarLiteral
+    | BSensorLiteral
+    | BVBracket
+    | ColorLiteral
+;
+                                        
+BVLiteral : neg ?= ('neg')? aValue = INT; 
+BBLiteral : bValue = BOOL_LITERAL;
+BVarLiteral : var = ID ;
+BSensorLiteral : sensor = Sensor;
+BVBracket : '(' bsub = ValueExpression ')' ;
+ColorLiteral : color = Color;
+
+
+enum BBinaryOp :
+    AND = '&&' | OR = '||'
+;
+enum CompareOp :
+    EQ = "equals" | NEQ = "!=" | GEQ = ">=" | GT = ">" | LEQ = "<=" | LT = "<"
+;
+
+enum Color : 
+      BLACK = 'BLACK'
+    | BLUE = 'BLUE'
+    | BROWN = 'BROWN'
+    | CYAN = 'CYAN'
+    | DARK_GRAY = 'DARKGRAY'
+    | GRAY = 'GRAY'
+    | GREEN = 'GREEN'
+    | LIGHT_GRAY = 'LIGHTGRAY'
+    | MAGENTA = 'MAGENTA'
+    | ORANGE = 'ORANGE'
+    | PINK = 'PINK'
+    | RED = 'RED'
+    | WHITE = 'WHITE'
+    | YELLOW = 'YELLOW'
+;
+
+//terminals
+terminal ALPHA : ('A'..'Z');
+terminal BOOL_LITERAL returns ecore::EBoolean: 'True' | 'False' | 'TRUE' | 'FALSE' ;
+\end{lstlisting}
+
+\paragraph{sensors} 
+Sensor values are accessed by the name of the respective sensor
+(Code~\ref{stx:sensors}). Sensor values
+are only updated at the start of a \texttt{Does:} block and before evaluating
+a \texttt{Takes Control:} expression. The sensor values used in the DSL are
+normalized. 
+
+\texttt{LeftLight, RightLight, FrontUS, RearUS} values are the raw sensor values
+multiplied by $100$. \texttt{LeftTouch, RighTouch} are either $>0$ when the 
+respective sensor is touched or $<0$ when it is not. \texttt{ColorID} is just
+the color ID seen by the color sensor, these can be compared to the 
+colorLiterals. \texttt{Angle} just is the value of the angle of the gyro.
+
+\begin{lstlisting}[caption=Sensor names, label=stx:sensors]
+enum Sensor :
+      COLORIDSENSOR = 'ColorID'
+    | LEFTLIGHTSENSOR = 'LeftLight'
+    | RIGHTLIGHTSENSOR = 'RightLight'
+    | FRONTULTRASONICSENSOR = 'FrontUS'
+    | REARULTRASONICSENSOR = 'RearUS'
+    | TOUCHSENSORL = 'LeftTouch'
+    | TOUCHSENSORR = 'RightTouch'
+    | ANGLESENSOR = 'Angle'     
+;
+\end{lstlisting}
