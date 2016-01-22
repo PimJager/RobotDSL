@@ -1,0 +1,102 @@
+The program a mars rover using our DSL two Java files are generated; one for
+each brick on the rover. 
+
+\subsubsection{Right Brick} 
+The Java file for the right brick is a static file containing a Java class 
+which controls the right brick. As per Section~\ref{sec:layout} the 
+right brick contains only sensors and actuators. Therefore the sole
+task of the right brick is to continuously read its sensor values and send them
+to the left brick via Bluetooth. 
+
+\subsubsection{Left Brick}
+The Java file for the left brick contains a mixture of generated and static 
+code. It contains a main class and classes for each specified behaviour. 
+Attachment 4 shows this file for the MeasureBlocks mission, with each generated
+line prefixed with a $>$. Below we will describe the general layout of the code
+in a pseudo Java syntax.
+
+\begin{lstlisting}
+< list of necesarry imports >
+
+public class Robot {
+
+	< variables needed for actuators and sensors >
+
+	< storage of sensor values send via Bluetooth from right brick >
+
+	< variables needed for Bluetooth connection >
+
+	< GENERATED list of constants eg. >
+	public static int CONSTANT_NAME = (40);
+
+	//is the robot running? 
+	public static int _running = 1;
+
+	< GENERATED list of variables eg. >
+	public static int variableName;
+
+	public static void main(..) {
+		init();
+		Behavior[] bList = {
+							< GENERATED list of behaviours eg. >
+							new BehaviourName(),
+							< Every robot has this behaviour for 'stops when:' >
+							,new DefaultQuitBehaviour() 
+							};
+		Arbitrator ar = new Arbitrator(bList); ar.start();
+	}
+
+	< init() function: sets up Bluetooth, resets sensors and 
+			actuators, starts the bluetooth and lcd threads. >
+
+	< updateSensors() update the sensors attached to this brick >
+
+	< normalisation functions to allow typeless variables in the DSL
+			in the typed JAVA language >
+
+	< Thread which prints the current sensor values and active 
+			behaviour to the LCD >
+
+	< Thread wich reads incoming bluetooth messages from the right 
+			brick and saves the sensor values >
+
+	< function for the measurement action >
+
+	< GENERATED list of subroutines eg. >
+	public static function routineName(){
+		Robot.rightMotor.stop();
+		variableName = CONSTANT_NAME;
+	}
+}
+
+class DefaultQuitBehaviour implements Behavior {	
+	@Override
+	public boolean takeControl() {
+		return < GENERATED 'stops when' expression >;
+	}
+	< action() and suppress() functions >
+}
+
+< GENERATED Behaviour classes which have the following form >
+class < GENERATED name of behaviour > implements Behaviour {
+	private boolean _supressed = true;
+	public boolean takeControl() {
+		Robot.updateSensors();
+		return Robot.makeBool(Robot._running) &&
+				< GENERATED 'takes control when' expression>;
+	}
+	public void action() {
+		_supressed = false;
+		Robot.updateSensors();
+		< GENERATED list of expressions for this behaviours 'Does:' 
+		  with a supression check before every expression >
+		if(_supressed) return;
+		Robot.routineName;
+	}
+	public void suppress() {_supressed = true;}
+}
+\end{lstlisting}
+
+Note that when generating expressions care has to be taken that all expressions
+have the correct type. Therefore the robot contains some normalisation 
+functions which convert from bool to int and from int to bool. 

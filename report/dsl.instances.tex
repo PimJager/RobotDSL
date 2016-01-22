@@ -1,0 +1,82 @@
+To complete mission set out in the requirements there are three instances
+of our DSL. \texttt{MeasureBlocks} which drives around and measures encountered
+blocks, \texttt{PushBlock} which pushes a light block of the table and 
+\texttt{ParkInCorner} which drives around, measures the three lakes exactly once
+and when all three lakes are found parks the robot in a corner of the table.
+
+\subsubsection{MeasureBlocks}
+Attachement 1 shows the implementation of a mission which drives forward and 
+measures any encountered blocks. When the robot is in danger of falling of the 
+table it will get itself to safety and turn a bit, because of this turning the
+robot covers the whole table when driving around.
+
+This mission has six behaviours, \texttt{DetectCliff} and
+\texttt{DetectOutsideline} keep the robot from falling of the table. The 
+\texttt{MeasureBlockBoth, MeasureBlockRight, MeasureBlockLeft} behaviours 
+measure a block when it is detected using the touch sensors, 
+\texttt{MeasureBlockLeft} and \texttt{measureBlockRight} will reposition the 
+robot so the block is below the arm before measuring. \texttt{DriveForward} is 
+the default behaviour, which just makes the robot drive forward in a straight 
+line.
+
+\subsubsection{PushBlock}
+Attachment 2 shows the implementation of a mission which drives around and 
+pushes light blocks of the table. This mission uses the fact that light blocks
+do not trigger the touch sensors, while heavy blocks do. Therefore the robot
+only tries to detect blocks using the touch sensor. Heavy blocks are then 
+avoided and light ones are pushed of the table as a biproduct of driving around.
+
+This mission has four behaviours. \texttt{DetectCliff} and 
+\texttt{DetectOutsideLine} behave similar as in the \texttt{MeasureBlocks} 
+mission. \texttt{AvoidHeavyBlock} drives away from a heavy block once it has 
+detected one using either touch sensor. \texttt{DriveForward} behaves the same
+as in the \texttt{MeasureBlocks} mission.
+
+\subsubsection{ParkInCorner}
+Attachment 3 shows the implementation of the ParkInCorner mission.
+This mission is the most complex of the three missions and describes a 
+mission consisting of the parts, first measuring all three lakes exactly once
+,while keeping the robot safe from cliffs, driving into lakes or blocks, and 
+then parking the robot in a corner of the table. 
+
+To achieve this the mission has 13 behaviours. The mission also uses 4 variables
+to track state. For each lake there is a variable which indicated whether it has
+been found or not, and there is a variable which indicates if the robot is 
+currently tracking a line in search for a corner.
+
+\paragraph{Safety} \texttt{DetectCliff} and \texttt{DetectOutsideLine} work 
+similar to the other two missions. \texttt{AvoidBlock} avoids a block when one 
+is detected using the front ultrasonic sensor or the either touch sensors.
+
+\paragraph{Detecting lakes} \texttt{MeasurBlueLake, MeasureRedLake} and 
+\texttt{MeasureGreenLake} measure a lake when the color sensor is positioned 
+over a lake line and the respective lake has not been found (determined using
+the respective variable). After measuring the variable which indicates that
+that lake is measured is set to \texttt{True}.
+
+\texttt{DetectLakeLineLeft} and \texttt{DetectLakeLineRight} take control when
+respectively the left or the right sensor is above a lake line and 
+move the robot left or right to try and get the robot in position for a 
+successful measurement of the lake. If the color sensor get above the lake line
+then the measurement behaviour for that color will take control.
+
+\texttt{DetectLakeColor} takes control when the light sensor is above a lake 
+line and none of the measurement behaviours take control. This behaviour 
+steers the robot away from the lake if it doesn't need to be measured, to make
+sure the robot doesn't drive into the lake.
+
+\paragraph{Parking in the corner} When \texttt{DetectOutsideLine} is active
+it checks if all three lakes have been found. If they are then the variable
+for tracking line is set to \texttt{True}. This causes \texttt{FollowLine1} to
+take control, which will align the robot parallel next to the outside line, 
+\texttt{FollowLine2} then takes control and drives the robot to the corner 
+very carefully. When any of the safety behaviours take control they set the 
+variable for line tracking to false an take the robot to safety. 
+
+\paragraph{Stopping} When the right light sensor detects the outside line 
+and the robot is currently tracking the outside line then the mission is 
+complete. 
+
+Because the rotate action of the robot is clockwise the outside line followed
+will always be on the left hand side of the robot, thus once the right light
+sensor detects an outside line a corner is found.
