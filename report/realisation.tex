@@ -6,8 +6,15 @@ week 2 we had already implemented everything from the second sprint and F2, F3,
 F4,, F5 and F9 from sprint 3. At the end of week 3 we had completely implemented
 sprint 3 and sprint 4. Week 4 was then spend implementing F21, F22, and F7. 
 
-\subsubsection{Final result}
-Nog dingen over wat V ? X en waarom de dingen die ? of X hebben dat hebben
+\subsection{Final result}
+Tables \ref{tbl:endFunctionalReq}, \ref{tbl:endUsabilityReq},
+\ref{tbl:endReliabilityReq}, \ref{tbl:endPerformanceReq} 
+and \ref{tbl:endSupportabilityReq} show the conformance of the final product to
+the requirements of section~\ref{sec:requirements}. In these tables `V' is means
+the product met the requirement, `X' means it does not meet the requirement and
+`?' means it is not objectively clear if the product meets the requirement. 
+Each requirement which does not have a `Would' priority and is not marked with
+`V' will be discussed.
 
 \setcounter{TCC}{1}
 \begin{table}[H]
@@ -124,7 +131,7 @@ Nog dingen over wat V ? X en waarom de dingen die ? of X hebben dat hebben
 		P\doTCC & Must & The robot must complete missions as fast as safely 
 			possible & ? \\   \hline
 		P\doTCC & Should & The robot should reach its targets with as little 
-			movement as possible & ? \\  
+			movement as possible & X \\  
 		\hline
 	\end{tabular}
 \caption{Realisation of performance requirements of Mars Rover}
@@ -150,3 +157,24 @@ Nog dingen over wat V ? X en waarom de dingen die ? of X hebben dat hebben
 \caption{Realisation of supportability requirements of Mars Rover}
 \label{tbl:endSupportabilityReq}
 \end{table}
+
+\begin{description}
+	\item[R2 - `?'] The sensor readings from the robot are reliable and 
+		consistent enough. However they are not calibrated at the start of a
+		mission and especially the color sensor can report wrong colors in some
+		light conditions. Therefore the sensor readings aren't as fool proof as
+		we would have liked.
+	\item[R3 - `X'] The Robot can sometimes drive out of a lake, but under some
+		conditions it can not. Instead we have opted to implement F6 very 
+		well, to stop the robot from driving into lakes in the first place.
+	\item[P2 - `?'] The Robot is able to complete missions in a timely fashion,
+		however we have not spend much time optimising this speed, therefore
+		it might be possible that the robot can complete the missions faster 
+		while still staying safe.
+	\item[P3 - `X'] We have spend little effort minimising the robots movement
+		and although the robot doesn't do a lot of unnecessary movement, some 
+		assumptions -such as always turning right to avoid danger- cause the
+		robot to move more than necessary.
+	\item[S2 - `X'] It is currently not possible to add extra sensors or 
+		actuators to the robot without changing the DSL. 
+\end{description}

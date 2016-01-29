@@ -56,6 +56,11 @@ public class Robot {
 
 	//CONSTANTS
     //generated from constant list
+    public static int LINE_TRESHOLD = (50);
+    public static int ROTATE_SPEED = (100);
+    public static int ROTATE_ACC = (6000);
+    public static int DEFAULT_SPEED = (300);
+    public static int DEFAULT_ACC = (800);
     
     //GLOBALS
     //To implement quit
@@ -68,7 +73,7 @@ public class Robot {
 		
 		Behavior[] bList = {
 								new DriveForward(),
-																	new DetectLine()
+																	new DetectOutsideLine()
 									,new DefaultQuitBehaviour() 
 							};
 		Arbitrator ar = new Arbitrator(bList);
@@ -188,6 +193,23 @@ public class Robot {
 	}
 	
 	//Generated list of subroutines
+	public static void beforeRatate(){
+		Robot.leftMotor.setSpeed((Robot.ROTATE_SPEED));
+		Robot.rightMotor.setSpeed((Robot.ROTATE_SPEED));
+		
+		Robot.leftMotor.setAcceleration((Robot.ROTATE_ACC));
+		Robot.rightMotor.setAcceleration((Robot.ROTATE_ACC));
+		
+		Robot.leftMotor.stop(true);
+		Robot.rightMotor.stop();
+	}
+	public static void setDefaults(){
+		Robot.leftMotor.setSpeed((Robot.DEFAULT_SPEED));
+		Robot.rightMotor.setSpeed((Robot.DEFAULT_SPEED));
+		
+		Robot.leftMotor.setAcceleration((Robot.DEFAULT_ACC));
+		Robot.rightMotor.setAcceleration((Robot.DEFAULT_ACC));
+	}
 }
 	
 class DefaultQuitBehaviour implements Behavior {
@@ -228,6 +250,9 @@ class DriveForward implements Behavior {
 		Robot.currentBehaviour = "DriveForward";
 		// supressioncontext = true
 		if(_supressed) return; 
+		Robot.setDefaults();
+		
+		if(_supressed) return; 
 		Robot.leftMotor.forward();
 		Robot.rightMotor.forward();
 		// supressioncontext = false
@@ -235,23 +260,39 @@ class DriveForward implements Behavior {
 	@Override
 	public void suppress() {_supressed = true;}
 }
-class DetectLine implements Behavior {
+class DetectOutsideLine implements Behavior {
 	private boolean _supressed = true;
 	@Override
 	public boolean takeControl() {
 		Robot.updateSensors();
 		return 	Robot.makeBool(Robot._running) &&
-				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (50))) || Robot.makeBool(Robot.normalise(Robot.rightLightSample > (50)))));
+				Robot.makeBool(Robot.normalise(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD))) || Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))));
 	}
 	@Override
 	public void action() {
 		_supressed = false;
 		Robot.updateSensors();
-		Robot.currentBehaviour = "DetectLine";
+		Robot.currentBehaviour = "DetectOutsideLine";
 		// supressioncontext = true
 		if(_supressed) return; 
-		Robot.leftMotor.stop(true);
-		Robot.rightMotor.stop();
+		Robot.beforeRatate();
+		
+		if(Robot.makeBool(Robot.normalise(Robot.leftLightSample > (Robot.LINE_TRESHOLD)))){
+			if(_supressed) return; 
+			Robot.leftMotor.rotate((-130),true);
+			
+			if(_supressed) return; 
+			Robot.rightMotor.rotate((-20),false);
+		} else {
+		}
+		if(Robot.makeBool(Robot.normalise(Robot.rightLightSample > (Robot.LINE_TRESHOLD)))){
+			if(_supressed) return; 
+			Robot.leftMotor.rotate((-20),true);
+			
+			if(_supressed) return; 
+			Robot.rightMotor.rotate((-130),false);
+		} else {
+		}
 		// supressioncontext = false
 	}
 	@Override
